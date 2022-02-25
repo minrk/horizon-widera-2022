@@ -1,0 +1,58 @@
+name: build
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu:20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: install tex
+        run: |
+          apt-get update && apt-get -y install \
+            --no-install-recommends \
+            ca-certificates \
+            make \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-bibtex-extra \
+            git \
+            python3
+
+
+      # - run:
+      #     name: finish cloning submodules
+      #     command: |
+      #       git submodule init
+      #       git submodule update
+
+      - name: build draft
+        run: |
+            make draft
+            test -f draft.pdf
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: draft.pdf
+          path: "draft.pdf"
+          if-no-files-found: error
+
+      - name: build final
+        run: |
+            make final
+            test -f final.pdf
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: final.pdf
+          path: final.pdf
+          if-no-files-found: error
+
+      - name: check person-month data
+        run: |
+          make check

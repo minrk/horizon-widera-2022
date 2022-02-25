@@ -32,6 +32,8 @@ PROPETC.sty = workaddress.sty metakeys.sty sref.sty
 EUPROPCLS.clssty = euproposal.cls
 PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.dir)/%) $(PROPETC.sty:%=$(PROPETC.dir)/%)
 
+.PHONY: docker-image docker-make
+
 all: $(TBIB.pdf) $(TSIMP.pdf)
 
 check:
@@ -146,3 +148,9 @@ diff:	allinone.tex
 LaTeX-proposal/base/proposal.cls:
 	@# not a real target, but if this file is missing, we need to get the git submodule
 	git submodule init; git submodule update
+
+docker-image:
+	docker build -t latex .
+
+docker-make:
+	docker run --rm -it -v$(PWD):/io -w /io latex make $(MAKE_ARGS)
