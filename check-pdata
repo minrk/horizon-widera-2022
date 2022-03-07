@@ -13,16 +13,9 @@ import sys
 
 site_order = [
     'SRL',
-    'XFEL',
+    'MP',
     'QS',
-    'CDS',
-    'EGI',
     'UIO',
-    'WTT',
-    'SIL',
-    'UPSUD',
-    'INSERM',
-    'EP',
 ]
 
 

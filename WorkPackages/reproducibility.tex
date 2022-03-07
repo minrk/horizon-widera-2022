@@ -12,9 +12,12 @@ once completed)}
 \end{verbatim}
 \end{draft}
 
-\begin{workpackage}[id=core,wphases=0-48,swsites,
+\begin{workpackage}[
+  id=reproducibility,
+  wphases=0-36,
   title=Structural improvements to Jupyter,
   short=Core,
+  swsites,
   lead=SRL,
   % % EGIRM=4,
   % % INSERMRM=4,
@@ -67,10 +70,10 @@ and accessibility (\localtaskref{accessibility}).
 \begin{tasklist}
 
 \input{tasks/maintenance}
-\input{tasks/jupyterhub-binder-convergence}
-\clearpage
-\input{tasks/accessibility}
-\input{tasks/server-state}
+% \input{tasks/jupyterhub-binder-convergence}
+% \clearpage
+% \input{tasks/accessibility}
+% \input{tasks/server-state}
 
 \end{tasklist}
 
@@ -84,25 +87,21 @@ and accessibility (\localtaskref{accessibility}).
     {Contributions to core Jupyter and JupyterHub software}
   \end{wpdeliv}
 
-  \begin{wpdeliv}[due=48,miles=final,id=jupyter-releases,dissem=PU,nature=OTHER,lead=SRL]
+  \begin{wpdeliv}[due=36,miles=final,id=jupyter-releases,dissem=PU,nature=OTHER,lead=SRL]
     {Public releases of core Jupyter and JupyterHub software supporting \TheProject services}
   \end{wpdeliv}
+% 
+%   \begin{wpdeliv}[due=24,miles=prototype,id=jh-bh-conv-report,dissem=PU,nature=R,lead=SRL]
+%     {Guidelines for a JupyterHub/Binder convergence}
+%   \end{wpdeliv}
 
-  \begin{wpdeliv}[due=24,miles=prototype,id=jh-bh-conv-report,dissem=PU,nature=R,lead=EP]
-    {Guidelines for a JupyterHub/Binder convergence}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=18,miles=prototype,id=accessibility-report,dissem=PU,nature=R,lead=SRL]
-    {Report and plan for Jupyter accessibility}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=36,miles=community,id=accessibility,dissem=PU,nature=OTHER,lead=SRL]
-    {Improved accessibility of Jupyter software}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=48,miles=final,id=server-state,dissem=PU,nature=OTHER,lead=UPSUD]
-    {Real-time collaborative notebook supporting multiple devices and selective aggregation and distribution}
-  \end{wpdeliv}
+%   \begin{wpdeliv}[due=18,miles=prototype,id=accessibility-report,dissem=PU,nature=R,lead=SRL]
+%     {Report and plan for Jupyter accessibility}
+%   \end{wpdeliv}
+% 
+%   \begin{wpdeliv}[due=36,miles=community,id=accessibility,dissem=PU,nature=OTHER,lead=SRL]
+%     {Improved accessibility of Jupyter software}
+%   \end{wpdeliv}
 
 \end{wpdelivs}
 

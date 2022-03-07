@@ -2,18 +2,21 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Task title,
+  title=Sample Task,
+  % task id for references
   id=task-id,
-  lead=XXX,
+  % lead institution ID
+  lead=SRL,
   PM=1,
-  wphases={0-48},
+  wphases={0-36},
+  % partner institution ID(s)
   % don't include lead here
-  partners={SRL,XFEL}
+  partners={XXX}
 ]
   The task includes the following activities
   \begin{compactitem}
   \item ...
      % deliverable will be defined in the appropriate WorkPackage.tex
-    (\localdelivref{deliv-id})
+    % (\localdelivref{deliv-id})
   \end{compactitem}
 \end{task}
