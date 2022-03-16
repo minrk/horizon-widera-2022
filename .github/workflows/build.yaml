@@ -7,12 +7,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu:20.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: install tex
         run: |
-          apt-get update && apt-get -y install \
+          sudo apt-get update && sudo apt-get -y install \
             --no-install-recommends \
             ca-certificates \
             make \
