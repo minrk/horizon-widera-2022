@@ -15,7 +15,7 @@ once completed)}
 \begin{workpackage}[
   id=reproducibility,
   wphases=0-36,
-  title=Structural improvements to Jupyter,
+  title=Improving robustness of reproducibility,
   short=Core,
   swsites,
   lead=SRL,
@@ -32,7 +32,9 @@ once completed)}
 ]
 \begin{wpobjectives}
   \begin{compactitem}
-    \item to support and maintain core Jupyter infrastructure in order to keep it healthy
+    \item to better understand and evaluate successful reproduction of computational environments
+    \item to improve the practical reproducibility of environments constructed with \TheProject tools
+    \item to support and maintain core Jupyter and Binder software infrastructure in order to keep it healthy
          and useful for open science
     \item to develop new features in the core of Jupyter to bring it to a wider community
     \item to develop new features in the core of Jupyter to make it more effective
@@ -42,6 +44,8 @@ once completed)}
 \end{wpobjectives}
 
 \begin{wpdescription}
+
+\TOWRITE{repurposed task from BOSSEE}
 
 Community-led open source software is critical to a sustainable future for open science.
 Commonly used tools make up a shared infrastructure,
@@ -69,11 +73,10 @@ and accessibility (\localtaskref{accessibility}).
 
 \begin{tasklist}
 
+\input{tasks/study}
+\input{tasks/repo2docker}
+\input{tasks/builds}
 \input{tasks/maintenance}
-% \input{tasks/jupyterhub-binder-convergence}
-% \clearpage
-% \input{tasks/accessibility}
-% \input{tasks/server-state}
 
 \end{tasklist}
 
@@ -90,18 +93,7 @@ and accessibility (\localtaskref{accessibility}).
   \begin{wpdeliv}[due=36,miles=final,id=jupyter-releases,dissem=PU,nature=OTHER,lead=SRL]
     {Public releases of core Jupyter and JupyterHub software supporting \TheProject services}
   \end{wpdeliv}
-% 
-%   \begin{wpdeliv}[due=24,miles=prototype,id=jh-bh-conv-report,dissem=PU,nature=R,lead=SRL]
-%     {Guidelines for a JupyterHub/Binder convergence}
-%   \end{wpdeliv}
 
-%   \begin{wpdeliv}[due=18,miles=prototype,id=accessibility-report,dissem=PU,nature=R,lead=SRL]
-%     {Report and plan for Jupyter accessibility}
-%   \end{wpdeliv}
-% 
-%   \begin{wpdeliv}[due=36,miles=community,id=accessibility,dissem=PU,nature=OTHER,lead=SRL]
-%     {Improved accessibility of Jupyter software}
-%   \end{wpdeliv}
 
 \end{wpdelivs}
 

@@ -1,0 +1,23 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[
+  title=Support more use patterns,
+  % task id for references
+  id=patterns,
+  % lead institution ID
+  lead=SRL,
+  PM=1,
+  wphases={0-36},
+  % partner institution ID(s)
+  % don't include lead here
+  partners={XXX}
+]
+  The task includes the following activities
+  \begin{compactitem}
+  \item Data access (BinderHub deployment, possibly mostly docs)
+  \item New buildpacks (repo2docker) - mostly code review
+     % deliverable will be defined in the appropriate WorkPackage.tex
+    % (\localdelivref{deliv-id})
+  \end{compactitem}
+\end{task}
