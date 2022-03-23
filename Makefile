@@ -18,7 +18,7 @@ TBIB.pdf 	= $(TBIB:%.tex=%.pdf)         	  # PDFs to be produced
 TBIB.aux 	= $(TBIB:%.tex=%.aux)             # their aux files.
 PDATA 		= $(PROPOSAL:%.tex=%.pdata)       # the proposal project data
 SRC = $(filter-out $(TARGET),$(shell ls *.tex */*.tex))   # included files
-PDFLATEX = pdflatex -interaction scrollmode -file-line-error -halt-on-error -synctex=1
+PDFLATEX = xelatex -interaction scrollmode -file-line-error -halt-on-error -synctex=1
 BBL = $(PROPOSAL:%.tex=%.bbl)
 PROPCLS.dir = $(PROP.dir)/base
 PROPETC.dir = $(PROP.dir)/etc
@@ -57,14 +57,10 @@ grantagreement:
 	mv grantagreement-striped.pdf grantagreement.pdf
 
 
-install: final
-	cp final.pdf proposal-www.pdf
-	git commit -m "Updated pdf" proposal-www.pdf
-	git push
 
 bbl:	$(BBL)
 $(BBL): %.bbl: %.aux
-	bibtex -min-crossrefs=100 -terse $<
+	biber $*
 
 $(TSIMP.pdf): %.pdf: %.tex $(PROPCLS) $(PDATA)
 	$(PDFLATEX) $< || $(RM) $@
@@ -81,7 +77,7 @@ $(TBIB.pdf): %.pdf: %.tex $(SRC) $(BIB) $(PROPCLS)
 	@if (test -e $(patsubst %.tex, %.idx,  $<));\
 	    then makeindex $(patsubst %.tex, %.idx,  $<); fi
 	$(MAKE) -$(MAKEFLAGS) $(BBL)
-	@if (grep "(re)run BibTeX" $(patsubst %.tex, %.log,  $<)> /dev/null);\
+	@if (grep "(re)run Biber" $(patsubst %.tex, %.log,  $<)> /dev/null);\
 	    then $(MAKE) -B $(BBL); fi
 	$(PDFLATEX)  $< || $(RM) $@
 	@if (grep Rerun $(patsubst %.tex, %.log,  $<) > /dev/null);\
