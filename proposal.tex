@@ -40,7 +40,7 @@
 % temporary fix due to http://tex.stackexchange.com/questions/311426/bibliography-error-use-of-blxbblverbaddi-doesnt-match-its-definition-ve
 \makeatletter\def\blx@maxline{77}\makeatother
 
-\input{WApersons} % Some sections of the included files depend on this.
+% \input{WApersons} % Some sections of the included files depend on this.
 \input{preamble}
 \usepackage{framed}
 
@@ -51,19 +51,34 @@
 
 \begin{document}
 \begin{proposal}[
-  % These PM numbers (person months) are for the coordinator to help planning
-  % Participants should not change these, but add PM numbers in the CVS in
-  % the site descriptions at CVs/*.tex
-  % TODO: Nicolas needs to update these numbers from the (requested ones)
+  % participants
+  PI=mrk,
+  mrkname=Benjamin Ragan-Kelley,
+  mrkaffiliation=Simula Research Laboratory,
+  mrkdept=Numerical Analysis and Scientific Computing,
+  mrktitle=Dr.,
+  % site descriptions
   site=SRL, % Simula
+  SRLacronym=Simula,
+  SRLshortname=Simula Research Laboratory,
   site=MP, % Max Planck
+  MPacronym=MaxPlanck,
+  MPshortname=Max Planck Institute,
   site=UIO, % U Oslo
+  UIOacronym=UiO,
+  UIOshortname=University of Oslo,
   site=IFR, % Ifremer
+  IFRacronym=Ifremer,
+  IFRshortname=Ifremer,
   site=QS, % QuantStack
+  QSacronym=QuantStack,
+  QSshortname=QuantStack,
   % site=XXX, % template example
   % alternative: (can be combined)
-    coordinator=minrk,
-  coordinatorsite=SRL,
+  coordinator=Dr. Benjamin Ragan-Kelley,
+  Cemail=benjaminrk@simula.no,
+  Ctelfax=(47) XXX-XX-XXX,
+  %coordinatorsite=SRL,
   acronym={SORCERER},
   acrolong={SORCERER},
   proposalnumber={...},
