@@ -1,4 +1,15 @@
-# Building Open Science Services on European E-Infrastructure (BOSSEE)
+# Supporting Open and Reproducible Computational Environments Relevent to Education and Research (SORCERER)
+
+Links:
+
+- [![build status](https://github.com/minrk/horizon-widera-2022/actions/workflows/build.yaml/badge.svg)](https://github.com/minrk/horizon-widera-2022/actions/workflows/build.yaml)
+- [latest build (draft)](https://nightly.link/minrk/horizon-widera-2022/workflows/build.yaml/main/draft.pdf.zip?status=completed)
+- [latest build (final)](https://nightly.link/minrk/horizon-widera-2022/workflows/build.yaml/main/final.pdf.zip?status=completed)
+
+
+## Prior proposal: BOSSEE
+
+This proposal is adapted from a prior submission, BOSSEE.
 
 BOSSEE is a [proposal](submitted.pdf) that was submitted on January
 29th to the H2020 European E-Infrastructure call
