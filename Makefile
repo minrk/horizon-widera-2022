@@ -28,9 +28,8 @@ BIBINPUTS := ../lib:$(BIBINPUTS)
 export TEXINPUTS
 export BIBINPUTS
 PROPCLS.clssty = proposal.cls pdata.sty
-PROPETC.sty = workaddress.sty metakeys.sty sref.sty
 EUPROPCLS.clssty = euproposal.cls
-PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.dir)/%) $(PROPETC.sty:%=$(PROPETC.dir)/%)
+PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.dir)/%)
 
 .PHONY: docker-image docker-make
 
