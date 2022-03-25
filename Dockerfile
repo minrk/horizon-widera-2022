@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:21.10
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
  && apt-get -y install \
@@ -10,5 +10,7 @@ RUN apt-get update \
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-bibtex-extra \
+            texlive-xetex \
+            biber \
             git \
             python3
