@@ -3,33 +3,11 @@
 
 \subsection{Concept and Methodology}\label{sec:concept_methodology}
 \eucommentary{5-8 pages}
-\eucommentary{
--- Describe and explain the overall concept underpinning the project.
-Describe the main ideas, models or assumptions involved. Identify
-any trans-disciplinary considerations;
--- Describe and explain the overall approach and methodology, distinguishing, as
-appropriate, activities indicated in the relevant section of the work programme, e.g.
-Networking Activities, Service Activities and Joint Research Activities, as detailed in
-the Part E of the Specific features for Research Infrastructures of the Horizon 2020
-European Research Infrastructures (including e-Infrastructures) Work Programme 2014-
-2015;\\
--- Describe how the Networking Activities will foster a culture of co-operation between the
-participants and other relevant stakeholders.\\
--- Describe how the Service activities will offer access to state-of-the-art infrastructures,
-high quality services, and will enable users to conduct excellent research.\\
--- Describe how the Joint Research Activities will contribute to quantitative and qualitative
-improvements of the services provided by the infrastructures.\\
--- As per Part E of the Work Programme, where relevant, describe how the project will
-share and use existing basic operations services (e.g. authorisation and accounting
-systems, service registry, etc.) with other e-infrastructure providers and justify why such
-services should be (re)developed if they already exist in other e-infrastructures. Describe
-how the developed services will be discoverable on-line.\\
--- Where relevant, describe how sex and/or gender analysis is taken into account in the
-project's content.}
 
 
 \subsubsection{Concept}\label{sec:concept}
 
+\TOWRITE{}{Open with reproducibility?}
 Open Science is the principle that science, in order to be most
 \textbf{impactful} and \textbf{socially responsible}, should be done \textbf{publicly}, with as
 much of the scientific process and products \textbf{accessible, reviewable,
@@ -41,38 +19,42 @@ more research takes the form of code and/or data, the opportunity to
 share, reproduce, and reuse scientific work is greater than ever, even
 enabling new forms of \textbf{interdisciplinary collaboration}.
 
+\TOWRITE{}{
+define various forms of reproducibility
+emphasize practicality
+reiterate "automating existing practices"
+}
+
 At the same time as we share in these exciting opportunities, there
 are corresponding challenges, technical and social, to making Open
-Science a practical reality.  We face big questions: If a researcher
+and Reproducible Science a practical reality.  We face big questions: If a researcher
 has code and/or data to publicise, how is that best done?  How do
-researchers learn \textbf{Open Science best practices} in their field?  How do
+researchers learn \textbf{best practices for Reproducible Open Science} in their field?  How do
 previously disconnected fields benefit from each other's work as the
 same computational challenges are faced again and again by different
 communities?
 
 These are the questions that guide \TheProject.
-With so much research being done that wants to be Open,
-how can we make Open Science
+With so much research being done that wants to be Open and Reproducible,
+how can we make Science
 
 \begin{enumerate}
-    \item as \textbf{easy} as possible to share?
+    \item as \textbf{easy} as possible to share and reproduce?
     \item as \textbf{useful} as possible to other researchers and the public?
 \end{enumerate}
 
-\noindent Our plan for \textbf{improving access and effectiveness of Open Science} can be summarised as:
+\noindent Our plan for \textbf{increasing the reproducibility of scientific results} can be summarised as:
 
 \begin{enumerate}
 \item improve and maintain \textbf{common software infrastructure} used for
-  Open Science,
+  reproducing computational results,
 \item develop the Jupyter ecosystem to improve capabilities to \textbf{better
-  serve Open Science},
+  serve Reproducible Open Science},
 \item \textbf{guide, validate, and demonstrate} our developments through
   collaboration with a wide variety of application domains,
-\item enable students and researchers to perform Open Science through
+\item enable students and researchers to perform Reproducible Open Science through
   \textbf{training and education}, and improving inclusiveness by focusing
-  these on under-served and under-represented communities, and
-\item operate services to facilitate Open Science collaborations with
-  Jupyter software.
+  these on under-served and under-represented communities
 \end{enumerate}
 
 \medskip
@@ -91,14 +73,15 @@ how can we make Open Science
 
 
 \TheProject has chosen to centre its efforts on the Jupyter software
-ecosystem. Figure~\ref{fig:use-cases-binder} summarises a typical use
-case of Jupyter Notebook and Binder; both are described in more detail
-below.
+ecosystem, in particular Binder and repo2docker.
+Figure~\ref{fig:use-cases-binder} summarises a typical use
+case of Jupyter Notebook and Binder;
+both are described in more detail below.
 
 The Jupyter notebook and Jupyter ecosystem are of increasing
 importance in computational science and data science, in academia,
 industry, and services. In addition to supporting high productivity of
-researchers, they have great potential to push Open Science forward:
+researchers, they have great potential to push Open and Reproducible Science forward:
 the notebook provides a complete description of a computational and
 data science study (Step 1 in figure~\ref{fig:use-cases-binder}), and the notebook can -- in principle -- be turned
 into a publication, or can be used to provide the required computation
@@ -108,8 +91,8 @@ specified what software is required to execute the notebook (Step 3
 in figure~\ref{fig:use-cases-binder}), the study is completely
 reproducible by anyone (Step 4 in figure~\ref{fig:use-cases-binder}).
 
-In this way, the notebook enables reproducibility of complex tasks
-with hardly any additional effort on the user side.
+In this way, the notebook \textbf{enables reproducibility} of complex tasks
+with minimal additional effort on the user side.
 The Binder project allows to execute such notebooks in
 tailored computational environments; an aspect of reproducibility that
 is not widely supported yet,
@@ -179,12 +162,6 @@ Some of the components and concepts important to \TheProject are detailed below.
   developed by the Jupyter core team. Kernels for other languages are maintained
   by third parties
 
-  \item \textbf{nbconvert} converts notebook files to a variety of other file
-  formats, including HTML and PDF, so that the content of a notebook can easily
-  be shared with people who don't have Jupyter software. nbconvert also powers
-  \textbf{nbviewer}, a web service which provides static HTML views of publicly
-  accessible notebooks.
-
   \item \textbf{JupyterHub} is a multi-user extension of the Jupyter Notebook.
   It runs on one or more notebook servers, for example at a research institution.
   Users can log in to author and run notebooks securely through their web
@@ -212,45 +189,7 @@ here, but a selection of projects which are relevant to
   the service builds the computational environment on demand, allowing them to
   execute and modify a copy of the notebooks.
   \textbf{repo2docker} \cite{repo2docker} and \textbf{BinderHub} \cite{binder} are components of the Binder
-  software.
-
-  \item \textbf{nbsphinx} \cite{Nbsphinx} integrates notebooks with the \emph{Sphinx}
-  documentation system, which is widely used for software documentation,
-  especially but not only for software written in Python.
-  This allows developers to write notebooks showing how to use their software,
-  then seamlessly make those notebooks part of their main documentation.
-
-  \item \textbf{nbval} \cite{nbval} is a plugin for the popular \emph{pytest} testing
-  framework to automatically execute notebooks and optionally check that the
-  output matches that saved in the file. While this is not a subsitute for a
-  test suite, it's valuable for documentation with code examples in notebooks.
-  If changes to the underlying tools mean the example no longer
-  works, testing with nbval will quickly show this, so that either the software
-  or the example can be corrected. This ensures that example code and
-  documentation don't get outdated.
-
-  \item \textbf{nbdime} \cite{nbdime} provides tools for comparing and merging notebooks.
-  These integrate with version control systems such as \emph{git}, which
-  are designed for plain text files and typically don't handle notebook files
-  well.
-
-  \item \textbf{Widgets} allow interactive output in the notebook which can
-  communicate with the kernel, updating values in the kernel and updating the
-  displayed output as code runs. \textbf{ipywidgets} \cite{ipywidgets} provides the main
-  implementation for the IPython kernel, while other packages such as
-  \textbf{bqplot} \cite{bqplot}, \textbf{ipyvolume} \cite{ipyvolume} and
-  \textbf{K3D} \cite{K3D} extend the framework to provide 2D and 3D visualisations.
-  Figure \ref{fig:ipywidgets-example} shows a simple example of interactive
-  widgets in use.
-
-  \item The \textbf{Voila} package \cite{Voila} enables the
-  sharing of notebook-based interactive dashboards for non-technical users.
-
-  \item The \textbf{Xeus} instrastructure \cite{Corlay2017} supports writing kernels
-  in C++. \textbf{xeus-cling} is one such kernel, running user code in C++,
-  and built upon CERN's C++ interpreter, "cling" \cite{Vassilev2012},
-  which has significant adoption in the High Energy Physics community.
-  xeus-cling is already in use for teaching the C++ programming language.
+  software. \TOWRITE{}{More here, as repo2docker is key}
 \end{itemize}
 
 \begin{figure}[ht]\centering
@@ -260,6 +199,10 @@ here, but a selection of projects which are relevant to
   the widgets and connects them to the function.}
   \label{fig:ipywidgets-example}
 \end{figure}
+
+\medskip
+\noindent\textbf{Binder for reproducibility}\\
+\TOWRITE{}{}
 
 \medskip
 \noindent\textbf{Jupyter as a basis for web services}\\
@@ -354,44 +297,11 @@ under-represented communities.
 \medskip
 \noindent\textbf{Related projects}
 
-EOSC-hub is a 33 million Euro H2020 project that started in January 2018 with
-the involvement of over 100 institutes. In three years the project is
-establishing the first elements of the European Open Science Cloud. EOSC-hub
-defines, creates and operates the integration and management system of the
-EOSC.  This integration and management system (the Hub) builds on mature
-processes, policies and tools from the leading European e-infrastructures to
-cover the whole life-cycle of services from planning to delivery. Through this
-management system online and `human' services, software and data are delivered
-towards researchers via a single EOSC Portal. The Marketplace already includes
-nearly 50 services from EOSC-hub provided by 3 e-infrastructure communities
-(EGI, EUDAT, INDIGO-DataCloud), and from 18 Research Infrastructures and
-scientific service providers. The catalogue of services is expected to
-radically grow in the next years through national, regional and EU
-initiatives.
-
-Integrating Jupyter-based services into EOSC provides an excellent opportunity
-for facilitating interoperability of EOSC services,
-bringing data and computation together in a flexible environment.
+\TOWRITE{}{The MyBinder.org federation}
 
 \subsubsection{Methodology}\label{sec:methodology}
 
-
-\textbf{Proposed improvements to core components of Jupyter (\WPref{core})}\\
-We plan to make technical changes to Jupyter software to better support
-% real-time collaboration (\taskref{core}{collaboration}),
-so that two or more people in different places or working on different
-devices can work together
-on the same notebook. This would significantly enhance the value of
-notebooks for collaborative research.
-We will also work on making Jupyter software accessible to as broad a
-% range of users as possible (\taskref{core}{accessibility}).
-
-Further work to bring the code behind JupyterHub and Binder closer together
-% (\taskref{core}{jh-bh-conv})
-will bring a range of benefits, allowing more
-flexible sharing of notebooks along with access to remote computing resources
-such as those available through EOSC.
-
+\textbf{Improving the robustness of reproducible environments (\WPref{reproducibility})}\\
 Finally, we are explicitly allocating time in \WPref{core} for maintaining
 Jupyter software, as well as new development
  % (\taskref{core}{maintenance}).
@@ -402,43 +312,36 @@ Being up front and explicit about this cost is critical to the sustainability
 of open source open science.
 
 \medskip
-\noindent\textbf{Proposed improvements to the Jupyter ecosystem (\WPref{ecosystem})}\\
-We further propose improvements to the wider Jupyter ecosystem for
-better scientific workflows. In particular, we have identified
-possible improvements to:
+\noindent\textbf{Broadening  (\WPref{impact})}\\
+In addition to improving how successfully and how often tools like repo2docker reproduce environments,
+we aim to broaden the impact of the tools by making them useful in more contexts.
+The existing software makes certain assumptions about where it will run,
+made for the purposes of limiting maintenance scope of the Binder project.
+As the project has matured, certain expansions of scope are appropriate,
+as seen in the existing demand for new features in the project.
+
+We further propose improvements to the wider Binder ecosystem
+to expand the impact of the tools in more contexts to be useful to more researchers
+and more institutions.
+In particular, we have identified planned improvements:
 
 \begin{itemize}
   \item Binder and its crucial software component \emph{repo2docker}
+  \item relaxing Kubernetes assumption
+  \item running on HPC
+  \item more buildpacks
     % (\taskref{ecosystem}{r2d-and-binder}).
-
-  \item Xeus, to better support the C++ programming language in notebooks
-    % (\taskref{ecosystem}{xeus-cpp}).
-
-  \item Interactive widgets, including tools for 3D visualisation to help
-    people make sense of large amounts of data
-    % (\taskref{ecosystem}{jupyter-widgets}).
-
-  \item Archiving of computational environments to allow reproducible research
-    with a focus on the long term
-     % (\taskref{ecosystem}{reproducibility}).
 
 \end{itemize}
 
-We may create new open source software projects in these tasks,
-but we will carefully review existing software, both in the
-Jupyter ecosystem and beyond, to avoid unnecessary duplication of effort.
-
-\medskip\noindent\textbf{Beyond the improvement to the Jupyter Project
-  (\WPref{applications}, \WPref{eosc}, \WPref{education})}\\
-Beyond the improvement to the Jupyter core and ecosystem software for EOSC, we plan on
+\medskip\noindent\textbf{Beyond the improvement to \TheProject tools
+  (\WPref{applications}, \WPref{education})}\\
+Beyond the improvement to the Binder tools for reproducility, we plan on
 \begin{itemize}
 \item Design, implementation, application, demonstration and
-  evaluation of new innovative EOSC services
-  in multiple demonstrators, that cover research fields such as
-  health, astrophysics, photon and neutron science, geosciences and
-  mathematics, and also interests of participating SMEs (\WPref{applications}).
-\item Operating a \emph{European Binder Service} on the EOSC-Hub and
-  enabling provision of Jupyter Services through the EOSC-Hub (\WPref{eosc}).
+  evaluation of multiple demonstrators, that cover research fields such as
+  \TOWRITE{}{photon and neutron science, geosciences},
+  and also interests of participating SMEs (\WPref{applications}).
 \item Producing \emph{training and education material} to disseminate
   the ability to do reproducible computational science using the tools
   we develop, among others (\WPref{education}).
