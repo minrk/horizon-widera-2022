@@ -2,21 +2,50 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Sample Task,
+  title=Towards quantifiable progress for reproducible software environments,
   % task id for references
-  id=task-id,
+  id=repo2docker-checker,
   % lead institution ID
   lead=SRL,
-  PM=1,
-  wphases={0-36},
+  PM=12,
+  wphases={0-24},
   % partner institution ID(s)
   % don't include lead here
-  partners={XXX}
-]
-  The task includes the following activities
+  partners={MP}
+  ]
+The \repotodocker tool is a key component of the Binder software for
+reproducibility \TOWRITE{Add link to relevant section in excellence/concept/...
+  XXX}. It can be used to create a software environment based on software
+dependency specification standards that are widely used.
+
+If the required software is specified -- for example through a
+\texttt{requirements.txt} file for Python dependencies -- then
+\repotodocker{} can create the software environment (currently limited to such
+environments in Docker images), within in which the main computation or data
+analysis can be reproduced.
+
+In this task, we will develop a tool that allows us to \emph{automatically} assess the
+reproducibility of software environments for software that is publicly available on
+Github, Bitbucket or Gitlab repositories.
+
+For every repository, the repo2docker-checker tool will report if an appropriate
+software could be compiled, or if a problem occurred. Software environments in
+repositories may be reproducible because the authors already use Binder to offer
+their repository in an interactive Binder environment. Or the software
+environment may be reproducible because the authors have followed standard
+conventions \TOWRITE{Should somewhere list these and refer to them here. XXX}
+and \repotodocker{} understands these conventions.
+
+The task includes the following activities:
   \begin{compactitem}
-  \item ...
-     % deliverable will be defined in the appropriate WorkPackage.tex
-    % (\localdelivref{deliv-id})
+  \item Design and develop the tool (working name
+    \softwarename{repo2docker-checker})
+  \item Develop a strategy and heuristic to evaluate success of the build
+    process.
+  \item Identify suitable software repositories for the study.
+  \item Automate the software reproduction process for the available
+    repositories.
+  \item Automate the analysis of the results, so the study can be repeated later.
   \end{compactitem}
+  The tool will be made available as open source (\localdelivref{deliv-id-repo2docker-checker-software}).
 \end{task}

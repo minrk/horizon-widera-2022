@@ -1,73 +1,81 @@
-\TOWRITE{ALL}{Proofread WP 1 Management pass 1}
 \begin{draft}
-\TOWRITE{PS (Work Package Lead)}{For WP leaders, please check the following (remove items
-once completed)}
 \begin{verbatim}
-- [ ] have all the tasks in this Work Package a lead institution?
-- [ ] have all deliverables in the WP a lead institution?
-- [ ] do all tasks list all sites involved in them?
-- [ ] does the table of sites and their PM efforts match lists of sites for each task?
-      (each site from the table is listed in all relevant tasks, and no site is listed
-      only in the table or only at some task)
+- [ ] distribute tasks for repo2docker to other workpackages
 \end{verbatim}
 \end{draft}
 
 \begin{workpackage}[
   id=reproducibility,
   wphases=0-36,
-  title=Improving robustness of reproducibility,
+  title=Improving robustness of reproducibility tools,
   short=Core,
-  swsites,
   lead=SRL,
   % % EGIRM=4,
   % % INSERMRM=4,
   % QSRM=15,
   % % SILRM=4,
-  SRLRM=30,
-  % % UIORM=4,
+  SRLRM=24,
+  UIORM=0,
+  MPRM=2,
+  QSRM=12,
   % UPSUDRM=14,
   % WTTRM=8,
   % XFELRM=16,
   % EPRM=13,
+  swsites,
 ]
 \begin{wpobjectives}
   \begin{compactitem}
     \item to better understand and evaluate successful reproduction of computational environments
-    \item to improve the practical reproducibility of environments constructed with \TheProject tools
-    \item to support and maintain core Jupyter and Binder software infrastructure in order to keep it healthy
-         and useful for open science
-    \item to develop new features in the core of Jupyter to bring it to a wider community
-    \item to develop new features in the core of Jupyter to make it more effective
-         in facilitating open science
-
+    \item to improve the practical reproducibility of environments constructed
+      with \TheProject tools
+    \item to support and maintain core Binder software infrastructure in order to keep it healthy
+         and useful for open science and reproducibility
  \end{compactitem}
 \end{wpobjectives}
 
 \begin{wpdescription}
-
 \TOWRITE{repurposed task from BOSSEE}
 
-Community-led open source software is critical to a sustainable future for open science.
-Commonly used tools make up a shared infrastructure,
-where investment in core components benefits the widest user community.
-\TheProject is centred around the Jupyter project,
-which is a collection of projects for interactive computing and
-communicating computational ideas.
+This Work package is focused on making \repotodocker{} do the things it does
+already \emph{better}, \emph{more robustly} and \emph{more sustainably}.
+(Orthogonal to those improvements, we plan to significantly extend the use cases
+for \repotodocker{} in \WPref{impact}.)
 
-This work package is focused on developing and maintaining
-the core of Jupyter.
-In particular, we will help maintain these projects to meet the needs of the
-Jupyter community, with a focus on needs for open science.
-To serve the needs of \TheProject,
-Jupyter core infrastructure will need improvements
-to security, performance, and scalability,
-which will be provided in \localtaskref{maintenance}.
-In addition, we will develop new features in the core of Jupyter
-to bring it to a wider audience,
-and to improve its usefulness to those working toward open science practices,
-including via collaboration features (\localtaskref{collaboration})
-and accessibility (\localtaskref{accessibility}).
+To be able to asses the impact of our planned improvements, we need to have a
+metric. Task \localtaskref{repo2docker-checker} will create this
+for us. In addition to the evaluation of the improvements in this proposal, this
+can be used more generally as an indicator for reproducibility of software
+environments.
 
+One major improvement to the existing capabilities of \repotodocker is the
+\emph{time-machine} functionality, and this is implemented in \localtaskref{repo2docker-timemachine}.
+
+
+Open source software needs ongoing maintenance to adapt to changing requirements
+and dependencies. We schedule a certain amount of time for this in task \localtaskref{maintenance}.
+
+% the existing functionality of repodocker.
+% Community-led open source software is critical to a sustainable future for open science.
+% Commonly used tools make up a shared infrastructure,
+% where investment in core components benefits the widest user community.
+% \TheProject is centred around the Jupyter project,
+% which is a collection of projects for interactive computing and
+% communicating computational ideas.
+% 
+% This work package is focused on developing and maintaining
+% the core of Jupyter.
+% In particular, we will help maintain these projects to meet the needs of the
+% Jupyter community, with a focus on needs for open science.
+% To serve the needs of \TheProject,
+% Jupyter core infrastructure will need improvements
+% to security, performance, and scalability,
+% which will be provided in \localtaskref{maintenance}.
+% In addition, we will develop new features in the core of Jupyter
+% to bring it to a wider audience,
+% and to improve its usefulness to those working toward open science practices,
+% including via collaboration features (\localtaskref{collaboration})
+% and accessibility (\localtaskref{accessibility}).
 
 \end{wpdescription}
 
@@ -86,12 +94,16 @@ and accessibility (\localtaskref{accessibility}).
   %   {Some Deliverable}
   % \end{wpdeliv}
 
-  \begin{wpdeliv}[due=24,miles=prototype,id=jupyter-contributions,dissem=PU,nature=OTHER,lead=SRL]
-    {Contributions to core Jupyter and JupyterHub software}
-  \end{wpdeliv}
+  % (\localdelivref{deliv-id})
 
-  \begin{wpdeliv}[due=36,miles=final,id=jupyter-releases,dissem=PU,nature=OTHER,lead=SRL]
-    {Public releases of core Jupyter and JupyterHub software supporting \TheProject services}
+  \begin{wpdeliv}[due=24,miles=prototype,id=deliv-id-repo2docker-checker-software,dissem=PU,nature=OTHER,lead=SRL]
+    {Release software tool for checking of reproducibility of software
+      environments (\texttt{repo2docker-checker})}
+  \end{wpdeliv}
+  
+  \begin{wpdeliv}[due=36,miles=final,id=software-tools-release,dissem=PU,nature=OTHER,lead=SRL]
+    {Final open source release of \TheProject tools, completed with automatic
+      testing and documentation.}
   \end{wpdeliv}
 
 
