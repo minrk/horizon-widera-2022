@@ -1,14 +1,11 @@
-\TOWRITE{ALL}{Proofread WP 1 Management pass 1}
 \begin{draft}
 \TOWRITE{PS (Work Package Lead)}{For WP leaders, please check the following (remove items
 once completed)}
 \begin{verbatim}
-- [ ] have all the tasks in this Work Package a lead institution?
-- [ ] have all deliverables in the WP a lead institution?
-- [ ] do all tasks list all sites involved in them?
-- [ ] does the table of sites and their PM efforts match lists of sites for each task?
-      (each site from the table is listed in all relevant tasks, and no site is listed
-      only in the table or only at some task)
+- [ ] discuss what the build packs are and where they go
+- [ ] how we structure and budget different tasks in this WP
+- [ ] needs review and more technical detail
+- [ ] add deliverable(s)
 \end{verbatim}
 \end{draft}
 
@@ -24,7 +21,8 @@ once completed)}
   % EPRM=21,
   % QSRM=20,
   % SILRM=4,
-  SRLRM=30,
+  SRLRM=27,
+  MPRM=18
   % % UIORM=4,
   % UPSUDRM=2,
   % WTTRM=6,
@@ -32,20 +30,65 @@ once completed)}
   % EPRM=20,
 ]
 \begin{wpobjectives}
+  This work package extends the functionality of the \TheProject tools for
+  reproducibility to broaden its applicability and increase impact.
+  \WPref{applications} exploits these technological advances 
+  in real world use cases.
+
+  The objectives of this work package are to
  \begin{compactitem}
-   \item develop projects for creating open science services built out of Jupyter components and exploring new models for such services
-   \item develop workflows for data science using Jupyter software
+ \item remove the dependency of \repotodocker{} on Kubernetes
+ \item support container technologies other than Docker
+ \item \TOWRITE{}{Something with Binderhub?}
+ \item extend the range of software specification standards that are recognised
+   and supported by \repotodocker{} \TOWRITE{}{Can we give an example here?}
+ \item enable access to data from data sources outside the container.
  \end{compactitem}
 \end{wpobjectives}
 
 \begin{wpdescription}
+pOne of the design decision that have led to the current Binder software stack is
+to constrain the supported infrastructure to a few key components. These
+include:
 
 \begin{compactitem}
-   \item BinderHub
-   \item Relax kubernetes
-   \item binder@home
-   \item new buildpacks
-   \item data access
+\item Software environments can only be created inside Docker container
+\item To run and orchestrate (multiple) Docker containers, a Kubernetes system must
+be available
+\item The user must interact with Binder environments through a Binderhub
+  installation
+\item There is no Binders-specific provision to access (substantial) data sets
+  from inside te container. \TODO{HF: What prevents us from
+    a data-publishing application at the moment? How to express this without
+    making the impression one couldn't use \softwarename{curl/wget} to fetch
+    data, etc. }
+\end{compactitem}
+
+The benefits of such a restrictive approach are that the software development
+and maintenance effort is kept small: the wider the range of supported
+infrastructure that the Binder tools can be deployed on, the higher the
+complexity.
+
+At the same time, these restrictions prevent the following scenarios:
+\begin{compactitem}
+\item to run the Binder software on systems where Kubernetes is not available (such as
+  the Desktop of a scientist). A related use case is ``Binder@home''
+  \TODO{Provide link to Binder at home task in
+   \WPref{applications}}.
+\item to use Binder on systems where Docker cannot be used. A use case for this
+  is to create reproducible environments on HPC installations. The HPC
+  administrators generally avoid use of Docker for security reasons, but much
+  prefer to support container technologies that can be executed with
+  user-only privileges). \TODO{Point to task in applications}
+\item Use of Binder for software environments that use \TOWRITE{}{insert buildback
+    example / community / software system}
+\item Access to and use of significant amounts data from inside the software
+  environment is not supported. An important use that cannot be supported due to
+  this restriction is that of ``data publishing'': the idea is that a
+  (potentially large and/or complex) dataset is published \emph{together} with
+  software that encodes the necessary knowledge to extract meaningful data from
+  that data set. A Binder environment would make this data set accessible in an
+  interactive environment. \TODO{Point to data publishing use case(s)}
  \end{compactitem}
 
 % Open source software in general, and Jupyter in particular,
@@ -80,8 +123,10 @@ once completed)}
 
 \begin{tasklist}
 % add tasks from task directory here
+\input{tasks/buildpacks}
 \input{tasks/constraints}
 \input{tasks/patterns}
+
 \end{tasklist}
 
 
