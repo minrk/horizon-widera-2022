@@ -1,0 +1,87 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[
+  title=Binder at HPC facilities,
+  % task id for references
+  id=binder-at-hpc,
+  % lead institution ID
+  lead=SRL,
+  PM=1,
+  wphases={0-36},
+  % partner institution ID(s)
+  % don't include lead here
+  partners={XXX}
+]
+\paragraph*{Context:}
+Reproducibility of data created with HPC resources is difficult. In addition to
+a specification and access to the actual (simulation) software and dependencies,
+one may also need specialised HPC hardware to be able to execute the software.
+
+The notebook interface -- which works well for many examples in computational and
+data science -- may not be appropriate for HPC applications, where jobs of
+substantial run-time are typically submitted to a queueing system, which will
+trigger execution of the (parallel) job, once the required resources have become
+available.
+
+It is outside the scope of this proposal to find and implement a generic
+reproducibility approach for HPC use cases. Nevertheless, we propose to explore
+some aspects of HPC-reproducibility already to influence the development of Binder,
+and start the - probably iterative - process of finding a good solution. 
+
+\paragraph*{Strategy:}
+We focus on reproducible execution of an HPC application to compute data as the step of
+novelty here. This may well be without using notebooks, but consist of the
+building of the software environment, and submission of a job making use of this
+environment to the HPC system's queue.
+
+We assume for this to work that the user (who wants to reproduce some results)
+needs to logon to the HPC resource of their choice, and uses repo2docker to
+create a suitable software container, and starts execution of those containers
+'manually', for example through submission of a compute job to the Slurm
+queueing system. We also assume that the hardware required for this reproduction
+is available on the HPC system.
+
+\paragraph*{Activity}: We will use repo2docker to automate creation of
+reproducible software environment on an HPC system. If no parallelism is
+required, this is similar to the Binder@home scenario
+(\localtaskref{binder-at-home}). Shared memory parallelisation, using for
+example OpenMP, should work well with approach.
+
+A main task here will be to explore the feasibility of using distributed
+parallelisation (for example through MPI) where for the execution of an
+MPI-program the processes on the nodes run in containers but communicate via MPI
+as usual. We evaluate the situation here with software that allows
+MPI-parallelisation (such as Octopus). Subsequently, we will share our experience with
+reproducible software environments in HPC contexts. \TODO{Add link to report
+  deliverable}.
+
+\paragraph*{Challenges}: We expect that we need to use a container technology
+that is widely accepted at HPC sites (such as for example Singularity): Docker
+on HPC systems is difficult due to the root-user requirements.
+
+Another challenge is that of using accelerators such as GPU cards, which are
+installed on the host, but need to be instructed from the software running
+inside the container. \TODO{Add links here to relevant papers.}
+
+For HPC systems, there are sometimes specialised drivers for high-performance
+network cards: can these be used from the container environment, and if not what
+is the performance impact?
+
+Should hardware requirements be archived in the reproducible repository? If so,
+what specification should we use?
+
+The existing buildpacks that repo2docker supports \TODO{Add link to overview of
+  supported languages etc}, may need to be extended for HPC specific software
+provision (such as Spack or Easybuild).
+
+% The re-execution of parallel software may create significant costs, and thus
+% authentication may be necessary.
+
+%   The task includes the following activities
+%   \begin{compactitem}
+%   \item ...
+%      % deliverable will be defined in the appropriate WorkPackage.tex
+%     % (\localdelivref{deliv-id})
+%   \end{compactitem}
+\end{task}
