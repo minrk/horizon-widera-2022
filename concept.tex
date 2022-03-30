@@ -200,8 +200,52 @@ here, but a selection of projects which are relevant to
   \label{fig:ipywidgets-example}
 \end{figure}
 
+
+\subsubsection{Project Binder}
+
+\TOWRITE{}{Turn the following ideas into full sentences.}
+
+\paragraph{Relationship to Jupyter}
+\begin{compactitem}
+\item Binder is part of Jupyter
+\item Bindersubproject (within the Jupyter project) consists of
+\begin{compactitem}
+\item Repo2docker
+\item BinderHub
+\end{compactitem}
+\item Binder project is operating within Jupyter ecosystem
+\item But not confined to notebooks
+\item Focus for this proposal is on \repotodocker{} part
+\item \repotodocker{} solves software environment question in generic way
+\end{compactitem}
+\TODO{Add image that depicts this Jupyter/Binder relation ship}.
+
+\paragraph{Basic functionality of Binder}
+
+\begin{compactitem}
+\item Binder is \TOWRITE{}{what?} User entry point (for example on mybinder.org) is web interface \TODO{Add image of mybinder.org webpage?}
+\item Binder is passed a URL from the user, for example a URL of a git repository with notebooks
+\item Binder is asking \repotodocker{} to create a docker container in which the notebooks from the repository can be executed
+\item \repotodocker{} searches the repository for specifications of software requirements (see \ref{repo2docker-supported-software-specifications}).
+\item \repotodocker{} composes a Dockerfile that contains all the identified commands to install software
+\item \repotodocker{} builds the Docker image based on the Dockerfile
+\item \ldots \TOWRITE{}{Continue, and explain role of BinderHub and Kubernetes along the way}.
+\end{compactitem}
+
+\TODO{Explain: mybinder.org (service) is not binder (software)}
+
+\paragraph{Supported software specification formats}
+\label{repo2docker-supported-software-specifications}
+\begin{compactitem}
+\item Python packages (\softwarename{requirements.txt})
+\item Conda packages (\softwarename{environment.yml})
+\item \ldots
+\end{compactitem}
+
+\TOWRITE{}{}
+
 \medskip
-\noindent\textbf{Binder for reproducibility}\\
+\paragraph{Binder for reproducibility}
 \TOWRITE{}{}
 
 \medskip

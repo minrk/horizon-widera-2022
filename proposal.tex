@@ -48,6 +48,7 @@
 
 \newcommand{\softwarename}[1]{\texttt{#1}}
 \newcommand{\repotodocker}{\softwarename{repo2docker}}
+\newcommand{\binderhub}{\softwarename{BinderHub}}
 
 
 % longtaskref: T1.2: Title of task
@@ -56,6 +57,27 @@
 
 
 \begin{document}
+\begin{draft}
+
+
+\section*{Guidelines for proposal co-authors}
+
+How do we describe the tools?
+\begin{itemize}
+\item  ``Binder tools'' - these are in particular \repotodocker{} and
+  \binderhub{}
+
+  We have a dedicated section describing the tools in 
+
+  \vfill This page is only visible in \texttt{draft} mode (i.e. when using
+  \texttt{make draft}).
+  \clearpage
+\end{itemize}
+
+
+  
+\end{draft}
+
 \begin{proposal}[
   % participants
   PI=mrk,
@@ -209,7 +231,11 @@ The information provided here will be used to judge the operational capacity.}
 \section{Ethics and Security}
 \input{ethics_security}
 \end{proposal}
-\TOWRITE{ALL}{Search through final.pdf ('make final') and look for questions marks ?? and XX and YY and XYZ as place holders where people intended to later add a link, or where a link is broken.}
+\TOWRITE{ALL}{Search through final.pdf ('make final') and look for questions
+  marks ?? and XX and YY and XYZ as place holders where people intended to later
+  add a link, or where a link is broken.}
+
+
 \end{document}
 
 %%% Local Variables:
