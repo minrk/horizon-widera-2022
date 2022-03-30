@@ -13,33 +13,38 @@
   % don't include lead here
   partners={MP}
   ]
-The \repotodocker tool is a key component of the Binder software for
-reproducibility \TOWRITE{Add link to relevant section in excellence/concept/...
-  XXX}. It can be used to create a software environment based on software
-dependency specification standards that are widely used.
+  The \repotodocker{} tool is a key component of the Binder software for
+  reproducibility (see \ref{binder-how-does-it-work}). It can be used to create
+  a software environment based on software dependency specification standards
+  (see \ref{repo2docker-supported-software-specifications}) that are widely used.
 
-If the required software is specified -- for example through a
-\texttt{requirements.txt} file for Python dependencies -- then
-\repotodocker{} can create the software environment (currently limited to such
-environments in Docker images), within in which the main computation or data
-analysis can be reproduced.
+  If the required software is specified -- for example through a
+  \texttt{requirements.txt} file for Python dependencies -- then \repotodocker{}
+  can create the software environment (currently limited to such environments in
+  Docker images), within in which the main computation or data analysis can be
+  reproduced.
 
-In this task, we will develop a tool that allows us to \emph{automatically} assess the
-reproducibility of software environments for software that is publicly available on
-Github, Bitbucket or Gitlab repositories.
+  In this task, we will develop a tool -- with working name
+  \softwarename{repo2docker-checker} -- that allows us to \emph{automatically}
+  assess the reproducibility of software environments for software that is
+  publicly available on Github, Bitbucket or Gitlab repositories.
 
-For every repository, the repo2docker-checker tool will report if an appropriate
-software could be compiled, or if a problem occurred. Software environments in
-repositories may be reproducible because the authors already use Binder to offer
-their repository in an interactive Binder environment. Or the software
-environment may be reproducible because the authors have followed standard
-conventions \TOWRITE{Should somewhere list these and refer to them here. XXX}
-and \repotodocker{} understands these conventions.
+  For every repository, the \softwarename{repo2docker-checker} tool will report if an
+  appropriate software could be compiled, or if a problem occurred. Software
+  environments in repositories may be reproducible because the authors already
+  use Binder to offer their repository in an interactive Binder environment. Or
+  the software environment may be reproducible because the authors have followed
+  standard conventions (see \ref{repo2docker-supported-software-specifications})
+  and \repotodocker{} understands these conventions.
 
 The task includes the following activities:
-  \begin{compactitem}
-  \item Design and develop the tool (working name
-    \softwarename{repo2docker-checker})
+\begin{compactitem}
+  \item Through manual inspection of selected repositories, identify common
+    failure modes of building of the software environment (such as for example
+    not specifying the Python version to use.)
+  \item Design and develop the \softwarename{repo2docker-checker}. A prototype
+    exists.\footnote{https://github.com/minrk/repo2docker-checker}
+  \item Where possible, identify for what reason the software build has failed.
   \item Develop a strategy and heuristic to evaluate success of the build
     process.
   \item Identify suitable software repositories for the study.
@@ -47,5 +52,11 @@ The task includes the following activities:
     repositories.
   \item Automate the analysis of the results, so the study can be repeated later.
   \end{compactitem}
-  The tool will be made available as open source (\localdelivref{deliv-id-repo2docker-checker-software}).
+  
+  The tool will be made available as open source
+  (\localdelivref{deliv-id-repo2docker-checker-software}). Some of the findings
+  here will contribute to the \TODO{deliverable XXX in WP5 - best practice for
+    reproducible repositories with Binder.} At the end of the project, we will
+  provide a summary of improvements in reproducibility we have achieved through
+  changes in the Binder tools.
 \end{task}

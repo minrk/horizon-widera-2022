@@ -9,57 +9,32 @@
 
 Often, a repository of scientific results may
 specify which software library is required (such as the Python library
-\softwarename{pandas}), but not which version. A software environment creation
-tool -- such as \repotodocker -- can then attempt to install the most recent
-version of \softwarename{pandas}. This is usually the intention of the authors,
-and was correct at the time the repository was created.  However, as time moves
-on, the interface, behaviour and dependence on other packages of
-\softwarename{pandas} will change, and at some point an automatic build of the
-software for the whole repository may fail because of conflicting dependencies.
+\softwarename{pandas}), but not which version.
+
+A software environment creation tool -- such as \repotodocker{} -- can then
+attempt to install the most recent version of \softwarename{pandas}. This is
+usually the intention of the authors, and was correct at the time the repository
+was created. However, as time moves on, the interface, behaviour and dependence
+on other packages of \softwarename{pandas} will change, and at some point an
+automatic build of the software for the whole repository may fail because of
+conflicting dependencies.
 
 We have found through anecdotal evidence that these problems can be overcome if a
 \softwarename{pandas} version can be chosen that was the most recent at the time
 when the repository was created.
 
-In this task, we will teach \repotodocker to establish the data of publication
+A related issue is that the Python version itself (such as 3.8, 3.9 or 3.10) may not
+be specified at all.
+
+In this task, we will teach \repotodocker{} to establish the date of publication
 (or last modification) of the repository, to determine the appropriate version
 of software libraries from that time, and to select libraries with those
-versions if no specific version is specified.
+versions if no specific version is specified. 
 
-XXX
+In the context of Python packages, we can use the
+\softwarename{pypi-timemachine}
+package.\footnote{\url{https://github.com/astrofrog/pypi-timemachine}}.
 
-
-\TOWRITE{There is probably more to be done?}
-
-\TOWRITE{HF: The following is good - but should probably go elsewhere.}
-  Running someone else's analyses is a particularly difficult problem.
-
-  There are differences between operating systems, versions of installed
-  software and access to the required data sets.
-  
-  These challenges mean that is currently considered to be beyond the scope of
-  an expert peer reviewer to verify data science analysis codes before
-  publication.
-  
-  BinderHub, part of Project Jupyter, enables one-click running of git repositories.
-
-  BinderHub provides a web interface to the repo2docker tool.
-  \TOWRITE{End of section to move elsewhere.}
-
-
-  \TOWRITE{HF: The following items are all good. I think some of the should be
-    scattered across the other workpackages.}
-  
-  The task includes the following activities
-  \begin{compactitem}
-  \item extend repo2docker with support for execution on cloud resources
-  \item extend repo2docker with support for execution on HPC resources with Docker support
-  \item improved "first use" experience of running repo2docker locally
-  \item add support for using archives such as Zenodo as source for repo2docker and BinderHub
-  \item define procedures and recommendations for long term reproducibility and sustainability of repo2docker compatible repositories
-  \item create educational material describing repo2docker and its benefits to researchers
-  \item Enable Openshift based deployments of BinderHub
-  \item User surveys about pain points using BinderHub
-  \item User authentication in BinderHub
-  \end{compactitem}
+\TODO{@QS, @min - Comment on other software sources - conda, ... ?}
 \end{task}
+
