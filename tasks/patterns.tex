@@ -13,11 +13,33 @@
   % don't include lead here
   partners={MP}
 ]
-  The task includes the following activities
+The task includes the following activities
   \begin{compactitem}
   \item Data access (BinderHub deployment, possibly mostly docs)
   \item Restrict access to BinderHub through authentication
-    - useful for many institutes who want to offer reproducibility services but
-    restrict their usage
+    - useful for many institutes who want to offer reproducibility services and
+    data hosting but need to limit or control access to those systems. 
+  \item Allow to use Binder without a BinderHub installation. A use case for
+    this is to run a Binder service on a local Desktop (see
+    \taskref{applications}{binder-at-home}).
+  \item Allow to use Binder without Jupyter notebooks.
+
+    Binder's original design goal was to allow execution of notebooks within a
+    software requirement that provides all the software required by the
+    notebook. This may include compile and highly customised software, which
+    might produce output files, which are then processed and visualised in the
+    notebook.
+
+    Here, we will provide the foundations for reproducibility work that is
+    non-interactive and doesn't need Jupyter notebook. A use case for this is
+    reproducibility at High Performance Computing facilities, where often the
+    computational tasks cannot be carried out interactively (see \taskref{applications}{binder-at-hpc}).
+
+    % Should we say more here? @min?
+    %
+    % This will require creation of a program that creates the required software
+    % environment, and - if a notebook is used - start a notebook server to which
+    % the user can connect.
+
   \end{compactitem}
 \end{task}
