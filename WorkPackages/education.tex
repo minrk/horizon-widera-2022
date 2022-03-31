@@ -1,4 +1,4 @@
-\TOWRITE{ALL}{Proofread WP 1 Management pass 1}
+\TOWRITE{ALL}{Proofread WP 5 Management pass 1}
 \begin{draft}
 \TOWRITE{PS (Work Package Lead)}{For WP leaders, please check the following (remove items
 once completed)}
@@ -15,32 +15,37 @@ once completed)}
 \begin{workpackage}[id=education,wphases=0-36,swsites,
   title=Education and Dissemination,
   short=Education,
-  % lead=INSERM,
-  % CDSRM=3,
-  % EGIRM=2,
-  % % EPRM=TBC,
-  % INSERMRM=12,
-  % QSRM=4,
-  % SILRM=5,
-  SRLRM=13,
-  % UIORM=12,
-  % UPSUDRM=3,
-  % WTTRM=3,
-  % XFELRM=8,
-  % EPRM=3,
+  lead=IFR,
+  IFRRM=8,
+  MPRM=6,
+  SRLRM=6,
+  QSRM=3,
+  UIORM=9
 ]
 \begin{wpobjectives}
-  The objective of this work package is to develop the community at the
-  European scale, foster cross team collaboration, spread the
-  expertise, and engage the greater community to participate in the
-  definition and refinement of the requirements, and the implementation and use of the
-  produced solutions. This includes:
+  The objective of this work package is to disseminate the results of this
+  project, including the technical advances and guidance for best practice for
+  reproducible science. This includes education of researchers about the value of
+  open science, reproducibility and re-usability as well as the possibilities of
+  integrating Binder tools in their workflows.
+
+  Beyond this activity acting from the project members to the wider community of
+  scientists, we also plan to seek input from scientists to the project: both in
+  terms of requirements for practical reproducibility in their domain and in
+  technical contributions -- for example through merge requests for Binder
+  tools, or open source documentation of best practice for reprocudible software
+  environments.
+
+  This includes:
  \begin{compactitem}
-   \item Ensure awareness of the results in the user community;
-   \item Train researchers in best practices for open and reproducible science
-   \item Educate the community on the value of open science
-   \item Produce training and education material to disseminate the ability to do reproducible computational science using the tools we develop.
-   \item Define individual exploitation plans;
+   \item Ensure awareness of the results of the project in the user community,
+     and in particular in those groups that act as educators and multipliers of
+     knowldege (such as the Carpentries and research infrastructure organisations).
+   \item Educate the community on the value of open science, and in particular
+   \item Train researchers in best practices for open and reproducible science.
+   \item Produce training and education material to disseminate the ability to
+     do reproducible computational science using the tools we develop.
+   % \item Define individual exploitation plans; ? XXX
  \end{compactitem}
 \end{wpobjectives}
 
@@ -50,30 +55,67 @@ once completed)}
 
 \begin{wpdescription}
 
-Open science is entirely dependent on researchers adopting open practices.
-In \TheProject, we are developing tools to facilitate these practices,
-but they only work if researchers actually adopt them.
-Going further, it is also clear that open science is not just of value
-to researchers: one of the largest benefits of open science is that it makes
-science accessible to the broader public who may not be members of the
-research community.
+  Open science and reproducible science is entirely dependent on researchers
+  adopting open practices. In \TheProject, we improve and developing tools that
+  can facilitate these practices, but they only work if researchers actually adopt
+  them. For researchers to adopt the practices, they need to (i) know about them
+  and (ii) use them.
 
-To this end, in addition to training researchers, we will also train the public in how to
-make use of the open science research and services facilitated by \TheProject.
-This will be done through regular open dissemination and training workshops, as well as
-by producing and maintaining material for online courses and documentation.
+  We address challenge in multiple ways:
+  \begin{enumerate}
+    \item the philosophy of the Binder tools is to respect existing standards and
+      best practice (and not to invent additional syntax or requirements). It is
+      thus possible to use the Binder tools (to recreate a software environment)
+      even if the repository authors did not anticipate the use of Binder, or
+      knew about their existence. In the best possible scenario, a
+      \emph{scientist can use Binder with zero additional effort}.
 
-\TheProject will develop, through WP4, a number of applications and demonstrators that
-will be disseminated in different ways.
-We will also participate in the concertation activities,
-consultations and other meetings and events of the European
-E-Infrastructure projects.
+    \item In this work package, we produce education materials and carry out
+      education activities to spread the knowledge about \emph{good practice for
+        reproducibility and re-usability in science}, such as for example
+      automation of all analysis steps, and complete documentation of the
+      required software stack. Only one aspect of this training is to show how
+      Binder can help with reproducibility.
+    
+      Attendees and users following such training and advice will create more
+      reproducible artifacts. If they - or later users of their published
+      artifacts - want to use Binder to reproduce or re-use the results, they
+      can. Even if they do not, we will have achieved an improvement of the
+      reproducibility of scientific artifacts.
+  \end{enumerate}
 
-All the code, documents, test and build infrastructure produced as
-part of the project will be made available as open source.
+  % HF: I think training the wider (non-scientist) public about Binder is going
+  % too far?
+  % 
+  % Going further, it is also clear that open science is not just of value
+  % to researchers: one of the largest benefits of open science is that it makes
+  % science accessible to the broader public who may not be members of the
+  % research community.
+  % 
+  % To this end, in addition to training researchers, we will also train the
+  % public in how to make use of the open science research and services
+  % facilitated by \TheProject. This will be done through regular open
+  % dissemination and training workshops, as well as by producing and maintaining
+  % material for online courses and documentation.
+
+\TheProject will develop, through \WPref{applications}, a number of demonstrator repositories that
+show examples of reproducibility. We use those activities to inform and evaluate
+the
+technical improvement to the Binder tools in \WPref{reproducibility} and
+\WPref{impact}. We also use those studies to create tutorials and \emph{best practice guides
+  for reproducibility} in this work package.
+
+We will also participate in the concertation activities, consultations and other
+meetings and events of the European E-Infrastructure projects. \TODO{Do we still
+want this sentence? If so, mention EGI here?}
+
+As with all the code, test and build infrastructure produced as part of the
+project, we will also make all documentation open source. Our documentation --
+which includes best practice guides for reproducibility -- can thus be modified
+and improved after the end of the project to react to new developments.
+
 Open access to all publications resulting from the project will be ensured.
-
-
+\TODO{Should this sentence go into a data / IPR management plan?}
 \end{wpdescription}
 
 \begin{tasklist}
