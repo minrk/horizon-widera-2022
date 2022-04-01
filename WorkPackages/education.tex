@@ -9,6 +9,9 @@ once completed)}
 - [ ] does the table of sites and their PM efforts match lists of sites for each task?
       (each site from the table is listed in all relevant tasks, and no site is listed
       only in the table or only at some task)
+
+- [ ] Binder / repo2docker documentation: tutorials and best practice guides -
+      have we got this covered?
 \end{verbatim}
 \end{draft}
 
@@ -16,9 +19,9 @@ once completed)}
   title=Education and Dissemination,
   short=Education,
   lead=IFR,
-  IFRRM=8,
+  IFRRM=10,
   MPRM=6,
-  SRLRM=6,
+  SRLRM=7,
   QSRM=3,
   UIORM=9
 ]
@@ -45,7 +48,9 @@ once completed)}
    \item Train researchers in best practices for open and reproducible science.
    \item Produce training and education material to disseminate the ability to
      do reproducible computational science using the tools we develop.
-   % \item Define individual exploitation plans; ? XXX
+   \item Address the shortage of researchers and research support staff trained in reproducibility.
+     % \item Define individual exploitation plans; ? XXX
+     \item \TODO{Do we need to say something about policies here?}
  \end{compactitem}
 \end{wpobjectives}
 
@@ -68,7 +73,7 @@ once completed)}
       thus possible to use the Binder tools (to recreate a software environment)
       even if the repository authors did not anticipate the use of Binder, or
       knew about their existence. In the best possible scenario, a
-      \emph{scientist can use Binder with zero additional effort}.
+      \emph{scientist can benefit from Binder tools with zero additional effort}.
 
     \item In this work package, we produce education materials and carry out
       education activities to spread the knowledge about \emph{good practice for
@@ -78,8 +83,8 @@ once completed)}
       Binder can help with reproducibility.
     
       Attendees and users following such training and advice will create more
-      reproducible artifacts. If they - or later users of their published
-      artifacts - want to use Binder to reproduce or re-use the results, they
+      reproducible artifacts. If they -- or later users of their published
+      artifacts -- want to use Binder to reproduce or re-use the results, they
       can. Even if they do not, we will have achieved an improvement of the
       reproducibility of scientific artifacts.
   \end{enumerate}
@@ -98,31 +103,41 @@ once completed)}
   % dissemination and training workshops, as well as by producing and maintaining
   % material for online courses and documentation.
 
-\TheProject will develop, through \WPref{applications}, a number of demonstrator repositories that
-show examples of reproducibility. We use those activities to inform and evaluate
-the
-technical improvement to the Binder tools in \WPref{reproducibility} and
-\WPref{impact}. We also use those studies to create tutorials and \emph{best practice guides
-  for reproducibility} in this work package.
+  The \TheProject project will develop, through \WPref{applications}, a number
+  of demonstrator repositories that show examples of reproducibility in
+  different scientific domains. (We use
+  those activities to inform and evaluate the technical improvement to the
+  Binder tools in \WPref{reproducibility} and \WPref{impact}). We also use those
+  studies to create tutorials and \emph{best practice guides for
+    reproducibility} (\localtaskref{online-resources}) in this work package, and
+  offer interactive workshops (\localtaskref{workshops}) to help disseminate the
+  content more effectively.
 
-We will also participate in the concertation activities, consultations and other
-meetings and events of the European E-Infrastructure projects. \TODO{Do we still
-want this sentence? If so, mention EGI here?}
+  As with all the code, test and build infrastructure produced as part of the
+  project, we will also make all documentation open source. Our documentation --
+  which includes best practice guides for reproducibility -- can thus be
+  modified and improved after the end of the project to react to new
+  developments (\delivref{education}{education-materials2}).
 
-As with all the code, test and build infrastructure produced as part of the
-project, we will also make all documentation open source. Our documentation --
-which includes best practice guides for reproducibility -- can thus be modified
-and improved after the end of the project to react to new developments.
+  We will engage with the scientific community to support them in making their
+  work more reproducible with Binder tools, and to benefit from the interaction
+  to tailor our work to scientific community as broad as possible
+  (\localtaskref{community-support}).
 
-Open access to all publications resulting from the project will be ensured.
-\TODO{Should this sentence go into a data / IPR management plan?}
+  We will also participate in the concertation activities, consultations and
+  other meetings and events of the European E-Infrastructure projects. \TODO{Do
+    we still want this sentence? If so, mention EGI here?}
+
+  Open access to all publications resulting from the project will be ensured.
+  \TODO{Should this sentence go into a data / IPR management plan?}
 \end{wpdescription}
 
 \begin{tasklist}
 % add tasks from task directory here
 \input{tasks/website-general}
-\input{tasks/training}
 \input{tasks/online-resources}
+\input{tasks/training}
+\input{tasks/community-support}
 \end{tasklist}
 
 
