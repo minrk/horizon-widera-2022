@@ -1,4 +1,4 @@
-# Supporting Open and Reproducible Computational Environments Relevent to Education and Research (SORCERER)
+# Supporting Open and Reproducible Computational Environments (SOURCE)
 
 Links:
 
