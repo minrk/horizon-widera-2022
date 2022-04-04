@@ -9,6 +9,9 @@ once completed)}
 - [ ] does the table of sites and their PM efforts match lists of sites for each task?
       (each site from the table is listed in all relevant tasks, and no site is listed
       only in the table or only at some task)
+
+- [ ] Binder / repo2docker documentation: tutorials and best practice guides -
+      have we got this covered?
 \end{verbatim}
 \end{draft}
 
@@ -16,9 +19,9 @@ once completed)}
   title=Education and Dissemination,
   short=Education,
   lead=IFR,
-  IFRRM=8,
+  IFRRM=10,
   MPRM=6,
-  SRLRM=6,
+  SRLRM=7,
   QSRM=3,
   UIORM=9
 ]
@@ -29,14 +32,14 @@ once completed)}
   open science, reproducibility and re-usability as well as the possibilities of
   integrating Binder tools in their workflows.
 
-  Beyond this activity acting from the project members to the wider community of
+  Beyond this activity, which is directed from the project members to the wider community of
   scientists, we also plan to seek input from scientists to the project: both in
   terms of requirements for practical reproducibility in their domain and in
   technical contributions -- for example through merge requests for Binder
   tools, or open source documentation of best practice for reprocudible software
   environments.
 
-  This includes:
+  Our education and dissemination objectives includes:
  \begin{compactitem}
    \item Ensure awareness of the results of the project in the user community,
      and in particular in those groups that act as educators and multipliers of
@@ -45,7 +48,9 @@ once completed)}
    \item Train researchers in best practices for open and reproducible science.
    \item Produce training and education material to disseminate the ability to
      do reproducible computational science using the tools we develop.
-   % \item Define individual exploitation plans; ? XXX
+   \item Address the shortage of researchers and research support staff trained in reproducibility.
+   \item Provide documentation and tutorials which can serve as the technical
+     components of reproducibility policies.
  \end{compactitem}
 \end{wpobjectives}
 
@@ -68,7 +73,7 @@ once completed)}
       thus possible to use the Binder tools (to recreate a software environment)
       even if the repository authors did not anticipate the use of Binder, or
       knew about their existence. In the best possible scenario, a
-      \emph{scientist can use Binder with zero additional effort}.
+      \emph{scientist can benefit from Binder tools with zero additional effort}.
 
     \item In this work package, we produce education materials and carry out
       education activities to spread the knowledge about \emph{good practice for
@@ -78,8 +83,8 @@ once completed)}
       Binder can help with reproducibility.
     
       Attendees and users following such training and advice will create more
-      reproducible artifacts. If they - or later users of their published
-      artifacts - want to use Binder to reproduce or re-use the results, they
+      reproducible artifacts. If they -- or later users of their published
+      artifacts -- want to use Binder to reproduce or re-use the results, they
       can. Even if they do not, we will have achieved an improvement of the
       reproducibility of scientific artifacts.
   \end{enumerate}
@@ -98,41 +103,58 @@ once completed)}
   % dissemination and training workshops, as well as by producing and maintaining
   % material for online courses and documentation.
 
-\TheProject will develop, through \WPref{applications}, a number of demonstrator repositories that
-show examples of reproducibility. We use those activities to inform and evaluate
-the
-technical improvement to the Binder tools in \WPref{reproducibility} and
-\WPref{impact}. We also use those studies to create tutorials and \emph{best practice guides
-  for reproducibility} in this work package.
+  The \TheProject project will develop, through \WPref{applications}, a number
+  of demonstrator repositories that show examples of reproducibility in
+  different scientific domains. (We use
+  those activities to inform and evaluate the technical improvement to the
+  Binder tools in \WPref{reproducibility} and \WPref{impact}). We also use those
+  studies to create tutorials and \emph{best practice guides for
+    reproducibility} (\localtaskref{online-resources}) in this work package, and
+  offer interactive workshops (\localtaskref{workshops}) to help disseminate the
+  content more effectively.
 
-We will also participate in the concertation activities, consultations and other
-meetings and events of the European E-Infrastructure projects. \TODO{Do we still
-want this sentence? If so, mention EGI here?}
+  As with all the code, test and build infrastructure produced as part of the
+  project, we will also make all documentation open source. Our documentation --
+  which includes best practice guides for reproducibility -- can thus be
+  modified and improved after the end of the project to react to new
+  developments (\delivref{education}{education-materials2}).
 
-As with all the code, test and build infrastructure produced as part of the
-project, we will also make all documentation open source. Our documentation --
-which includes best practice guides for reproducibility -- can thus be modified
-and improved after the end of the project to react to new developments.
+  We will engage with the scientific community to support them in making their
+  work more reproducible with Binder tools. The project will benefit from these interactions
+  as we will lean more about reproducibility requirements and usefulness of the
+  Binder tools, so that we can tailor our work to support scientific communities as broad as possible
+  (\localtaskref{community-support}).
 
-Open access to all publications resulting from the project will be ensured.
-\TODO{Should this sentence go into a data / IPR management plan?}
+  We will also participate in the well established academic dissemination
+  activities, and events of the European E-Infrastructure projects and other
+  relevant structures. EGI is a member of our the community engagement panel
+  (see \TODO{XXX, \taskref{management}{community-engagement-panel}})
+  and the interaction with them be useful to prioritise our resources in this
+  very active field.
+
+  Open access to all publications resulting from the project will be ensured.
+  %\TODO{Should this sentence go into a data / IPR management plan?}
 \end{wpdescription}
 
 \begin{tasklist}
 % add tasks from task directory here
 \input{tasks/website-general}
-\input{tasks/training}
 \input{tasks/online-resources}
+\input{tasks/training}
+\input{tasks/community-support}
 \end{tasklist}
 
 
 \begin{wpdelivs}
-\begin{wpdeliv}[due=18,id=report1,dissem=PU,miles=prototype,nature=R,lead=UIO]
-  {Community building: Report on impact of development workshops, dissemination and training activities, reporting period 1}
+\begin{wpdeliv}[due=24,id=education-materials1,dissem=PU,miles=prototype,nature=R,lead=UIO]
+  {First version of all training materials available online. }
 \end{wpdeliv}
-\begin{wpdeliv}[due=36,id=report2,dissem=PU,miles=community,nature=R,lead=UIO]
-  {Community building: Report on impact of development workshops, dissemination and training activities, reporting period 2}
+\begin{wpdeliv}[due=36,id=education-materials2,dissem=PU,miles=final,nature=R,lead=UIO]
+  {All training sessions material completed, reviewed, and published online.}
 \end{wpdeliv}
+% \begin{wpdeliv}[due=36,id=report2,dissem=PU,miles=final,nature=R,lead=UIO]
+%   {Community building: Report on impact of development workshops, dissemination and training activities.}
+% \end{wpdeliv}
 \end{wpdelivs}
 
 \end{workpackage}

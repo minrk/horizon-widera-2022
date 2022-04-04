@@ -2,30 +2,41 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Online resources for reproducible science,
+  title=Best practice guidelines for reproducible science,
   id=online-resources,
   lead=UIO,
-  PM=14,
-  wphases={0-36!.3},
+  PM=10,
+  wphases={0-36!.28},
   partners={SRL,MP,UIO}
 ]
-  \TOWRITE{repurposed from BOSSEE: target repo2docker docs for covering best practices}
-  The aim of this task is to provide communities with online resources for Open Science and support \taskref{education}{workshops}.
-  This task includes the following activities:
+The aims of this task are to (i) provide online resources for more reproducible
+and re-usable science, and (ii) support delivery of our workshops
+(\taskref{education}{workshops}).
+  
+This task includes the following activities:
   \begin{compactitem}
-  \item Collaboration with the \href{https://coderefinery.org}{CodeRefinery} project for the development and maintainance of the \href{https://coderefinery.org/lessons/}{online lesson materials} on open science best practices (JupyterLab, version control, collaboration and peer review, documentation, testing, software licensing, and reproducible research).
-    Following CodeRefinery's tradition, the aim will be to contribute the
-    lessons to \href{https://software-carpentry.org/}{Software Carpentry}
-    and \href{https://data-carpentry.org/}{Data Carpentry}.
-\item Development of an interactive book on applied stochastic
-  processes in Physics (\localdelivref{sde-book}). Unlike classical
-  books in this subject, it will be supplemented by interactive
-  numerical examples solving real life problems. This will be the
-  occasion to emphasize the role of high performance computing in
-  solving problems modeled by stochastic differential equations (SDE).
-  The book will be available via the EOSC hub, and showcase the use of
-  HPC hardware (GPU).
+  \item Collect and compose best practice guidelines for reproducible and
+    re-usable science. Split the content into multiple topic areas so learners
+    with different prior knowledge can skip the content they are familiar with
+    already.
+  \item Develop lesson materials on \emph{open science} best practices (version
+    control, testing, automation of all steps, collaboration and peer review,
+    documentation, software licensing and open source, use of Jupyter
+    notebooks).
+  \item Develop lesson materials on \emph{reproducible computational science},
+    which focuses on combining the open science tools for reproducible science.
+  \item Develop materials on \emph{using Binder tools to make science more
+      reproducible and re-usable}. This includes addressing and describing the
+    use cases from \WPref{applications}.
+  \item Collaboration with the \href{https://coderefinery.org}{CodeRefinery}
+    project for the development and maintainance of the
+    \href{https://coderefinery.org/lessons/}{online lesson materials}. Following
+    CodeRefinery's tradition, the aim will be to contribute the lessons to
+    \href{https://software-carpentry.org/}{Software Carpentry} and
+    \href{https://data-carpentry.org/}{Data Carpentry}.
+  \item The training material will also be referenced on the Binder tools webpage.
   \end{compactitem}
   All material will be licensed under an open license such as
-  \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA 4.0}.
+  \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA 4.0}
+  (\delivref{education}{education-materials1}, \delivref{education}{education-materials1}).
 \end{task}
