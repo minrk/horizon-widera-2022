@@ -59,6 +59,131 @@ how can we make Science
 
 \medskip
 
+\subsubsection{Reproducibility}\label{sec:concept}
+
+Before describing the focus of the work that we propose here, we want to embed
+this into the much wider context of reproducibility challenges.
+
+We will exclude the challenges of reproducing \emph{experimental} data. Our
+study starts at the point where such experimental data is available in digital
+form.
+
+We will focus on the challenge of computational reproducibility: can we carry out
+the same data analysis, creation of figures and tables as they are presented in
+a paper, at a later stage, and get to the same results?
+
+Such tables and figures in a publication may be computed from the analysis of
+some type of raw data which could originate an experiment, another publication,
+a data base, post-processing of another data set or from executing computer
+simulations.
+
+% Where additional software, such as analysis scripts, input files
+% and software for the simulation are needed, 
+
+\paragraph{Challenges of Reproducibility}
+
+The challenges of such ``computational reproducibility'' include:
+\begin{itemize}
+\item Are the different processing steps for that data recorded? This could be
+the order in which analysis scripts need to be executed -- for example to
+compute intermediate results -- which will be turned into a figure in the last
+step?
+
+We will call this sequence of steps the \emph{workflow}. This workflow could be
+archived -- for example -- through a \softwarename{README.txt} file, or scanned
+pages of a hand-written laboratory notebook as a pdf file, or as a
+machine-executable script (or a Jupyter notebook).
+
+This is particularly challenging where software is used which can only be
+controlled via a Graphical User Interface, as it may require manual recording
+and description of the different clicks and steps in laboratory logbook.
+
+\item Are all the scripts and configuration files (and more generally all
+software) that is needed in this process known and archived? 
+
+\item Where software is involved, have we recorded which version of that
+software is needed (or was used)? If compilation is required, do we know which
+compilers (and which version) and which additional dependencies are required?
+
+\item Are there instructions how to obtain / compile the required dependencies,
+and the software itself (in particular where this is about simulation based
+science or more complex analysis and interpretation software tools)?
+
+\item Where raw data is required, is this archived, accessible, and sufficiently
+documented that the format is understandable?
+\end{itemize}
+
+
+\subsubsection{Reproducibility concept}
+
+We can classify the reproducibility challenges listed above into different categories:
+
+\begin{description}
+\item[1. Workflow]: Are the processing commands (and their order)
+correctly recorded? Do we know which part of the data set the analysis is meant
+to be applied to? This is to a significant degree a question of the organisation
+and documentation of the research process.
+
+\item[2. Software environment]: Can we recreate the software environment that is
+required to execute these commands?
+
+\item[3. Importance]: Is the researcher convinced that investing effort into making
+their work more reproducible is a worth while investment? This is a wide topic,
+touching on expectations, existing cultures, lack of metrics that acknowledge
+reproducibility efforts, and policies.
+
+\item[4. Other]: There are other related topics, for example the challenge of
+archival of (large) research data sets, of making the data FAIR, and the (for
+some domains important) bit-wise reproducibility.
+\end{description}
+
+In this proposal, we start from practices that researchers increasingly adopt,
+and which we argue are \emph{good reproducibility practices}. We propose to carry
+out additional work to \emph{improve the toolset enabling this practice}.
+
+To deal with the \emph{Workflow} challenges, we recommend to automate the
+workflow steps as much as possible. In particular, the use of Jupyter Notebooks
+to orchestrate the execution of commands seems effective~\cite{Beg2021}.
+The use of the notebook is
+perceived by many as an improvement of their research effectiveness because
+it supports ``Thinking with Code and Data''~\cite{Granger2021}. A such, the
+practice of using Notebooks (which helps improving research effectiveness) has
+the very positive side effect of making the work more reproducible.
+
+
+To deal with the \emph{Software environment} challenge, we recommend to follow
+standard practices to describe software requirements. The \emph{focus of this
+project is to extend the capabilities of the \repotodocker{} tool} to be able to
+\emph{automatically create software environments} based on such software
+requirement descriptions.
+
+We can only partially address the \emph{Importance} challenge as this needs
+concerted efforts from many stakeholders (such as employers of researchers,
+research funders, publishers). However, we will offer training that advocates
+the value of open science and that teaches existing best practice in 
+effective computational science. The step from following such best practice to
+making the work reproducible is -- given the Binder tools we want to develop
+further here -- relatively small, or even possible without additional effort.
+
+The \emph{Other} challenges are mostly outside the focus of this work
+(although our proposal will also assist in reproducible and FAIR data
+publishing, see for example Task \taskref{applications}{data-publishing}).
+
+
+\paragraph{Terminology - Work in progress}\TOWRITE{}{Hans to continue here}
+
+- repository, -notebook, software environment, jupyter, binder
+
+We assume that researchers have carried out a study, and that they want to
+publish a \emph{repository} of electronic files that help to make this work
+reproducible.
+
+
+\ldots
+
+
+
+
 \subsubsection{Project Jupyter and the surrounding ecosystem}
 \label{sec:project-jupyter}
 
