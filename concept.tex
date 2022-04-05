@@ -65,12 +65,12 @@ Before describing the focus of the work that we propose here, we want to embed
 this into the much wider context of reproducibility challenges.
 
 We will exclude the challenges of reproducing \emph{experimental} data. Our
-study starts at the point where such experimental data is available
-electronically.
+study starts at the point where such experimental data is available in digital
+form.
 
-We will focus on the challenge of electronic reproducibility: can we carry out
+We will focus on the challenge of computational reproducibility: can we carry out
 the same data analysis, creation of figures and tables as they are presented in
-a paper, at a later stage, and get to the same results.
+a paper, at a later stage, and get to the same results?
 
 Such tables and figures in a publication may be computed from the analysis of
 some type of raw data which could originate an experiment, another publication,
@@ -82,7 +82,7 @@ simulations.
 
 \paragraph{Challenges of Reproducibility}
 
-The challenges of such ``electronic reproducibility'' include:
+The challenges of such ``computational reproducibility'' include:
 \begin{itemize}
 \item Are the different processing steps for that data recorded? This could be
 the order in which analysis scripts need to be executed -- for example to
@@ -92,7 +92,7 @@ step?
 We will call this sequence of steps the \emph{workflow}. This workflow could be
 archived -- for example -- through a \softwarename{README.txt} file, or scanned
 pages of a hand-written laboratory notebook as a pdf file, or as a
-machine-executable script (or Jupyter notebook).
+machine-executable script (or a Jupyter notebook).
 
 This is particularly challenging where software is used which can only be
 controlled via a Graphical User Interface, as it may require manual recording
@@ -143,12 +143,10 @@ out additional work to \emph{improve the toolset enabling this practice}.
 
 To deal with the \emph{Workflow} challenges, we recommend to automate the
 workflow steps as much as possible. In particular, the use of Jupyter Notebooks
-to orchestrate the execution of commands seems effective.\footnote{\TODO{Add
-citations here, at least Marijan Beg et al.
-https://ieeexplore.ieee.org/document/9325550}} The use of the notebook is
-perceived by many as an improvement of their research effectiveness in because
-it supports ``Thinking with Code and Data'' \footnote{\TODO{Cite last year's paper by
-Fernando and Brian: https://doi.org/10.1109/MCSE.2021.3059263}}. A such, the
+to orchestrate the execution of commands seems effective~\cite{Beg2021}.
+The use of the notebook is
+perceived by many as an improvement of their research effectiveness because
+it supports ``Thinking with Code and Data''~\cite{Granger2021}. A such, the
 practice of using Notebooks (which helps improving research effectiveness) has
 the very positive side effect of making the work more reproducible.
 
@@ -167,12 +165,14 @@ effective computational science. The step from following such best practice to
 making the work reproducible is -- given the Binder tools we want to develop
 further here -- relatively small, or even possible without additional effort.
 
-The \emph{Other} challenges are primarily outside the focus of this work
+The \emph{Other} challenges are mostly outside the focus of this work
 (although our proposal will also assist in reproducible and FAIR data
-publishing, see \TODO{Insert data publishing use case Task reference}).
+publishing, see for example Task \taskref{applications}{data-publishing}).
 
 
 \paragraph{Terminology - Work in progress}\TOWRITE{}{Hans to continue here}
+
+- repository, -notebook, software environment, jupyter, binder
 
 We assume that researchers have carried out a study, and that they want to
 publish a \emph{repository} of electronic files that help to make this work
