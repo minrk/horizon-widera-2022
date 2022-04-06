@@ -30,7 +30,9 @@
 %\documentclass[submit,public,noworkareas,deliverables]{euproposal} % for public version
 
 \usepackage[utf8]{inputenc}
-%\usepackage{minitoc}
+% \usepackage{minitoc}
+
+%\usepackage{varioref}
 
 \usepackage{float}  % used to suppress floating of tables in Resources section.
 \usetikzlibrary{calc,fit,positioning,shapes,arrows,snakes}
@@ -96,6 +98,13 @@ How do we describe the tools?
   - [ ] other aspects of reproducibility: knowing which commands to repeat,
 knowing where to deposit software, and data, ...
   - [ ] myBinder.org
+
+- [ ] LaTeX layout items
+  - [ ] can we switch the citation style so that we use [1], [2], [3], instead
+of [Beg+21], [17a] and []? I think our references where we don't provide authors
+(because it is a git repo and the authors don't matter so much) break the
+current style. It may be necessary to change this in the Proposalclass. The
+relevant line may look something like 'usepackage[maxbibnames=6,hyperref=auto,style=numeric,backend=bibtex]{biblatex}'
 
 \end{verbatim}
   
@@ -167,7 +176,7 @@ knowing where to deposit software, and data, ...
   %objectiveid={N/A},
   %objective = TODO,
   %outcomeid = N/A,
-  %outcome = N/A,
+  %outcomet = N/A,
   months=36,
   compactht]
 \newcommand{\TheProject}{\pn}% \pn is defined automatically
