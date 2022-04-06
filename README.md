@@ -46,6 +46,8 @@ Quick instructions:
 - run `make draft`
 - inspect output in `draft.pdf`
 
+Join us on [Zulip chat](https://source.mpsd.mpg.de).
+
 <!--
 ## Stay tuned
 
