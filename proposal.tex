@@ -30,6 +30,7 @@
 %\documentclass[submit,public,noworkareas,deliverables]{euproposal} % for public version
 
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
 % \usepackage{minitoc}
 
 %\usepackage{varioref}
@@ -52,7 +53,14 @@
 \newcommand{\repotodocker}{\softwarename{repo2docker}}
 \newcommand{\binderhub}{\softwarename{BinderHub}}
 
+%\newcommand*{\fullref}[1]{\ref{#1} \nameref*{#1}} % One
 
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref{#1} \nameref*{#1}}}
+% single clickable link of the style: 1.1 Concept
+% source: https://tex.stackexchange.com/questions/121865/nameref-how-to-display-section-name-and-its-number
+
+
+ 
 % longtaskref: T1.2: Title of task
 \newcommand\longtaskref[2]{\csname task@#1@#2@label\endcsname: ``\csname task@#1@#2@title\endcsname''}
 
