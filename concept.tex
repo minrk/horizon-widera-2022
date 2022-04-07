@@ -7,20 +7,20 @@
 \TODO{Check we have addressed all mandatory topics}
 
 % \subsubsection{Concept}%\label{sec:concept}
-% 
+%
 % Open Science is the principle that science, in order to be most
 % {impactful} and {socially responsible}, should be done
 % {publicly}, with as much of the scientific process and products
 % accessible, reviewable, reproducible and reusable by as many members of
 % the global community as possible.
-% 
+%
 % There are exciting opportunities for Open Science for almost all academic fields
 % in the modern age of computational science. As more and more research takes the
 % form of code and/or data, the opportunity to share, reproduce, and reuse
 % scientific work is greater than ever, even enabling new forms of
 % {interdisciplinary collaboration}, and interoperable and re-usable results and
 % tools.
-% 
+%
 %  Simultaneously, there are obstacles -- both technical and social -- to
 % making open science and reproducible science a practical reality. The challenges
 % include: If a researcher has code and/or data to publish, how is that best
@@ -28,7 +28,7 @@
 % their field? How do previously disconnected fields benefit from each other's
 % work as the same computational challenges are faced again and again by different
 % communities? How can scientists be encouraged to make their work reproducible?
-% 
+%
 % These are the questions that guide the \TheProject{} project.
 
 \subsubsection{Supporting Open, Useful, and Reproducible Computational
@@ -51,7 +51,7 @@ Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computat
   (We note that the collective development of the grant proposal you are reading
   is also done as open source, and can be inspected at
   \url{http://github.com/minrk/horizon-widera-2022} for those interested.)
-  
+
 \item Measures towards better reproducibility have to be \emph{Useful} and
   practical: if a proposed approach or tool burdens the scientist with
   additional work, or requires significant additional skills, it becomes less
@@ -95,21 +95,21 @@ proposed project builds in more detail.
 
 %\TODO{Do we need to keep anything from the commented out lines here?}
 
-% 
+%
 % With so much research being done that wants to be Open and Reproducible,
 % how can we make Science
-% 
+%
 % \begin{enumerate}
 %     \item as \textbf{easy} as possible to share and reproduce?
 %     \item as \textbf{useful} as possible to other researchers and the public?
 % \end{enumerate}
-% 
-% 
-% 
-% 
-% 
+%
+%
+%
+%
+%
 % \noindent Our plan for \textbf{increasing the reproducibility of scientific results} can be summarised as:
-% 
+%
 % \begin{enumerate}
 % \item improve and maintain \textbf{common software infrastructure} used for
 %   reproducing computational results,
@@ -143,7 +143,7 @@ a data base, post-processing of another data set or from executing computer
 simulations.
 
 % Where additional software, such as analysis scripts, input files
-% and software for the simulation are needed, 
+% and software for the simulation are needed,
 
 \subsubsection{Challenges of Reproducibility}\label{sec:reproducibility-challenges}
 
@@ -164,7 +164,7 @@ controlled via a Graphical User Interface, as it may require manual recording
 and description of the different clicks and steps in laboratory logbook.
 
 \item Are all the scripts and configuration files (and more generally all
-software) that is needed in this process known and archived? 
+software) that is needed in this process known and archived?
 
 \item Where software is involved, have we recorded which version of that
 software is needed (or was used)? If compilation is required, do we know which
@@ -225,7 +225,7 @@ requirement descriptions.
 We can only partially address the \emph{Importance} challenge as this needs
 concerted efforts from many stakeholders (such as employers of researchers,
 research funders, publishers). However, we will offer training that advocates
-the value of open science and that teaches existing best practice in 
+the value of open science and that teaches existing best practice in
 effective computational science. The step from following such best practice to
 making the work reproducible is -- given the Binder tools we want to develop
 further here -- relatively small, or even possible without additional effort.
@@ -284,7 +284,7 @@ or similar). Such scripts can execute data processing commands, and are often
 part of a repository to make the (automatic) reproduction of results possible.
 
 In our example, the necessary steps to create the figure from the raw data are
-gathered in the notebook \texttt{figure1.ipynb}. 
+gathered in the notebook \texttt{figure1.ipynb}.
 
 \item[Notebook] A Jupyter Notebook. In short, an executable document that can
   combine text, code and computation results. A Jupyter notebook can act like a
@@ -496,12 +496,20 @@ here, but a selection of projects which are relevant to
 
 \paragraph{Supported software specification formats}
 \label{repo2docker-supported-software-specifications}
-\begin{compactitem}
-\item Python packages (\softwarename{requirements.txt})
-\item Conda packages (\softwarename{environment.yml})
-\item \ldots
-\end{compactitem}
-
+% \begin{compactitem}
+% \item Python packages (\softwarename{requirements.txt})
+% \item Conda packages (\softwarename{environment.yml})
+% \item \ldots
+% \end{compactitem}
+The repo2docker package currently supports the following software specification
+formats to build Docker images: First, the \softwarename{requirements.txt}
+format can be used to define a software environment based on generic
+pip-installable Python packages from pypi or other sources.  Second, the
+\softwarename{environment.yml} format is understood by repo2docker to define a
+software environment based on Conda packages from the Anaconda Cloud,
+conda-forge, Bioconda and similar sources.  Third, a Dockerfile can be passed to
+repo2docker, enabling users to define virtually arbitrary environments,
+for example based on software from the repositories of Linux distributions.
 \TOWRITE{}{}
 
 \medskip
