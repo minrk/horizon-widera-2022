@@ -60,7 +60,7 @@
 % source: https://tex.stackexchange.com/questions/121865/nameref-how-to-display-section-name-and-its-number
 
 
- 
+
 % longtaskref: T1.2: Title of task
 \newcommand\longtaskref[2]{\csname task@#1@#2@label\endcsname: ``\csname task@#1@#2@title\endcsname''}
 
@@ -233,46 +233,26 @@ Madison - how good is your LaTeX?
 %  Section 3: Implementation
 % ---------------------------------------------------------------------------
 
-\section{Implementation}
+\section{Quality and efficiency of the implementation}
 \COMMENT{Typical granularity: 5-8 work packages with 3-5 tasks and one
   deliverable per task; 10 milestones}
 
-\subsection{Work Plan --- Work packages, deliverables and milestones}
+\subsection{Work Plan and resources}
+
 \label{sect:workplan}
 \input{workplan}
 \newpage
 
-\subsection{Management Structure and Procedures}
 \input{management_structure_and_procedures.tex}
+\subsubsection{Resources to be Committed}\label{sec:resources}
+\input{resources}
 
 \draftpage
-\subsection{Consortium as a Whole}
+\subsection{Capacity of participants and consortium as a whole}
 \input{consortium.tex}
 \draftpage
 
-\subsection{Resources to be Committed}\label{sec:resources}
-\input{resources}
 
-% ---------------------------------------------------------------------------
-%  Section 4: Members of the Consortium
-% ---------------------------------------------------------------------------
-
-\newpage
-
-\eucommentary{This section is not covered by the page limit.\\
-The information provided here will be used to judge the operational capacity.}
-
-\section{Members of the Consortium}
-\input{members}
-
-% ---------------------------------------------------------------------------
-%  Section 5: Ethics and Security
-% ---------------------------------------------------------------------------
-
-\newpage
-
-\section{Ethics and Security}
-\input{ethics_security}
 \end{proposal}
 \TOWRITE{ALL}{Search through final.pdf ('make final') and look for questions
   marks ?? and XX and YY and XYZ as place holders where people intended to later
