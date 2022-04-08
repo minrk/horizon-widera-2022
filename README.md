@@ -1,4 +1,4 @@
-# Supporting Open and Reproducible Computational Environments (SOURCE)
+# Supporting Open, Useful, and Reproducible Computational Environments (SOURCE)
 
 Links:
 
