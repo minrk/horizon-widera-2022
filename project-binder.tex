@@ -2,7 +2,7 @@
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
 a subproject of the Jupyter project. The Binder project is formally operating
-within the Jupyter ecosystem, but not confined to be useful for notebooks.
+within the Jupyter ecosystem, but not confined to be useful only for notebooks.
 
 The key components of the Binder software are \repotodocker{}
 (Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
@@ -32,19 +32,23 @@ Section~\ref{sec:reproducibility-example}. We will use this to
 Section~\ref{sec:terminology}. We will use this to
 describe the role of the individual components of Binder:
 
+
 \begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{images/mybinder.png}
-  \caption{Home page of the MyBinder service.}
-  \label{fig:mybinder-homepage}
+  \begin{minipage}[b]{0.67\textwidth}
+    \includegraphics[width=1.0\textwidth]{images/mybinder.png}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \caption{Home page of the MyBinder service.}  \label{fig:mybinder-homepage}
+  \end{minipage}
 \end{figure}
+
 
 \begin{compactitem}
 \item The MyBinder service is called with a URL that encodes the location of the data
-  repository\footnote{For example
+  repository\footnote{For example the 
     {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
-    referring to the GitHub repository REPRODUCIBILITY-REPOSITORY-EXAMPLE of the
-    github user FANGOHR, asking to open FIGURE1.IPYNB file.}
+    refers to the GitHub repository ``reproducibility-repository-example'' of the
+    github user ``fangohr'', asking to open the ``figure1.ipynb'' file.}
 
   Alternatively, there is form (see Figure~\ref{fig:mybinder-homepage})
   which users can complete with repository details
@@ -126,7 +130,8 @@ This project will not provide or operate a BinderHub service (such as the global
 be made available to all operators of BinderHubs, including mybinder.org.
 
 \subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
-\TOWRITE{}{}
+\TOWRITE{}{Hmm -- perhaps we don't need this section, as we explain in the
+  Methodology section what we want to do with Binder?}
 
 
 
