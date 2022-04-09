@@ -53,6 +53,8 @@
 \newcommand{\softwarename}[1]{\texttt{#1}}
 \newcommand{\repotodocker}{\softwarename{repo2docker}}
 \newcommand{\binderhub}{\softwarename{BinderHub}}
+% \newcommand{\mybinder}{\softwarename{mybinder.org}} % mybinder.org in monospaced font
+\newcommand{\mybinder}{mybinder.org}   % mybinder.org in normal proportional font
 
 %\newcommand*{\fullref}[1]{\ref{#1} \nameref*{#1}} % One
 
@@ -79,12 +81,14 @@
   - [ ] Figure or figure or Fig or Fig.? Use 'Figure'
   - [ ] Binder or binder - Binder? Use 'Binder'
   - [ ] MyBinder or Mybinder or mybinder? Use `mybinder.org` for the public
-        instance of the service
+        instance of the service -> \mybinder
 
 - we have a command \repotodocker to insert 'repo2docker' in \softwarename{}
   font.
-- we have a command \binderhub to insert 'BinderHub'. Best use {} after the
-  commands to enforce a space.
+- we have a command \binderhub to insert 'BinderHub'.
+- we have a command \mybinder to insert 'mybinder.org'.
+- Best use {} after the commands to enforce a space, i.e. ``\repotodocker{} is the focus''
+
 \end{verbatim}
 
 \section*{Todo items}

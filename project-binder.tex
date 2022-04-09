@@ -11,7 +11,7 @@ specification in a repository. \binderhub{} starts a Jupyter notebook server
 within this container from which the user can execute the notebooks from the
 repository.
 
-\emph{MyBinder} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
+\emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
   federation} that collectively host a service running the Binder software
 under the URL \url{https://mybinder.org}. This is the service we made use of in
 our example in section~\ref{sec:reproducibility-example}.
@@ -38,13 +38,13 @@ describe the role of the individual components of Binder:
     \includegraphics[width=1.0\textwidth]{images/mybinder.png}
   \end{minipage}\hfill
   \begin{minipage}[b]{0.3\textwidth}
-    \caption{Home page of the MyBinder service.}  \label{fig:mybinder-homepage}
+    \caption{Home page of the \mybinder{} service.}  \label{fig:mybinder-homepage}
   \end{minipage}
 \end{figure}
 
 
 \begin{compactitem}
-\item The MyBinder service is called with a URL that encodes the location of the data
+\item The \mybinder{} service is called with a URL that encodes the location of the data
   repository\footnote{For example the 
     {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
     refers to the GitHub repository ``reproducibility-repository-example'' of the
@@ -54,7 +54,7 @@ describe the role of the individual components of Binder:
   which users can complete with repository details
   to start the build of the corresponding environment, or to obtain the URL to
   re-use that configuration later, or share it with others.
-\item From the mybinder.org entry point, the request is forwarded to one
+\item From the \mybinder{} entry point, the request is forwarded to one
   \binderhub{} service of one of the organisations in the BinderHub federation
   that has available compute capacities.
 \item The \binderhub{} software running at the chosen location, will ask
@@ -116,15 +116,15 @@ JupyterHub where individuals can share reproducible environments for
 immediate and free interaction by readers in their browser.
 
 
-\paragraph{The MyBinder service}\label{sec:mybinder}
+\paragraph{The \mybinder{} service}\label{sec:mybinder}
 
-\emph{MyBinder} is a service run by the \emph{BinderHub
+\emph{\mybinder{}} is a service run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations that collectively host a service running the Binder software
 under the URL \url{https://mybinder.org}.
 
 The service is actively used with approximately 200,000 binder sessions being
-requested and delivered by the MyBinder service every week in 2021. The number
+requested and delivered by the \mybinder{} service every week in 2021. The number
 of sessions is growing from approximately 10,000 per day in November 2018
 (beginning of the available records) to about 30,000 per day in 2022. We have
 identified 60,000 unique repositories published in the last few years which have
@@ -132,7 +132,7 @@ used the binder service. The data is available~\cite{mybinder-archive}.
 
 This project will not provide or operate a BinderHub service (such as the global
 ``\url{https://mybinder.org}'' instance). The improvements achieved, however, will immediately
-be made available to all operators of BinderHubs, including mybinder.org.
+be made available to all operators of BinderHubs, including \mybinder{}.
 
 \subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
 \TOWRITE{}{Hmm -- perhaps we don't need this section, as we explain in the
