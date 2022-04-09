@@ -26,7 +26,7 @@ from Jupyter notebooks.
 \paragraph{Basic functionality of Binder}
 \label{binder-how-does-it-work}
 
-The most common reproducibility use case -- with the current state of the Binder
+The currently most common reproducibility use case -- with the current state of the Binder
 tools -- is the one we introduced in
 Section~\ref{sec:reproducibility-example}. We will use this to
 Section~\ref{sec:terminology}. We will use this to
@@ -73,8 +73,13 @@ describe the role of the individual components of Binder:
 
 \paragraph{The repo2docker software tool.}\label{sec:repo2docker}
 
-\repotodocker{} is a tool for automatically building reproducible computational
-environments using best practices for environment specifications and
+\repotodocker{} is a tool to fetch a remote repository and build a software
+environment for this repository. Currently, \repotodocker{} can retrieve
+repositories from the following services and formats: GitHub, Gist, Git, GitLab,
+Zenodo, Hydroshare, Figshare, Dataverse.
+
+For the automatic building of reproducible computational environments,
+\repotodocker{} understands commonly used conventions for environment specifications and
 community standard tools such as Docker, conda, and pip. See
 Section~\ref{repo2docker-supported-software-specifications} below for a full list of
 currently supported software specifications.
