@@ -42,21 +42,29 @@ from Jupyter notebooks.
 
 \paragraph{Supported software specification formats}
 \label{repo2docker-supported-software-specifications}
-% \begin{compactitem}
-% \item Python packages (\softwarename{requirements.txt})
-% \item Conda packages (\softwarename{environment.yml})
-% \item \ldots
-% \end{compactitem}
-The repo2docker package currently supports the following software specification
-formats to build Docker images: First, the \softwarename{requirements.txt}
-format can be used to define a software environment based on generic
-pip-installable Python packages from pypi or other sources.  Second, the
-\softwarename{environment.yml} format is understood by repo2docker to define a
-software environment based on Conda packages from the Anaconda Cloud,
-conda-forge, Bioconda and similar sources.  Third, a Dockerfile can be passed to
-repo2docker, enabling users to define virtually arbitrary environments,
-for example based on software from the repositories of Linux distributions.
-\TOWRITE{}{}
+The \repotodocker{} tool currently supports the following software specification
+formats to build Docker images:
+% source:
+% https://repo2docker.readthedocs.io/en/latest/config_files.html#config-files
+% 9 April 2022
+\begin{compactitem}
+\item \softwarename{requirements.txt}, \softwarename{setup.py},
+  \softwarename{Pipfile}, \softwarename{Pipfile.lock}: to specify Python
+  packages and environments
+\item \softwarename{Project.toml}, \softwarename{JuliaProject.toml} and (legacy)
+  \softwarename{REQUIRE}: to
+  specify Julia version and packages
+\item \softwarename{install.R}, \softwarename{DESCRIPTION}: to install R
+  libraries, or install the repository as R package
+\item \softwarename{apt.get}: to install Debian packages. The Docker container
+  is currently based on Ubuntu, which uses the Debian package management tool \softwarename{apt}.
+\item \softwarename{environment.yml}: to specify conda packages and
+  environments
+\item \softwarename{default.nix}: to use the nix package manager for software provision
+\item \softwarename{Dockerfile}: providing a Dockerfile enables users to define
+  virtually arbitrary environments, for example based on software from the
+  repositories of Linux distributions.
+\end{compactitem}
 
 \medskip
 \subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
