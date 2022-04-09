@@ -5,6 +5,7 @@ RUN apt-get update \
             --no-install-recommends \
             ca-certificates \
             make \
+            latexmk \
             texlive-latex-base \
             texlive-latex-recommended \
             texlive-latex-extra \

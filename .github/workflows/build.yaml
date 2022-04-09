@@ -10,12 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
       - name: install tex
         run: |
           sudo apt-get update && sudo apt-get -y install \
             --no-install-recommends \
             ca-certificates \
             make \
+            latexmk \
             texlive-latex-base \
             texlive-latex-recommended \
             texlive-latex-extra \
@@ -26,13 +29,6 @@ jobs:
             pdftk \
             git \
             python3
-
-
-      # - run:
-      #     name: finish cloning submodules
-      #     command: |
-      #       git submodule init
-      #       git submodule update
 
       - name: build draft
         run: |
