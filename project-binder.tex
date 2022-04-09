@@ -11,10 +11,11 @@ specification in a repository. \binderhub{} starts a Jupyter notebook server
 within this container from which the user can execute the notebooks from the
 repository.
 
-The MyBinder federation (see \ref{sec:mybinder}) is a federation of
-organisations that collectively host a service running the Binder software
-(\url{https://mybinder.org}). This is the service we made use of in our example
-in section~\ref{sec:reproducibility-example}.
+\emph{MyBinder} (see \ref{sec:mybinder}) is a service run by the \emph{BinderHub
+  federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+of organisations that collectively host a service running the Binder software
+under the URL \url{https://mybinder.org}. This is the service we made use of in
+our example in section~\ref{sec:reproducibility-example}.
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
 \repotodocker{} solves software environment challenge (see
@@ -26,19 +27,43 @@ from Jupyter notebooks.
 \paragraph{Basic functionality of Binder}
 \label{binder-how-does-it-work}
 
+The most common reproducibility use case -- with the current state of the Binder
+tools -- is the one we introduced in
+Section~\ref{sec:terminology-and-repository-example}. We will use this to
+describe the role of the individual components of Binder:
+
 \begin{compactitem}
-\item Binder is \TOWRITE{}{what?} User entry point (for example on mybinder.org) is web interface \TODO{Add image of mybinder.org webpage?}
-\item Binder is passed a URL from the user, for example a URL of a git repository with notebooks
-\item Binder is asking \repotodocker{} to create a docker container in which the notebooks from the repository can be executed
+\item The mybinder service is called with a URL that encodes the location of the data
+  repository\footnote{For example
+    {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
+    referring to the GitHub repository REPRODUCIBILITY-REPOSITORY-EXAMPLE of the
+    github user FANGOHR, asking to open FIGURE1.IPYNB file.}
+
+  Alternatively, there is form (shown in Figure:\TODO{Add figure of
+    mybinder.org}) which users can complete with repository details
+  to start the build of the corresponding environment, or to obtain the URL to
+  re-use that configuration later, or share it with others.
+\item From the mybinder.org entry point, the request is forwarded to one
+  \binderhub{} service of one of the organisations in the BinderHub federation
+  that has available compute capacities.
+\item The \binderhub{} software running at the chosen location, will ask
+  \repotodocker{} to create a docker container in which the notebooks from the repository can be executed.
 \item \repotodocker{} searches the repository for specifications of software requirements (see \ref{repo2docker-supported-software-specifications}).
-\item \repotodocker{} composes a Dockerfile that contains all the identified commands to install software
+\item \repotodocker{} composes a Dockerfile that contains all the commands
+  necessary to install software.
 \item \repotodocker{} builds the Docker image based on the Dockerfile
-\item \ldots \TOWRITE{}{Continue, and explain role of BinderHub and Kubernetes along the way}.
+\item \binderhub{} takes the Docker image and asks Kubernetes to start up
+  container based on this image
+\item The notebook server is started in this Docker container.
+\item \binderhub{} forwards the user who requested this virtual environment to
+  the URL at which the repository (or a particular notebook) can be explored
+  from within the Jupyter notebook (which runs in the container).
 \end{compactitem}
 
-\TODO{Explain: mybinder.org (service) is not binder (software)}
-
 \paragraph{\repotodocker}\label{sec:repo2docker}
+\TODO{Hans: I think we refer to this section from various places, but we have
+  introduced the role of repo2docker already above in
+  \ref{binder-how-does-it-work}. What should/could we add here?}
 
 \paragraph{Supported software specification formats}
 \label{repo2docker-supported-software-specifications}
