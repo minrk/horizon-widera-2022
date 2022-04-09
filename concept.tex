@@ -213,8 +213,9 @@ The use of the notebook is
 perceived by many as an improvement of their research effectiveness because
 it supports ``Thinking with Code and Data''~\cite{Granger2021}. A such, the
 practice of using Notebooks (which helps improving research effectiveness) has
-the very positive side effect of making the work more reproducible.
-
+the very positive side effect of making the work more reproducible. (However, we
+note that an important task of this project is to support reproducible science
+that does not make use of Jupyter Notebooks.)
 
 To deal with the \emph{Software environment} challenge, we recommend to follow
 standard practices to describe software requirements. The \emph{focus of this
@@ -235,16 +236,72 @@ The \emph{Other} challenges are mostly outside the focus of this work
 publishing, see for example Task \taskref{applications}{data-publishing}).
 
 
-\subsubsection{Terminology and repository example}\label{sec:terminology-and-repository-example}
+% \subsubsection{Terminology and repository example}\label{sec:terminology-and-repository-example}
 
-For clarity, we define a few terms that we refer to through this proposal, and
-illustrate this in the context of a education example repository\footnote{
-(https://github.com/fangohr/reproducibility-repository-example/}
-\cite{ReproducibilityRepositoryExample2022}).
+\subsubsection{Reproducibility Example}\label{sec:terminology-and-repository-example}
 
-We imagine that we have a publication that contains figure
-\ref{fig:reproducibility-example-covid} as a result, and we want to archive and
-make available the necessary information for others to reproduce that figure.
+\begin{figure}[htb]\centering
+  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
+  \caption{A typical use case for Binder-based reproducibility using Jupyter notebooks in research.
+            Image by Juliette Belin for the OpenDreamKit project, used under
+            CC-BY-SA.}\label{fig:use-cases-binder}
+\end{figure}
+
+We start with a description of a use-case making use of existing Binder-based
+tools for computational reproducibility. Start from this base-line, we can
+explain what progress and additional impact we will enable through this project.
+
+Figure~\ref{fig:use-cases-binder} depicts how a scientist can use a Jupyter
+notebook and the Binder software to make her research results easily
+reproducible and re-usable. In short:
+\begin{itemize}
+\item Scientist Jane has created a notebook that carries out computations or
+  data processing and creates a figure based on those results. For the purpose
+  of the introduction of this workflow, we assume that
+  Figure~\ref{fig:reproducibility-example-covid} shows this figure.
+
+\item She has made the notebook and raw data available in a public repository
+  (for our example at\newline
+  \mbox{\url{https://github.com/fangohr/reproducibility-repository-example}}).
+
+\item As she has described what software is needed to execute her notebook (more
+  details below), it is possible for all interested scientists (and anybody
+  else, including the reviewers of this proposal) to \emph{reproduce} her
+  figure:
+
+  To reproduce the figure, one needs to visit the URL\newline
+  \mbox{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
+  in a browser, and then wait a minute or so for a dedicated computational
+  environment to be created and started. Then select 'Run' -> 'Run all cells'
+  from the menu of the interactive Jupyter notebook that will appear in the
+  browser.
+
+  At that point, the computational steps that Jane has carried out to create her
+  result are repeated, and the results are \emph{reproduced}.
+  
+\item Because all the computational steps are captured in the Jupyter notebook,
+  they can be inspected and interrogated if desired. In particular, the steps
+  can be modified and re-executed: this allows very efficient \emph{re-use} of
+  the results by other researchers.
+\end{itemize}
+
+We provide a more detailed description of the components and steps in this
+process in the following sections \ref{sec:terminology} to \ref{sec:mybinder}.
+
+The reproducibility workflow shown in Figure~\ref{fig:use-cases-binder} is
+working today, and we provide estimates on the number of current users in
+section \ref{sec:mybinder}. The work proposed for this project will build on
+this existing technology and (i) make it more robust and easier to use
+(\WPref{reproducibility}), and (ii) extend the functionality (\WPref{impact}) so
+that the existing tools can be used in many more use cases
+(\WPref{applications}).
+
+We note in particular that the Binder-enabled workflow for reproducibility has
+originally been developed to reproduce results that are created within Jupyter
+Notebook (as shown in Figure~\ref{fig:use-cases-binder}). As part of this
+project, we will extend the Binder tool functionality, so that reproducible
+computational environments can be created and used in studies that do not make
+use of Jupyter notebooks.
 
 \begin{figure}
   \centering
@@ -252,6 +309,18 @@ make available the necessary information for others to reproduce that figure.
   \caption{Figure (\softwarename{figure1.pdf}) which can be reproduced in our explanatory repository example
     \cite{ReproducibilityRepositoryExample2022}. \label{fig:reproducibility-example-covid}}
 \end{figure}
+
+
+\subsubsection{Terminology}\label{sec:terminology}
+
+For clarity, we define some terms that have been used already above which refer to
+throughout this proposal. We illustrate the terms in the context of the
+reproducibility example in Section~\ref{sec:terminology-and-repository-example}.
+
+In particular, we imagine that we have a publication that contains
+figure~\ref{fig:reproducibility-example-covid} as a result, and we want to
+archive and make available \cite{ReproducibilityRepositoryExample2022} the
+necessary information for others to reproduce that figure.
 
 \begin{description}
 \item[Repository] We refer to a \emph{repository} as a collection of files.
@@ -269,7 +338,8 @@ Figshare, as an electronic supplementary to a publication, or through Github.
 It is not unusual that a larger number of files might be
 organised in subdirectories within the repository.
 
-Our example repository \cite{ReproducibilityRepositoryExample2022} contains the following files:
+Our example repository\footnote{
+  https://github.com/fangohr/reproducibility-repository-example/} \cite{ReproducibilityRepositoryExample2022} contains the following files:
 
 \begin{description}
 \item[\softwarename{README.md}]: an overview of the content of the repository
