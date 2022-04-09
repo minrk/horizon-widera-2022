@@ -32,6 +32,13 @@ tools -- is the one we introduced in
 Section~\ref{sec:terminology-and-repository-example}. We will use this to
 describe the role of the individual components of Binder:
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{images/mybinder.png}
+  \caption{Home page of the mybinder service.}
+  \label{fig:mybinder-homepage}
+\end{figure}
+
 \begin{compactitem}
 \item The mybinder service is called with a URL that encodes the location of the data
   repository\footnote{For example
@@ -39,8 +46,8 @@ describe the role of the individual components of Binder:
     referring to the GitHub repository REPRODUCIBILITY-REPOSITORY-EXAMPLE of the
     github user FANGOHR, asking to open FIGURE1.IPYNB file.}
 
-  Alternatively, there is form (shown in Figure:\TODO{Add figure of
-    mybinder.org}) which users can complete with repository details
+  Alternatively, there is form (see Figure~\ref{fig:mybinder-homepage})
+  which users can complete with repository details
   to start the build of the corresponding environment, or to obtain the URL to
   re-use that configuration later, or share it with others.
 \item From the mybinder.org entry point, the request is forwarded to one
