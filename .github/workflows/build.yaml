@@ -23,6 +23,7 @@ jobs:
             texlive-bibtex-extra \
             texlive-xetex \
             biber \
+            pdftk \
             git \
             python3
 
@@ -54,6 +55,15 @@ jobs:
           name: final.pdf
           path: final.pdf
           if-no-files-found: error
+
+      - name: page length check final.pdf
+        run: |
+            # display number of pages for debugging
+            pdftk draft.pdf dump_data_annots output  | grep NumberOfPages
+            # trigger error if too long
+            make check-length-final
+
+
 
       # Comment out for now as the check script is not working yet
       # - name: check person-month data

@@ -40,6 +40,10 @@ check:
 	test -f draft.pdata
 	python3 ./check-pdata
 
+check-length-final:
+	python3 ./check-length-final.py
+
+
 final:
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=final.tex all
 

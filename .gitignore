@@ -250,3 +250,6 @@ TSWLatexianTemp*
 *.spl
 
 .DS_Store
+
+# Generated as part of CI, or when running check-length-final manually
+pdftk-data-annots-output.txt
