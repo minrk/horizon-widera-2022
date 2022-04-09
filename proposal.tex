@@ -19,9 +19,11 @@
 %% Suggested fix above taken from
 %% https://tex.stackexchange.com/questions/425600/latex-error-command-counterwithout-already-defined
 %%
+
 \documentclass[
   deliverables,
   longtasklabels,
+  numericcites,
   noworkareas,
   svgnames,
   \classoptions
@@ -32,7 +34,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 % \usepackage{minitoc}
-
 %\usepackage{varioref}
 
 \usepackage{float}  % used to suppress floating of tables in Resources section.
@@ -98,10 +99,10 @@ How do we describe the tools?
   - [X] include example in concept somewhere
 
 - Consistency
-  - [ ] Section or section or Sect or Sec.
-  - [ ] Figure or figure or Fig or Fig.
-  - [ ] Binder or binder
-  - [ ] MyBinder or Mybinder or mybinder
+  - [ ] Section or section or Sect or Sec. - Section
+  - [ ] Figure or figure or Fig or Fig. - Figure
+  - [ ] Binder or binder - Binder
+  - [ ] MyBinder or Mybinder or mybinder - let's use `mybinder.org` for the public instance of the service
 
 - [ ] Add binder usage numbers to proposal (Hans/Min have those),
       probably best in mybinder section.
@@ -109,14 +110,14 @@ How do we describe the tools?
 - [ ] have a generic section on reproducibility and things we talk about here
   - [X] a repository
   - [X] software environment / ways how to specify this (step A)
-  - [ ] executing anotebook in this environment (step B)
+  - [ ] executing a notebook in this environment (step B)
   - [ ] step A and B are the reproducibility steps we care about here
   - [ ] other aspects of reproducibility: knowing which commands to repeat,
 knowing where to deposit software, and data, ...
-  - [ ] myBinder.org
+  - [ ] mybinder.org
 
 - [ ] LaTeX layout items
-  - [ ] can we switch the citation style so that we use [1], [2], [3], instead
+  - [x] can we switch the citation style so that we use [1], [2], [3], instead
 of [Beg+21], [17a] and []? I think our references where we don't provide authors
 (because it is a git repo and the authors don't matter so much) break the
 current style. It may be necessary to change this in the Proposalclass. The
