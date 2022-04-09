@@ -1,20 +1,26 @@
 \subsubsection{Project Binder}\label{seq:project-binder}
 
-\TOWRITE{}{Turn the following ideas into full sentences.}
+The Binder Project \cite{Binderpaper2018} (\url{https://jupyter.org/binder}) is
+a subproject of the Jupyter project. The Binder project is formally operating
+within the Jupyter ecosystem, but not confined to be useful for notebooks.
 
-\paragraph{Relationship to Jupyter}
-\begin{compactitem}
-\item Binder is part of Jupyter
-\item Bindersubproject (within the Jupyter project) consists of
-\begin{compactitem}
-\item Repo2docker
-\item BinderHub
-\end{compactitem}
-\item Binder project is operating within Jupyter ecosystem
-\item But not confined to notebooks
-\item Focus for this proposal is on \repotodocker{} part
-\item \repotodocker{} solves software environment question in generic way
-\end{compactitem}
+The key components of the Binder software are \repotodocker{}
+(Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
+creates a software environment inside a Docker container from a software
+specification in a repository. \binderhub{} starts a Jupyter notebook server
+within this container from which the user can execute the notebooks from the
+repository.
+
+The MyBinder federation (see \ref{sec:mybinder}) is a federation of
+organisations that collectively host a service running the Binder software
+(\url{https://mybinder.org}). This is the service we made use of in our example
+in section~\ref{sec:reproducibility-example}.
+
+The focus for this proposal is to improve \repotodocker{}. In particular,
+\repotodocker{} solves software environment challenge (see
+Section~\ref{sec:reproducibility-concept}) in generic way and is independent
+from Jupyter notebooks.
+
 \TODO{Add image that depicts this Jupyter/Binder relation ship}.
 
 \paragraph{Basic functionality of Binder}
@@ -31,6 +37,8 @@
 \end{compactitem}
 
 \TODO{Explain: mybinder.org (service) is not binder (software)}
+
+\paragraph{\repotodocker}\label{sec:repo2docker}
 
 \paragraph{Supported software specification formats}
 \label{repo2docker-supported-software-specifications}
@@ -147,3 +155,9 @@ under-represented communities.
 \subsubsection{Related project: Mybinder}\label{sec:mybinder}
 
 \TOWRITE{}{The MyBinder.org federation}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "proposal"
+%%% End:
