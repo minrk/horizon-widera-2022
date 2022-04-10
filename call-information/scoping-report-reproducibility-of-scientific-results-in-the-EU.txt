@@ -1,0 +1,22 @@
+Notes from the EU scoping report (https://github.com/minrk/horizon-widera-2022/blob/main/call-information/scoping-report-reproducibility-of-scientific-results-in-the-EU.pdf)
+
+Recommendations from the report:
+- page 6: Best practices in the reproducibility continuum start far before publication of
+  scientific results to make them ‘reasonably available’.
+
+- page 16: invest in training of young scientists
+- page 16: align efforts on reproducibility with publishers and stake holders
+
+- page 21: guidelines are good, should be concrete (check list rather than generic)
+
+Vocabulary 
+- page 4/5: A reproducibility continuum is based on three main research processes: 
+  reproduction, replication, and re-use. All three processes rest on the
+  availability of data and methods from the original study. 
+
+  -> software environments and software special cases of data and methods
+  -> workflow is described as 'protocols' - so should use that somewhere in the beginning
+
+- transparency important (page 7)
+  - open data / open science / open source generally helps but is not required
+    
