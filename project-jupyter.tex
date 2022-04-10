@@ -9,17 +9,16 @@
 %             CC-BY-SA.}\label{fig:use-cases-binder}
 % \end{figure}
 
-\paragraph{Relationship between the \TheProject{}project and the Jupyter ecosystem}
+\paragraph{Relationship between the \TheProject{} project and the Jupyter ecosystem}
 
 Some of the team member of the proposed SOURCE project have a track record as
 developers and contributors to Project Jupyter and its associated
 ecosystem, including Jupyter Notebook.
 
-In opening this section, we'd like to state that the proposed work will improve
-the reproducibility of research that uses notebooks, but that it is a key aspect
-of the proposal to make the potential impact of the Binder tools for
-reproducibility available to those researchers who have no desire or possibility
-to use notebooks in their work.
+The proposed work will improve the reproducibility of research that uses
+notebooks, but it is a key aspect of the proposal to make the potential
+impact of the Binder tools for reproducibility available to those researchers
+who have no desire or possibility to use notebooks in their work.
 
 In this section, we introduce key components of project Jupyter to help
 contextualise the Binder project that is described subsequently, and the focus
@@ -47,13 +46,15 @@ rapidly in popularity and adoption both in the industry and academia. We
 estimate the user base of the Jupyter notebook to be in the millions
 \cite{jupyter-grant}. Users range from data scientists to researchers,
 educators, and students from many fields, including journalists and librarians.
-The number of publicly hosted Notebook documents is also of the order of 5 to 10
-millions~\cite{notebookcount}.
+The number of publicly hosted Notebook documents is exceeding 8~millions~\cite{notebookcount}.
 
-In 2017, the Jupyter team was awarded the \emph{ACM Software System Award}, an
-annual award that honors people or an organization \emph{"for developing a
-  software system that had a lasting influence"}. Prior recipients include
-\emph{Unix}, \emph{TCP/IP}, and the \emph{World Wide Web} \cite{acm-award}.
+%%% The award is mentioned in the 'excellence' section in 1.1 now. No need to
+%%% repeat I would say.
+%
+% In 2017, the Jupyter team was awarded the \emph{ACM Software System Award}, an
+% annual award that honors people or an organization \emph{"for developing a
+%   software system that had a lasting influence"}. Prior recipients include
+% \emph{Unix}, \emph{TCP/IP}, and the \emph{World Wide Web} \cite{acm-award}.
 
 A large number of discrete software components make up Project Jupyter.
 While these interact with one another, many can be installed separately
@@ -96,17 +97,22 @@ research institution).
 The communication between the notebook server (for example at the research
 institution) and the client (for example the researcher with their laptop in the
 home office) is based on the standard https protocol, and the connection is
-efficient. The researcher - as the client of the connection to the JupyterHub -
+efficient. The researcher -- as the client of the connection to the JupyterHub --
 only needs a web browser, and very modest hardware to be able to access
 supercomputers or cloud resources remotely.
 
 \TODO{Add an image with a schematic of JupyterHub here?}
 
-Because of these characteristics, many research institutions host their own
-JupyterHub service to provide access to large compute and data hosting
-hardware~\cite{Fangohr2020}. JupyterHub installations are also seen as important
-for EOSC, for example~\cite{panosc-jupyter-binder}. \TODO{Would be good to list
-  one or two more EOSC projects / activities / EGI JupyterHub link}
+Because of these characteristics, many research institutions and HPC centres host their own
+JupyterHub service to provide access to large compute resources and data hosting
+hardware. Users of the service can connect remotely and conduct computational
+exploration or data analysis through the notebook interface displayed in their
+web browser~\cite{Fangohr2020}.
+%% Some of this detail is now in the ambition section.
+% 
+% JupyterHub installations are also seen as important
+% for EOSC, for example~\cite{panosc-jupyter-binder}. \TODO{Would be good to list
+%   one or two more EOSC projects / activities / EGI JupyterHub link}
 
 
 % \medskip\noindent\emph{Jupyter ecosystem}\label{jupyter-ecosystem}
@@ -143,7 +149,7 @@ for EOSC, for example~\cite{panosc-jupyter-binder}. \TODO{Would be good to list
 
 While Jupyter notebooks can make computational and data-driven research more effective
 \cite{Perkel2018,Fangohr2020,Granger2021}, they also have great potential to push
-Open and Reproducible Science forward \cite{Beg2021}. The notebook provides a complete
+open and reproducible science forward \cite{Beg2021}. The notebook provides a complete
 description of a computational and data science study (Step 1 in
 figure~\ref{fig:use-cases-binder}), and the notebook can -- in principle -- be
 turned into a publication, or can be used to provide the required computation
@@ -160,23 +166,25 @@ substantial number of scientists for publications already (for example
 \TODO{insert publications with reproducible repositories - the LIGO paper?
   Anything else}): it is hard to prove
 but it seems plausible that a significant fraction of the 30,000 sessions
-triggered on MyBinder every day are used for reproducible repositories
+triggered on the mybinder.org service every day are used for reproducible repositories
 (Section~\ref{sec:mybinder}).
 
 % HF: this is a reference to the Joel Grus criticism. Not sure if we need it.
 % The paper by Beg2021 addresses that in section 9.
 (We note in passing that the use of Jupyter notebooks alone does not guarantee
 reproducibility: it requires some training and/or experience to be able to specify a
-computational environment and to capture in a machine readable way all required
-computational steps.)
+computational environment and to capture that information in a machine readable
+way. It is also important to include all computational steps in the notebook in
+order~\cite{Beg2021}.)
+
 
 The Binder tools (Section~\ref{seq:project-binder}) were designed to execute
 such notebooks in tailored computational environments which can be created
 automatically and on demand (Step 4 in figure~\ref{fig:use-cases-binder}).
 
-This fully-automatic creation of the correct software environment is an
-essential aspect of reproducibility that is not widely addressed yet. This
-project will address this need, improve the automatic software creation support
+The fully-automated creation of the correct software environment is an
+essential aspect of reproducibility that is not widely addressed yet. The
+\TheProject{} project will address this need, improve the automatic software creation support
 for notebook-driven computational research, and make the same improved automatic
 software creation support accessible for uses cases without notebooks.
 

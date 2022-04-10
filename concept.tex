@@ -1,4 +1,4 @@
-\TOWRITE{HF: section 1.1, and 1.2.12}{Finalise}
+\TOWRITE{HF: 1.2.12}{Finalise}
 
 \TOWRITE{ALL}{Proofread 1.2 up to 1.2.10}
 
@@ -85,15 +85,15 @@ proposed project builds in more detail.
   approach concisely.
 
 \item To prepare the more detailed description of the concept and the content of
-  the Work Packages, we use Section
-  \fullref{sec:reproducibility-example} to introduce key terminology
-  together with an example for computational reproducibility.
+  the Work Packages, we use Section \fullref{sec:reproducibility-example} and
+  \fullref{sec:terminology} to introduce key terminology together with an
+  example for computational reproducibility.
 
 \item Sections \fullref{sec:project-jupyter} and \fullref{seq:project-binder}
   introduce the Jupyter and Binder projects, respectively.
 
-\item Section \fullref{sec:binder-for-reproducibility} explains the use of
-  Binder tools for reproducible science.
+%\item Section \fullref{sec:binder-for-reproducibility} explains the use of
+%  Binder tools for reproducible science.
 \end{itemize}
   
 \noindent The methodology for this project is discussed starting in section
@@ -157,10 +157,10 @@ simulations.
 
 The challenges of such ``computational reproducibility'' include:
 \begin{itemize}
-\item Are the different processing steps for that data recorded? This could be
-the order in which analysis scripts need to be executed -- for example to
-compute intermediate results -- which will be turned into a figure in the last
-step?
+\item Do we know the protocol, \emph{i.e.} are the different
+  processing steps for that data recorded? This could be the order in which
+  analysis scripts need to be executed -- for example to compute intermediate
+  results -- which will be turned into a figure in the last step?
 
 We will call this sequence of steps the \emph{workflow}. This workflow could be
 archived -- for example -- through a \softwarename{README.txt} file, or scanned
@@ -201,7 +201,7 @@ and documentation of the research process.
 required to execute these commands?
 
 \item[3. Importance]: Is the researcher convinced that investing effort into making
-their work more reproducible is a worth while investment? This is a wide topic,
+their work more reproducible is a worthwhile investment? This is a wide topic,
 touching on expectations, existing cultures, lack of metrics that acknowledge
 reproducibility efforts, and policies.
 
@@ -300,8 +300,8 @@ process in the following sections \ref{sec:terminology} to \ref{sec:mybinder}.
 The reproducibility workflow shown in Figure~\ref{fig:use-cases-binder} is
 working today, and we provide estimates on the number of current users in
 section \ref{sec:mybinder}. The work proposed for this project will build on
-this existing technology and (i) make it more robust and easier to use
-(\WPref{reproducibility}), and (ii) extend the functionality (\WPref{impact}) so
+this existing technology and (i)~make it more robust and easier to use
+(\WPref{reproducibility}), and (ii)~extend the functionality (\WPref{impact}) so
 that the existing tools can be used in many more use cases
 (\WPref{applications}).
 
@@ -352,8 +352,10 @@ Our example repository\footnote{
 
 \begin{description}
 \item[\softwarename{README.md}]: an overview of the content of the repository
-\item[\softwarename{figure1.ipynb}]: notebook that creates \softwarename{figure1.pdf}gs from
-  the raw data. Could also be realised through a script of some kind.
+\item[\softwarename{figure1.ipynb}]: notebook that creates
+  \softwarename{figure1.pdf} from
+  the raw data. Could also be realised through a script or other executable
+  program of some kind.
 \item[\softwarename{requirements.txt}]: software specification
 \item[\softwarename{time\_series\_covid19\_deaths\_global.csv}]: raw data
 \end{description}
@@ -367,7 +369,7 @@ In our example, the necessary steps to create the figure from the raw data are
 gathered in the notebook \texttt{figure1.ipynb}.
 
 \item[Notebook] A Jupyter Notebook. In short, an executable document that can
-  combine text, code and computation results. A Jupyter notebook can act like a
+  combine text, code and computation results. A Jupyter notebook can be used like a
   script. The notebook is explained in Section \fullref{sec:jupyter-notebook}.
 
 \item[Software specification] The software specification depends on the software

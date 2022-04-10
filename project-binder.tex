@@ -17,8 +17,8 @@ under the URL \url{https://mybinder.org}. This is the service we made use of in
 our example in section~\ref{sec:reproducibility-example}.
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
-\repotodocker{} solves software environment challenge (see
-Section~\ref{sec:reproducibility-concept}) in generic way and is independent
+\repotodocker{} solves the software environment challenge (see
+Section~\ref{sec:reproducibility-concept}) in a generic way and is independent
 from Jupyter notebooks.
 
 \TODO{Add image that depicts this Jupyter/Binder relation ship}.
@@ -29,7 +29,6 @@ from Jupyter notebooks.
 The currently most common reproducibility use case -- with the current state of the Binder
 tools -- is the one we introduced in
 Section~\ref{sec:reproducibility-example}. We will use this to
-Section~\ref{sec:terminology}. We will use this to
 describe the role of the individual components of Binder:
 
 
@@ -56,15 +55,15 @@ describe the role of the individual components of Binder:
   re-use that configuration later, or share it with others.
 \item From the \mybinder{} entry point, the request is forwarded to one
   \binderhub{} service of one of the organisations in the BinderHub federation
-  that has available compute capacities.
+  that has available compute resources.
 \item The \binderhub{} software running at the chosen location, will ask
-  \repotodocker{} to create a docker container in which the notebooks from the repository can be executed.
+  \repotodocker{} to create a Docker container in which the notebooks from the repository can be executed.
 \item \repotodocker{} searches the repository for specifications of software requirements (see \ref{repo2docker-supported-software-specifications}).
 \item \repotodocker{} composes a Dockerfile that contains all the commands
   necessary to install software.
-\item \repotodocker{} builds the Docker image based on the Dockerfile
-\item \binderhub{} takes the Docker image and asks Kubernetes to start up
-  container based on this image
+\item \repotodocker{} builds the Docker image based on the Dockerfile.
+\item \binderhub{} takes the Docker image and asks Kubernetes to start 
+  a container based on this image.
 \item The notebook server is started in this Docker container.
 \item \binderhub{} forwards the user who requested this virtual environment to
   the URL at which the repository (or a particular notebook) can be explored
@@ -120,23 +119,23 @@ immediate and free interaction by readers in their browser.
 
 \emph{\mybinder{}} is a service run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
-of organisations that collectively host a service running the Binder software
-under the URL \url{https://mybinder.org}.
+of organisations. Collectively, they host a service running the BinderHub software
+which can be reached from \url{https://mybinder.org}.
 
-The service is actively used with approximately 200,000 binder sessions being
+The service is actively used with approximately 200,000 sessions being
 requested and delivered by the \mybinder{} service every week in 2021. The number
 of sessions is growing from approximately 10,000 per day in November 2018
 (beginning of the available records) to about 30,000 per day in 2022. We have
 identified 60,000 unique repositories published in the last few years which have
-used the binder service. The data is available~\cite{mybinder-archive}.
+used the \mybinder{} service. The data is available~\cite{mybinder-archive}.
 
-This project will not provide or operate a BinderHub service (such as the global
+This \TheProject{} project will not provide or operate a BinderHub service (such as the global
 ``\url{https://mybinder.org}'' instance). The improvements achieved, however, will immediately
 be made available to all operators of BinderHubs, including \mybinder{}.
 
-\subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
-\TOWRITE{}{Hmm -- perhaps we don't need this section, as we explain in the
-  Methodology section what we want to do with Binder?}
+% \subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
+% \TOWRITE{}{Hmm -- perhaps we don't need this section, as we explain in the
+%   Methodology section what we want to do with Binder?}
 
 
 
@@ -145,3 +144,4 @@ be made available to all operators of BinderHubs, including \mybinder{}.
 %%% mode: latex
 %%% TeX-master: "proposal"
 %%% End:
+
