@@ -1,11 +1,13 @@
-\TOWRITE{HF: 1.2.12}{Finalise}
-
 \TOWRITE{ALL}{Proofread 1.2 up to 1.2.10}
 
 \TOWRITE{ALL}{Write missing sections 1.2.13 to 1.2.16}
 
+\TOWRITE{Min/Hans}{Mention KPIs somewhere?}
+
 \subsection{Methodology}\label{sec:concept_methodology}
 \eucommentary{5-8 pages}
+
+
 
 \TODO{Check we have addressed all mandatory topics}
 
@@ -408,64 +410,160 @@ notebooks and scripts of a repository can be executed
 
 \subsubsection{Methodology}\label{sec:methodology}
 
-\TODO{Needs review and polishing}
+Our approach is centered around the following ideas:
+\begin{compactenum}
+  \item We put the researcher into the center of our work. In the end,
+    researchers need to lead or the very least contribute to make their work
+    reproducible. It is thus essential to find technical and social solutions
+    that are \emph{useful and practical}. This idea is reflected in researchers
+    being involved in \WPref{management} through the \emph{Community Engagegment
+    Panel}, the requirements gathering and application of the work carried out
+  in \WPref{applications} and the interaction with scientists through our
+  outreach and engagement activities in \WPref{education}. All of these inputs
+  drive the technical software work done in \WPref{reproducibility} and \WPref{impact}.
+\item We also need to consider wishes and constraints from other reproducibility
+  stakeholders. These include research councils and funders, publishers, research
+  infrastructure providers, and educators. There are also opportunities to use the same
+  software environment creation to support outreach and
+  citizen-science projects (see~\ref{sec:mybinder}). A set of representative of
+  these domains will be gathered in the Community Engagement Panel, and connect
+  us with the relevant communities. A list of confirmed panel members is
+  available (see~\taskref{management}{community-engagement-panel}) and will be
+  extended if the project is funded.
+\item The design idea for \repotodocker{} is to build on existing standards and
+  conventions. This means that researchers have already created reproducible
+  repositories (if they use those conventions to specify software requirements),
+  but we have not developed the tool yet to create the software for that
+  repository automatically. Following this design choice means that we do not
+  expect researchers to learn something just so that \repotodocker{} can
+  understand it.
+\item Providing useful training plays a key role in enabling and motivating
+  researchers to work reproducible. We will explain the benefits for
+  reproducible work, and teach good practice for reproducible science such as
+  keeping raw data,  meta data and relevant software, using version control and
+  automating analysis steps and workflows.
+  We will also show case tools to support the creation (and use) of reproducible
+  research artifacts, including those developed through this project.
+\item We will explain the possibility of using Jupyter notebooks to create
+  reproducible records of computational science, but also support non-notebook
+  driven use cases.
+\item The measures we advocate to improve reproducibility in science are
+  designed to be embedded into the ongoing research activity to minimise the
+  additional burden associated with the publication of results.
+\item We believe in an agile approach to effective software engineering to get
+  the most useful and fast feedback from the use of those features in a real
+  world context.
+\item All our outputs will be open source and published with permissive
+  licenses.
+\end{compactenum}
 
-Our methodology and approach  ...
-
-\textbf{Improving the robustness of reproducible environments (\WPref{reproducibility})}\\
-Finally, we are explicitly allocating time in \WPref{core} for maintaining
-Jupyter software, as well as new development
- % (\taskref{core}{maintenance}).
-Maintenance is crucial to creating reliable, sustainable software,
-but its cost is often swept under the rug in funding applications
-because of the perceived pressure to focus on novelty.
-Being up front and explicit about this cost is critical to the sustainability
-of open source open science.
-
-\medskip
-\noindent\textbf{Broadening  (\WPref{impact})}\\
-In addition to improving how successfully and how often tools like \repotodocker{} reproduce environments,
-we aim to broaden the impact of the tools by making them useful in more contexts.
-The existing software makes certain assumptions about where it will run,
-made for the purposes of limiting maintenance scope of the Binder project.
-As the project has matured, certain expansions of scope are appropriate,
-as seen in the existing demand for new features in the project.
-
-We further propose improvements to the wider Binder ecosystem
-to expand the impact of the tools in more contexts to be useful to more researchers
-and more institutions.
-In particular, we have identified planned improvements:
-
-\begin{itemize}
-  \item Binder and its crucial software component \emph{repo2docker}
-  \item relaxing Kubernetes assumption
-  \item running on HPC
-  \item more buildpacks
-    % (\taskref{ecosystem}{r2d-and-binder}).
-
-\end{itemize}
-
-\medskip\noindent\textbf{Beyond the improvement to \TheProject tools
-  (\WPref{applications}, \WPref{education})}\\
-Beyond the improvement to the Binder tools for reproducility, we plan on
-\begin{itemize}
-\item Design, implementation, application, demonstration and
-  evaluation of multiple demonstrators, that cover research fields such as
-  \TOWRITE{}{photon and neutron science, geosciences},
-  and also interests of participating SMEs (\WPref{applications}).
-\item Producing \emph{training and education material} to disseminate
-  the ability to do reproducible computational science using the tools
-  we develop, among others (\WPref{education}).
-\end{itemize}
 
 \medskip
-\noindent
-\textbf{The science
-  demonstrators}\label{sec:science-demonstrators-in-concept}\\
+\noindent We implement our approach through 5 Work packages:
 
-We describe the context and challenges for each demonstrator in this
-section. The particular planned activities are shown in the
-corresponding tasks in \WPref{applications}.
+%\begin{itemize}
+%\item
+  \WPref{management} deals with the administration and management of
+    the project.
+    % \item
+
+    \WPref{reproducibility} will improve the robustness of reproducible
+    environments through technical work on \repotodocker{} and BinderHub. In
+    particular, we will first create a metric to be able to measure our progress
+    (\taskref{reproducibility}{repo2docker-checker}), improve the ability create
+    software environments for older repositories
+    (\taskref{reproducibility}{repo2docker-timemachine}) and improve the
+    performance (\taskref{reproducibility}{performance-optimisation}). We
+    explicitly allocate some time in \taskref{reproducibility}{maintenance} for
+    maintaining the tools we extend and want to build on. Maintenance is crucial
+    to creating reliable, sustainable software, but its cost is often swept
+    under the rug in funding applications because of the perceived pressure to
+    focus on novelty.
+    % \item
+
+    \WPref{impact} will extend the feature set of \repotodocker{} to broaden
+    the impact of the project. This
+    includes to understand more data sources and software specification patters
+    (\taskref{impact}{patterns}), to refactor the tool to not depend on a
+    Kubernetis installation and support other container formats next to Docker
+    (\taskref{impact}{patterns}), to export identified software dependencies
+    (\taskref{impact}{extract-dependencies}), to support new use cases and use
+    outside the Jupyter ecosystem (\taskref{impact}{extract-patterns}).
+    % \item
+
+    \WPref{applications} will test, evaluate and apply the improvements from
+    Applications \WPref{reproducibility} and \WPref{impact} in real-world reproducibility
+    use cases, such as best practice reproducibility show cases
+    (\taskref{applications}{demos}), use of \repotodocker{} on decentralised
+    hardware (\taskref{applications}{binder-at-home}), publishing of large,
+    complex or restricted access data sets
+    (\taskref{applications}{data-publishing}), and reproducibility for HPC
+    (\taskref{applications}{binder-at-hpc}).
+    % \item
+
+    \WPref{education} disseminates outcomes, delivers training materials
+    and activities, and supports community engagement. We will develop best practice guidelines for reproducible
+    science (\taskref{education}{online-resources}), organise and deliver
+    training events (\taskref{education}{workshops}), work closely with
+    scientists wishing to contribute to the project (\taskref{education}{community-support}).
+  %\end{itemize}
+
+% 
+% \textbf{Improving the robustness of reproducible environments (\WPref{reproducibility})}\\
+% Finally, we are explicitly allocating time in \WPref{reproducibility} for maintaining
+% Jupyter software, as well as new development
+%  % (\taskref{reproducibility}{maintenance}).
+% Maintenance is crucial to creating reliable, sustainable software,
+% but its cost is often swept under the rug in funding applications
+% because of the perceived pressure to focus on novelty.
+% Being up front and explicit about this cost is critical to the sustainability
+% of open source open science.
+% 
+% \medskip
+% \noindent\textbf{Broadening  (\WPref{impact})}\\
+% In addition to improving how successfully and how often tools like \repotodocker{} reproduce environments,
+% we aim to broaden the impact of the tools by making them useful in more contexts.
+% The existing software makes certain assumptions about where it will run,
+% made for the purposes of limiting maintenance scope of the Binder project.
+% As the project has matured, certain expansions of scope are appropriate,
+% as seen in the existing demand for new features in the project.
+% 
+% We further propose improvements to the wider Binder ecosystem
+% to expand the impact of the tools in more contexts to be useful to more researchers
+% and more institutions.
+% In particular, we have identified planned improvements:
+% 
+% \begin{itemize}
+%   \item Binder and its crucial software component \emph{repo2docker}
+%   \item relaxing Kubernetes assumption
+%   \item running on HPC
+%   \item more buildpacks
+%     % (\taskref{ecosystem}{r2d-and-binder}).
+% 
+% \end{itemize}
+% 
+
+%   \medskip\noindent\textbf{Beyond the improvement to \TheProject tools
+%   (\WPref{applications}, \WPref{education})}\\
+% Beyond the improvement to the Binder tools for reproducility, we plan on
+% \begin{itemize}
+% \item Design, implementation, application, demonstration and
+%   evaluation of multiple demonstrators, that cover research fields such as
+%   \TOWRITE{}{photon and neutron science, geosciences},
+%   and also interests of participating SMEs (\WPref{applications}).
+% \item Producing \emph{training and education material} to disseminate
+%   the ability to do reproducible computational science using the tools
+%   we develop, among others (\WPref{education}).
+% \end{itemize}
+% 
+% \medskip
+% \noindent
+% \textbf{The science
+%   demonstrators}\label{sec:science-demonstrators-in-concept}\\
+% 
+% We describe the context and challenges for each demonstrator in this
+% section. The particular planned activities are shown in the
+% corresponding tasks in \WPref{applications}.
 
 
 \subsubsection{Gender aspects}\label{sec:gender}
