@@ -1,0 +1,76 @@
+From https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-widera-2022-era-01-41
+
+Topic description
+=================
+
+ExpectedOutcome:
+----------------
+Projects are expected to contribute to the following expected outcomes:
+
+- Structured understanding of the underlying drivers, of concrete and effective
+  interventions - funding, community-based, technical and policy - to increase
+  reproducibility of the results of R&I; and of their benefits;
+
+- Effective solutions, policy-, technical- and practice-based, to increase the
+  reproducibility of R&I results in funding programmes, in communities and in
+  the dissemination of scientific results;
+
+- Greater collaboration, alignment of practices and joint action by stakeholders
+  to increase reproducibility, including but not limited to training,
+  specialised careers and guidelines for best practice.
+
+
+These outcomes should contribute to medium and long-term impacts:
+
+- Increased proportion of reproducible results from publicly funded R&I;
+- Increased re-use of scientific results by research and innovation;
+- Greater quality of the scientific production.
+
+Scope:
+
+Reproducibility refers to the possibility for the scientific community to obtain
+the same results as the originators of a specific finding. As such,
+reproducibility is core to scientific progress, and there is debate on whether
+there is a ‘crisis of reproducibility’ in contemporary science. At a time when
+funding levels for R&I are under scrutiny globally, and societal trust in the
+outcomes of research and innovation become increasingly essential, there is a
+need to address inefficiencies in the research process, to avoid useless and
+costly repetition, to maximise return on investment in R&D&I, to prevent the
+propagation of mistakes, and to facilitate the translation of results into
+innovations.
+
+Therefore, this topic aims to fund activities to
+
+a) determine how increased reproducibility generates gains and savings in the
+R&I process and improve overall performance - alongside the demonstrated
+positive effects on their quality, integrity and trust-worthiness, and
+
+b) find, experiment and mainstream concrete solutions and best-practices to
+increase the reproducibility of research funded with European taxpayers’ money,
+including through the more systematic integration of sex and gender as variables
+whenever relevant.
+
+Consequently, actions should help understand and promote reproducibility by:
+
+1) creating an open knowledge base of results, methodologies and interventions
+on the drivers and consequences of reproducibility for the R&I system; and to
+fill the main gaps in such knowledge;
+
+2) develop, validate, pilot and deploy practices and practical tools for
+funders, publishers and scientists;
+
+3) promote uptake, greater collaboration, and increased alignment of the
+activities of stakeholders - scientific and technical communities, publishers
+and funders among others - to increase reproducibility.
+
+Finally, projects should assist further policy development on reproducibility,
+based on scoping work by the Commission [1]. While solutions should be applicable
+to Europe, attention should be paid to reproducibility in global science.
+
+It is expected that the funded action(s) will adhere to best practices in open
+science and reproducibility (e.g. re-use existing results, fully document the
+research process), and provide a final reflection based on their own experience
+at the forefront of reproducibility.
+
+[1]i.e. https://data.europa.eu/doi/10.2777/341654 -> see file
+scoping-report-reproducibility-of-scientific-results-in-the-EU.pdf
