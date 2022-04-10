@@ -1,0 +1,337 @@
+\subsection{Objectives and ambition}
+
+\subsubsection{Ambition}
+
+\TheProject's ambition is to \myemph{improve the global reproducibility of
+  scientific results} with focus on those aspects of the research process that
+are supported by computation and software, such as computer simulation, data
+processing, data analysis and creation of figures and tables in publications.
+
+We want to achieve this ambition through
+\begin{compactitem}
+\item educating researchers about good reproducible practices, and
+\item make it easier to perform computational research in a reproducible way
+  through improving and developing relevant software tools.
+\end{compactitem}
+
+\subsubsection{State of the Art}
+
+To make computational research reproducible, we generally need to archive
+(i)~required data, (ii)~the required software, (iii)~the protocol that explains
+how to process the data to obtain the result that is to be reproduced. Using
+services such as Zenodo, it is possible to deposit such archives with a DOI and
+make reference to them in publications.
+
+In order to reproduce the results, it should be possible for anybody to take such an archive of a research
+output, and to carry out the two necessary steps:
+\begin{compactitem}
+\item Step 1 to install the required software environment, and
+\item Step 2 to follow the protocol to reproduce the results from the archived data.
+\end{compactitem}
+
+It is of particular value if Steps 1 \emph{and} 2 can be \emph{carried out
+  automatically} by executing some kind of script or program that is part of the
+archive. First, if the automatic execution is possible, we know that there is a
+complete description of the protocol included in the archive, and that no
+mistake is made in trying to follow the protocol. Second, the automatic
+execution saves time.
+
+\emph{Given enough training or experience}, researchers can use existing technical
+solutions to compose such archives, and to allow a completely automatic
+reproduction of the necessary software environment, and then reproduction of the actual
+result using that software. 
+
+\medskip Researchers who use the Jupyter Notebook to orchestrate their
+computational research (see Figure~\ref{fig:jeodpp}) can achieve this automatic
+reproducibility with little additional effort: they use the Notebook document as
+the protocol of their analysis (Step 2), which can be executed automatically.
+They can make use of the Binder tool (Section~\ref{seq:project-binder}) and the
+associated mybinder.org service that has
+been designed by the Jupyter team to automatically create the appropriate
+software environment (step 1) in which the notebook can be executed.
+
+\begin{figure}[tb]
+  \centering\includegraphics[height=0.2\textheight]{images/jeodpp.png}
+  \centering\includegraphics[height=0.2\textheight]{images/jeodpp-demo.jpg}
+  \caption{\emph{Left}: The Joint Research Centre (JRC) Earth Observation
+    Data and Processing Platform (JEODPP) is a user of the
+    Jupyter Notebook (source:
+    \url{https://cidportal.jrc.ec.europa.eu/home/}), where it features
+    at the top of the pyramid to help users orchestrate layers of data
+    analysis software and hardware. \emph{Right}: An example
+    service in which an interactive visualisation is provided through
+    the Jupyter Notebook rendering of the density map of the ships
+    detected from Sentinel-1 images over the Mediterranean sea during
+    the period October 2014 to September 2016. \cite[Figure
+    6]{Soille2018}. \label{fig:jeodpp}}
+  \TODO{Do we want to keep the figure? The left side is useful, and it is good
+    to have some images.}
+\end{figure}
+
+\subsubsection{Beyond state of the art}
+
+In this project, we will focus on the \emph{reproduction of the
+  software environment} (Step 1) which is a prerequisite for any attempt to
+reproduce the actual research outputs. In particular, we want to make the
+creation of this computational environment \emph{automatic}.
+
+We will go beyond the current state of the art by
+\begin{compactitem}
+\item enhancing the existing Binder software for Jupyter notebooks,
+  directly improving the reproducibility of research created by the substantial
+  community of researchers using such Notebooks,
+\item extending the capabilities of the Binder tools so that its capability to
+  create arbitrary software environments automatically can be used outside the
+  Jupyter ecosystem,
+\item adding new capabilities to the Binder tools that enable new reproducibility
+  use cases, such as those than need access to large data sets, access to restricted sets,
+  and reproducibility for High Performance Computing,
+\item enabling the Binder tools to run on the desktop computer of individual
+  researchers (rather than having to rely on central or institutional
+  installations such as mybinder.org).
+\end{compactitem}
+
+\subsubsection{Motivation - Why?}
+
+We focus on the computational reproducibility because it is a real
+obstacle for practical reproducibility. 
+
+Firstly, it affects the majority of all researchers: there are estimates that over 92\%
+of all researchers work with \emph{research software} and over 50\% develop
+their own~\cite{Hettrick2014}. Where experiments drive the research, this is
+often data processing, analysis and plotting. Each of those computational
+research cases needs a software environment in which the actual processing can
+be carried out. The software environment may consist of somewhat standard packages (for example
+use of a Python, R or Julia plotting library), or it may include tailored
+programs that have been developed especially for this study.
+
+Secondly, software packaging and management is a technically challenging topic,
+and we cannot expect 92\% of all researchers to master it -- so we believe there
+is a clear need to support this with appropriate tooling.
+
+The complexity arises in parts from the increasing age of archived studies, and
+also in the often unusual combinations of research software and libraries that
+need to be combined for a particular study. Other difficulties include that a
+reproduction typically needs to be done on a different computer, perhaps even on
+a different operating system. If, say, a plotting library is used, then it may
+have changed its interface or behaviour over time, so it is important to install
+exactly the right version of the plotting library, before a reproduction of
+results is attempted using it.
+
+Thirdly, being able to re-create the appropriate software environment is a
+pre-requisite before any actual reproduction of results can be attempted: it
+would be inefficient to educate researchers what data and programs to archive,
+if in the future nobody (or only very few highly trained people) will be able to
+execute those scripts.
+
+Finally, we think that there are low hanging fruits: the work proposed here will
+make it possible create computational environments automatically for
+\emph{existing data archives}: the Binder philosophy is to understand existing standards for software
+specification, and to build a software environment based on those standards.
+Where researchers have used the existing software specification already, Binder
+will work immediately on their archived files. This means that (i)~a researcher
+putting together a well organised archive does not need to know about Binder,
+yet the researcher who wants to reproduce the results later can use Binder to
+automate the recreation of the software environment. This also means that
+(ii)~improvements we propose in this work, will make some existing archives (that
+have been created in the past) more easily reproducible.
+
+%(It is part of our training programme to educate about the importance and methods
+%for software specification.)
+
+\subsubsection{Objectives}\label{sect:objectives}
+\begin{compactenum}[\myemph{Objective} 1:]
+
+\item \label{obj:reproducibility} \myemph{Facilitate better computational
+    reproducibility and FAIR data} by 
+  improving the \myemph{reproducibility of computational environments}
+  used for science, and facilitating \myemph{FAIR data practices}.
+  We will contribute to the recording and automatic reproducibility
+  of environments with Binder,
+  and extend capabilities to better support FAIR
+  data requirements. In particular, the archival of execution
+  environments to support \myemph{reusability} of notebooks in the future
+  needs attention. Such notebooks may, for example, be published alongside
+  traditional publications to detail the computation of published data
+  and figures, and address the Reusablity requirement of FAIR data.
+  \TODO{This needs editing. It is too long in comparison to the other
+    objectives. It is not clear to me how the FAIR data comes in here.}
+
+\item \label{obj:broaden} \myemph{To broaden the impact} of existing Binder tools
+    for reproducibility by expanding the feature set, applicable domains and use
+    cases. In particular, make it possible to create computational environments
+    outside the Jupyter ecosystem.
+    
+  \item \label{obj:demonstrators} \myemph{Provide demonstrator use cases for
+      reproducible science} to validate and demonstrate the value of the work. We will apply
+    improved tools and guidelines to a number of reproducible use cases in
+    academic research, education, research infrastructures and SMEs.
+
+\item \label{obj:education} \myemph{Outreach and engagement} --- Develop best
+  practice guidelines for reproducible science, and disseminate this by
+  educating the research communities about reproducible practices, and available
+  tools for reproducible publications and policies. Reach out to scientists, and
+  the wider research communities and reproducibility stakeholders to encourage
+  engagement with this project.
+  % and exploitation of existing tools for Reproducible and Open Science
+  % for their research domains and interests.
+  % Engaging a larger community will help \myemph{ensure the sustainability} of
+  % the services and underlying infrastructure by distributing its
+  % development, hosting, and maintenance over stakeholders from a
+  % variety of institutions and backgrounds,
+  % from the private sector to public research, education
+  % and open government.
+
+
+
+\end{compactenum}
+
+\begin{table}
+  \label{tab:objectives-tasks}
+  \caption{
+  Each objective and the tasks which further that goal.}
+  \begin{tabular}{|m{.3\textwidth}|m{.7\textwidth}|}
+
+    \hline
+
+    \myemph{Objective} & \myemph{Tasks}
+    \\\hline
+
+    \ref{obj:reproducibility} &
+
+    % \longtaskref{core}{maintenance}
+    % \longtaskref{core}{jh-bh-conv},
+
+    \\\hline
+
+    \ref{obj:broaden} &
+
+    % \longtaskref{core}{accessibility},
+    % \longtaskref{core}{collaboration},
+    % \longtaskref{ecosystem}{xeus-cpp},
+    % \longtaskref{ecosystem}{jupyter-widgets},
+    % \longtaskref{ecosystem}{teaching-tools}
+
+    \\\hline
+
+    \ref{obj:demonstrators} &
+    % \longtaskref{applications}{astro},
+    % \longtaskref{applications}{teaching},
+    % \longtaskref{applications}{application-gpu},
+    % \longtaskref{applications}{geoscience},
+    % \longtaskref{applications}{opendose-analysis},
+    % \longtaskref{applications}{math},
+    % \longtaskref{applications}{reproducibility-xfel}
+
+    \\\hline
+
+    \ref{obj:education} &
+
+    % \longtaskref{education}{workshops},
+    % \longtaskref{education}{online-resources},
+    % \longtaskref{education}{helpdesk}
+
+    \\\hline
+
+  \end{tabular}
+  \TODO{Complete table, or delete.}
+\end{table}
+
+
+
+
+\subsubsection{Excellence}
+
+We have a diverse and interdisciplinary team driving this project, in which we
+bring together research software developers, researchers, research support staff
+and educators -- each world class in their domain -- with the common vision to
+work towards better open source tools for better reproducibility in science.
+
+Through our multiple and interdisciplinary roles, we see the same process of
+generating reproducible research outputs from the perspective of different
+stakeholders, and can propose and develop solutions that are \emph{useful and
+  practical} in real-world research environments.
+
+We extend our own experience through our wide network of collaborators and
+colleagues and will -- as part of the execution of this project -- seek
+constant exchange with and feedback from different additional stakeholders in
+our \emph{Community Engagegment Panel} to shape the work of the
+\TheProject project. As a team experienced in developing open source software,
+we expect to be able to go beyond this and attract development contributions
+from volunteers to support this project.
+
+The existing Binder tools -- which are the baseline for this project --
+originate from Project Jupyter. We have a core Jupyter and Binder developer in
+our team, and thus direct access to developer expertise and experience.
+
+\subsubsection{Impact}
+
+We have already discussed above that computational reproducibility affects the
+majority of researchers, including those who carry out work that is not
+predominantly computational.
+
+The impact of this project will be realised through (i) the training we develop
+and disseminate, and (ii) the improved Binder tools. The improved tools will
+directly impact the community of researchers using Jupyter notebooks. However,
+the \emph{new functionality and applicability of the Binder tools outside Project
+Jupyter} will benefit all researchers who need computational reproducibility, and
+may be -- and in the long run -- more important.
+
+\medskip
+
+We can give some indication of the size and activity of the Jupyter notebook
+community and use of the existing Binder tools: Jupyter Notebooks are used to
+support research in numerous communities, including
+%\begin{compactitem}
+%\item
+\noemph{Journalists} and practitioners of \noemph{data-driven
+    journalism} at the LA Times, BuzzFeed News, Columbia Journalism School
+  \cite{latimes-datadesk} \cite{columbia-nytimes} \cite{data-journalism};
+  \noemph{Data scientists} in academia, industry and services \cite{Perkel2018};
+  % \item
+  \noemph{Research institutions} such as CERN, EuXFEL, JRC, and many more,
+  operating institution-wide Jupyter deployment;
+  % \item
+  \noemph{Universities} using Jupyter as a teaching platform;
+  % \item
+  \noemph{Large cloud providers} building commercial products on the
+  top of Jupyter (Google DataLab and Colaboratory, Amazon Sagemaker, Microsoft Azure
+  Notebooks);
+  % \item
+  within the \noemph{European Open Science Cloud} Jupyter is used in many EOSC
+  projects, and a JupyterHub service is provided by the EGI foundation.
+  % \item
+  This impact was recognised by the \emph{ACM Software System Award} that was
+  awarded to the Jupyter team to honour \emph{"developing a software system that
+    had a lasting influence"} in 2017. (Prior recipients include \emph{Unix},
+  \emph{TCP/IP}, and the \emph{World Wide Web} \cite{acm-award}.)
+  
+  There are 8 million notebooks deposited on GitHub \cite{notebookcount}, and
+  the size of the Notebook user base was estimated to be of the order of
+  millions in 2015 \cite{jupyter-grant}. We know that the Binder service for
+  Jupyter notebooks is used to create about 30,000 computational environments
+  every day (Section~\ref{sec:mybinder}) to enable execution of notebooks within
+  that computational environment.
+
+  
+%  research effectiveness for many of their millions of users. 
+  
+%   Our aim is to re-use the work that has gone into the development of the Binder
+%   tools, and to make this functionality for automatic creation of computational
+%   environments available to researchers outside the Jupyter user community to
+%   improve reproducibility at a wider scale.
+
+
+
+
+  \subsubsection{Technical Readiness Level (TRL)}
+
+  The Binder software and service prototype at mybinder.org is TRL 6. We will
+  bring Binder to at least TRL 8 during the course of the project.
+
+
+
+  %%% Local Variables:
+  %%% mode: latex
+  %%% TeX-master: "proposal"
+  %%% End:
