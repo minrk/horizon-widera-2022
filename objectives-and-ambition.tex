@@ -1,0 +1,124 @@
+\subsection{Objectives and ambition}
+
+\subsubsection{Ambition}
+
+\TheProject's ambition is to \myemph{improve the global reproducibility of
+  scientific results} with focus on those aspects of the research process that
+are supported by computation and software, such as computer simulation, data
+processing, analysis and creation of figures and tables in publications.
+
+We want to achieve this ambition through
+\begin{compactitem}
+\item educating researchers about good reproducible practices, and
+\item make it easier to perform computational research in a reproducible way
+  through improving and developing relevant software tools.
+\end{compactitem}
+
+\subsubsection{State of the Art}
+
+To make computational research reproducible, we generally need to archive
+(i)~required data, (ii)~the required software, (iii)~the protocol that explains
+how to process the data to obtain the result that is to be reproduced. Using
+services such as Zenodo, it is possible to deposit such archives with a DOI and
+make reference to them in publications.
+
+Ideally, it should be possible for anybody to take such an archive of a research
+output, and to carry out the two necessary steps:
+\begin{compactitem}
+\item Step 1 to install the required software environment, and
+\item Step 2 to follow the protocol to reproduce the results from the archived data.
+\end{compactitem}
+
+It is of particular value if Steps 1 \emph{and} 2 can be \emph{carried out
+  automatically} by executing some kind of script or program that is part of the
+archive. First, if the automatic execution is possible, we know that there is a
+complete description of the protocol included in the archive, and that no
+mistake is made in trying to follow the protocol. Second, the automatic
+execution saves time.
+
+\emph{Given enough training or experience}, researchers can use existing technical
+solutions to compose such archives, and to allow a completely automatic
+reproduction of the necessary software, and then reproduction of the actual
+result using that software. 
+
+\medskip Researchers who use the Jupyter Notebook to orchestrate their
+computational research can achieve this automatic reproducibility with little
+additional effort: they use the Notebook document as the protocol of their
+analysis (Step 2), which can be executed automatically. They can make use of the
+Binder tool that has been designed by the Jupyter team to automatically create
+the appropriate software environment (step 1) in notebooks can be executed.
+
+\subsubsection{Beyond state of the art}
+
+In this project, we will focus on the \emph{reproduction of the
+  software environment} (Step 1) which is a prerequisite for any attempt to
+reproduce the actual research outputs. In particular, we want to make the
+creation of this computational environment automatic.
+
+We will go beyond the current state of the art:
+\begin{compactitem}
+\item improvements to Binder software for Jupyter notebooks, directly improving
+  the reproducibility of research created by the substantial community of
+  researchers using such Notebooks
+\item extending the capabilities of the Binder tool so that its capability to
+  create arbitrary software environments automatically can be used outside the
+  Jupyter Ecosystem.
+\item add new capabilities to the Binder tools that enable new reproducibility
+  use cases, such access to large data sets, restricted access to data,
+  and reproducibility for High Performance Computing.
+\end{compactitem}
+
+\subsubsection{Motivation - Why?}
+
+The reproduction of software environments is a real obstacle for reproducible computation.
+- a real problem
+
+- not much attention
+
+- low hanging fruit - attach to existing standards
+
+\input{objectives.tex}
+
+\subsubsection{Excellence}
+
+We have a diverse and interdisciplinary team driving this project, in which we
+bring together research software developers, researcher, research support staff
+and educators - each world class in their domain - with the common vision to
+work towards better open source tools for better reproducibility in science.
+
+As active researchers, we are aware of the need and difficulties in creating
+reproducible research outputs. 
+
+The existing Binder tools -- which are the baseline for this project --
+originate from Project Jupyter. We have a core Jupyter and Binder developer in
+our team, and thus direct access to developer expertise and experience.
+
+We are well connected and will, as part of the execution of this project, seek
+constant exchange with different stakeholders to shape the work of the
+\TheProject project. As a team experienced in developing open source software,
+we expect to be able to go beyond this and attract development contributions
+from volunteers to support this project.
+
+\subsubsection{Impact}
+
+There are estimates that over 50\% of all researchers work with \emph{research software}
+- everybody has computational research challenges
+  - also experimental groups
+
+  - Jupyter community big (notebooks, users)
+
+  , which has changed the work, education and
+  research effectiveness for many of their millions of users. This impact was
+  recognised by the \emph{ACM Software System Award} that was awarded to the
+  Jupyter team to honour \emph{"developing a software system that had a lasting
+    influence"} in 2017.
+  
+  Our aim is to re-use the work that has gone into the development of the Binder
+  tools, and to make this functionality for automatic creation of computational
+  environments available to researchers outside the Jupyter user community to
+  improve reproducibility at a wider scale.
+
+- 
+
+
+\subsubsection{TRL}
