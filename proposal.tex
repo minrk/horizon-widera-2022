@@ -59,6 +59,9 @@
 % \newcommand{\myemph}[1]{\emph{#1}}%    to try bf or emph in ambition section
 \newcommand{\myemph}[1]{\textbf{#1}}%    to try bf or emph in ambition section
 
+\newcommand{\noemph}[1]{#1}%    to switch off emphasis but keep the option to
+                           %    de-activate it again later
+
 %\newcommand*{\fullref}[1]{\ref{#1} \nameref*{#1}} % One
 
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref{#1} \nameref*{#1}}}
@@ -205,7 +208,7 @@ Please bear in mind that advances beyond the state of the art must be interprete
 % \draftpage
 % \input{objectives}
 % \draftpage
-\input{relation_to_the_work_programme.tex}
+% \input{relation_to_the_work_programme.tex}
 
 % ---------------------------------------------------------------------------
 %  Section 1.2: Methodology
