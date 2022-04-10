@@ -348,6 +348,7 @@ audience and key stakeholders, (b) updating social media content and sparking
 discussion in social media/tweeting, (c) measuring social impact and reassessing
 social media strategy as required.
 
+\clearpage
 \subsection{Summary}
 
 \eucommentary{
@@ -356,5 +357,110 @@ key elements of your project impact pathway and of the measures to
 maximise its impact.
 }
 
+\textbf{KEY ELEMENT OF THE IMPACT SECTION}
 
-\TOWRITE{}{DIAGRAM}
+\newlength{\savedparindent}
+\newcommand{\summarybox}[2]{
+\begin{framed}
+
+\centerline{\textbf{ #1}}
+\setlength{\savedparindent}{\parindent}
+\par
+\setlength{\parindent}{0pt}
+{#2}
+\setlength{\parindent}{\savedparindent}
+\end{framed}
+}
+
+
+\begin{multicols}{2}
+\summarybox{SPECIFIC NEEDS}{
+\eucommentary{What are the specific needs that triggered this project?}
+
+Reproducibility is a widely recognized challenge in computational science.
+There are many tools that solve \emph{part} of the problem,
+or aim to solve the whole problem while requiring wholesale adoption of a specific tool,
+which may not be practical or desirable across a variety of domains or communities.
+Reliably reproducing software environments without requiring adoption of any single tool chain
+allows for modular adoption, integrating into policies, practices, etc.
+We want to lower the barrier to reproducibility, and thereby increase the adoption of reproducible practices.
+}
+\summarybox{D \& E \& C MEASURES}{
+\eucommentary{What dissemination, exploitation and communication measures will you apply to the results?}
+
+\textbf{Exploitation:} \TOWRITE{}{???}
+
+\textbf{Dissemination:} \TOWRITE{}{Workshops}
+
+\textbf{Communication:} \TOWRITE{}{Documentation \(or do I have DIS/Comm backwards?\)}
+}
+
+\summarybox{EXPECTED RESULTS}{
+\eucommentary{What do you expect to generate by the end of the project? }
+
+\textbf{Improved software tools for reproducing computational environments}:
+by improving the Binder tools for reproducible environments,
+it will be easier for researchers to produce and share results openly and reproducibly.
+
+\textbf{Improved understanding of good practices for reproducibility}: study results, documentation, and workshops will aid researchers and policy makers in understanding the most appropriate practices to adopt in their pursuit of reproducible research.
+}
+
+\summarybox{TARGET GROUPS}{
+\eucommentary{Who will use or further up-take the results of the project? Who will benefit from the results of the project?}
+
+\textbf{Computational science practitioners}: researchers with an interest in reproducibility of their on work.
+
+\textbf{Research institutions}: institutions facilitating or enforcing the reproducibility of their researchers.
+
+\textbf{Policy makers}: Funders and institutions requiring their subjects to follow reproducible practices
+
+\textbf{Publishers}: Requiring/enabling reproducible publications
+}
+
+\summarybox{OUTCOMES}{
+\eucommentary{What change do you expect to see after successful dissemination and exploitation of project results to the target group(s)?}
+
+\textbf{Adoption of Binder tools for reproducibility}:
+practitioners will have access to Binder tools for reproducibility.
+Having improved their usability and robustness
+
+\textbf{Facilitating practical policies for reproducible publications}
+}
+\summarybox{IMPACTS}{
+\eucommentary{
+What are the expected wider scientific, economic and societal effects of the project contributing to the expected impacts outlined in the respective destination in the work programme?
+}
+
+\textbf{Improved reproducibility of scientific results}: Improving the \emph{ease of use} tools for reproducibility
+lowers the barrier for adoption, and thereby increases the number, quality, and access of reproducible research outputs.
+}
+\end{multicols}
+
+% \noindent
+% \fbox{
+% \begin{minipage}{
+% % \dimexpr\linewidth-2\fboxrule-2\fboxsep
+% 2in
+% }
+% \textbf{SPECIFIC NEEDS 2}
+%
+% xyz
+% \begin{compactenum}
+% \item x
+% \item y
+% \end{compactenum}
+% \end{minipage}
+% }
+% {
+% \hfill\makebox[0pt]{\fbox{
+% \textbf{SPECIFIC NEEDS}}}
+% \hfill
+% }
+
+% \textbf{SPECIFIC NEEDS}
+%
+% xyz
+% \begin{compactenum}
+% \item x
+% \item y
+% \end{compactenum}
