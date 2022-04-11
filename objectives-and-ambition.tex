@@ -36,14 +36,23 @@ complete description of the protocol included in the archive, and that no
 mistake is made in trying to follow the protocol. Second, the automatic
 execution saves time.
 
-\emph{Given enough training or experience}, researchers can use existing technical
-solutions to compose such archives, and to allow a completely automatic
-reproduction of the necessary software environment, and then reproduction of the actual
-result using that software.
+There are two approaches emerging to achieve this reproducibility: (a) to use a
+workflow tool or environment that caters to a given use case (for example
+~\cite{reana2019} \TODO{cite other workflow systems}). Or (b) to use standard
+(software engineering) computing tools and conventions (git, make, python, perl,
+bash, \ldots) to specify the compute environment and reproduce steps piecemeal.
+
+The workflow tool approach (a) is more robust, but requires `all-in' adoption by authors and reproducers alike,
+and may not suit all use cases. It can also have associated `vendor lock-in' effects
+- once a tool is adopted for one piece, it must be used for all associated work.
+The standard computing tools approach (b) is generic, but not accessible to all researchers
+ as it requires sufficient training or experience to be effective.
+ The loose coupling of tools and modular choices make it more flexible (covering more use cases),
+ but more difficult to follow robustly.
 
 \medskip Researchers who use the Jupyter Notebook to orchestrate their
 computational research (see Figure~\ref{fig:jeodpp}) can achieve this automatic
-reproducibility with little additional effort: they use the Notebook document as
+reproducibility with little additional effort~\cite{Beg2021}: they use the Notebook document as
 the protocol of their analysis (Step 2), which can be executed automatically.
 They can make use of the Binder tool (Section~\ref{seq:project-binder}) and the
 associated mybinder.org service that has
