@@ -1,12 +1,12 @@
 {
-  "actions" : {
-    "build" : {
-      "enabled" : true,
-      "script" : "latexmk final"
-    },
-    "run" : {
-      "enabled" : true,
-      "script" : "latexmk -pvc final"
-    }
-  }
+  "extension" : {
+    "identifier" : "info.varisco.LaTeX",
+    "name" : "LaTeX"
+  },
+  "extensionTemplate" : "novalatex",
+  "extensionValues" : {
+    "novalatex.mainfile" : "final.tex",
+    "novalatex.option-latexmk" : "-xelatex"
+  },
+  "openLogOnRun" : "fail"
 }
