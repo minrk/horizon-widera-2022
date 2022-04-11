@@ -7,7 +7,7 @@ Check final.pdf is not too long. Raise ValueError if it is too long.
 import subprocess
 
 
-def check_page_length(document="final.pdf", max_allowed_pages=44):
+def check_page_length(document="final.pdf", max_allowed_pages=45):
     # establish current number of pages, store output in pdftk-output.txt
     subprocess.check_call(
         f"pdftk {document} dump_data_annots output pdftk-data-annots-output.txt".split()
