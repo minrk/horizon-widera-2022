@@ -6,12 +6,12 @@
   % task id for references
   id=binder-at-home,
   % lead institution ID
-  lead=MP,
-  PM=1,
+  lead=SRL,
+  PM=6,
   wphases={0-36},
   % partner institution ID(s)
   % don't include lead here
-  partners={SRL}
+  partners={MP,UIO}
 ]
 In this task, we want to use the compute power of the Desktops of individual researchers and
 users, to recreate software environments in which computational results can be
@@ -30,19 +30,19 @@ It thus possible to overload the system \TODO{Add link to general discussion
 
 To allow the up-scaling of good reproducibility practice, it would be
 desirable not to depend on such a single (or even multiple hosted services).
-  
+
 The compute resources offered through mybinder are modest: at most 2 GB of RAM
 and a single CPU core (\TODO{check this!}).
 Most laptops and Desktops have similar or much better hardware capabilities than
 the mybinder cloud-computing resources currently offer
-  
+
 \paragraph*{Task activity:} Based on the preparations in \WPref{reproducibility} and
 \WPref{impact}, extend Binder so that users of the service can
 carry out the building of the environment, and -- if desired -- launching of a
 notebook server \emph{on their own hardware}. The working title for such
 functionality is ``binder@home'' (as a reference to the crowd-based SETI@home search for
 extraterrestrial intelligence at home.\footnote{https://setiathome.berkeley.edu}
-  
+
 We will design, implement, and test the 'binder@home' functionality, and make it
 available as part of binder software. We will need a utility that takes on
 the responsibility of BinderHub for a single-user use case, and which triggers
