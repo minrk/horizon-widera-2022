@@ -33,145 +33,204 @@ Only include such outcomes and impacts where your project would make a significa
 
 
 The expected impact of \TheProject with respect to the
-work program is detailed in the table below.
+work program is detailed in Table~\ref{table:impact-comparison}.
 
-\begin{center}
-\begin{tabular}{|m{.3\textwidth}|m{.7\textwidth}|}\hline
-  Expected impact & \\\hline
+% \begin{center}
+% \begin{tabular}{|m{.3\textwidth}|m{.7\textwidth}|}\hline
+%   Expected impact & \\\hline
+% 
+% 
+%   Integrating co-design into research and
+%   development of tools to better support scientific, industrial, and
+%   societal applications benefiting from a strong user orientation &
+%   The Jupyter and Binder tools have always been driven by a close connection to users; since
+%   the project began as IPython in 2001, many of the developers have been
+%   scientific researchers using the tools as they developed them. More recently,
+%   when Jupyter has benefited from dedicated developer time, developers have
+%   remained in academic institutions, in the role now referred to as
+%   'research software engineers,' allowing day-to-day interactions with
+%   researchers using these tools in a wide range of fields.
+% 
+%   By supporting developers in various research institutions where the improvements
+%   will be used as they are developed, \TheProject will continue this invaluable
+%   collaboration.
+% 
+%   The impact of this approach for enabling reproducible computational science is expected
+%   to be very high because it is a direct response to the strong demand from
+%   scientists for improving the productivity and reproducibility of their work.
+%   The notebook approach central to the Jupyter community is being embraced in many scientific disciplines, so the
+%   proposed services to be developed in \TheProject are strongly oriented to the user needs.
+%   Further, the environment-reproducibility focus of the Binder project is useful well beyond
+%   the notebook focus of the Jupyter community.
+% 
+%   \\\hline
+% 
+%   Supporting the objectives of Open and Reproducible Science by
+%   improving access to content and resources, and facilitating interdisciplinary
+%   collaborations &
+%   Binder and repo2docker have seen rapid uptake in many kinds of research,
+%   because they bring together the essential elements of the modern scientific
+%   computational workflow (from data collection to publication and open sharing)
+%   in the familiar format of a scientific notebook, with powerful functionality
+%   for access to scientific content for analysis and visualisation.
+%   Notebooks also embody the core concepts of open science by providing a
+%   mechanism to reproduce results in publications, and collaborative
+%   sharing of not just scientific results, but of the code that produced them.
+% 
+% 
+%   We expect the use of notebooks in EOSC to improve access to scientific code:
+%   digital documents and notebooks encourage publishing workflows, whereas code in
+%   scripts or manual interactive workflows are often kept by the researchers who
+%   performed them. The focus on clarity and reproducibility also helps to ensure
+%   that data is meaningfully accessible, by preserving essential understanding to
+%   make sense of the raw data.
+% 
+%   We have already seen a good example of the Jupyter ecosystem facilitating an
+%   interdisciplinary collaboration: the LIGO scientific collaboration shared
+%   notebooks detailing the data processing steps which led to the discovery of
+%   gravitational waves, using the Binder service to allow anyone to re-compute
+%   the published plots. Scientists with no background in gravitational waves
+%   studied these notebooks and improved the signal processing.
+%   In this proposal, we want to provide this ability to a wider audience through
+%   improved tools and documentation,
+%   including for disciplines which rely on processing much larger volumes of
+%   data \cite{ligo-open-science}.
+% 
+%     By connecting new notebook capabilities to existing and highly used services,
+%   we expect to have impacts for the users and also for the service provider.
+%   The scientific users will have access to new capabilities,
+%   and we anticipate adoption of new innovative ways of using the data.
+%   We also expect an impact on the services themselves, in terms of usage,
+%   but also in terms of capturing precious information and feedback on
+%   how to evolve these services to best support open and collaborative use of
+%   the data and services.
+% 
+%   \\\hline
+% 
+%   Facilitating Open and Reproducible Science by automating existing practices &
+%   A key to our philosophy and success thus far has been automating
+%   what scientists already are (or should be) doing.
+%   The approaches and environment specifications used in Binder are
+%   not specific to Binder, and are already widely adopted.
+%   We only seek to automate this process,
+%   and implement and document as many standards as we can find in use by the community.
+%   By implementing what is already in use,
+%   we minimise "lock-in" and meet users,
+%   lowering the barrier to adoption relative to "bespoke" tools,
+%   which require a large change in tooling, and significant disruption to researchers'
+%   work.
+% 
+% 
+% 
+% 
+%   % \\\hline
+    %     \TOWRITE{ALL}{More impacts for other applications/demonstrators ...}
+% 
+%   \\\hline
+% 
+% 
+% \end{tabular}
+% \end{center}
 
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{>{\raggedright}m{.2\textwidth}m{.7\textwidth}}
+      \textbf{Expected impacts from call}
+      & \textbf{Expected impact from the \TheProject project}\\\toprule
+        % 
+        % 
+      Increased proportion of reproducible results from publicly funded R\&I 
+      &
+      % 
+        The \TheProject project will improve the ease of use tools for reproducibility,
+        thereby increasing the number of reproducible research outputs.
+        The project will also educate researchers to provide the motivation, required
+        technical skills, and an understanding of best practice to achieve
+        reproducible science outcomes. 
+      \\\midrule
 
-  Integrating co-design into research and
-  development of tools to better support scientific, industrial, and
-  societal applications benefiting from a strong user orientation &
-  The Jupyter and Binder tools have always been driven by a close connection to users; since
-  the project began as IPython in 2001, many of the developers have been
-  scientific researchers using the tools as they developed them. More recently,
-  when Jupyter has benefited from dedicated developer time, developers have
-  remained in academic institutions, in the role now referred to as
-  'research software engineers,' allowing day-to-day interactions with
-  researchers using these tools in a wide range of fields.
+        %
+        % 
+      Increased re-use of scientific results by research and innovation
+      &
+        Reproducibility enables re-usability, in particular where the reproduction
+        of the results can be carried out automatically (for example using the
+        tools developed and improved in the \TheProject project).
 
-  By supporting developers in various research institutions where the improvements
-  will be used as they are developed, \TheProject will continue this invaluable
-  collaboration.
+        From anecdotal evidence it is known that
+        a new PhD student may need many months (sometimes exceeding 12 months) to reproduce
+        a published study which is to form the basis of their new research task.
+        An immediately reproducible research output made available together with the publication
+        can reduce this time immensely: a binder-enabled reproducible repository may be able
+        to recompute the results within an hour or a much shorter time because the process is automatic.
+        % and because the PhD student (or more experience researcher embarking onto a
+        % research
+        % activity new to them) does not need to understand all the details of recreating the software environment and how to 
+        %
+        % We know from PhD students we have supervised, that this initial learning phase can
+        % be vastly reduced if the published result has a reproducible archive available. 
 
-  The impact of this approach for enabling reproducible computational science is expected
-  to be very high because it is a direct response to the strong demand from
-  scientists for improving the productivity and reproducibility of their work.
-  The notebook approach central to the Jupyter community is being embraced in many scientific disciplines, so the
-  proposed services to be developed in \TheProject are strongly oriented to the user needs.
-  Further, the environment-reproducibility focus of the Binder project is useful well beyond
-  the notebook focus of the Jupyter community.
+        The availability of an immediately reproducible research output plays a very
+        important role for modern research, where generally advances are built based on prior results.\\\midrule
+        %
+        %
+        %
+        % 
+      Greater quality of the scientific production.
+      &
+        %Reproducibility is an important concept underpinning the scientific method.
+        %Re-usability of results -- often enabled through their reproducibility -- has the potential to accelerate the research significantly.
 
-  \\\hline
+        The availability of practical reproducibility as advanced by \TheProject has the potential to
+        improve the quality of scientific research through new opportunities for collaboration and interdisciplinary research:
 
-  Supporting the objectives of Open and Reproducible Science by
-  improving access to content and resources, and facilitating interdisciplinary
-  collaborations &
-  Binder and repo2docker have seen rapid uptake in many kinds of research,
-  because they bring together the essential elements of the modern scientific
-  computational workflow (from data collection to publication and open sharing)
-  in the familiar format of a scientific notebook, with powerful functionality
-  for access to scientific content for analysis and visualisation.
-  Notebooks also embody the core concepts of open science by providing a
-  mechanism to reproduce results in publications, and collaborative
-  sharing of not just scientific results, but of the code that produced them.
-
-
-  We expect the use of notebooks in EOSC to improve access to scientific code:
-  digital documents and notebooks encourage publishing workflows, whereas code in
-  scripts or manual interactive workflows are often kept by the researchers who
-  performed them. The focus on clarity and reproducibility also helps to ensure
-  that data is meaningfully accessible, by preserving essential understanding to
-  make sense of the raw data.
-
-  We have already seen a good example of the Jupyter ecosystem facilitating an
-  interdisciplinary collaboration: the LIGO scientific collaboration shared
-  notebooks detailing the data processing steps which led to the discovery of
-  gravitational waves, using the Binder service to allow anyone to re-compute
-  the published plots. Scientists with no background in gravitational waves
-  studied these notebooks and improved the signal processing.
-  In this proposal, we want to provide this ability to a wider audience through
-  improved tools and documentation,
-  including for disciplines which rely on processing much larger volumes of
-  data \cite{ligo-open-science}.
-
-    By connecting new notebook capabilities to existing and highly used services,
-  we expect to have impacts for the users and also for the service provider.
-  The scientific users will have access to new capabilities,
-  and we anticipate adoption of new innovative ways of using the data.
-  We also expect an impact on the services themselves, in terms of usage,
-  but also in terms of capturing precious information and feedback on
-  how to evolve these services to best support open and collaborative use of
-  the data and services.
-
-  \\\hline
-
-  Facilitating Open and Reproducible Science by automating existing practices &
-  A key to our philosophy and success thus far has been automating
-  what scientists already are (or should be) doing.
-  The approaches and environment specifications used in Binder are
-  not specific to Binder, and are already widely adopted.
-  We only seek to automate this process,
-  and implement and document as many standards as we can find in use by the community.
-  By implementing what is already in use,
-  we minimise "lock-in" and meet users,
-  lowering the barrier to adoption relative to "bespoke" tools,
-  which require a large change in tooling, and significant disruption to researchers'
-  work.
-
-
-
-
-  % \\\hline
-  \TOWRITE{ALL}{More impacts for other applications/demonstrators ...}
-
-  \\\hline
-
-
-\end{tabular}
-\end{center}
+        We have already seen a good example of the Jupyter ecosystem facilitating an
+        interdisciplinary collaboration: the LIGO scientific collaboration shared
+        notebooks detailing the data processing steps which led to the discovery of
+        gravitational waves, using the Binder service to allow anyone to re-compute
+        the published plots. Scientists with no background in gravitational waves
+        studied these notebooks and improved the signal processing.
+        In this proposal, we want to provide this ability to a wider audience through
+        improved tools and documentation,
+        including for disciplines which rely on processing much larger volumes of
+        data~\cite{ligo-open-science}.\\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{Impact comparison table \label{table:impact-comparison}}
+  \TOWRITE{ALL}{This \emph{could} be extended with more details on use cases /
+    applications. But maybe that is too much and it is fine as it is?}
+\end{table}
 
 
 \subsubsection{Measuring impact}
 
-As we are building tools and services for Open and Reproducible Science,
-the best measure of our impact is in the adoption and use of these tools and services,
-which can be observed qualitatively (positive anecdotal feedback) and quantitatively
-(counting visitors to a service, for example).
-Much of our work will be in the form of contributions to existing public projects,
-such as Jupyter and Binder,
-which can be measured in our participation in those projects,
-such as code and documentation contributions,
-bug reports, and roadmap contributions.
+As we are building tools for open and reproducible science, the best measure of our impact
+is in the adoption and use of these tools and services based on them. This can be observed
+qualitatively (anecdotal feedback and case studies) and quantitatively (counting workshop
+attendees, for example). Much of our work will be in the form of contributions to existing
+public projects, such as Binder and Jupyter, which can be measured in our participation in
+those projects, such as code and documentation contributions, bug reports, and roadmap
+contributions.
 
-We can measure our progress toward aims and objectives in \ref{sect:objectives}
-via the following
-Key Performance Indicators (KPIs):
-
+We can measure progress toward our objectives in \ref{sect:objectives}
+via the following Key Performance Indicators (KPIs):
 \begin{compactenum}[\textbf{KPI} 1:]
   \item \label{kpi:workshop-attendees}
-    Attendees at Reproducible Science workshops organised by \TheProject participants.
+    Number of attendees of \TheProject workshops on reproducible science.
   \item \label{kpi:binder-publications}
-    Open publications for which the authors have made a reproducible repository available
-    through \TheProject services.
-    \TODO{HF: Services or tools? We are thinking here of the number of (git) repos
-      that reproduce results from papers, or for which we can build the
-      environment sucessfully with repo2docker?}
-    \TODO{HF: Can/should we count existing repositories that may become reproducible
-    (in this sense) through the time-machine (and other) improvements to repo2docker?}
-  \item \label{kpi:binder-visits}
-    Visitors to \TheProject services, engaging with open, interactive
-    communications.
-    \TODO{HF: Are these users of mybinder.org? Doesn't hit the projectly as we don't
-    run the mybinder.org service. Maybe remove the KPI?}
-  \item \label{kpi:dissemination}
-    Publications and presentations by \TheProject documenting the use of \TheProject services for
-    Open Science. \TODO{HF: So this includes papers, presentations, but also
-      documentation and best practice guides?}
-  \item \label{kpi:contributions}
-    Contributions by \TheProject and the wider community to Jupyter software and others,
-    including issues reported, bugs fixed, features added, and roadmaps developed.
+    Fraction of published repositories for which Binder tools can build the computational
+    environment -- measuring both improvements in Binder and impact from our training efforts
+    % Open publications for which the authors have made a reproducible repository available
+    % through \TheProject services.
+  \item \label{kpi:dissemination} Dissemination outputs such as publications, reports,
+    presentations, case studies and demonstrators by \TheProject documenting best
+    practice and the use of \TheProject tools and services. 
+  \item \label{kpi:contributions} Contributions by \TheProject and the
+    wider community to Binder and other open source software, including
+  issues reported, bugs fixed, features added, and roadmaps developed. \TODO{Keep ``and
+    the wider community''? We need to restrict this to those who contribute only because
+    of \TheProject [and not include those who would work on it anyway].}
 \end{compactenum}
 
 \subsubsection{Barriers, Obstacles and Framework conditions}
