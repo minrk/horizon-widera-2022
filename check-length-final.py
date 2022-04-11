@@ -4,6 +4,9 @@ Check final.pdf is not too long. Raise ValueError if it is too long.
 
 """
 
+MB = 1e6  # 1 MegaByte: use 1e6 not 2^20 to get more conservative estimate
+
+import os
 import subprocess
 
 
@@ -32,5 +35,16 @@ def check_page_length(document="final.pdf", max_allowed_pages=45):
         print(f"{max_allowed_pages-pages} additional pages are allowed.")
 
 
+def check_file_size(document="final.pdf", limit=10 * MB):
+    filesize = os.stat(document).st_size  # in bytes
+    msg = f"{document} has a size of {filesize/MB} MB  (limit: {limit/MB} MB)"
+    print(msg)
+    if filesize >= limit:
+        msg2 = f"File is too large."
+        print(msg2)
+        raise ValueError(msg + " " + msg2)
+
+
 if __name__ == "__main__":
     check_page_length()
+    check_file_size()
