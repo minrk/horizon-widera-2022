@@ -14,7 +14,8 @@
   partners={IFR, UIO}
   ]
 In this task, we want to broaden the applicability of the Binder tools to become
-useful in High Performance Computing (HPC) environments.
+useful in High Performance Computing (HPC) environments. In particular, this
+requires parallel execution using the reproduced computational environments.
 
 \paragraph*{Context:}
 Reproducibility of data created with HPC resources is difficult. In addition to
@@ -61,22 +62,22 @@ reproducible software environments in HPC contexts. \TODO{Add link to report
 
 \paragraph*{Challenges}: We expect that we need to use a container technology
 that is widely accepted at HPC sites (such as for example Singularity): Docker
-on HPC systems is difficult due to the root-user requirements.
+on HPC systems is difficult due to the root-user requirements~\cite{Gerhardt_2017}.
 
 Another challenge is that of using accelerators such as GPU cards, which are
 installed on the host, but need to be instructed from the software running
-inside the container. \TODO{Add links here to relevant papers.}
+inside the container.
 
 For HPC systems, there are sometimes specialised drivers for high-performance
 network cards: can these be used from the container environment, and if not what
-is the performance impact?
+is the performance impact?  \cite{Liu2021} 
 
 Should hardware requirements be archived in the reproducible repository? If so,
 what specification should we use?
 
-The existing buildpacks that repo2docker supports \TODO{Add link to overview of
-  supported languages etc}, may need to be extended for HPC specific software
-provision (such as Spack or Easybuild).
+The existing buildpacks that repo2docker supports
+\ref{repo2docker-supported-software-specifications} may need to be extended for
+HPC specific software provision (such as Spack or Easybuild).
 
 % The re-execution of parallel software may create significant costs, and thus
 % authentication may be necessary.
@@ -88,3 +89,13 @@ provision (such as Spack or Easybuild).
 %     % (\localdelivref{deliv-id})
 %   \end{compactitem}
 \end{task}
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../proposal"
+%%% End:
+
