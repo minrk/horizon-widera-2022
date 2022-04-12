@@ -2,7 +2,7 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Reducing technical constraints for broader usage,
+  title=Reducing technical constraints to enable broader usage,
   % task id for references
   id=constraints,
   % lead institution ID
@@ -18,14 +18,28 @@ In this task, we refactor and extend the existing code to be more flexible. In
 particular, we want to address and remove the constraints that currently exist:
 
 \begin{compactitem}
-  \item Dependency of existing Kubernetes system
-  \item Support of only Docker containers to host created software environments
+\item Dependency of existing Kubernetes system: at the moment, BinderHub can
+  only start container environments within a Kubernetes installation. In this
+  task, we will make it possible to start a container directly on the host
+  machine. Setting up Kubernetis system is a complex task: while justified to
+  exploit large computational resources through swarms of containers
+  effectively, it is not necessary for single-machine execution of
+  Binder-reproduced environments (such as anticipated for Binder@home in
+  \taskref{applications}{binder-at-home}).
+\item Support of only Docker containers to host created software environments.
+  Docker is widespread and popular, and in particular has an attractive user
+  interface for Windows and OSX. However, many HPC centres refuse to allow use
+  of Docker containers on their systems for security reasons. In this task, we
+  will make it possible to user container technologies, which are more
+  acceptable to use on large HPC installations (such as singularity for
+  example).
      % deliverable will be defined in the appropriate WorkPackage.tex
     % (\localdelivref{deliv-id})
   \end{compactitem}
 
-These steps are essential to enable the Binder@home and the Binder@HPC use
-cases. \TODO{Add links to those tasks}.
+  These steps are essential to enable the Binder@home
+  (\taskref{applications}{binder-at-home}) and the Binder@HPC
+  (\taskref{applications}{binder-at-hpc}) use cases. 
   
 %   The task includes the following activities
 %   \begin{compactitem}
