@@ -220,12 +220,16 @@
   compactht]
 \newcommand{\TheProject}{\pn}% \pn is defined automatically
 % \input{grantagreement-history}
-\ifgrantagreement
+
+\ifsubmit
 \else
+% only abstract in draft
 \clearpage
 \input{abstract}
+
+% detailed toc in draft
+\setcounter{tocdepth}{4}
 \fi
-\ifsubmit\else\setcounter{tocdepth}{4}\fi
 
 \tableofcontents
 
