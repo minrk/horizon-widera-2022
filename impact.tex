@@ -13,27 +13,49 @@ e.g. 4 pages
 Impact: Logical steps towards the achievement of the expected impacts of the project over time, in particular beyond the duration of a project. A pathway begins with the projects' results, to their dissemination, exploitation and communication, contributing to the expected outcomes in the work programme topic, and ultimately to the wider scientific, economic and societal impacts of the work programme destination.
 }
 
-\eucommentary{
-Provide a narrative explaining how the project’s results are expected to make a difference in terms of impact, beyond the immediate scope and duration of the project. The narrative should include the components below, tailored to your project.
+\begin{draft}
+{
+\textcolor{red}
+%\eucommentary{
+Provide a narrative explaining how the project’s results are expected to make a
+difference in terms of impact, beyond the immediate scope and duration of the
+project. The narrative should include the components below, tailored to your
+project.
+
 (a)	Describe the unique contribution your project results would make towards (1) the outcomes specified in this topic, and (2) the wider impacts, in the longer term, specified in the respective destinations in the work programme.
 	Be specific, referring to the effects of your project, and not R\&I in general in this field.
 	State the target groups that would benefit. Even if target groups are mentioned in general terms in the work programme, you should be specific here, breaking target groups into particular interest groups or segments of society relevant to this project.
 	The outcomes and impacts of your project may:
-•	Scientific, e.g. contributing to specific scientific advances, across and within disciplines, creating new knowledge, reinforcing scientific equipment and instruments,  computing systems (i.e. research infrastructures);
-•	Economic/technological, e.g. bringing new products, services, business processes to the market, increasing efficiency, decreasing costs, increasing profits, contributing to standards’ setting,  etc.
-•	Societal , e.g. decreasing CO2 emissions, decreasing avoidable mortality, improving policies and decision making, raising consumer awareness.
-Only include such outcomes and impacts where your project would make a significant and direct contribution. Avoid describing very tenuous links to wider impacts. However, include any potential negative environmental outcome or impact of the project including when expected results are brought at scale (such as at commercial level). Where relevant, explain how the potential harm can be managed.
+  \begin{compactitem}
+    
+  
+\item	Scientific, e.g. contributing to specific scientific advances, across and within disciplines, creating new knowledge, reinforcing scientific equipment and instruments,  computing systems (i.e. research infrastructures);
+\item	Economic/technological, e.g. bringing new products, services, business processes to the market, increasing efficiency, decreasing costs, increasing profits, contributing to standards’ setting,  etc.
+\item	Societal , e.g. decreasing CO2 emissions, decreasing avoidable mortality,
+improving policies and decision making, raising consumer awareness.
+\end{compactitem}
+Only include such outcomes and impacts where your project would make a
+significant and direct contribution. Avoid describing very tenuous links to
+wider impacts. However, include any potential negative environmental outcome or
+impact of the project including when expected results are brought at scale (such
+as at commercial level). Where relevant, explain how the potential harm can be
+managed.
+
 (b)	Describe any requirements and potential barriers - arising from factors beyond the scope and duration of the project - that may determine whether the desired outcomes and impacts are achieved. These may include, for example, other R\&I work within and beyond Horizon Europe; regulatory environment; targeted markets; user behaviour. Indicate if these factors might evolve over time. Describe any mitigating measures you propose, within or beyond your project, that could be needed should your assumptions prove to be wrong, or to address identified barriers.
-	Note that this does not include the critical risks inherent to the management of the project itself , which should be described below under ‘Implementation’.
+	Note that this does not include the critical risks inherent to the management
+  of the project itself , which should be described below under
+  ‘Implementation’.
+  
 (c)	 Give an indication of the scale and significance of the project’s contribution to the expected outcomes and impacts, should the project be successful.  Provide quantified estimates where possible and meaningful.
 	‘Scale’ refers to how widespread the outcomes and impacts are likely to be. For example, in terms of the size of the target group, or the proportion of that group, that should benefit over time; ‘Significance’ refers to the importance, or value, of those benefits. For example, number of additional healthy life years; efficiency savings in energy supply.
 	Explain your baselines, benchmarks and assumptions used for those estimates. Wherever possible, quantify your estimation of the effects that you expect from your project. Explain assumptions that you make, referring for example to any relevant studies or statistics. Where appropriate, try to use only one methodology for calculating your estimates: not different methodologies for each partner, region or country (the extrapolation should preferably be prepared by one partner).
 	Your estimate must relate to this project only - the effect of other initiatives should not be taken into account.
 }
+\end{draft}
 
-
-The expected impact of \TheProject with respect to the
-work program is detailed in Table~\ref{table:impact-comparison}.
+The expected outputs and impact of \TheProject with respect to the
+work program is detailed in Tables~\ref{table:output-comparison}
+and~\ref{table:impact-comparison}, respectively.
 
 % \begin{center}
 % \begin{tabular}{|m{.3\textwidth}|m{.7\textwidth}|}\hline
@@ -131,6 +153,49 @@ work program is detailed in Table~\ref{table:impact-comparison}.
 % 
 % \end{tabular}
 % \end{center}
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{>{\raggedright}m{.475\textwidth}m{.475\textwidth}}
+      \textbf{Expected outputs from call}
+      & \textbf{Expected outputs from the \TheProject project}\\\toprule
+        % 
+        % 
+      Structured understanding of the underlying drivers, of concrete and effective
+      interventions -- funding, community-based, technical and policy -- to increase
+      reproducibility of the results of R\&I; and of their benefits;
+      &
+      %
+        We know that the technologies such as the Jupyter Notebook and their reproducibility
+        with Binder find some acceptance in the scientist community (see Section~\ref{sec:mybinder})
+        (and of course originate from scientists seeking solutions to their computational needs).
+        One of the outcomes of this project is an improved understanding of the underlying drivers
+        for scientist to adopt or not adopt this technology for their workflows~(\WPref{education}).
+      \\\midrule
+      Effective solutions, policy-, technical- and practice-based, to increase the
+      reproducibility of R\&I results in funding programmes, in communities and in
+      the dissemination of scientific results;
+      &
+        The Binder tools are effective and practice-based technical solutions to inncrease the
+        reproducibility of R\&I results in funding programmes and in scientific research more widely.
+        The combination of Jupyter Notebooks and Binder are also effective for the delivery of
+        workshops and education activities involving computation as participants can use complex
+        software environments through their browser, and do not need to install any additional software locally.
+
+        
+      \\\midrule
+      Greater collaboration, alignment of practices and joint action by stakeholders
+      to increase reproducibility, including but not limited to training,
+      specialised careers and guidelines for best practice.
+      &
+        \TheProject is developing tools that enable automatic computational reproducibility across many domains by aligning to the existing software specification practices. Having one tool that respects existing practices means it can be adopted across many domains, thus facilitating greater collaboration. We will develop best practice guidelines for reproducibility and open science, and disseminate them through training activities and materials. The staff hired for the project will be highly specialised research software engineers. We expect that voluntary contributors attracted by the project will also receive additional training for such specialised careers.
+      \\\bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{Output comparison table \label{table:output-comparison}}
+\end{table}
+
+
 
 \begin{table}[h!]
   \begin{center}
@@ -259,17 +324,33 @@ that will be applicable across many domains.
 \eucommentary{
 e.g. 5 pages, including 2.3
 }
-\eucommentary{
+
+\begin{draft}
+  \textcolor{red}
 Describe the planned measures to maximise the impact of your project by providing a first version of your ‘plan for the dissemination and exploitation including communication activities’. Describe the dissemination, exploitation and communication measures that are planned, and the target group(s) addressed (e.g. scientific community, end users, financial actors, public at large).
-	Please remember that this plan is an admissibility condition, unless the work programme topic explicitly states otherwise. In case your proposal is selected for funding, a more detailed ‘plan for dissemination and exploitation including communication activities’ will need to be provided as a mandatory project deliverable within 6 months after signature date. This plan shall be periodically updated in alignment with the project’s progress.
-	Communication measures should promote the project throughout the full lifespan of the project. The aim is to inform and reach out to society and show the activities performed, and the use and the benefits the project will have for citizens. Activities must be strategically planned, with clear objectives, start at the outset and continue through the lifetime of the project. The description of the communication activities needs to state the main messages as well as the tools and channels that will be used to reach out to each of the chosen target groups.
-	All measures should be proportionate to the scale of the project, and should contain concrete actions to be implemented both during and after the end of the project, e.g. standardisation activities. Your plan should give due consideration to the possible follow-up of your project, once it is finished. In the justification, explain why each measure chosen is best suited to reach the target group addressed. Where relevant, and for innovation actions, in particular, describe the measures for a plausible path to commercialise the innovations.
-	If exploitation is expected primarily in non-associated third countries, justify by explaining how that exploitation is still in the Union’s interest.
-	Describe possible feedback to policy measures generated by the project that will contribute to designing, monitoring, reviewing and rectifying (if necessary) existing policy and programmatic measures or shaping and supporting the implementation of new policy initiatives and decisions.
-•	Outline your strategy for the management of intellectual property, foreseen protection measures, such as patents, design rights, copyright, trade secrets, etc., and how these would be used to support exploitation.
-	If your project is selected, you will need an appropriate consortium agreement to manage (amongst other things) the ownership and access to key knowledge (IPR, research data etc.). Where relevant, these will allow you, collectively and individually, to pursue market opportunities arising from the project.
-	If your project is selected, you must indicate the owner(s) of the results (results ownership list) in the final periodic report.
-}
+
+Please remember that this plan is an admissibility condition, unless the work programme topic explicitly states otherwise. In case your proposal is selected for funding, a more detailed ‘plan for dissemination and exploitation including communication activities’ will need to be provided as a mandatory project deliverable within 6 months after signature date. This plan shall be periodically updated in alignment with the project’s progress.
+
+Communication measures should promote the project throughout the full lifespan of the project. The aim is to inform and reach out to society and show the activities performed, and the use and the benefits the project will have for citizens. Activities must be strategically planned, with clear objectives, start at the outset and continue through the lifetime of the project. The description of the communication activities needs to state the main messages as well as the tools and channels that will be used to reach out to each of the chosen target groups.
+
+All measures should be proportionate to the scale of the project, and should contain concrete actions to be implemented both during and after the end of the project, e.g. standardisation activities. Your plan should give due consideration to the possible follow-up of your project, once it is finished. In the justification, explain why each measure chosen is best suited to reach the target group addressed. Where relevant, and for innovation actions, in particular, describe the measures for a plausible path to commercialise the innovations.
+
+If exploitation is expected primarily in non-associated third countries, justify by explaining how that exploitation is still in the Union’s interest.
+
+Describe possible feedback to policy measures generated by the project that will
+contribute to designing, monitoring, reviewing and rectifying (if necessary)
+existing policy and programmatic measures or shaping and supporting the
+implementation of new policy initiatives and decisions.
+\begin{compactitem}
+\item	Outline your strategy for the management of intellectual property, foreseen protection measures, such as patents, design rights, copyright, trade secrets, etc., and how these would be used to support exploitation.
+	If your project is selected, you will need an appropriate consortium agreement
+  to manage (amongst other things) the ownership and access to key knowledge
+  (IPR, research data etc.). Where relevant, these will allow you, collectively
+  and individually, to pursue market opportunities arising from the project.
+\item If your project is selected, you must indicate the owner(s) of the results (results ownership list) in the final periodic report.
+\end{compactitem}
+\end{draft}
+
 
 \TheProject is contributing to tools for Open and Reproducible Science.
 Tools only have impact if and when they are used,
@@ -544,3 +625,11 @@ enables rapid re-use of published results leading to more effective research act
 % \item x
 % \item y
 % \end{compactenum}
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "proposal"
+%%% End:
