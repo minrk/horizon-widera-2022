@@ -15,9 +15,9 @@
 
 - [ ] Your objectives must be SMART but I don’t see much about this? (how would you measure them, are they achievable, etc.)
 
-- [ ] Maybe better to put them in tabular form, separating some of the detail from the core description of each objective? Eg, for obj. 1, the first sentence is the “objective” as such, the rest is an explanation / further details. In the same table you can add the SMART aspects, eg in another column. If table 1.1.1 is about WP tasks, then it is out of place here.
+- [x] Maybe better to put them in tabular form, separating some of the detail from the core description of each objective? Eg, for obj. 1, the first sentence is the “objective” as such, the rest is an explanation / further details. In the same table you can add the SMART aspects, eg in another column. If table 1.1.1 is about WP tasks, then it is out of place here.
 
-- [ ] Don’t forget you need to match your objectives to the scope items in the topic. You can do this in a separate table from the one I mentioned above, if putting everything together in the same table makes it too crowded.
+- [x] Don’t forget you need to match your objectives to the scope items in the topic. You can do this in a separate table from the one I mentioned above, if putting everything together in the same table makes it too crowded.
 
 
 3) 1.1.7 Impact:

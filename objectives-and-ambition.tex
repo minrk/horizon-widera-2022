@@ -1,35 +1,149 @@
 \subsection{Objectives and ambition}
 
-% \subsubsection{Problem statement}
+\label{sect:objectives}
 
-% Open Science is the principle of ....
-% The core of Open Science is making the scientific process \emph{available}.
-% Two key societal goals are facilitated by this:
-%
-% \begin{compactenum}
-% \item \textbf{verifying results}, reinforcing the integrity of scientific communication
-% \item \textbf{reuse}, improving the efficiency of exploitation, whether commercial or in derivative research
-% \end{compactenum}
-%
-% If results are merely \emph{available}, however,
-% much of the value of Open Science remains unrealised.
-% \myemph{Reproducibility} is required for efficient, widespread fulfillment of Open Science goals.
-% But what does it mean to be reproducible?
-% Without the \emph{practical} ability to verify results, results are not
-% any more likely to be verified.
-% Without the \emph{practical} ability to reuse work, results are not
-% any more likely to be exploited in new research or commercial work.
-%
-% In \TheProject, we focus on `practical reproducibility',
-% specifically focusing on computational results, such as computer simulation, data
-% processing, data analysis, and creation of figures and tables in publications.
-%
+As the values of Open and Reproducible Science are adopted by
+governments, funding agencies, research institutes, and society,
+there are practical challenges to implementing such practices on a global scale.
+
+Two of the key societal goals of Open Science are facilitation of
+
+\begin{compactenum}
+\item \textbf{verification} of results, improving the reliability and trustworthiness of scientific output, and
+\item \textbf{reuse} of research products, enabling commercial exploitation and/or derivative research
+\end{compactenum}
+
+If results are merely \emph{available}, however,
+much of the value of Open Science remains unrealised.
+\myemph{Practical reproducibility} is required for efficient, widespread fulfillment of Open Science goals.
+But what does it mean to be reproducible?
+Without the \emph{practical} ability to verify results, results are not
+any more likely to be verified.
+Without the \emph{practical} ability to reuse work, results are not
+any more likely to be exploited in new research or commercial work.
+
+In \TheProject, we focus on `practical reproducibility',
+specifically focusing on computational results, such as computer simulation, data
+processing, data analysis, and creation of figures and tables in publications.
+We differentiate `technical reproducibility,'
+where enough information is \emph{technically present} to reproduce the work given sufficient effort,
+from `practical reproducibility,'
+where effort to reproduce the work is not a burden \cite{binder}.
+
+
+Computational reproducibility is a major challenge facing all scientific domains,
+from social sciences to life sciences, physical sciences, engineering, and digital humanities.
+Almost every area of academia must spend some time computing,
+ranging from large-scale computer simulations to basic data analysis to produce a figure in a publication.
+
+All of these face a common reproducibility challenge: \textbf{the computational environment},
+or the collection of software used to produce the output.
+To reproduce the work, a \textbf{sufficiently similar} computational environment must be produced to re-execute the code.
+This may be a specific version of an application, or a large collection of software dependencies,
+as is common in data science fields.
+
+In order to meet the goals or policies of Open and Reproducible science,
+\myemph{researchers need tools}. Ideally, those tools should
+
+\begin{compactenum}
+\item be freely available and open source
+\item meet researchers where they are, as much as possible
+\end{compactenum}
+
+Binder is a project providing open source tools to solve this computational environment reproducibility challenge.
+It has already proven useful for at least tens of thousands of researchers, educators, developers, and students,
+and we believe it has the potential to facilitate practical reproducibility for millions more,
+including into institutions, funding agencies, and policy makers.
+We aim to realise that potential.
+
 % Increasingly, Open Science and Reproducibility are declared as values or requirements
 % at research institutions, governments, and funding agencies.
 % In order to meet these goals or requirements,
 % researchers need \myemph{tools} that help them accomplish the tasks required for reproducible work.
 
-\subsubsection{Main goal}
+It is in this context that we set our objectives to \textbf{find, experiment, and mainstream Binder tools as concrete solutions and best-practices to increase the reproducibility of research}:
+
+\TOWRITE{Feedback}{
+Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bound
+}
+
+\begin{table}[H]
+  \label{tab:objectives-tasks}
+  \caption{
+  Our objectives and their relationship to the work programme}
+  \begin{tabular}{>{\raggedright}m{.2\textwidth}|m{.4\textwidth}|m{.4\textwidth}}
+
+    \hline
+
+    \myemph{Objective} & \myemph{Description} & \myemph{Relation to work programme}
+
+    \\\hline
+
+    \label{obj:reproducibility} \myemph{Evaluate and facilitate better computational
+    reproducibility and FAIR data}
+    &
+    Tools for reproducibility must be evaluated by how successfully they produce the correct environment.
+    We will provide evaluation tools for reproducibility,
+    and use these tools to guide improvements to the Binder tools,
+    solving known issues where we can improve the \myemph{reproducibility of computational environments}
+    used for science, and facilitate \myemph{FAIR data practices}.
+    &
+    The core of this effort is to \textbf{develop, validate, pilot and deploy practices and practical tools for funders, publishers and scientists}.
+    The robustness of these tools is key to their utility and value,
+    and thereby adoption in research communities.
+    \\\hline
+
+    \label{obj:broaden}
+    \myemph{Enable reproducibility using common tools in a wider variety of environments}
+    &
+    We develop generic tools for reproducible software environments,
+    but have identified several areas where the Binder tools do not yet meet user needs,
+    such as in traditional HPC environments, or users with large data.
+    We shall address those gaps so that tools and strategies can be shared by a wider variety of communities,
+    aligning effort and reducing necessary duplication.
+    &
+    In order to \textbf{promote uptake, greater collaboration, and increased alignment of the activities of stakeholders},
+    it is most efficient when knowledge and tools can be shared.
+    When tools do not work for significant fractions of the research community
+    they must develop their own, often similar tools,
+    as has often been the case for the HPC community.
+
+    \\\hline
+
+    \label{obj:demonstrators}
+    \myemph{Demonstrate reproducibility in specific scientific applications}
+    &
+    We will demonstrate the utility of the Binder tools for achieving reproducible research
+    in a variety of scientific domains,
+    which serves both to inform and motivate improvements to the system,
+    and as illustration and reference for others to follow.
+    &
+    By collaborating across domains, we \textbf{promote uptake, greater collaboration, and increased alignment of the activities of stakeholders}.
+    Further, by publishing working examples,
+    we contribute to an \textbf{open knowledge base of results, methodologies and interventions on the drivers and consequences of reproducibility} in these specific domains,
+    to be used as reference or followed by others in the same domain
+    and other domains with similar challenges.
+
+    \\\hline
+
+    \label{obj:education}
+    \myemph{Educate researchers about reproducible practices}
+    &
+    Develop best practice guidelines for reproducible science, and disseminate this by
+    educating the research communities about reproducible practices and available
+    tools for reproducible publications and policies. Reach out to scientists, and
+    the wider research communities and reproducibility stakeholders to encourage
+    engagement with this project.
+    &
+    By collecting expertise and guidelines, we contribute an \textbf{open knowledge base of results, methodologies and interventions}
+    for computational reproducibility.
+    \\\hline
+
+  \end{tabular}
+\end{table}
+
+
+\subsubsection{Ambition}
 
 \TheProject's main goal is to \myemph{improve the global reproducibility of
   scientific results} with a focus on those aspects of the research process that
@@ -45,7 +159,7 @@ We plan to achieve this goal through
 
 \subsubsection{State of the Art}
 
-To make computational research reproducible, we generally need to archive
+To make computational research reproducible, we generally need to make available
 (i)~required data, (ii)~the required software, (iii)~the protocol that explains
 how to process the data to obtain the result that is to be reproduced. Using
 services such as Zenodo, it is possible to deposit such archives with a DOI and
@@ -65,7 +179,7 @@ complete description of the protocol included in the archive, and that no
 mistake is made in trying to follow the protocol. Second, the automatic
 execution saves time.
 
-There are two approaches emerging to achieve this reproducibility: (a) to use a
+There are two major approaches emerging to achieve this reproducibility: (a) to use a
 workflow tool or environment that caters to a given use case (for example
 ~\cite{reana2019} \TODO{cite other workflow systems}). Or (b) to use standard
 (software engineering) computing tools and conventions (git, make, python, perl,
@@ -74,10 +188,25 @@ bash, \ldots) to specify the compute environment and reproduce steps piecemeal.
 The workflow tool approach (a) is more robust, but requires `all-in' adoption by authors and reproducers alike,
 and may not suit all use cases. It can also have associated `vendor lock-in' effects
 - once a tool is adopted for one piece, it must be used for all associated work.
+A consequence of this more tailored approach is reduced re-use and duplication of effort.
+As a workflow tool may not meet the needs of a community,
+that community must then build its own tool, or be left without appropriate tools
+if they lack the resources or expertise to build their own.
+Workflow tools also often \emph{dictate} a significant amount of how researchers perform their work,
+which can inhibit adoption when it does not suit their existing patterns.
+
 The standard computing tools approach (b) is generic, but not accessible to all researchers
- as it requires sufficient training or experience to be effective.
- The loose coupling of tools and modular choices make it more flexible (covering more use cases),
- but more difficult to follow robustly.
+as it requires substantial training or experience to be effective,
+and prone to errors or incompleteness when executed,
+leading to the "Works for Me" problem,
+where they author may have no trouble reproducing their work,
+but they have not effectively communicated the requirements such that others can do the same.
+The gap between in research expertise and practical need when it comes to these tools has led to the creation of whole industries of remedial skills training.
+The loose coupling of tools and modular choices make it more flexible (covering more use cases),
+but more difficult to follow robustly.
+Identifying which tools to use and following appropriate installation is a challenge
+for both authors, who must communicate requirements clearly without knowing the reader's context,
+and readers, who must find, understand, and follow potentially complex directions, even assuming they were complete and correct.
 
 \medskip Researchers who use the Jupyter Notebook to orchestrate their
 computational research (see Figure~\ref{fig:jeodpp}) can achieve this automatic
@@ -134,14 +263,14 @@ We will go beyond the current state of the art by
 We focus on the computational reproducibility because it is a real
 obstacle for practical reproducibility.
 
-First, it affects the majority of all researchers: there are estimates that over 92\%
-of all researchers work with \emph{research software} and over 50\% develop
+First, it affects the majority of all researchers: there are estimates that over
+92\% of all researchers work with \emph{research software} and over 50\% develop
 their own~\cite{Hettrick2014}. Where experiments drive the research, this is
 often data processing, analysis, and plotting. Each of those computational
 research cases needs a software environment in which the actual processing can
-be carried out. The software environment may consist of somewhat standard packages (for example
-use of a Python, R, or Julia plotting library), or it may include tailored
-programs that have been developed especially for the study.
+be carried out. The software environment may consist of somewhat standard
+packages (for example use of a Python, R, or Julia plotting library), or it may
+include tailored programs that have been developed especially for the study.
 
 Second, software packaging and management is a technically challenging topic,
 and we cannot expect 92\% of all researchers to master it -- so we believe there
@@ -152,7 +281,7 @@ also in the often unusual combinations of research software and libraries that
 need to be combined for a particular study. Other difficulties include that a
 reproduction typically needs to be done on a different computer, perhaps even on
 a different operating system. If, say, a plotting library is used, then it may
-have changed its interface or behaviour over time, so it is important to install
+change its interface or behaviour over time, so it is important to install
 exactly the right version of the plotting library, before a reproduction of
 results is attempted using it.
 
@@ -177,112 +306,11 @@ have been created in the past) more easily reproducible.
 %(It is part of our training programme to educate about the importance and methods
 %for software specification.)
 
-\subsubsection{Objectives}\label{sect:objectives}
-
-\TOWRITE{Feedback}{
-Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bound
-}
-
-\begin{compactenum}[\myemph{Objective} 1:]
 
 
-\item \label{obj:reproducibility} \myemph{Facilitate better computational
-    reproducibility and FAIR data} by
-  improving the \myemph{reproducibility of computational environments}
-  used for science, and facilitating \myemph{FAIR data practices}.
-  We will contribute to the recording and automatic reproducibility
-  of environments with Binder tools,
-  and extend capabilities to better support FAIR
-  data requirements. In particular, the archival of execution
-  environments to support \myemph{reusability} of notebooks in the future
-  needs attention. Such notebooks may, for example, be published alongside
-  traditional publications to detail the computation of published data
-  and figures, and address the Reusablity requirement of FAIR data.
-  \TODO{This needs editing. It is too long in comparison to the other
-    objectives. It is not clear to me how the FAIR data comes in here.}
+\begin{draft}
 
-\item \label{obj:broaden} \myemph{To broaden the impact} of existing Binder tools
-    for reproducibility by expanding the feature set, applicable domains and use
-    cases. In particular, improve its utility for creating computational environments
-    outside the Jupyter ecosystem.
-
-  \item \label{obj:demonstrators} \myemph{Provide demonstrator use cases for
-      reproducible science} to validate and demonstrate the value of the work. We will apply
-    improved tools and guidelines to a number of reproducible use cases in
-    academic research, education, research infrastructures, and SMEs.
-
-\item \label{obj:education} \myemph{Outreach and engagement} --- Develop best
-  practice guidelines for reproducible science, and disseminate this by
-  educating the research communities about reproducible practices and available
-  tools for reproducible publications and policies. Reach out to scientists, and
-  the wider research communities and reproducibility stakeholders to encourage
-  engagement with this project.
-  % and exploitation of existing tools for Reproducible and Open Science
-  % for their research domains and interests.
-  % Engaging a larger community will help \myemph{ensure the sustainability} of
-  % the services and underlying infrastructure by distributing its
-  % development, hosting, and maintenance over stakeholders from a
-  % variety of institutions and backgrounds,
-  % from the private sector to public research, education
-  % and open government.
-
-
-
-\end{compactenum}
-
-\begin{table}
-  \label{tab:objectives-tasks}
-  \caption{
-  Each objective and the tasks which further that goal.}
-  \begin{tabular}{|m{.3\textwidth}|m{.7\textwidth}|}
-
-    \hline
-
-    \myemph{Objective} & \myemph{Tasks}
-    \\\hline
-
-    \ref{obj:reproducibility} &
-
-    % \longtaskref{core}{maintenance}
-    % \longtaskref{core}{jh-bh-conv},
-
-    \\\hline
-
-    \ref{obj:broaden} &
-
-    % \longtaskref{core}{accessibility},
-    % \longtaskref{core}{collaboration},
-    % \longtaskref{ecosystem}{xeus-cpp},
-    % \longtaskref{ecosystem}{jupyter-widgets},
-    % \longtaskref{ecosystem}{teaching-tools}
-
-    \\\hline
-
-    \ref{obj:demonstrators} &
-    % \longtaskref{applications}{astro},
-    % \longtaskref{applications}{teaching},
-    % \longtaskref{applications}{application-gpu},
-    % \longtaskref{applications}{geoscience},
-    % \longtaskref{applications}{opendose-analysis},
-    % \longtaskref{applications}{math},
-    % \longtaskref{applications}{reproducibility-xfel}
-
-    \\\hline
-
-    \ref{obj:education} &
-
-    % \longtaskref{education}{workshops},
-    % \longtaskref{education}{online-resources},
-    % \longtaskref{education}{helpdesk}
-
-    \\\hline
-
-  \end{tabular}
-  \TODO{Complete table, or delete.}
-\end{table}
-
-
-
+\TODO{HF: Move this content to 3.2}
 
 \subsubsection{Excellence}
 
@@ -299,7 +327,7 @@ stakeholders, and can propose and develop solutions that are \emph{useful and
 We extend our own experience through our wide network of collaborators and
 colleagues and will -- as part of the execution of this project -- seek
 constant exchange with and feedback from different additional stakeholders in
-our \emph{Community Engagegment Panel} to shape the work of the
+our \emph{Community Engagement Panel} to shape the work of the
 \TheProject project. As a team experienced in developing open source software,
 we expect to be able to go beyond this and attract development contributions
 from volunteers to support this project.
@@ -308,56 +336,7 @@ The existing Binder tools -- which are the baseline for this project --
 originate from Project Jupyter. We have core Jupyter and Binder developers in
 our team, and thus direct access to developer expertise and experience.
 
-\subsubsection{Impact}
-
-We have already discussed above that computational reproducibility affects the
-majority of researchers, including those who carry out work that is not
-predominantly computational.
-
-The impact of this project will be realised through (i) the training we develop
-and disseminate, and (ii) the improved Binder tools. The improved tools will
-directly impact the community of researchers using Jupyter notebooks. However,
-the \emph{improved functionality and applicability of the Binder tools outside Project
-Jupyter} will benefit all researchers who need computational reproducibility, and
-may be -- and in the long run -- more important.
-
-\medskip
-
-We can give some indication of the size and activity of the Jupyter notebook
-community and use of the existing Binder tools: Jupyter Notebooks are used to
-support research in numerous communities, including
-%\begin{compactitem}
-%\item
-\noemph{Journalists} and practitioners of \noemph{data-driven
-journalism} at the LA Times, BuzzFeed News, Columbia Journalism School
-\cite{latimes-datadesk} \cite{columbia-nytimes} \cite{data-journalism};
-\noemph{Data scientists} in academia, industry and services \cite{Perkel2018};
-% \item
-\noemph{Research institutions} such as CERN, EuXFEL, JRC, and many more,
-operating institution-wide Jupyter deployment;
-% \item
-\noemph{Universities} using Jupyter as a teaching platform;
-% \item
-\noemph{Large cloud providers} building commercial products on the
-top of Jupyter (Google DataLab and Colaboratory, Amazon Sagemaker, Microsoft Azure
-Notebooks);
-% \item
-within the \noemph{European Open Science Cloud} Jupyter is used in many EOSC
-projects, and a JupyterHub service is provided by the EGI foundation.
-% \item
-This impact was recognised by the \emph{ACM Software System Award} that was
-awarded to the Jupyter team to honour \emph{"developing a software system that
-had a lasting influence"} in 2017. (Prior recipients include \emph{Unix},
-\emph{TCP/IP}, and the \emph{World Wide Web} \cite{acm-award}.)
-
-There are 8 million notebooks deposited on GitHub \cite{notebookcount}, and
-the size of the Notebook user base was estimated to be of the order of
-millions in 2015 \cite{jupyter-grant}. We know that the Binder service for
-Jupyter notebooks is used to create about 30,000 computational environments
-every day (Section~\ref{sec:mybinder}) to enable execution of notebooks within
-that computational environment.
-
-
+\end{draft}
 %  research effectiveness for many of their millions of users.
 
 %   Our aim is to re-use the work that has gone into the development of the Binder
@@ -370,12 +349,12 @@ that computational environment.
 
 \subsubsection{Technical Readiness Level (TRL)}
 
-The Binder software and service prototype at mybinder.org is TRL 6. We will
-bring Binder to at least TRL 8 during the course of the project.
+TRL is unusual for Binder tools, because they are tools that can be used in many ways,
+and they can be described as having a different TRL \emph{in different contexts}.
 
-\TOWRITE{}{Check TRL requirements for this call. I think this is leftover from BOSSEE}
-
-  %%% Local Variables:
-  %%% mode: latex
-  %%% TeX-master: "proposal"
-  %%% End:
+The Binder software and service demonstration at mybinder.org is TRL 6,
+where scope \emph{excludes} long-term robustness.
+The Binder software for deploying services with authenticated access to data is TRL 3.
+We will bring it to TRL 5 or 6.
+The Binder tool repo2docker when targeting robust reproducible environments is TRL 4.
+We will bring it to TRL 6.
