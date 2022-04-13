@@ -34,12 +34,14 @@ desirable not to depend on such a single (or even multiple hosted services).
 The compute resources offered through mybinder are modest: at most 2 GB of RAM
 and a single CPU core (\TODO{check this!}).
 Most laptops and Desktops have similar or much better hardware capabilities than
-the mybinder cloud-computing resources currently offer
+the mybinder cloud-computing resources currently offer.
+
+For some research areas, it is essential to access big data sets to reproduce the scientific computing workflow.  For such cases, it is essential to reproduce the work using infrastructure that has optimised access to the data, so that one does not consume unnessesary computing and network resources.  
 
 \paragraph*{Task activity:} Based on the preparations in \WPref{reproducibility} and
 \WPref{impact}, extend Binder so that users of the service can
 carry out the building of the environment, and -- if desired -- launching of a
-notebook server \emph{on their own hardware}. The working title for such
+notebook server \emph{on their own hardware}, such as their laptop or on-premise or cloud infrastructures.   The working title for such
 functionality is ``binder@home'' (as a reference to the crowd-based SETI@home search for
 extraterrestrial intelligence at home.\footnote{https://setiathome.berkeley.edu}
 
@@ -48,6 +50,10 @@ available as part of binder software. We will need a utility that takes on
 the responsibility of BinderHub for a single-user use case, and which triggers
 the local build of the software environment, start of Jupyter notebook
 server and opening of the relevant local URL and port an a browser.
+This effort will bridge the gap from mybinder.org to ``Home'';
+by giving the freedom and digital sovereignty
+to the researchers to chose where they execute their computational experiments in a simple manner,
+without sacrificing the convenience of the mybinder.org service.
 
 
 %  The task includes the following activities
