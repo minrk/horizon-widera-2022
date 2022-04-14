@@ -56,6 +56,9 @@ managed.
 }
 \end{draft}
 
+
+\TOWRITE{}{Start with brief narrative summary, hitting 'Scale and Significance' hard. We have close to nothing on Significance, yet. Scale could be clearer: All researchers!}
+
 \subsubsection{Contributions towards outcomes and impact}
 \label{sec:countributions-towards-outcome-and-impact}
 
@@ -286,6 +289,8 @@ public projects, such as Binder and Jupyter, which can be measured in our partic
 those projects, such as code and documentation contributions, bug reports, and roadmap
 contributions.
 
+\TODO{KPIs should tie directly to objectives - if they don't, KPIs or objectives need updating}
+
 We can measure progress toward our objectives in \ref{sect:objectives}
 via the following Key Performance Indicators (KPIs):
 \begin{compactenum}[\textbf{KPI} 1:]
@@ -407,10 +412,10 @@ implementation of new policy initiatives and decisions.
 
 
 \TheProject is contributing to tools for Open and Reproducible Science.
-Tools only have impact if and when they are used,
+Tools only have impact when they are used,
 so it is important that we disseminate our work
-in order to reach and support user communities for our software and services. This section
-outlines how the project will establish and organise the dissemination and communication
+in order to reach and support user communities so that they may best exploit our software and services. This section
+outlines how the project will establish and organise the dissemination, communication, and exploitation
 actions to promote the project and the adoption of its outcomes beyond the project's lifetime.
 
 
@@ -431,10 +436,10 @@ actions to promote the project and the adoption of its outcomes beyond the proje
 
 \subsubsection{Dissemination of results}
 
- \TheProject endeavours to make Open and Reproducible Science practices both more understandable and actionable 
+ \TheProject endeavours to make Open and Reproducible Science practices both more understandable and actionable
  to practioners through the development and use of open and freely available tools.
 Most of \TheProject software will be in the form of contributions to existing projects,
-which will be governed by the licenses of those projects. 
+which will be governed by the licenses of those projects.
 All Jupyter and Binder software is released under the permissive BSD license,
 which specifically allows commercial exploitation,
 as has proven successful in enabling collaborations with industrial partners
@@ -449,7 +454,7 @@ Similarly, non-code products such as dissemination works
 
 
 All the partners will be involved in the dissemination of \TheProject results (see draft plan of the
-dissemination, communication and exploitation plan in the text box below) and 
+dissemination, communication and exploitation plan in the text box below) and
 \WPref{applications} and \WPref{education} will play a central role.
 
 As a result, the primary dissemination effort is to:
@@ -460,121 +465,137 @@ As a result, the primary dissemination effort is to:
 \end{enumerate}
 
 Our focus for dissemination will be on
-% \taskref{education}{workshops},
+\taskref{education}{workshops}
 operating workshops, training various communities in the availability,
 purpose, development, and use of \TheProject software and services.
 We will make a particular effort to use these workshops as an opportunity
 to \textbf{support diversity and inclusion in the Open Science community},
 by running (online, hybrid or in-person) workshops for under-served and under-represented groups in the academic and
-open source communities. \textbf{Free and online training} will be streamed (Twitch),  
+open source communities. \textbf{Free and online training} will be streamed (Twitch),
  make available to the wider community for instance on YouTube and archived on Zenodo for long-term availability and
- findability to the wider community who may not be able to attend workshops. 
+ findability to the wider community who may not be able to attend workshops.
+
 
 These resources will be hosted on free, public hosting services,
-such as GitHub Pages, YouTube channels and as much as possible co-developed and co-hosted with existing and 
+such as GitHub Pages, YouTube channels and as much as possible co-developed and co-hosted with existing and
 well-established organizations
 (The Carpentries, CodeRefinery, Galaxy Training Network, Pangeo, etc.).
 
+We will also disseminate our results through publications and conferences.
+All publications funded by \TheProject will be \textbf{Open Access},
+and sites expecting publications have budgeted funds for paying Open Access fees.
+We will identify and attend appropriate conferences for disseminating our work,
+including running tutorials at conferences in historically interested communities such as PyData and SciPy.
+Also, we will identify and attend conferences from complementary communities such as ROpenSci,
+Mozilla Science, and Julia
+as well as domain specific conferences to maximise the impact of \TheProject and to broaden its
+audience outside the
+traditionally included communities.
 
-The operation of prototype deployments of binder services
-using developments made in \WPref{applications} is also a dissemination activity: services like Binder not only 
-enable Open and Reproducible Science by 
-facilitating interactive publications, they also enable \textbf{interactive demonstration of tools and functionality}
+The operation of prototype services in \WPref{applications} is also a dissemination activity,
+as services like Binder not only enable Open and Reproducible Science by facilitating interactive publications,
+they also enable \textbf{interactive demonstration of tools and functionality}
 developed in \TheProject.
 
-\TheProject, in collaboration with the operators of mybinder.org,
-will explore sustainability plans for covering long-term costs of operating such services,
-including institutional subscription models, donations, and others. \TheProject will also actively seek for
-collaboration (through the CEP and \TheProject partners) with existing EOSC projects (many already use/deploy 
-Jupyter Notebook services) to inform and support them in exploiting  \TheProject developments and adapting their
-service offerings.
+\TheProject will also actively seek for collaboration (through the Community
+Engagement Panel and
+\TheProject partners) with existing EOSC projects (many already use/deploy
+Jupyter Notebook services) to inform and support them in exploiting \TheProject
+developments and adapting their service offerings.
+\subsubsection{Exploitation}
 
-\begin{framed}
+Our primary outputs are in the form of software tools, prototype services, and information resources,
+all of which will be freely available to all under appropriate permissive open licenses.
+This means that exploitation generally has the form of:
 
-  \centerline{\textbf{ \TheProject DRAFT COMMUNICATION, DISSEMINATION and EXPLOITATION }}
-  {
-  \begin{itemize}
+\begin{compactenum}
+  \item Use of Binder tools for producing reproducible environments in research, as enabled by \WPref{reproducibility}
+  \item Use of Binder tools for evaluating reproducible environments in research or publication policy, as enabled by \WPref{reproducibility}
+  \item Use of Binder tools in the construction and operation of services, as enabled by \WPref{impact}
+  \item Deploying new services derived from our science demonstrators in \WPref{applications}
+  \item Application of effective practices for reproducibility, developed and disseminated in \WPref{education}
+  \item Commercial exploitation via product development and consulting \TOWRITE{Sylvain}{brief bullet here, more below}
+\end{compactenum}
 
-\item Logo creation, standard document templates for deliverables, reports, letters, presentations, roject posters/leaflets, etc. and creation and/or use of relevant social media accounts such as Linkedin, Twitter, YouTube channel (80k followers for Project Jupyter, 34k for IPythonDev, 132k for the pydata); 
-\item Annual plan for publication in scientific and technical peer-reviewed journals and conference proceedings;
-\item Creation of \TheProject website:
-\begin{itemize}
-\item links to \TheProject repository of results (videos, training material, use cases, demonstrators, software and associated documentation such as repo2docker, jupyterhub and binder);
-\item links to social media accounts, e.g. on Facebook, Instagram, LinkedIn and Twitter and public communication channel (zulip);
-\item live “Infoboard” to highlight news and outcomes, event calendar, public resources, specific social media posts; This infoBoard will be relayed by the News (and Newsletter) of partnered projects (Jupyter, Pangeo, Ifremer, NeIC, Sigma2, etc.).
-\item links to the EOSC catalogues of services and national/institutional services supporting \TheProject; 
-\end{itemize}
-\item Use the CEP to review the target audience for dissemination (workshops, training, hackathon, etc.), create a live list of communication partners and associated channels and tools;
-\item Coordinate (annually) with other initiatives (The Carpentries, codeRefinery, Jupyter, Pangeo) for the collaborative development of training material and the delivery of demos, training/workshops/hackathons;
-\item Refine measurable goals (based on inputs/feedback from the CEP), quantitative KPIs for dissemination and monitoring procedures; 
-\item Develop and maintain a live collaboration plan for links and interactions with other projects (EC-funded, Nordic and/or national projects), research institutions and industries to find opportunities to show-case \TheProject results. 
-\item Develop a consolidated exploitation to ensure the long term and sustainable exploitation of the project results beyond its lieftime, in particular the deployment of EOSC services. 
-    \end{itemize}
-}
-\end{framed}
+A key aspect of our exploitation strategy is to focus our work on existing,
+active projects in Binder and the wider Jupyter ecosystem.
+This means that our contributions are of immediate practical benefit to between
+thousands and millions of users worldwide (Section \ref{sec:project-jupyter}).
 
-\medskip
-\noindent \textbf{Data management plan}\label{sec:data-management-plan}\\
-Except for the usage data described below,
-\TheProject activities will not generate or collect data.
-While we have many demonstrators that interact with data, they do not generate or collect that
-data themselves, but rather provide analytical mechanisms or access to data governed by
-existing data management plans and data policies of project partners at each site,
-as well as publicly accessible open data.
+\TheProject contributions to Binder tools will be immediately (\emph{i.e.
+  already during the duration of the project}) exploited via the public mybinder.org service
+and its thousands of daily users (Section~\ref{sec:mybinder}), as well as many BinderHub instances worldwide.
 
+The science demonstrators in \WPref{applications} are themselves exploitations of the outputs
+in \WPref{reproducibility} and \WPref{impact},
+building prototype services not possible before the project.
+Continued operation and adoption of these services by project partners and the researchers they serve beyond the duration of the project
+is a goal and will indicate successful exploitation of the project.
 
-\noindent \textbf{Service usage data} \\
-Any data collected through the operation of public services
-(e.g. popularity data for public open science repositories)
-will be fully anonymised to the satisfaction of relevant best privacy practices and regulations, such as GDPR,
-and made publicly available in the standard JSON Lines format,
-as is done already for mybinder.org \cite{mybinder-archive}.
-This is very small data and easily archived on free hosting services such as GitHub,
-and will be made available under the Creative-Commons Universal Public Domain Dedication (CC0).
-There is no cost to the project associated with archiving this data long-term.
+%\TOWRITE{ALL}{Specific per-site exploitation?}  Not needed I think - we have
+%the demonstrators clearly mentioned.
+
+\TOWRITE{Sylvain}{describe QS commercial exploitation: ``Additionally, SME partner \site{QS} ...''}.
 
 \subsubsection{Communication activities}
 
 The main goal of the communication activities is making sure that potential users
-are aware of the tools and services developed by \TheProject.
+are aware of the tools and services developed by \TheProject
+on an ongoing basis,
+showing the public clear benefits of the work they have funded.
 
 In order to maximise this impact, it is vital to address the audience as one project
 and ensure the immediate recognition of information stemming from it.
-Together with all partners involved, \TheProject will therefore build \textbf{a strong project identity} 
-(see draft of the communication, dissemination and exploitation plan above) to strengthen the project
-identity and to deliver clear messages to our audience. 
-.
+Together with all partners involved, \TheProject will therefore build \textbf{a strong project identity}
+(see draft of the communication, dissemination, and exploitation plan above) to strengthen the project
+identity and to deliver clear messages to our audience.
 
-In addition to \TheProject-organised workshops in
-\taskref{education}{workshops},
-the primary mechanism by which we will communicate our results is through publications and conferences.
-All publications funded by \TheProject will be \textbf{Open Access},
-and sites expecting publications have budgeted funds for paying Open Access fees.
-We will identify and attend appropriate conferences for sharing our work,
-including running tutorials at conferences in historically interested communities such as PyData and SciPy.
-Also, we will identify and attend conferences from complementary communities such as ROpenSci,
-Mozilla Science, and Julia
-as well as domain-specific conferences to maximise the impact of \TheProject and to broaden its
-audience outside the
-traditionally included communities.
-
-As indicated in our draft dissemination, communication and exploitation plan, we will operate a \textbf{website}
+As indicated in our draft communication, dissemination, and exploitation plan, we will operate a \textbf{website}
 (\taskref{management}{website}) for collecting and sharing information about \TheProject and its progress.
 It will provide a centralised way to access the various publicly available deliverables, publications
 and articles related to the project. The site will be regularly updated over the lifetime of the project
 with the project publications and public materials, such as flyers, posters and
-public deliverables, organized workshops, available services, news, etc.
+public deliverables, organised workshops, available services, news, etc.
 Site analytics will be associated with the project website, in order
 to provide useful insight on how to improve its impact. In addition, the project intends to
 develop its presence on \textbf{the social and content
 networks}, such as Twitter. The channels will be used for interaction
 with the professional community as well as the general public
 (differentiation on the content per channel based on the target group wishing to address).
-As part of the project?s communication plan, \TheProject will develop a social media strategy
+As part of the project's communication plan, \TheProject will develop a social media strategy
 in order to increase outreach and social impact, which can be summarised as follows: (a) identifying target
 audience and key stakeholders, (b) updating social media content and sparking
 discussion in social media/tweeting, (c) measuring social impact and reassessing
 social media strategy as required.
+
+\subsubsection{Communication, Dissemination, and Exploitation plan}
+
+We will continually refine our Communication, Dissemination, and Exploitation plans, starting with the draft below:
+
+\begin{framed}
+
+  \centerline{\textbf{ \TheProject DRAFT COMMUNICATION, DISSEMINATION, and EXPLOITATION}}
+  {
+  \begin{itemize}
+
+\item Logo creation, standard document templates for deliverables, reports, letters, presentations, roject posters/leaflets, etc. and creation and/or use of relevant social media accounts such as Linkedin, Twitter, YouTube channel (80k followers for Project Jupyter, 34k for IPythonDev, 132k for the pydata);
+\item Annual plan for publication in scientific and technical peer-reviewed journals and conference proceedings;
+\item Creation of \TheProject website:
+\begin{itemize}
+\item links to \TheProject repository of results (videos, training material, use cases, demonstrators, software and associated documentation such as repo2docker, jupyterhub and binder);
+\item links to social media accounts, e.g. on Facebook, Instagram, LinkedIn and Twitter and public communication channel (zulip);
+\item live “Infoboard” to highlight news and outcomes, event calendar, public resources, specific social media posts; This infoBoard will be relayed by the News (and Newsletter) of partnered projects (Jupyter, Pangeo, Ifremer, NeIC, Sigma2, etc.).
+\item links to the EOSC catalogues of services and national/institutional services supporting \TheProject;
+\end{itemize}
+\item Use the Community Engagement Panel to review the target audience for dissemination (workshops, training, hackathon, etc.), create a live list of communication partners and associated channels and tools;
+\item Coordinate (annually) with other initiatives (The Carpentries, codeRefinery, Jupyter, Pangeo) for the collaborative development of training material and the delivery of demos, training/workshops/hackathons;
+\item Refine measurable goals (based on inputs/feedback from the Community
+  Engagement Panel), quantitative KPIs for dissemination and monitoring procedures;
+\item Develop and maintain a live collaboration plan for links and interactions with other projects (EC-funded, Nordic and/or national projects), research institutions and industries to find opportunities to show-case \TheProject results.
+\item Develop a consolidated exploitation to ensure the long term and sustainable exploitation of the project results beyond its lifetime, in particular the deployment of EOSC services.
+    \end{itemize}
+}
+\end{framed}
 
 \clearpage
 \subsection{Summary}
