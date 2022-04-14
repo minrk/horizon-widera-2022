@@ -1,6 +1,3 @@
-%\TO WRITE{ALL}{Proofread 3.4 consortium pass 2 [Done by Hans]}
-%remove this, as we have more pressing things left.
-
 \eucommentary{
 The individual members of the consortium are described in a
 separate section under Part A. There is no need to repeat that
@@ -51,20 +48,18 @@ The \TheProject consortium spans the broad spectrum of actors required for
 successfully developing and disseminating tools and infrastructure for open and
 reproducible computational science, catering to the needs of the European and
 global scientific community. It is composed of one academic institution
-(University of Oslo), three research organisations (Max Planck Society, Ifremer,
+(University of Oslo), three research organisations (Max Planck Gesellschaft, Ifremer,
 Simula), and one SME (QuantStack) based in three different countries (Norway,
 France, Germany).
 
 The consortium has developed through collaborations and common interests. Some
 partners have been working together on different aspects of Jupyter development
 (\site{QS}, \site{SRL}), software for education (\site{QS}, \site{SRL},
-\site{MP}) and use of Jupyter tools for reproducible science {\site{MP},
-  \site{SRL}} for many years. Meanwhile, others joined together during a
-previous successful H2020 European Research Infrastructure project OpenDreamKit
-\#676541 (\site{MP}, \site{SRL}). Additionally, some partners have expertise in
+\site{MP}) and use of Jupyter tools for reproducible science (\site{SRL}, \site{MP})
+for many years. Others contribute significant expertise in
 the practice of open science and training (\site{IFR}, \site{UIO}).
 
-Many participants (\site{MP}, \site{UiO}, \site{IFR}) have scientists involved who work on
+Many participants (\site{MP}, \site{UIO}, \site{IFR}) have scientists involved who work on
 facilitating computational and open science for scientists in their
 institutions. As such, each of them has experience and a good overview of the
 requirements for effective science and reproducible science from the many
@@ -98,9 +93,7 @@ is also vital for this project.
 The chosen consortium ensures a critical mass of scientific expertise and
 excellence in key areas (such as natural sciences, education, software
 engineering, Project Jupyter) with research organisations and SMEs of recognised
-international reputation.
-
-In more detail:
+international reputation:
 \begin{compactitem}
 \item A set of use cases that cover several application domains and users, and that impose very diverse
 requirements on open tools (\site{MP}, \site{IFR}, \site{UIO});
@@ -111,7 +104,10 @@ JupyterHub, Binder, MyBinder.org, Jupyter Widgets (\site{SRL}, \site{QS})
 \item A long experience and proven track record of success with large and complex collaborative projects,
 including European E-Infrastructure projects (\site{MP}, \site{SRL}),
 projects focused on large-scale infrastructures and large experimental services (\site{MP}, \site{IFR}),
-as well as experience in running large scale open source projects (Jupyter project, \site{SRL}, \site{QS});
+as well as experience in running large scale open source projects (Jupyter
+project, \site{SRL}, \site{QS});
+\item Experience in educating students and experienced researchers on
+  computational methods and open science (\site{SRL}, \site{MP}, \site{IFR}, \site{UIO});
 \item A comprehensive range of skill sets and competencies in several relevant domains,
 from applied research to standardisation to business analysis.
 \end{compactitem}
@@ -120,42 +116,144 @@ from applied research to standardisation to business analysis.
 
 \paragraph{Simula Research Laboratory}
 
-\TODO{Min, add short description of SRL: (i) what is it, (ii) relevant expertise
-  (Jupyter, research software engineers?), (ii) role in project.}
+\site{SRL} is an internationally-leading Norwegian research institute in the key
+ICT areas: communication systems, scientific computing and software
+engineering. Dedicated to tackling scientific challenges with long-term impact and of
+genuine importance to real life, Simula offers an environment that emphasises
+and promotes basic research. This translates into numerous projects funded by
+the EU, Norwegian government or regional institutions, that Simula was
+involved in.
+
+Benjamin Ragan-Kelley has contributed to the Jupyter Project since its
+inception as a lead developer, and is now heading the Numerical Analysis and
+Scientific Computing department at Simula. While continuing to contribute to the
+open source software, he is also researching the effectiveness and usefulness of
+such tools for education~\cite{JupyterHub-for-education-2016}, science and reproducible
+science~\cite{binder,Forde2018ReproducibleRE,nbval-arxiv,repo2docker-checker2020,Beg2021}. 
+
+Simula's role -- in addition to managing the overall project -- is to provide
+technical leadership and in-depth expertise of the Jupyter and Binder project, which will be
+instrumental in the execution of this project.
 
 \paragraph{Max Planck Gesellschaft}
+The Max Planck Society (\emph{Max Planck Society}, MPG) is non-profit research
+organisation with 86 research institutes and nearly 24,000 staff. For this
+project, we have Max Planck representatives from the Max Planck Compute and Data
+Facility (MPCDF) -- the organisation's cross-institutional competence centre 
+for computational and data sciences -- and staff from the Max Planck Institute
+for Structure and Dynamics of matter (MPSD), who are active in condensed matter research and
+reproducibility research.
 
-\TODO{Hans / Klaus: Turn the following into text}
-\begin{compactitem}
-\item Premier research organisation in Germanny (add numbers: institutions,
-  staff)
-\item Compute and Data facility serving all MPG
-\item Joint work with Simula: \cite{Beg2021}, also NBVAL preprint
-\item Other applicationts of notebooks for science and reproducibility (cite
-  XFEL paper)
-\item relevant experience: education, reproducibility
-\item Role in project: research and development of tools and processes for
-  reproducibilty, application of those in real-world contexts
-\end{compactitem}
+% A bit odd to mention an individual here, but lots of the prior work
+% was not done at MPG, so it may help reviewers to know the name.
+One team member (Hans Fangohr) has a long-standing collaboration with \site{SRL}
+and the Jupyter project, and a research interest in the use of open source
+tools, Jupyter, and Binder for research and reproducible
+research~\cite{Fangohr:ICALEPCS2017-TUCPA01,fangohr:icalepcs2019-tucpr02,nbval-arxiv,Beg2021}.
+The MPCDF has experience deploying and using JupyterHub and BinderHub
+installations for the many staff they support.
+
+MPCDF and MPSD have long standing experience in delivering training and
+workshops on computational methods, including best practice and reproducibility.
+% not sure if we want to show case the following:
+Hans Fangohr has won awards repeatedly for excellence in design and delivery of
+teaching activities at different universities.
+% https://fangohr.github.io/teaching/index.html#awards
+
+In this project, the team will co-design Binder-based services for
+reproducible science and data publishing. They will use the wide research
+activities of scientists in the Max Planck Society -- including social sciences,
+humanities and HPC-based activities -- to evaluate, improve and apply the Binder
+tools for use cases such as data sharing and more reproducible HPC.
 
 \paragraph{QuantStack}
 
-\TODO{Sylvian, add short description of QS: (ii) what is it, (i) relevant
-  expertise  (Jupyter), (ii) role in project.}
+QuantStack was founded in 2016 by a team of developers and maintainers of
+key packages of the open-source scientific computing stack. QuantStack provides
+support and custom development services in the Jupyter and Scientific Python
+ecosystems. Clients and partners of QuantStack range from financial software
+companies to robotics startups and public research institutions. The team
+comprises several core developers of Jupyter subprojects and authors of popular
+scientific computing and visualisation software used in both academic and
+industrial contexts.
 
+\TODO{Sylvain, are the following projects all open source? If so, please inject
+  ``open source'' in the right place.}
+
+Beyond Project Jupyter, projects developed at QuantStack include data
+visualization packages for Jupyter such as bqplot, ipyvolume, ipyleaflet, and
+ipysheet, as well as Jupyter language kernels such as xeus-cling and
+xeus-python, and JupyterLab extensions like te draw.io and sidecar. QuantStack
+is also behind the development of the xtensor framework, a high-level array
+computing library and C++ dataframe.
+
+In this project, QuantStack will provide expertise as core-Jupyter developers.
+
+\TODO{Sylvian, -- can you add something on how the new capabilities will benefit
+  QuantStack?}
+  
 \paragraph{Ifremer}
 
-\TODO{Tina, add short description of Ifremer: (i) what is Ifremer, (ii) expertise, (iii) role in project.}
+Ifremer, French National Institute for Ocean Science, is a French public
+scientific and technological institution that works for exploring, understanding
+and predicting the ocean. A pioneer in ocean science, Ifremer's cutting-edge
+research is grounded in sustainable development and open science. Ifremer's
+vision is to advance science, expertise and innovation by creating and sharing
+ocean data, information \& knowledge. Ifremer hosts more than 1,500 personnel
+spread along the French coastline in more than 20 sites.
+
+Within this project, Ifremer will focus on testing, validating, improving and
+applying the developed
+tools for practical reproducibility in real-world research contexts.
+\TODO{Tina, a bit more detail on the use cases, and the challenges?}
 
 \paragraph{University of Oslo}
 
-\TODO{Anne, add short description of UiO: (i) short intro UiO, (ii) expertise, (iii) role in project.}
+The University of Oslo (UiO) is Norway's oldest institution for research and
+higher education, with 28,000 students and 6,000 employees. UiO aspires to be an
+international hub for the research-based integration of computing into science
+education and has financed a university-wide hosting service for Jupyter
+notebooks through JupyterHub to introduce a computational aspect to all
+curriculum programs in all science disciplines from bachelor to postdoctoral
+studies.
 
-\subsection{Connections beyond project partners}
+The University of Oslo is a Silver Partner to \href{https://carpentries.org}{The
+  Carpentries}, an international successful community driven project with
+Instructors, Trainers, Maintainers, helpers, and supporters who share a mission
+to teach foundational computational and data science skills to researchers. It
+is also actively involved in the \href{https://coderefinery.org/}{CodeRefinery}
+initiative that acts as a hub for FAIR (Findable, Accessible, Interoperable, and
+Reusable) software practices. Twice a year, CodeRefinery organizes big online
+training events with more then 300 attendees each.
 
-\TODO{Describe / point to CEP and benefits}
+The focus of UiO is to use their vast and leading experience in training 
+and communication to educate researchers globally about open science and
+practical reproducibility, to help translate the technical advances of this
+project into wide-spread impact.
 
-\TODO{All: Mention other projects we are integrated in? EOSC, FAIR, RDA, Carpentries, SSI, ?}
+\TODO{Anne - is this an okay description?} 
+
+\subsubsection{Connections beyond project partners}
+
+As our ambition is to improve practical reproducibility for the \emph{global
+  community of researchers}, we need to be well connected to understand
+requirements and constraints from many domains. To improve our networking and
+information gathering, we have started to compose our Community Engagement Panel
+\taskref{management}{community-engagement-panel} with the aim to bring together
+representatives from diverse research domains, research infrastructure
+providers, research funders, publishers, educators, and policy makers. We expect
+to also be able to use that network to support communication, dissemination and
+exploitation of our results.
+
+The project partners are research active in current topics of open science, and
+are members in varies of research activities and organisations, including {Big
+  data driven material science (BIGMax), Novel Materials Discovery (NOMAD), FAIR
+  data infrastructure for Condensed-Matter Physics and the Chemical Physics of
+  Solids (FAIRmat), Data Infrastructure Capacity for EOSC (DICE), Software
+  Sustainability Institute.}
+
+\TODO{All, Please list more. Feel free to add more relevant ones at the beginning.
+  EOSC, FAIR, RDA, Carpentries, SSI, ?}
 
 % \input{coherence}
 %%% Local Variables:
