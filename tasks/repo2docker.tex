@@ -3,10 +3,11 @@
   id=repo2docker-timemachine,
   lead=SRL,
   PM=12,
-  wphases={0-36!0.33},
+  wphases={0-24!0.5},
   partners={QS}
 ]
 
+This tasks improves the robustness of \repotodocker{}. We illustrate this with one specific example: 
 Often, a repository of scientific results may
 specify which software library is required (such as the Python library
 \softwarename{pandas}), but not which version.
@@ -19,14 +20,13 @@ on other packages of \softwarename{pandas} will change, and at some point an
 automatic build of the software for the whole repository may fail because of
 conflicting dependencies.
 
-We have found through anecdotal evidence that these problems can be overcome if a
-\softwarename{pandas} version can be chosen that was the most recent at the time
-when the repository was created.
+We have found through anecdotal evidence that these problems can be
+overcome if a \softwarename{pandas} version can be chosen that was the
+most recent at the time when the repository was created. A related
+issue is that the Python version itself (such as 3.8, 3.9 or 3.10) may
+not be specified at all.
 
-A related issue is that the Python version itself (such as 3.8, 3.9 or 3.10) may not
-be specified at all.
-
-In this task, we will teach \repotodocker{} to establish the date of publication
+We will teach \repotodocker{} to establish the date of publication
 (or last modification) of the repository, to determine the appropriate version
 of software libraries from that time, and to select libraries with those
 versions if no specific version is specified.
