@@ -87,22 +87,18 @@ proposed project builds in more detail.
   within the wide field of reproducibility.
 \item Section \fullref{sec:reproducibility-concept} summarises our concept and
   approach concisely.
-
-\item To prepare the more detailed description of the concept and the content of
-  the Work Packages, we use Section \fullref{sec:reproducibility-example} and
-  \fullref{sec:terminology} to introduce key terminology together with an
-  example for computational reproducibility.
-
-\item Sections \fullref{sec:project-jupyter} and \fullref{seq:project-binder}
-  introduce the Jupyter and Binder projects, respectively.
-
-%\item Section \fullref{sec:binder-for-reproducibility} explains the use of
-%  Binder tools for reproducible science.
+\item We illustrate the reproducibility discussion with
+  \fullref{sec:reproducibility-example} and provide details on some of our
+  \fullref{sec:science-applications}.
+\item To assist the more detailed description of the concept and the content of
+  the Work Packages, we provide a \fullref{sec:terminology}
+  and additional technical information in \fullref{sec:project-jupyter} and
+  \fullref{seq:project-binder} in our technical appendix that forms
+  Section~\ref{sec:appendix} (page~\pageref{sec:appendix}) of this document.
 \end{itemize}
 
 \noindent The methodology for this project is discussed starting in section
 \fullref{sec:methodology}.
-
 
 
 %\TODO{Do we need to keep anything from the commented out lines here?}
@@ -345,91 +341,6 @@ Our science applications follow the workflow outlined in
   to start the reproduction.
 \end{itemize}
 
-\subsubsection{Terminology}\label{sec:terminology}
-
-For clarity, we define some terms that have been used already above which refer to
-throughout this proposal. We illustrate the terms in the context of the
-reproducibility example in Section~\ref{sec:reproducibility-example}.
-
-In particular, we imagine that we have a publication that contains
-figure~\ref{fig:reproducibility-example-covid} as a result, and we want to
-archive and make available \cite{ReproducibilityRepositoryExample2022} the
-necessary information for others to reproduce that figure.
-
-\begin{description}
-\item[Repository] We refer to a \emph{repository} as a collection of files.
-
-The \emph{purpose} of the repository in our context is to archive information to make
-research results reproducible.
-
-Such a repository could be a git repository (which could be hosted on Github,
-Bitbucket, GitLab, or other services), but it could also just be a zip file of a
-collection of files.
-
-The repository could be made publicly available, for example through Zenodo,
-Figshare, as an electronic supplementary to a publication, or through Github.
-
-It is not unusual that a larger number of files might be
-organised in subdirectories within the repository.
-
-Our example repository\footnote{
-  https://github.com/fangohr/reproducibility-repository-example/} \cite{ReproducibilityRepositoryExample2022} contains the following files:
-
-\begin{description}
-\item[\softwarename{README.md}]: an overview of the content of the repository
-\item[\softwarename{figure1.ipynb}]: notebook that creates
-  \softwarename{figure1.pdf} from
-  the raw data. Could also be realised through a script or other executable
-  program of some kind.
-\item[\softwarename{requirements.txt}]: software specification
-\item[\softwarename{time\_series\_covid19\_deaths\_global.csv}]: raw data
-\end{description}
-
-\item[Script] A machine-executable file (for example a Bash, Python, Perl
-script, Makefile or similar). Such scripts can execute data processing commands,
-and are often part of a repository to make the (automatic) reproduction of
-results possible.
-
-In our example, the necessary steps to create the figure from the raw data are
-gathered in the notebook \texttt{figure1.ipynb}.
-
-\item[Notebook] A Jupyter Notebook. In short, an executable document that can
-  combine text, code and computation results. A Jupyter notebook can be used like a
-  script. The notebook is explained in Section \fullref{sec:jupyter-notebook}.
-
-\item[Software specification] The software specification depends on the software
-  tools used. In our example, the \texttt{requirements.txt} file contains
-\begin{verbatim}
-pandas==1.3.4
-matplotlib==3.4.3
-\end{verbatim}
-to indicate that we need the pandas and matplotlib package with the respective
-versions 1.3.4 and 3.4.3.
-
-\item[Software environment] All the software that needs to be available and
-  installed to execute the scripts and (and if desired) Jupyter notebooks.
-
-\item[Project Binder] The Project Binder is described in Section
-\ref{seq:project-binder}. It is part of the Jupyter ecosystem of tools, and
-allows to convert a repository with Jupyter notebooks into an browser-hosted
-environment, in which the notebooks can be executed interactively (and thus
-results can be reproduced).
-
-\item[Binder tools] The Binder tools consist of \binderhub{}
-  (Section~\ref{sec:binderhub}) and \repotodocker{} (see
-  Section~\ref{sec:repo2docker}) .
-
-\item[\repotodocker] \repotodocker{} is a tool that can automatically create a
-\emph{software environment} (currently within a Docker container) in which the
-notebooks and scripts of a repository can be executed
-(Section~\ref{sec:repo2docker} and \ref{binder-how-does-it-work}).
-\end{description}
-
-\input{project-jupyter.tex}
-\input{project-binder.tex}
-
-% Not relevant here. Should remove that file later.
-% \input{jupyter-services.tex}
 
 \subsubsection{Methodology}\label{sec:methodology}
 
