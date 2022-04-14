@@ -79,7 +79,7 @@ Zenodo, Hydroshare, Figshare, Dataverse.
 
 For the automatic building of reproducible computational environments,
 \repotodocker{} understands commonly used conventions for environment specifications and
-community standard tools such as Docker, conda, and pip. See
+community standard tools such as Docker, conda, mamba, and pip. See
 Section~\ref{repo2docker-supported-software-specifications} below for a full list of
 currently supported software specifications.
 
@@ -101,7 +101,7 @@ formats to build Docker images:
   libraries, or install the repository as R package
 \item \softwarename{apt.get}: to install Debian packages. The Docker container
   is currently based on Ubuntu, which uses the Debian package management tool \softwarename{apt}.
-\item \softwarename{environment.yml}: to specify conda packages and
+\item \softwarename{environment.yml}: to specify conda or mamba packages and
   environments
 \item \softwarename{default.nix}: to use the nix package manager for software provision
 \item \softwarename{Dockerfile}: providing a Dockerfile enables users to define
