@@ -41,7 +41,7 @@ The task includes the following activities:
 \begin{compactitem}
   \item Through manual inspection of selected repositories, identify common
     failure modes of building of the software environment (such as for example
-    not specifying the Python version to use.)
+    not specifying the Python version to use).
   \item Design and develop the \softwarename{repo2docker-checker}. A prototype
     exists.\footnote{https://github.com/minrk/repo2docker-checker}
   \item Where possible, identify for what reason the software build has failed.
@@ -51,12 +51,18 @@ The task includes the following activities:
   \item Automate the software reproduction process for the available
     repositories.
   \item Automate the analysis of the results, so the study can be repeated later.
+  \item Carry out the study to estimate the fraction of reproducible repositories.
+  \item Repeat the study after the robustness of \repotodocker{} has
+    been improved (\localtaskref{repo2docker-timemachine} to evaluate
+    progress. \TODO{Point to KPI}
   \end{compactitem}
 
   The tool will be made available as open source
-  (\localdelivref{deliv-id-repo2docker-checker-software}). Some of the findings
-  here will contribute to the \TODO{deliverable XXX in WP5 - best practice for
-    reproducible repositories with Binder.} At the end of the project, we will
-  provide a summary of improvements in reproducibility we have achieved through
-  changes in the Binder tools.
+  (\localdelivref{deliv-id-repo2docker-checker-software}).
+
+  % Some of the findings
+  % here will contribute to the \TODO{deliverable XXX in WP5 - best practice for
+  %   reproducible repositories with Binder.} At the end of the project, we will
+  % provide a summary of improvements in reproducibility we have achieved through
+  % changes in the Binder tools.
 \end{task}
