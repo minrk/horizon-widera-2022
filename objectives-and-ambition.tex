@@ -200,9 +200,11 @@ The standard computing tools approach (b) is generic, but not accessible to all 
 as it requires substantial training or experience to be effective,
 and prone to errors or incompleteness when executed,
 leading to the "Works for Me" problem,
-where they author may have no trouble reproducing their work,
+where the author may have no trouble reproducing their own work,
 but they have not effectively communicated the requirements such that others can do the same.
-The gap between in research expertise and practical need when it comes to these tools has led to the creation of whole industries of remedial skills training.
+The gap
+% gap between what and what?
+between in research expertise and practical need when it comes to these tools has led to the creation of whole industries of remedial skills training.
 The loose coupling of tools and modular choices make it more flexible (covering more use cases),
 but more difficult to follow robustly.
 Identifying which tools to use and following appropriate installation is a challenge
@@ -236,19 +238,19 @@ software environment (step 1) in which the notebook can be executed.
     to have some images.}
 \end{figure}
 
-\repotodocker is a tool that aims to \emph{automate existing practices} for reproducible environment specification.
+\repotodocker{} is a tool that aims to \emph{automate existing practices} for reproducible environment specification.
 It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
 constructing an environment in a Docker container.
-\repotodocker is successful enough to be widely adopted,
+\repotodocker{} is successful enough to be widely adopted,
 but many shortcomings have been identified,
 especially when a repository contains an \emph{incomplete} specification.
 A common issue is to produce an environment that works when published,
 but which may produce a non-working environment at a later point in time,
 due to version drift and insufficiently strict specifications.
-Additionally, community practices not yet supported by \repotodocker have been proposed by their respective community members,
-while the \repotodocker team has not had the funding support to incorporate and maintain.
+Additionally, community practices not yet supported by \repotodocker{} have been proposed by their respective community members,
+while the \repotodocker{} team has not had the funding support to incorporate and maintain.
 
-The BinderHub software exposes \repotodocker and Jupyter as a service,
+The BinderHub software exposes \repotodocker{} and Jupyter as a service,
 allowing one-click reproduction of published environments for \emph{interactive exploration}.
 BinderHub is shown to work well,
 but has limited application due to technical limitations,
@@ -261,7 +263,7 @@ but being hosted services they do not offer the digital sovereignty
 of private execution on one's own computational resources,
 be they a local machine or cloud or on-premises clusters.
 
-While the \repotodocker terminal utility \emph{can} technically be deployed anywhere,
+While the \repotodocker{} terminal utility \emph{can} technically be deployed anywhere,
 the technical expertise required is dramatically greater than a single click on a website.
 
 
