@@ -1,4 +1,4 @@
-\subsubsection{Project Binder}\label{seq:project-binder}
+\subsection{Project Binder}\label{seq:project-binder}
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
 a subproject of the Jupyter project. The Binder project is formally operating
@@ -23,7 +23,7 @@ from Jupyter notebooks.
 
 \TODO{Add image that depicts this Jupyter/Binder relation ship}.
 
-\paragraph{Basic functionality of Binder}
+\subsubsection{Basic functionality of Binder}
 \label{binder-how-does-it-work}
 
 The currently most common reproducibility use case -- with the current state of the Binder
@@ -70,7 +70,7 @@ describe the role of the individual components of Binder:
   from within the Jupyter notebook (which runs in the container).
 \end{compactitem}
 
-\paragraph{The repo2docker software tool.}\label{sec:repo2docker}
+\subsubsection{The repo2docker software tool.}\label{sec:repo2docker}
 
 \repotodocker{} is a tool to fetch a remote repository and build a software
 environment for this repository. Currently, \repotodocker{} can retrieve
@@ -83,7 +83,7 @@ community standard tools such as Docker, conda, mamba, and pip. See
 Section~\ref{repo2docker-supported-software-specifications} below for a full list of
 currently supported software specifications.
 
-\paragraph{Supported software specification formats}
+\subsubsection{Supported software specification formats}
 \label{repo2docker-supported-software-specifications}
 The \repotodocker{} tool currently supports the following software specification
 formats to build Docker images:
@@ -109,13 +109,13 @@ formats to build Docker images:
   repositories of Linux distributions.
 \end{compactitem}
 
-\paragraph{BinderHub}\label{sec:binderhub}
+\subsubsection{BinderHub}\label{sec:binderhub}
 BinderHub is software for hosting a web service built on \repotodocker{} and
 JupyterHub where individuals can share reproducible environments for
 immediate and free interaction by readers in their browser.
 
 
-\paragraph{The \mybinder{} service}\label{sec:mybinder}
+\subsubsection{The \mybinder{} service}\label{sec:mybinder}
 
 \emph{\mybinder{}} is a service run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
