@@ -180,12 +180,14 @@ execution saves time.
 
 There are two major approaches emerging to achieve this reproducibility: (a) to use a
 workflow tool or environment that caters to a given use case (for example
-~\cite{reana2019} \TODO{cite other workflow systems}). Or (b) to use standard
-(software engineering) computing tools and conventions (git, make, python, perl,
-bash, \ldots) to specify the compute environment and reproduce steps piecemeal.
+~\cite{reana2019} \TODO{cite other workflow systems})
+and encapsulates the full process for strong reproducility guarantees.
+Or (b) to use standard (software engineering) computing tools and conventions
+(git, make, python, perl, bash, \ldots)
+to specify the compute environment and reproduce steps piecemeal.
 
 The workflow tool approach (a) is more robust, but requires `all-in' adoption by authors and reproducers alike,
-and may not suit all use cases. It can also have associated `vendor lock-in' effects
+and cannot suit all use cases. It can also have associated `vendor lock-in' effects
 - once a tool is adopted for one piece, it must be used for all associated work.
 A consequence of this more tailored approach is reduced re-use and duplication of effort.
 As a workflow tool may not meet the needs of a community,
@@ -211,7 +213,7 @@ and readers, who must find, understand, and follow potentially complex direction
 computational research (see Figure~\ref{fig:jeodpp}) can achieve this automatic
 reproducibility with little additional effort~\cite{Beg2021}: they use the Notebook document as
 the protocol of their analysis (Step 2), which can be executed automatically.
-They can make use of the Binder tool (Section~\ref{seq:project-binder}) and the
+They can make use of the Binder tools (Section~\ref{seq:project-binder}) and/or the
 associated mybinder.org service that has
 been designed by the Jupyter team to automatically create the appropriate
 software environment (step 1) in which the notebook can be executed.
@@ -234,27 +236,60 @@ software environment (step 1) in which the notebook can be executed.
     to have some images.}
 \end{figure}
 
+\repotodocker is a tool that aims to \emph{automate existing practices} for reproducible environment specification.
+It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
+constructing an environment in a Docker container.
+\repotodocker is successful enough to be widely adopted,
+but many shortcomings have been identified,
+especially when a repository contains an \emph{incomplete} specification.
+A common issue is to produce an environment that works when published,
+but which may produce a non-working environment at a later point in time,
+due to version drift and insufficiently strict specifications.
+Additionally, community practices not yet supported by \repotodocker have been proposed by their respective community members,
+while the \repotodocker team has not had the funding support to incorporate and maintain.
+
+The BinderHub software exposes \repotodocker and Jupyter as a service,
+allowing one-click reproduction of published environments for \emph{interactive exploration}.
+BinderHub is shown to work well,
+but has limited application due to technical limitations,
+such as its reliance on the Kubernetes deployment platform,
+or challenges with combining the convenience of BinderHub's anonymous-by-default model
+with authenticated and/or performant access to large data or compute resources.
+
+BinderHub instances such as mybinder.org are extremely convenient,
+but being hosted services they do not offer the digital sovereignty
+of private execution on one's own computational resources,
+be they a local machine or cloud or on-premises clusters.
+
+While the \repotodocker terminal utility \emph{can} technically be deployed anywhere,
+the technical expertise required is dramatically greater than a single click on a website.
+
+
 \subsubsection{Beyond state of the art}
 
 In this project, we will focus on the \emph{reproduction of the
-  software environment} (Step 1) which is a prerequisite for any attempt to
+software environment} (Step 1) which is a prerequisite for any attempt to
 reproduce the actual research outputs. In particular, we want to make the
-creation of this computational environment \emph{automatic}.
+creation of this computational environment \emph{automatic} and \emph{generic}.
 
 We will go beyond the current state of the art by
 \begin{compactitem}
-\item enhancing the existing Binder software, already widely used by authors of Jupyter notebooks,
+\item improving the robustness of \repotodocker{}'s ability to produce environments,
+      through testing and development, as well as taking additional context information into account,
+      such as repository publication date.
+\item enhancing the existing Binder software, already widely used in the Jupyter user community,
   directly improving the reproducibility of research created by the substantial
   community of researchers using such notebooks,
-\item extending the capabilities of the Binder tools so that its capability to
-  create arbitrary software environments automatically can be realised more broadly beyond the
-  Jupyter user community,
+\item extending the capabilities of the Binder tools so that they can be used to
+  create reproducible software environments more broadly in the research community,
+  removing technical restrictions such as the reliance on Kubernetes,
+  and implementing more community practices for reproducible environments.
 \item adding new capabilities to the Binder tools that enable new reproducibility
-  use cases, such as those that need access to large data sets, access to restricted sets,
+  use cases, such as those that need access to large data sets, access to restricted data,
   and reproducibility for High Performance Computing,
-\item enabling the Binder tools to run on the desktop computer of individual
-  researchers (rather than having to rely on central or institutional
-  installations such as mybinder.org).
+\item enabling the Binder tools to run conveniently on private computers of individual
+  researchers, rather than having to rely on central or institutional
+  installations such as mybinder.org.
 \end{compactitem}
 
 \subsubsection{Motivation - Why?}\label{sec:motivation-why}
@@ -321,4 +356,3 @@ The Binder software for deploying services with authenticated access to data is 
 We will bring it to TRL 5 or 6.
 The Binder tool repo2docker when targeting robust reproducible environments is TRL 4.
 We will bring it to TRL 6.
-
