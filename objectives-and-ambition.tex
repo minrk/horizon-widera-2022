@@ -272,27 +272,17 @@ the technical expertise required is dramatically greater than a single click on 
 In this project, we will focus on the \emph{reproduction of the
 software environment} (Step 1) which is a prerequisite for any attempt to
 reproduce the actual research outputs. In particular, we want to make the
-creation of this computational environment \emph{automatic} and \emph{generic}.
+creation of this computational environment \emph{automatic},\emph{generic} and robust, especially for long-term preservation.
 
-We will go beyond the current state of the art by
+We will go beyond the current state of the art by bringing the following selected improvements:
 \begin{compactitem}
-\item improving the robustness of \repotodocker{}'s ability to produce environments,
-      through testing and development, as well as taking additional context information into account,
-      such as repository publication date.
-\item enhancing the existing Binder software, already widely used in the Jupyter user community,
-  directly improving the reproducibility of research created by the substantial
-  community of researchers using such notebooks,
-\item extending the capabilities of the Binder tools so that they can be used to
-  create reproducible software environments more broadly in the research community,
-  removing technical restrictions such as the reliance on Kubernetes,
-  and implementing more community practices for reproducible environments.
-\item adding new capabilities to the Binder tools that enable new reproducibility
-  use cases, such as those that need access to large data sets, access to restricted data,
-  and reproducibility for High Performance Computing,
-\item enabling the Binder tools to run conveniently on private computers of individual
-  researchers, rather than having to rely on central or institutional
-  installations such as mybinder.org.
+\item currently producing valid computational environments from published scientific publications and/or existing online repositories is difficult and usually requires manual handling of the process which is cumbersome and time consuming. Improving the robustness of \repotodocker{}'s ability to produce computational environments, long after the publication and/or release,
+      through testing and development, as well as taking additional context information into account, such as repository publication date will enable the production of computational environment to be seamless;
+\item the existing Binder software is already widely used in the Jupyter user community but focused on the reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending the Binder software beyond the notebooks will undoubtedly attract new community of users and can facilitate transfer of knowledge between academia and industry;
+\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are beyond many institutional or companies IT support staff. As a result, most researchers rely on existing deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{} anywhere e.g. from the user’s personal laptop (Binder@Home) to the most powerful High Performance Computers (Binder@HPC) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
+\item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes with restricted access permissions) that are published and deposited on (domain) specific long-term archives. Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset itself or separately) but the usage of the Binder software and/or existing public Binder deployments for this use case is not currently supported (such amount of data cannot be easily and efficiently moved to the Binder resources). Ad-hoc or domain specific solutions (for instance the usage of cloud optimized data formats and associated catalogs such as intake or STAC by the Pangeo Geoscience community) have been explored by diverse communities but are technically difficult and not generic enough to be adopted by everyone. The Binder software will be extended to facilitate the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to the data and Binder service).
 \end{compactitem}
+
 
 \subsubsection{Motivation - Why?}\label{sec:motivation-why}
 
