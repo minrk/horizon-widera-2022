@@ -15,7 +15,6 @@ jobs:
       - name: install tex
         run: |
           sudo apt-get update && sudo apt-get -y install \
-            --no-install-recommends \
             ca-certificates \
             make \
             latexmk \
