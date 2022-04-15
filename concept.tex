@@ -330,7 +330,17 @@ Our science applications follow the workflow outlined in
 \ref{fig:use-cases-binder}. \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
 \begin{itemize}
-\item \TODO{Add examples from Ifremer}
+\item Introduceing reproducibility to a fish track analysis model~\cite{woillez2016} based on
+  marine physics data uisng Pangeo ecosystem:
+  Pangeo enables interactive analysis on HPC infrastructures~\cite{odaka2020}
+  but also have examples on reproducible marine data analysis~\cite{maze2020}.
+  A particular challenge here is
+  the size and complexity of marine physics data to be ingested
+  to obtain high spatial and temporal resolution of resulting sea bass track 
+  required by fish habitat scientist.
+  Access to parallel computing resources throught DASK on HPC or
+  Cloud architecture together with access to bigdata stored next to the
+  parallel computing architecture is required to make reproducibility realistic.
 \item \TODO{Add examples from UiO}
 \item Reproduciblity of result computed
   with the ab-initio software Octopus
@@ -341,6 +351,14 @@ Our science applications follow the workflow outlined in
   to start the reproduction.
 \end{itemize}
 
+\begin{figure}[htb]
+  \includegraphics[width=0.33\textwidth]{images/fish.png}
+  \caption{An example of an interactive analysis of  
+  fish track reconstructions on a biologging tag
+   data (sea bass) with low resolution marine physics data.
+   % by HMM moodel ~\cite{woillez2016}} .
+   (Background map: \copyright OpenStreetMap contributors ).} \label{fig:fish}
+\end{figure}
 
 \subsubsection{Methodology}\label{sec:methodology}
 
