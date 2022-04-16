@@ -2,7 +2,6 @@
 \usepackage{comments}
 % %\usepackage[final]{comments}
 \usepackage{fontspec}
-\usepackage{ifplatform}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{supertabular,array}
@@ -81,10 +80,8 @@
 \newcommand{\Julia}{\software{Julia}}
 \newcommand{\Fortran}{\software{Fortran}}
 
-\XeTeXtracingfonts=1\relax
+\XeTeXtracingfonts=1
 
-\ifmacosx
-\setmainfont{Times New Roman}
-\else
-\setmainfont{Nimbus Roman No9 L}
-\fi
+% this is latex's Times New Roman,
+% extending Nimbus Roman No9 L
+\setmainfont{texgyretermes-regular.otf}
