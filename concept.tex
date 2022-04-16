@@ -332,9 +332,14 @@ Our science applications follow the workflow outlined in
 \begin{itemize}
 \item \TODO{Add examples from Ifremer}
 \item \TODO{Add examples from UiO}
-\item Reproduciblity of result computed
-  with the ab-initio software Octopus
-  (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
+\item Reproducibility of data processing pipelines, at the example of a
+  Biophysics application\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
+  While the compute requirements are moderate and satisfied by Binder in the Cloud,
+  the underlying software stack is highly complex (it requires the Gromacs simulation
+  code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others)
+  and poses a particular challenge for reproducibility.
+\item Reproducibility of results computed with the ab-initio software Octopus
+  (\href{https://octopus-code.org}{https://octopus-code.org}) which provides
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
   reproduction of simulation results. A (Slurm) job submission may be required
