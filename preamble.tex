@@ -1,6 +1,8 @@
 \usepackage{lscape} % for landscape
 \usepackage{comments}
 % %\usepackage[final]{comments}
+\usepackage{fontspec}
+\usepackage{ifplatform}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{supertabular,array}
@@ -79,7 +81,10 @@
 \newcommand{\Julia}{\software{Julia}}
 \newcommand{\Fortran}{\software{Fortran}}
 
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "proposal"
-%%% End:
+\XeTeXtracingfonts=1\relax
+
+\ifmacosx
+\setmainfont{Times New Roman}
+\else
+\setmainfont{Nimbus Roman No9 L}
+\fi
