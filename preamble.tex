@@ -1,9 +1,11 @@
 \usepackage{lscape} % for landscape
 \usepackage{comments}
 % %\usepackage[final]{comments}
+\usepackage{fontspec}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{supertabular,array}
+\usepackage{tcolorbox}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -78,7 +80,8 @@
 \newcommand{\Julia}{\software{Julia}}
 \newcommand{\Fortran}{\software{Fortran}}
 
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "proposal"
-%%% End:
+\XeTeXtracingfonts=1
+
+% this is latex's Times New Roman,
+% extending Nimbus Roman No9 L
+\setmainfont{texgyretermes-regular.otf}

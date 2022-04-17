@@ -364,7 +364,7 @@ There are at least 8 million notebooks deposited on GitHub \cite{notebookcount},
 the size of the Notebook user base was estimated to be of the order of
 millions in 2015 \cite{jupyter-grant}. We know that the public Binder-based service mybinder.org
 was used to create over 10,000,000 computational environments
-from at least 50,000 unique repositories in 2021 (Section~\ref{sec:mybinder}).
+from at least 50,000 unique repositories in 2021~(Section~\ref{sec:mybinder}).
 
 \TODO{Or integrate into table above?}
 \TODO{This is mentioned on the evaluation form for this section, and then
@@ -444,7 +444,7 @@ actions to promote the project and the adoption of its outcomes beyond the proje
 \subsubsection{Dissemination of results}
 
  \TheProject endeavours to make Open and Reproducible Science practices both more understandable and actionable
- to practioners through the development and use of open and freely available tools.
+ to practitioners through the development and use of open and freely available tools.
 Most of \TheProject software will be in the form of contributions to existing projects,
 which will be governed by the licenses of those projects.
 All Jupyter and Binder software is released under the permissive BSD license,
@@ -652,26 +652,23 @@ We will continually refine our Communication, Dissemination, and Exploitation pl
 Provide a summary of this section by presenting in the canvas below the
 key elements of your project impact pathway and of the measures to
 maximise its impact.
+KEY ELEMENT OF THE IMPACT SECTION
 }
 
-\textbf{KEY ELEMENT OF THE IMPACT SECTION}
+% measured original color as 0, 0.75, 0.95
+% but it's a bit low-contrast
 
-\newlength{\savedparindent}
-\newcommand{\summarybox}[2]{
-\begin{framed}
-
-\centerline{\textbf{ #1}}
-\setlength{\savedparindent}{\parindent}
-\par
-\setlength{\parindent}{0pt}
-{#2}
-\setlength{\parindent}{\savedparindent}
-\end{framed}
+\definecolor{summaryblue}{rgb}{0, 0.7, 0.9}
+\newtcolorbox{summarybox}[1]{
+    colback=white,
+    colframe=summaryblue,
+    fonttitle=\bfseries,
+    title={#1}
 }
-
 
 \begin{multicols}{2}
-\summarybox{SPECIFIC NEEDS}{
+
+\begin{summarybox}{SPECIFIC NEEDS}
 \eucommentary{What are the specific needs that triggered this project?}
 
 Reproducibility is a widely recognized challenge in computational science.
@@ -681,8 +678,9 @@ which may not be practical or desirable across a variety of domains or communiti
 Reliably reproducing software environments without requiring adoption of any single tool chain
 allows for modular adoption, integrating into policies, practices, etc.
 We want to lower the practical barrier to reproducibility, and thereby increase the adoption of reproducible practices.
-}
-\summarybox{D \& E \& C MEASURES}{
+\end{summarybox}
+
+\begin{summarybox}{D \& E \& C MEASURES}
 \eucommentary{What dissemination, exploitation and communication measures will you apply to the results?}
 
 \textbf{Exploitation:} All services based on BinderHub will immediately benefit from the project, improving tools
@@ -704,10 +702,9 @@ industrial robotics and quantitative finance.
   about the project through news releases, videos, a website, social media,
   further media engagement, fliers and interviews, with a consistent visual
   identity.
+\end{summarybox}
 
- }
-
-\summarybox{EXPECTED RESULTS}{
+\begin{summarybox}{EXPECTED RESULTS}
 \eucommentary{What do you expect to generate by the end of the project? }
 
 \textbf{Improved software tools for reproducing computational environments}:
@@ -715,9 +712,10 @@ by improving the Binder tools for reproducible environments,
 it will be easier for researchers to produce and share results openly and reproducibly.
 
 \textbf{Improved understanding of good practices for reproducibility}: study results, documentation, and workshops will aid researchers and policy makers in understanding the most appropriate practices to adopt in their pursuit of reproducible research.
-}
 
-\summarybox{TARGET GROUPS}{
+\end{summarybox}
+
+\begin{summarybox}{TARGET GROUPS}
 \eucommentary{Who will use or further up-take the results of the project? Who will benefit from the results of the project?}
 
 \textbf{Computational science practitioners}: researchers with an interest in reproducibility of their on work.
@@ -727,9 +725,9 @@ it will be easier for researchers to produce and share results openly and reprod
 \textbf{Policy makers}: Funders and institutions requiring their subjects to follow reproducible practices
 
 \textbf{Publishers}: Requiring/enabling reproducible publications
-}
+\end{summarybox}
 
-\summarybox{OUTCOMES}{
+\begin{summarybox}{OUTCOMES}
 \eucommentary{What change do you expect to see after successful dissemination and exploitation of project results to the target group(s)?}
 
 \textbf{Adoption of Binder tools for reproducibility}:
@@ -737,8 +735,8 @@ practitioners will have access to Binder tools for reproducibility.
 Having improved their usability and robustness
 
 \textbf{Facilitating practical policies for reproducible publications}
-}
-\summarybox{IMPACTS}{
+\end{summarybox}
+\begin{summarybox}{IMPACTS}
 \eucommentary{
 What are the expected wider scientific, economic and societal effects of the project contributing to the expected impacts outlined in the respective destination in the work programme?
 }
@@ -749,9 +747,9 @@ access of reproducible research outputs.
 
 \textbf{Increased re-use of scientific results}: Practical reproducibility
 enables rapid re-use of published results leading to more effective research activities.
-
-}
+\end{summarybox}
 \end{multicols}
+\clearpage
 
 % \noindent
 % \fbox{
