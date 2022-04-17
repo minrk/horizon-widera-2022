@@ -80,8 +80,14 @@
 \newcommand{\Julia}{\software{Julia}}
 \newcommand{\Fortran}{\software{Fortran}}
 
-\XeTeXtracingfonts=1
+\XeTeXtracingfonts=1\relax
 
 % this is latex's Times New Roman,
 % extending Nimbus Roman No9 L
-\setmainfont{texgyretermes-regular.otf}
+\setmainfont[
+    Extension=.otf,
+    UprightFont=*-regular,
+    BoldFont=*-bold,
+    ItalicFont=*-italic,
+    BoldItalicFont=*-bolditalic,
+]{texgyretermes}
