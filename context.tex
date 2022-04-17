@@ -1,0 +1,99 @@
+\subsubsection{Context - Jupyter and Binder}\label{sec:context}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/spectrogram.png}
+  \caption{A notebook document in the Jupyter Notebook interface.}
+    \label{fig:notebook-screenshot}
+
+    \end{minipage}%
+    % some margin between images
+    \hspace*{.04\textwidth}%
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/mybinder.png}
+        \caption{Home page of the \mybinder{} service, an instance of \textbf{BinderHub}.}
+        \label{fig:mybinder-homepage}
+    \end{minipage}
+\end{figure}
+
+The implementation of our approach to reproducibility
+is focused on the Binder and Jupyter projects,
+which are presented here at a high level.
+In particular, we focus on the \textbf{Binder tools}
+for \textbf{reproducible software environments}.
+In this section, we introduce key components of Project Jupyter and Binder to help
+contextualise the work we plan to do,
+as well as some terminology
+
+\paragraph*{Relationship between \TheProject and Jupyter, Binder}
+
+Several \TheProject team members have a track record as
+developers and contributors to Project Jupyter, Binder and its associated
+ecosystem, including two current and founding members of the Jupyter Steering Committee,
+and the leader of the Binder subproject.
+The proposed work has the potential to improve the reproducibility of almost all computational research,
+not just those that choose to use notebooks.
+
+
+\definecolor{terminologyFrame}{rgb}{0.5, 0.5, 0.5}
+\definecolor{terminologyBack}{rgb}{0.9, 0.9, 0.9}
+
+\newtcolorbox{terminology}[1]{
+    breakable,
+    colback=terminologyBack,
+    colframe=terminologyFrame,
+    fonttitle=\bfseries,
+    title={Terminology #1}
+}
+
+\begin{terminology}{}
+For clarity, we define some terms that have been used
+throughout this proposal. We illustrate the terms in the context of the
+reproducibility example in \nameref{sec:reproducibility-example}.
+
+\begin{description}
+\item[Repository] We refer to a \emph{repository} as a collection of files.
+
+The \emph{purpose} of the repository in our context is to collect/archive/transport information to make
+research results reproducible.
+Such a repository could be a \softwarename{git} repository (hosted on GitHub or other services),
+but it could also be a simple zip file.
+A repository typically contains some of these items:
+
+\begin{compactitem}
+  \item \textbf{Documentation}
+  \item \textbf{Script}
+  \item \textbf{Software specification}
+  \item \textbf{Data}
+\end{compactitem}
+
+The repository could be made publicly available,
+for example through Zenodo
+as an electronic supplementary to a publication,
+or through GitHub.
+
+\item[Script] A machine-executable file (for example a Bash, Python, Perl
+script, Makefile or similar). Such scripts can execute data processing commands,
+and are often part of a repository to make the (automatic) reproduction of
+results possible.
+
+In our example, the necessary steps to create the figure from the raw data are
+gathered in the notebook \texttt{figure1.ipynb}.
+
+\item[Software specification] A description of what software is needed to run the \textbf{Script}.
+  Ideally, but \emph{not necessarily} machine readable.
+  The exact form of the software specification depends on the software tools used.
+  In our example, a \texttt{requirements.txt} file indicates the \softwarename{pip} tool is used.
+
+\item[Software environment] All the software that needs to be available and
+  installed to execute the scripts and (and if desired) Jupyter notebooks.
+  This is generally produced from the \textbf{Software specification}.
+\end{description}
+\end{terminology}
+
+
+\input{project-jupyter.tex}
+\input{project-binder.tex}

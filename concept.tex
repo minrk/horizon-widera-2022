@@ -10,9 +10,6 @@
 \eucommentary{5-8 pages}
 
 
-
-
-
 % \subsubsection{Concept}%\label{sec:concept}
 %
 % Open Science is the principle that science, in order to be most
@@ -82,23 +79,19 @@ Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computat
 In the following we explain our concept and the technology on which this
 proposed project builds in more detail.
 \begin{itemize}
-\item Sections \fullref{sec:reproducibility} and
-  \fullref{sec:reproducibility-challenges} contextualise the proposed work
+\item Section \fullref{sec:reproducibility} contextualises the proposed work
   within the wide field of reproducibility.
-\item Section \fullref{sec:reproducibility-concept} summarises our concept and
+\item \nameref{sec:reproducibility-concept} summarises our concept and
   approach concisely.
 \item We illustrate the reproducibility discussion with
-  \fullref{sec:reproducibility-example} and provide details on some of our
+  \nameref{sec:reproducibility-example} and provide details on some of our
   \fullref{sec:science-applications}.
-\item To assist the more detailed description of the concept and the content of
-  the Work Packages, we provide a \fullref{sec:terminology}
-  and additional technical information in \fullref{sec:project-jupyter} and
-  \fullref{seq:project-binder} in our technical appendix that forms
-  Section~\ref{sec:appendix} (page~\pageref{sec:appendix}) of this document.
+\item \fullref{sec:context} establishes the context
+  of the open source projects where we will perform our work.
 \end{itemize}
 
-\noindent The methodology for this project is discussed starting in section
-\fullref{sec:methodology}.
+\noindent The specific approach for this project is discussed starting in section
+\fullref{sec:approach}.
 
 
 %\TODO{Do we need to keep anything from the commented out lines here?}
@@ -132,7 +125,8 @@ proposed project builds in more detail.
 
 \medskip
 
-\subsubsection{Reproducibility}\label{sec:concept}\label{sec:reproducibility}
+\subsubsection{Concept - Reproducibility}
+\label{sec:reproducibility}
 
 Before describing the focus of the work that we propose here, we want to embed
 this into the much wider context of reproducibility challenges.
@@ -153,7 +147,9 @@ simulations.
 % Where additional software, such as analysis scripts, input files
 % and software for the simulation are needed,
 
-\subsubsection{Challenges of Reproducibility}\label{sec:reproducibility-challenges}
+\paragraph*{Challenges of Reproducibility}
+\label{sec:reproducibility-challenges}
+\par
 
 The challenges of such ``computational reproducibility'' include:
 \begin{itemize}
@@ -187,7 +183,9 @@ documented that the format is understandable?
 \end{itemize}
 
 
-\subsubsection{Reproducibility concept}\label{sec:reproducibility-concept}
+\paragraph*{Classifying Reproducibility Challenges}
+\label{sec:classifying-reproducibility}
+\par
 
 We can classify the reproducibility challenges listed above into different categories:
 
@@ -244,13 +242,14 @@ The \emph{Other} challenges are mostly outside the focus of this work
 publishing, see for example Task \taskref{applications}{data-publishing}).
 
 
+\include{context.tex}
 % \subsubsection{Terminology and repository example}\label{sec:reproducibility-example}
 
 \subsubsection{Reproducibility Example}
 \label{sec:reproducibility-example}
 
 \begin{figure}[htb]\centering
-  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
+  \includegraphics[width=0.7\textwidth]{use-cases-binder-logbook-solution.png}
   \caption{A typical use case for Binder-based reproducibility using Jupyter notebooks in research.
             Image by Juliette Belin for the OpenDreamKit project, used under
             CC-BY-SA.}\label{fig:use-cases-binder}
@@ -330,7 +329,7 @@ Our science applications follow the workflow outlined in
 \ref{fig:use-cases-binder}. \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
 \begin{itemize}
-\item Introduceing reproducibility to a fish track analysis model~\cite{woillez2016} based on
+\item Introducing reproducibility to a fish track analysis model~\cite{woillez2016} based on
   marine physics data uisng Pangeo ecosystem:
   Pangeo enables interactive analysis on HPC infrastructures~\cite{odaka2020}
   but also have examples on reproducible marine data analysis~\cite{maze2020}.
@@ -360,7 +359,7 @@ Our science applications follow the workflow outlined in
    (Background map: \copyright OpenStreetMap contributors ).} \label{fig:fish}
 \end{figure}
 
-\subsubsection{Methodology}\label{sec:methodology}
+\subsubsection{Approach}\label{sec:approach}
 
 Our approach is centered around the following ideas:
 \begin{compactenum}

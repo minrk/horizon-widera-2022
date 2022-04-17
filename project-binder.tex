@@ -1,29 +1,35 @@
-\subsection{Project Binder}\label{seq:project-binder}
+\paragraph*{Binder}\label{seq:project-binder}
+
+The \textbf{Binder tools} were designed to execute
+Jupyter notebooks in tailored computational environments which can be created
+automatically and on demand (Step 4 in figure~\ref{fig:use-cases-binder}).
+The \textbf{fully-automated} creation of the correct \textbf{software environment} is an
+essential aspect of reproducibility that is not widely addressed yet.
+The \TheProject{} project will address this need,
+improve the \textbf{automatic software environment creation} support for computational research,
+making such tools \textbf{practical} for uses cases with and without notebooks.
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
-a subproject of the Jupyter project. The Binder project is formally operating
-within the Jupyter ecosystem, but not confined to be useful only for notebooks.
+a subproject of the Jupyter project.
+The Binder project is most popular with existing Jupyter notebook users,
+but not restricted to be useful only for notebooks.
 
-The key components of the Binder software are \repotodocker{}
-(Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
-creates a software environment inside a Docker container from a software
-specification in a repository. \binderhub{} starts a Jupyter notebook server
+The key components of the \textbf{Binder tools} are \repotodocker{}
+and \binderhub{}.
+The \repotodocker{} tool creates a \textbf{software environment} inside a Docker image from a \textbf{software
+specification} in a \textbf{repository}.
+\binderhub{} starts a \textbf{Jupyter server}
 within this container from which the user can execute the notebooks from the
 repository.
 
-\emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
-  federation} that collectively host a service running the Binder software
-under the URL \url{https://mybinder.org}. This is the service we made use of in
-our example in section~\ref{sec:reproducibility-example}.
-
 The focus for this proposal is to improve \repotodocker{}. In particular,
-\repotodocker{} solves the software environment challenge (see
-Section~\ref{sec:reproducibility-concept}) in a generic way and is independent
+\repotodocker{} solves the \textbf{software environment} challenge (see
+Section~\ref{sec:reproducibility}) in a generic way and is independent
 from Jupyter notebooks.
 
-\TODO{Add image that depicts this Jupyter/Binder relation ship}.
+\TODO{Add image that depicts this Jupyter/Binder relationship.}
 
-\subsubsection{Basic functionality of Binder}
+\paragraph*{Basic functionality of Binder}
 \label{binder-how-does-it-work}
 
 The currently most common reproducibility use case -- with the current state of the Binder
@@ -31,111 +37,70 @@ tools -- is the one we introduced in
 Section~\ref{sec:reproducibility-example}. We will use this to
 describe the role of the individual components of Binder:
 
-
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=0.7\textwidth]{images/mybinder.png}
-    \caption{Home page of the \mybinder{} service.}
-    \label{fig:mybinder-homepage}
-\end{figure}
-
-
 \begin{compactitem}
-\item The \mybinder{} service is called with a URL that encodes the location of the data
+\item The \binderhub{} service is given a URL that encodes the location of the data
   repository\footnote{For example the
     {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
     refers to the GitHub repository ``reproducibility-repository-example'' of the
     github user ``fangohr'', asking to open the ``figure1.ipynb'' file.}
-
-  Alternatively, there is form (see Figure~\ref{fig:mybinder-homepage})
-  which users can complete with repository details
-  to start the build of the corresponding environment, or to obtain the URL to
-  re-use that configuration later, or share it with others.
-\item From the \mybinder{} entry point, the request is forwarded to one
-  \binderhub{} service of one of the organisations in the BinderHub federation
-  that has available compute resources.
-\item The \binderhub{} software running at the chosen location, will ask
-  \repotodocker{} to create a Docker container in which the notebooks from the repository can be executed.
-\item \repotodocker{} searches the repository for specifications of software requirements (see \ref{repo2docker-supported-software-specifications}).
-\item \repotodocker{} composes a Dockerfile that contains all the commands
-  necessary to install software.
-\item \repotodocker{} builds the Docker image based on the Dockerfile.
-\item \binderhub{} takes the Docker image and asks Kubernetes to start
-  a container based on this image.
-\item The notebook server is started in this Docker container.
-\item \binderhub{} forwards the user who requested this virtual environment to
+  (see Figure~\ref{fig:mybinder-homepage})
+\item \binderhub{} will use
+  \repotodocker{} to create a \textbf{software environment} (Docker image)
+  in which the notebooks or scripts from the repository can be executed.
+\item \repotodocker{} searches the repository for \textbf{software specifications}.
+\item \repotodocker{} constructs the \textbf{software environment}
+  from the \textbf{software specification(s)} (a Docker image).
+\item \binderhub{} asks \JupyterHub to start
+  a \textbf{notebook session} in this \textbf{software environment}.
+\item \binderhub{} forwards the user who requested this environment to
   the URL at which the repository (or a particular notebook) can be explored
-  from within the Jupyter notebook (which runs in the container).
+  from within the Jupyter application.
 \end{compactitem}
 
-\subsubsection{The repo2docker software tool.}\label{sec:repo2docker}
-
-\repotodocker{} is a tool to fetch a remote repository and build a software
-environment for this repository. Currently, \repotodocker{} can retrieve
-repositories from the following services and formats: GitHub, Gist, Git, GitLab,
-Zenodo, Hydroshare, Figshare, Dataverse.
-
-For the automatic building of reproducible computational environments,
-\repotodocker{} understands commonly used conventions for environment specifications and
-community standard tools such as Docker, conda, mamba, and pip. See
-Section~\ref{repo2docker-supported-software-specifications} below for a full list of
-currently supported software specifications.
-
-\subsubsection{Supported software specification formats}
-\label{repo2docker-supported-software-specifications}
-The \repotodocker{} tool currently supports the following software specification
-formats to build Docker images:
-% source:
-% https://repo2docker.readthedocs.io/en/latest/config_files.html#config-files
-% 9 April 2022
-\begin{compactitem}
-\item \softwarename{requirements.txt}, \softwarename{setup.py},
-  \softwarename{Pipfile}, \softwarename{Pipfile.lock}: to specify Python
-  packages and environments
-\item \softwarename{Project.toml}, \softwarename{JuliaProject.toml} and (legacy)
-  \softwarename{REQUIRE}: to
-  specify Julia version and packages
-\item \softwarename{install.R}, \softwarename{DESCRIPTION}: to install R
-  libraries, or install the repository as R package
-\item \softwarename{apt.get}: to install Debian packages. The Docker container
-  is currently based on Ubuntu, which uses the Debian package management tool \softwarename{apt}.
-\item \softwarename{environment.yml}: to specify conda or mamba packages and
-  environments
-\item \softwarename{default.nix}: to use the nix package manager for software provision
-\item \softwarename{Dockerfile}: providing a Dockerfile enables users to define
-  virtually arbitrary environments, for example based on software from the
-  repositories of Linux distributions.
-\end{compactitem}
-
-\subsubsection{BinderHub}\label{sec:binderhub}
-BinderHub is software for hosting a web service built on \repotodocker{} and
-JupyterHub where individuals can share reproducible environments for
-immediate and free interaction by readers in their browser.
-
-
-\subsubsection{The \mybinder{} service}\label{sec:mybinder}
-
-\emph{\mybinder{}} is a service run by the \emph{BinderHub
-  federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
-of organisations. Collectively, they host a service running the BinderHub software
-which can be reached from \url{https://mybinder.org}.
-
-The service is actively used with approximately 200,000 sessions being
-requested and delivered by the \mybinder{} service every week in 2021. The number
+\paragraph*{The \mybinder{} service}
+\label{sec:mybinder}
+\mybinder{} is a service run by the \emph{BinderHub
+federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+of organisations. Collectively, they host a service running the \binderhub{} software
+which can be reached at \url{https://mybinder.org}.
+The service is actively used, with approximately 200,000 sessions being
+requested and delivered by \mybinder{} every week in 2021. The number
 of sessions is growing from approximately 10,000 per day in November 2018
-(beginning of the available records) to about 30,000 per day in 2022. We have
-identified 60,000 unique repositories published in the last few years which have
-used the \mybinder{} service. The data is available~\cite{mybinder-archive}.
-
+(beginning of the available records) to 30,000 per day in 2022. We have
+identified 55,000 unique repositories which used the \mybinder{} service in 2021 alone.
+The data is open and available~\cite{mybinder-archive}.
+The improvements made to \textbf{Binder tools} by \TheProject will be immediately
+and freely available to all operators of BinderHubs, including \mybinder{}.
 Examples of reproducible repositories that make use of the \mybinder service
 include reproducible research repositories
 \cite{GitHubRepoExampleAlbert2016,Beg2021}, interactive textbooks
-\cite{Fangohr2022,Zeller2022} and citizen science and outreach activities
+\cite{Fangohr2022,Zeller2022} and Nobel Prize-wining citizen science and outreach activities
 \cite{ligo-open-science,OSCOVIDA2022}.
 
-This \TheProject{} project will not provide or operate a BinderHub service (such as the global
-``\url{https://mybinder.org}'' instance). The improvements achieved, however, will immediately
-be made available to all operators of BinderHubs, including \mybinder{}.
+\begin{terminology}{(Binder)}
+\begin{description}
+\item[Project Binder] The Project Binder is described in Section
+\ref{seq:project-binder}. It is part of the Jupyter ecosystem of tools, and
+allows to convert a repository with Jupyter notebooks into an browser-hosted
+environment, in which the notebooks can be executed interactively (and thus
+results can be reproduced).
+
+\item[Binder tools] The Binder tools consist of \binderhub{} and \repotodocker{}.
+
+\item[\repotodocker] \repotodocker{} is a tool to fetch a \textbf{repository} and build a \textbf{software
+environment} for this repository. Currently, \repotodocker{} can retrieve
+repositories from many services and formats, including GitHub, Zenodo, Dataverse, and others.
+For the automatic building of \textbf{reproducible computational environments},
+\repotodocker{} understands commonly used conventions for \textbf{software specifications} and
+community standard tools such as Docker, conda, mamba, Julia, R, nix, and pip.
+
+\item[\BinderHub] software for hosting a web service built on \repotodocker and \JupyterHub where individuals can share reproducible environments for
+immediate and free interaction by readers in their browser,
+  with no need to install anything themselves.
+\item[mybinder.org] A flagship instance of \BinderHub,
+  serving over 10 million sessions in 2021.
+\end{description}
+\end{terminology}
 
 
 % \subsubsection{Binder for reproducibility}\label{sec:binder-for-reproducibility}
