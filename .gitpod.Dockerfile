@@ -4,6 +4,7 @@ FROM gitpod/workspace-full
 RUN sudo apt-get -q update &&     sudo apt-get install -yq --no-install-recommends \
             ca-certificates \
             make \
+            latexmk \
             texlive-latex-base \
             texlive-latex-recommended \
             texlive-latex-extra \
