@@ -124,11 +124,11 @@ running that code.
 \end{itemize}
 
 We provide a more detailed description of the components and steps in this
-process in the following sections \ref{sec:terminology} to \ref{sec:mybinder}.
+process in the following sections \ref{sec:opensource}.
 
 The reproducibility workflow shown in Figure~\ref{fig:use-cases-binder} is
 working today, and we provide estimates on the number of current users in
-section \ref{sec:mybinder}. The work proposed for this project will build on
+section \ref{sec:opensource}. The work proposed for this project will build on
 this existing technology and (i)~make it more robust and easier to use
 (\WPref{reproducibility}), and (ii)~extend the functionality (\WPref{impact}) so
 that the existing tools can be used in many more use cases
@@ -136,10 +136,11 @@ that the existing tools can be used in many more use cases
 
 We note in particular that the Binder-enabled workflow for reproducibility has
 originally been developed to reproduce results that are created within Jupyter
-Notebook (as shown in Figure~\ref{fig:use-cases-binder}). As part of this
-project, we will extend the Binder tool functionality, so that reproducible
-computational environments can be created and used in studies that do not make
-use of Jupyter notebooks.
+Notebook (as shown in Figure~\ref{fig:use-cases-binder}).
+However, the approach taken is generic, and not specific to notebooks.
+As part of this project, we will demonstrate that reproducible
+computational environments can be created  using the same approach
+in studies that do not make use of Jupyter notebooks.
 
 \begin{figure}
   \centering
@@ -285,20 +286,20 @@ where the author may have no trouble reproducing their own work,
 but they have not effectively communicated the requirements such that others can do the same.
 The gap
 % gap between what and what?
-between researchers' expertise and practical need when it comes to these tools has led to the creation 
+between researchers' expertise and practical need when it comes to these tools has led to the creation
 of whole industries of remedial skills training.
 The loose coupling of tools and modular choices make it more flexible (covering more use cases),
 but more difficult to follow robustly.
 Identifying which tools to use and following appropriate installation is a challenge
 for both authors, who must communicate requirements clearly without knowing the reader's context,
-and readers, who must find, understand, and follow potentially complex directions, even assuming they were 
+and readers, who must find, understand, and follow potentially complex directions, even assuming they were
 complete and correct.
 
 \medskip Researchers who use the Jupyter Notebook to orchestrate their
 computational research can achieve this automatic
 reproducibility with little additional effort~\cite{Beg2021}: they use the Notebook document as
 the protocol of their analysis (Step 2), which can be executed automatically.
-They can make use of the Binder tools (Section~\ref{seq:project-binder}) and/or the
+They can make use of the Binder tools (Section~\ref{sec:opensource}) and/or the
 associated mybinder.org service that has
 been designed by the Jupyter team to automatically create the appropriate
 software environment (step 1) in which the notebook can be executed.

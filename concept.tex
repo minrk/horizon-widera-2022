@@ -38,14 +38,14 @@
 %
 % These are the questions that guide the \TheProject{} project.
 
-\subsubsection{Supporting Open, Useful, and Reproducible Computational
+\paragraph*{Supporting Open, Useful, and Reproducible Computational
   Environments}\label{sec:SOURCE}
 
-Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computational Environments.}'':
+The ideas behind our project title:
 \begin{itemize}
-\item The work done is this project will be \emph{Supporting} scientists in their
-  endavours to make their work more reproducible and re-usable.
-\item We believe in the value of \emph{Open} science and \emph{Open} source. The
+\item The work done is this project will be \textbf{Supporting} scientists in their
+  endeavours to make their work more reproducible and re-usable.
+\item We believe in the value of \textbf{Open} science and \textbf{Open} source. The
   best reproducibility and re-usability of scientific results is given through
   complete transparency of the steps taken in the derivation of a result. For
   the computational aspects this means to make all simulation and/or
@@ -59,7 +59,7 @@ Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computat
   is also done as open source, and can be inspected at
   \url{http://github.com/minrk/horizon-widera-2022} for those interested.)
 
-\item Measures towards better reproducibility have to be \emph{Useful} and
+\item Measures towards better reproducibility have to be \textbf{Useful} and
   practical: if a proposed approach or tool burdens the scientist with
   additional work, or requires significant additional skills, it becomes less
   likely to be widely accepted.
@@ -69,7 +69,7 @@ Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computat
   adopted by many and can be considered best practice.
 
 \item Within the wide field of reproducibility in science, we focus in this
-  project on the improvement of the automatic generation of \emph{Reproducible
+  project on the improvement of the automatic generation of \textbf{Reproducible
     Computational Environments}.
   % It is an essential step for reproducible
   % science to be able to setup the correct
@@ -82,19 +82,14 @@ Our project is titled ``\emph{Supporting Open, Useful, and Reproducible Computat
 In the following we explain our concept and the technology on which this
 proposed project builds in more detail.
 \begin{itemize}
-\item Sections \fullref{sec:reproducibility} and
+\item Sections~\fullref{sec:reproducibility} and
   \fullref{sec:reproducibility-challenges} contextualise the proposed work
   within the wide field of reproducibility.
-\item Section \fullref{sec:reproducibility-concept} summarises our concept and
-  approach concisely.
+\item Section~\fullref{sec:methodology} presents our approach to improving reproducibility.
 \item We illustrate the reproducibility discussion with
   \fullref{sec:reproducibility-example} and provide details on some of our
   \fullref{sec:science-applications}.
-\item To assist the more detailed description of the concept and the content of
-  the Work Packages, we provide a \fullref{sec:terminology}
-  and additional technical information in \fullref{sec:project-jupyter} and
-  \fullref{seq:project-binder} in our technical appendix that forms
-  Section~\ref{sec:appendix} (page~\pageref{sec:appendix}) of this document.
+\item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
 
 \noindent The methodology for this project is discussed starting in section
@@ -153,7 +148,7 @@ simulations.
 % Where additional software, such as analysis scripts, input files
 % and software for the simulation are needed,
 
-\subsubsection{Challenges of Reproducibility}\label{sec:reproducibility-challenges}
+\paragraph*{Challenges of Reproducibility}\label{sec:reproducibility-challenges}
 
 We can classify the reproducibility challenges listed above into different categories:
 
@@ -248,7 +243,7 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
   stakeholders. These include research councils and funders, publishers, research
   infrastructure providers, and educators. There are also opportunities to use the same
   software environment creation to support outreach and
-  citizen-science projects (see~\ref{sec:mybinder}). A set of representatives of
+  citizen-science projects (see~\ref{sec:opensource}). A set of representatives of
   these domains will be gathered in the Community Engagement Panel, and connect
   us with the relevant communities. A list of confirmed panel members is
   available (see~\taskref{management}{community-engagement-panel}) and will be
@@ -336,7 +331,7 @@ Panel~(\taskref{management}{community-engagement-panel}).
     project, evaluate the tools, and provide demonstrators. We expect the
     demonstrators we develop to be exploited as production services already during
     the grant, and subsequently.
-    
+
 Our science applications (Figure \ref{fig:applications}) follow the workflow outlined in
 \ref{fig:use-cases-binder}, and include these examples: \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
@@ -377,11 +372,13 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
   \TODO{Add at least one more.}
 \end{figure}
 
-\subsubsection{Open Source ecosystem}\label{seq:project-binder}
+\subsubsection{Open Source ecosystem}\label{sec:opensource}
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
 a subproject of the Jupyter project. The Binder project is formally operating
 within the Jupyter ecosystem, but not confined to be useful only for notebooks.
+
+\TODO{Lost "what is Jupyter" in reshuffle}
 
 The key components of the Binder software are \repotodocker{}
 (Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
@@ -390,48 +387,24 @@ specification in a repository. \binderhub{} starts a Jupyter notebook server
 within this container from which the user can execute the notebooks from the
 repository.
 
-\emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
+\emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \myemph{BinderHub
   federation} that collectively host a service running the Binder software
 under the URL \url{https://mybinder.org}. This is the service we made use of in
 our example in section~\ref{sec:reproducibility-example}.
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
 \repotodocker{} solves the software environment challenge (see
-Section~\ref{sec:reproducibility-concept}) in a generic way and is independent
+Section~\ref{sec:reproducibility-challenges}) in a generic way and is independent
 from Jupyter notebooks.
 
 \TODO{Add image that depicts this Jupyter/Binder relation ship}.
 
-\subsubsection{The repo2docker software tool.}\label{sec:repo2docker}
 
-\repotodocker{} is a tool that aims to \emph{automate existing practices} for reproducible environment specification.
-It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
-constructing an environment in a Docker container.
-
-\repotodocker{} can fetch a remote repository and build a software
-environment for this repository. Currently, \repotodocker{} can retrieve
-repositories from the following services and formats: GitHub, Gist, Git, GitLab,
-Zenodo, Hydroshare, Figshare, Dataverse.
-
-For the automatic building of reproducible computational environments,
-\repotodocker{} understands commonly used conventions for environment specifications and
-community standard tools such as Docker, conda, mamba, and pip. See
-Section~\ref{repo2docker-supported-software-specifications} below for a full list of
-currently supported software specifications.
-\repotodocker{} is successful enough to be widely adopted,
-but many shortcomings have been identified,
-especially when a repository contains an \emph{incomplete} specification.
-A common issue is to produce an environment that works when published,
-but which may produce a non-working environment at a later point in time,
-due to version drift and insufficiently strict specifications.
-Additionally, community practices not yet supported by \repotodocker{} have been proposed by their respective community members,
-while the \repotodocker{} team has not had the funding support to incorporate and maintain.
-
-\subsubsection{Binder software}
+\paragraph*{Binder example}
 \label{binder-how-does-it-work}
 
-The currently most common reproducibility use case -- with the current state of the Binder
-tools -- is the one we introduced in
+The currently most common reproducibility use case -- with the current state of the
+\textbf{Binder tools} -- is the one we introduced in
 Section~\ref{sec:reproducibility-example}. We will use this to
 describe the role of the individual components of Binder:
 
@@ -443,41 +416,52 @@ describe the role of the individual components of Binder:
     \label{fig:mybinder-homepage}
 \end{figure}
 
-
 \begin{compactitem}
-\item The \mybinder{} service is called with a URL that encodes the location of the data
+\item The \binderhub{} service is given a URL that encodes the location of the data
   repository\footnote{For example the
     {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
     refers to the GitHub repository ``reproducibility-repository-example'' of the
     github user ``fangohr'', asking to open the ``figure1.ipynb'' file.}
-
-  Alternatively, there is form (see Figure~\ref{fig:mybinder-homepage})
-  which users can complete with repository details
-  to start the build of the corresponding environment, or to obtain the URL to
-  re-use that configuration later, or share it with others.
-\item From the \mybinder{} entry point, the request is forwarded to one
-  \binderhub{} service of one of the organisations in the BinderHub federation
-  that has available compute resources.
-\item The \binderhub{} software running at the chosen location, will ask
-  \repotodocker{} to create a Docker container in which the notebooks from the repository can be executed.
-\item \repotodocker{} searches the repository for specifications of software requirements (see \ref{repo2docker-supported-software-specifications}).
-\item \repotodocker{} composes a Dockerfile that contains all the commands
-  necessary to install software.
-\item \repotodocker{} builds the Docker image based on the Dockerfile.
-\item \binderhub{} takes the Docker image and asks Kubernetes to start
-  a container based on this image.
-\item The notebook server is started in this Docker container.
-\item \binderhub{} forwards the user who requested this virtual environment to
+  (see Figure~\ref{fig:mybinder-homepage})
+\item \binderhub{} will use
+  \repotodocker{} to create a \textbf{software environment} (Docker image)
+  in which the notebooks or scripts from the repository can be executed.
+\item \repotodocker{} searches the repository for \textbf{software specifications}.
+\item \repotodocker{} constructs the \textbf{software environment}
+  from the \textbf{software specification(s)} (a Docker image).
+\item \binderhub{} asks \JupyterHub to start
+  a \textbf{notebook session} in this \textbf{software environment}.
+\item \binderhub{} forwards the user who requested this environment to
   the URL at which the repository (or a particular notebook) can be explored
-  from within the Jupyter notebook (which runs in the container).
+  from within the Jupyter application.
 \end{compactitem}
 
 
-\textbf{BinderHub}\label{sec:binderhub}
-BinderHub is software for hosting a web service built on \repotodocker{} and
+\noindent\textbf{\repotodocker}\label{sec:repo2docker}
+is a tool that aims to \myemph{automate existing practices} for reproducible environment specification.
+It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
+constructing an environment in a Docker container image.
+\repotodocker{} can fetch a remote repository and build a software
+environment for this repository. Currently, \repotodocker{} can retrieve
+repositories from the following services and formats: GitHub, Gist, Git, GitLab,
+Zenodo, Hydroshare, Figshare, Dataverse.
+
+For the automatic building of reproducible computational environments,
+\repotodocker{} understands commonly used conventions for environment specifications and
+community standard tools such as Docker, conda, mamba, and pip.
+\repotodocker{} is successful enough to be widely adopted,
+but many shortcomings have been identified,
+especially when a repository contains an \emph{incomplete} specification.
+A common issue is to produce an environment that works when published,
+but which may produce a non-working environment at a later point in time,
+due to version drift and insufficiently strict specifications.
+Additionally, community practices not yet supported by \repotodocker{} have been proposed by their respective community members,
+while the \repotodocker{} team has not had the funding support to incorporate and maintain.
+
+\noindent \textbf{BinderHub}\label{sec:binderhub}
+is software for hosting a web service built on \repotodocker{} and
 JupyterHub where individuals can share reproducible environments for
 immediate and free interaction by readers in their browser.
-
 
 The BinderHub software exposes \repotodocker{} and Jupyter as a service,
 allowing one-click reproduction of published environments for \emph{interactive exploration}.
@@ -490,19 +474,7 @@ with authenticated and/or performant access to large data or compute resources.
 While the \repotodocker{} terminal utility \emph{can} technically be deployed anywhere,
 the technical expertise required is dramatically greater than a single click on a website such as mybinder.org.
 
-\subsubsection{Technical Readiness Level (TRL)}
-
-TRL is unusual for Binder tools, because they are tools that can be used in many ways,
-and they can be described as having a different TRL \emph{in different contexts}.
-
-The Binder software and service demonstration at mybinder.org is TRL 6,
-where scope \emph{excludes} long-term robustness.
-The Binder software for deploying services with authenticated access to data is TRL 3.
-We will bring it to TRL 5 or 6.
-The Binder tool repo2docker when targeting robust reproducible environments is TRL 4.
-We will bring it to TRL 6.
-
-\subsubsection{The \mybinder{} service}\label{sec:mybinder}
+\paragraph*{The \mybinder{} service}\label{sec:mybinder}
 
 \emph{\mybinder{}} is a service run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
@@ -529,6 +501,20 @@ be made available to all operators of BinderHubs, including \mybinder{}.
 
 \TODO{Add info on links we have with our own providers and what role they play in the project e.g.
 deployment of binder services with newly developed features}
+
+\subsubsection{Technical Readiness Level (TRL)}
+
+TRL is unusual for Binder tools, because they are tools that can be used in many ways,
+and they can be described as having a different TRL \emph{in different contexts}.
+
+The Binder software and service demonstration at mybinder.org is TRL 6,
+where scope \emph{excludes} long-term robustness.
+The Binder software for deploying services with authenticated access to data is TRL 3.
+We will bring it to TRL 6.
+The Binder tool repo2docker when targeting robust reproducible environments is TRL 4.
+We will bring it to TRL 6.
+
+
 
 \subsubsection{Community Engagement Panel}\label{sec:community-engagement-panel}
 The Community Engagement Panel (CEP) is a forum to bring together
