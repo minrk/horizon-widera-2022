@@ -257,7 +257,7 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
   conventions. This means that researchers have already created reproducible
   repositories (if they use those conventions to specify software requirements),
   but we have not developed the tool yet to create the software for that
-  repository automatically. 
+  repository automatically.
 \item Providing useful training plays a key role in enabling and motivating
   researchers to work reproducible. We will explain the benefits for
   reproducible work, and teach good practice for reproducible science such as
@@ -337,40 +337,46 @@ Panel~(\taskref{management}{community-engagement-panel}).
     demonstrators we develop to be exploited as production services already during
     the grant, and subsequently.
     
-    Our science applications follow the workflow outlined in
-    \ref{fig:use-cases-binder}. \TODO{Mention that some of our science applications need
-      additional features, and are not yet supported.}
-    \begin{itemize}
-    \item Introduceing reproducibility to a fish track analysis model~\cite{woillez2016} based on
-      marine physics data uisng Pangeo ecosystem:
-      Pangeo enables interactive analysis on HPC infrastructures~\cite{odaka2020}
-      but also have examples on reproducible marine data analysis~\cite{maze2020}.
-      A particular challenge here is
-      the size and complexity of marine physics data to be ingested
-      to obtain high spatial and temporal resolution of resulting sea bass track
-      required by fish habitat scientist.
-      Access to parallel computing resources throught DASK on HPC or
-      Cloud architecture together with access to bigdata stored next to the
-      parallel computing architecture is required to make reproducibility realistic.
-    \item \TODO{Add examples from UiO}
-    \item Reproduciblity of result computed
-      with the ab-initio software Octopus
-      (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
-      virtual experimentation capabilities. A particular challenge is that Octopus
-      is a highly parallelised code and needs HPC computing resources for a
-      reproduction of simulation results. A (Slurm) job submission may be required
-      to start the reproduction.
-    \end{itemize}
-    
-    \begin{figure}[htb]
-      \includegraphics[width=0.33\textwidth]{images/fish.png}
-      \caption{An example of an interactive analysis of
-      fish track reconstructions on a biologging tag
-       data (sea bass) with low resolution marine physics data.
-       % by HMM moodel ~\cite{woillez2016}} .
-       (Background map: \copyright OpenStreetMap contributors ).} \label{fig:fish}
-    \end{figure}
-   
+Our science applications (Figure \ref{fig:applications}) follow the workflow outlined in
+\ref{fig:use-cases-binder}, and include these examples: \TODO{Mention that some of our science applications need
+  additional features, and are not yet supported.}
+\begin{itemize}
+\item Introducing reproducibility to a fish track analysis model~\cite{woillez2016} based on
+  marine physics data using Pangeo ecosystem:
+  Pangeo enables interactive analysis on HPC infrastructures~\cite{odaka2020}
+  but also have examples on reproducible marine data analysis~\cite{maze2020}.
+  A particular challenge here is
+  the size and complexity of marine physics data to be ingested
+  to obtain high spatial and temporal resolution of resulting sea bass track
+  required by fish habitat scientist.
+  Access to parallel computing resources throught DASK on HPC or
+  Cloud architecture together with access to bigdata stored next to the
+  parallel computing architecture is required to make reproducibility realistic.
+\item Reproduciblity of result computed
+  with the ab-initio software Octopus
+  (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
+  virtual experimentation capabilities. A particular challenge is that Octopus
+  is a highly parallelised code and needs HPC computing resources for a
+  reproduction of simulation results. A (Slurm) job submission may be required
+  to start the reproduction.
+\item \TODO{Add examples from UiO. Some placeholder text. Some placeholder
+    text.Some placeholder text.Some placeholder text. Some placeholder text.Some
+    placeholder text. Some placeholder text. Some placeholder text. Some
+    placeholder text. Some placeholder text. Some placeholder text. }
+\end{itemize}
+
+\begin{figure}
+  \includegraphics[height=4cm]{images/fish.png}
+  \includegraphics[height=4cm]{images/octopus-benzene.pdf}
+  \caption{Selected domains from our use cases. From left to right: interactive
+    analysis of sea bass fish track reconstructions on biologging tag data (sea bass)
+    with low resolution marine physics data; electron
+    density of benzene molecule computed with Octopus.
+    (Background map: \copyright
+    OpenStreetMap contributors ) \label{fig:applications}}
+  \TODO{Add at least one more.}
+\end{figure}
+
 \subsubsection{Open Source ecosystem}\label{seq:project-binder}
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
@@ -536,7 +542,7 @@ The Community Engagement Panel (CEP) is a forum to bring together
   providers, publishers, research councils, librarians, and educators.
 
   \input{community-engagement-panel.tex}
-  
+
 \subsubsection{Gender aspects}\label{sec:gender}
 
 \eucommentary{Describe how the gender dimension (i.e. sex and/or gender
