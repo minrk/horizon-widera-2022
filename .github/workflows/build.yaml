@@ -3,6 +3,10 @@ name: build
 on:
   pull_request:
   push:
+    branches:
+      # avoid duplicate builds of PRs
+      - main
+      - test/*
   workflow_dispatch:
 
 jobs:
