@@ -88,14 +88,18 @@ proposed project builds in more detail.
   \fullref{sec:reproducibility-challenges} contextualise the proposed work
   within the wide field of reproducibility.
 \item Section~\fullref{sec:methodology} presents our approach to improving reproducibility.
-\item We illustrated the reproducibility discussion with
-  \fullref{sec:reproducibility-example} and highlighted the current shortcomings\fullref{sec:reproducibility-challenges}.
-    We provide details on some of our
-  \fullref{sec:science-applications}, how they will contribute to feedback the developments of the 
-  Binder tools and serve to showcase the outcomes of \TheProject.  
-\item Section~\fullref{sec:community-engagement-panel} presents our strategy to engage with communities, 
-  learn from each others and create training materials that are targeting different audiences and 
-  contribute to the elaboration of best practices.   
+\item We illustrate the reproducibility discussion in 
+  \fullref{sec:reproducibility-example} and highlight the current shortcomings
+  in \fullref{sec:reproducibility-challenges}.
+    We provide details on some of our science use cases in 
+  \fullref{sec:science-applications}. These studies will provide feedback to the development of the 
+  Binder tools, validate the tools, and serve to showcase the outcomes of \TheProject.  
+\item Section~\fullref{sec:community-engagement-panel} presents our strategy to
+  engage with all stakeholders on reproducibility in science. We use the forum to  
+  share requirements, constraints and experiences from different communities,
+  and to learn from each other. This will help us to
+  create training materials that are targetting different audiences and 
+  contribute to a relevant presentation of best practices.   
 \item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
 
@@ -343,8 +347,8 @@ Panel~(\taskref{management}{community-engagement-panel}).
     demonstrators we develop to be exploited as production services already during
     the grant, and subsequently.
 
-We will actively work with representatives of key user communities, from Biophysics, 
-Climate change and biodiversity, Molecular Dynamics.
+We will actively work with representatives of key user communities, including Biophysics, 
+Climate change and biodiversity, Molecular Dynamics, and ab-initio physics calculations.
 Our science applications (Figure \ref{fig:applications}) follow a workflow that is similar to the one 
 outlined in \ref{fig:use-cases-binder}. 
 Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but 
@@ -371,11 +375,11 @@ solves practial issues for reproducible science:
   requirements at the example of a
   Biophysics application\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
   While the compute requirements are moderate and mostly satisfied by Binder in the Cloud,
-  the underlying software stack is highly complex (--- it requires the Gromacs simulation
+  the underlying software stack is highly complex -- it requires the Gromacs simulation
   code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
-  ---) and poses a particular challenge for long-term reproducibility.
+  -- and poses a particular challenge for long-term reproducibility.
   \TheProject will increase the re-usability of such complex pipelines, 
-  highlithing the ability of the newly developed Binder tools to re-create valid computational environments,
+  highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
   and re-run the same pipelones, long after their publications (\taskref{applications}{data-publishing}). 
 \item Reproduciblity of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
@@ -396,21 +400,24 @@ solves practial issues for reproducible science:
    ~\cite{Seland2020} and in research assessed in the IPCC’s reports. 
    NorESM can be run on a laptop (small configuration such as single 
   point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity). 
-  The current bottleneck is the need to create a container for each specific simulation (which is not easy to do for a researcher) and
+  The current bottleneck is the need to create a container for each specific
+  simulation (which is difficult or impossible for most researchers) and
   make sure a docker/singularity container can be re-created long after the simulation has been archived.
-  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (cpu, communication fabric and filesystem) and software.
+  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (CPU, communication fabric and filesystem) and software.
   This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
 development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC), 
 data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
 blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT) 
-and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National provider of e-infrastructure for the provision of computing, storage and services (Binder deployment planned within \TheProject).
+and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National
+provider of e-infrastructure for the provision of computing, storage and
+services. A BinderHub deployment is planned within \TheProject. 
 
 \end{itemize}
 
 \begin{figure}
-  \includegraphics[height=4cm]{images/fish.png}
-  \includegraphics[height=4cm]{images/octopus-benzene.pdf}
-  \includegraphics[height=4cm]{images/gg-a.png}
+  \includegraphics[height=4.5cm]{images/fish.png}\hfill
+  \includegraphics[height=4.5cm]{images/octopus-benzene.pdf}\hfill
+  \includegraphics[height=4.5cm]{images/gg-a.png}
   \caption{Selected domains from our use cases. From left to right: interactive
     analysis of sea bass fish track reconstructions on biologging tag data (sea bass)
     with low resolution marine physics data; electron
@@ -420,7 +427,8 @@ and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National
   \TODO{Add at least one more.}
 \end{figure}
 
-\subsubsection{Open Source ecosystem}\label{sec:opensource}
+\subsubsection{Open Source ecosystem}\label{sec:opensource}\TODO{Should the
+  title be a bit more specific for Binder /Jupyter?}
 
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
@@ -437,7 +445,7 @@ of the results \cite{Kluyver2016,Granger2021}.
 \TODO{Lost "what is Jupyter" in reshuffle}
 
 The key components of the Binder software are \repotodocker{}
-(Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
+(Section~\ref{sec:repo2docker}) and \binderhub{}~\ref{sec:binderhub}. The \repotodocker{} tool
 creates a software environment inside a Docker container from a software
 specification in a repository. \binderhub{} starts a Jupyter notebook server
 within this container from which the user can execute the notebooks from the
@@ -453,19 +461,16 @@ The focus for this proposal is to improve \repotodocker{}. In particular,
 Section~\ref{sec:reproducibility-challenges}) in a generic way and is independent
 from Jupyter notebooks.
 
-\TODO{Add image that depicts this Jupyter/Binder relation ship}.
 
-
-\paragraph*{Binder example}
+\paragraph{Binder example}
 \label{binder-how-does-it-work}
 
 \mbox{}\\
 
 The currently most common reproducibility use case -- with the current state of the
 \textbf{Binder tools} -- is the one we introduced in
-Section~\ref{sec:reproducibility-example}. We will use this to
-describe the role of the individual components of Binder:
-
+Section~\ref{sec:reproducibility-example} using the \mybinder{} service. We will use this to
+describe the role of the individual components of the Binder tools:
 
 \begin{figure}[ht]
   \centering
@@ -495,8 +500,8 @@ describe the role of the individual components of Binder:
 \end{compactitem}
 
 
-\noindent\textbf{\repotodocker}\label{sec:repo2docker}
-is a tool that aims to \myemph{automate existing practices} for reproducible environment specification.
+\paragraph{\repotodocker}\label{sec:repo2docker}
+The \repotodocker{} tool aims to \myemph{automate existing practices} for reproducible environment specification.
 It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
 constructing an environment in a Docker container image.
 \repotodocker{} can fetch a remote repository and build a software
@@ -516,8 +521,8 @@ due to version drift and insufficiently strict specifications.
 Additionally, community practices not yet supported by \repotodocker{} have been proposed by their respective community members,
 while the \repotodocker{} team has not had the funding support to incorporate and maintain.
 
-\noindent \textbf{BinderHub}\label{sec:binderhub}
-is software for hosting a web service built on \repotodocker{} and
+\paragraph{BinderHub}\label{sec:binderhub}
+BinderHub is software for hosting a web service built on \repotodocker{} and
 JupyterHub where individuals can share reproducible environments for
 immediate and free interaction by readers in their browser.
 
@@ -532,11 +537,11 @@ with authenticated and/or performant access to large data or compute resources.
 While the \repotodocker{} terminal utility \emph{can} technically be deployed anywhere,
 the technical expertise required is dramatically greater than a single click on a website such as mybinder.org.
 
-\paragraph*{The \mybinder{} service}\label{sec:mybinder}
+\paragraph{The \mybinder{} service}\label{sec:mybinder}
 
-\mbox{}\\
+% \mbox{}\\
 
-\emph{\mybinder{}} is a service run by the \emph{BinderHub
+The \mybinder{} service is run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
