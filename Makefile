@@ -43,6 +43,10 @@ check:
 check-length-final:
 	python3 ./check-length-final.py
 
+check-length-abstract:
+	@echo "limit is 2000 characters for abstract:"
+	wc -c abstract.txt
+	./check-length-abstract.sh
 
 final:
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=final.tex all
