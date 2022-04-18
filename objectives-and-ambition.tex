@@ -10,7 +10,7 @@ Two of the key societal goals of Open Science are facilitation of
 
 \begin{compactenum}
 \item \textbf{verification} of results, improving the reliability and trustworthiness of scientific output, and
-\item \textbf{reuse} of research products, enabling commercial exploitation and/or derivative research
+\item \textbf{reuse} of research products, enabling commercial exploitation and/or derivative research.
 \end{compactenum}
 
 If results are merely \emph{available}, however,
@@ -46,8 +46,8 @@ as is common in data science fields.
 In order to meet the goals or policies of Open and Reproducible science,
 \myemph{researchers need tools} to address the challenge. Ideally, those tools should
 \begin{compactenum}
-\item be freely available and open source
-\item meet researchers where they are, as much as possible
+\item be freely available and open source;
+\item meet researchers where they are, as much as possible.
 \end{compactenum}
 
 \TheProject's main goal is to \myemph{improve the global reproducibility of
@@ -67,7 +67,7 @@ Rather than re-inventing the wheel, we will build upon existing tools and standa
 \subsubsection{Binder for Reproducible Research}
 \label{sec:reproducibility-example}
 
-Binder is a project providing open source tools to solve this computational environment reproducibility challenge.
+Binder\footnote{https://jupyter.org/binder} is a project providing open source tools to solve this computational environment reproducibility challenge.
 It has already proven useful for at least tens of thousands of researchers, educators, developers, and students,
 and we believe it has the potential to facilitate practical reproducibility for millions more,
 including in institutions, funding agencies, and policy makers.
@@ -105,11 +105,10 @@ running that code.
 \item As she has described what software is needed to execute her notebook (more
   details below), it is possible for all interested scientists (and anybody
   else, including the reviewers of this proposal) to \emph{reproduce} her
-  figure:
+  figure.
 
-  To reproduce the figure, one needs to visit the URL\newline
-  \mbox{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
-  in a browser, and then wait a minute or so for a dedicated computational
+  To reproduce the figure, one needs to visit an online URL\footnote{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
+  (combination of the public repository and online Binder service) in a browser, and then wait a minute or so for a dedicated computational
   environment to be created and started. Then select 'Run' -> 'Run all cells'
   from the menu of the interactive Jupyter notebook that will appear in the
   browser.
@@ -137,7 +136,9 @@ that the existing tools can be used in many more use cases
 We note in particular that the Binder-enabled workflow for reproducibility has
 originally been developed to reproduce results that are created within Jupyter
 Notebook (as shown in Figure~\ref{fig:use-cases-binder}).
-However, the approach taken is generic, and not specific to notebooks.
+However, the approach taken is generic, and not specific to notebooks: it is
+based on \repotodocker (Section~\ref{sec:repo2docker}), a tool to build, run, and 
+push Docker images from source code repositories.
 As part of this project, we will demonstrate that reproducible
 computational environments can be created  using the same approach
 in studies that do not make use of Jupyter notebooks.
@@ -300,7 +301,7 @@ computational research can achieve this automatic
 reproducibility with little additional effort~\cite{Beg2021}: they use the Notebook document as
 the protocol of their analysis (Step 2), which can be executed automatically.
 They can make use of the Binder tools (Section~\ref{sec:opensource}) and/or the
-associated mybinder.org service that has
+associated  mybinder.org\footnote{https://mybinder.org/} service (free and public) that has
 been designed by the Jupyter team to automatically create the appropriate
 software environment (step 1) in which the notebook can be executed.
 
@@ -319,11 +320,35 @@ especially for long-term preservation.
 
 We will go beyond the current state of the art by bringing the following selected improvements:
 \begin{compactitem}
-\item currently producing valid computational environments from published scientific publications and/or existing online repositories is difficult and usually requires manual handling of the process which is cumbersome and time consuming. Improving the robustness of \repotodocker{}'s ability to produce computational environments, long after the publication and/or release,
-      through testing and development, as well as taking additional context information into account, such as repository publication date will enable the production of computational environment to be seamless;
-\item the existing Binder software is already widely used in the Jupyter user community but focused on the reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending the Binder software beyond the notebooks will undoubtedly attract new community of users and can facilitate transfer of knowledge between academia and industry;
-\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are beyond many institutional or companies IT support staff. As a result, most researchers rely on existing deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{} anywhere e.g. from the user’s personal laptop (Binder@Home) to the most powerful High Performance Computers (Binder@HPC) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
-\item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes with restricted access permissions) that are published and deposited on (domain) specific long-term archives. Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset itself or separately) but the usage of the Binder software and/or existing public Binder deployments for this use case is not currently supported (such amount of data cannot be easily and efficiently moved to the Binder resources). Ad-hoc or domain specific solutions (for instance the usage of cloud optimized data formats and associated catalogs such as intake or STAC by the Pangeo Geoscience community) have been explored by diverse communities but are technically difficult and not generic enough to be adopted by everyone. The Binder software will be extended to facilitate the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to the data and Binder service).
+\item currently producing valid computational environments from published scientific publications and/or existing 
+      online repositories is difficult and usually requires manual handling of the process which is cumbersome and 
+      time consuming. Improving the robustness of Binder tools and in particular \repotodocker{}'s ability to 
+      produce computational environments, long after the publication and/or release,
+      through testing and development, as well as taking additional context information into account, 
+      such as repository publication date will enable the production of computational environment to be seamless;
+\item the existing Binder software is already widely used in the Jupyter user community but focused on the 
+      reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many
+      programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending
+      the Binder software beyond the notebooks will undoubtedly attract new community of users and can facilitate 
+      transfer of knowledge between academia and industry;
+\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are 
+      beyond many institutional or companies IT support staff. As a result, most researchers rely on existing 
+      deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder 
+      as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{} 
+      anywhere e.g. from the user’s personal laptop (Binder@home, \taskref{applications}{binder-at-home}) to the
+      most powerful High Performance Computers (Binder@HPC, \taskref{applications}{binder-at-hpc}) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
+\item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes
+      with restricted access permissions) that are published and deposited on (domain) specific long-term archives.
+      Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset 
+      itself or separately) but the usage of the Binder software and/or existing public Binder deployments for 
+      this use case is not currently supported (such amount of data cannot be easily and efficiently moved to 
+      the Binder resources). Ad-hoc or domain specific solutions (for instance the usage of cloud optimized 
+      data formats and associated catalogs such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
+      or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community) 
+      have been explored by diverse communities but are technically difficult and not generic enough to be 
+      adopted by everyone. The Binder software will be extended to facilitate data publishing (see \taskref{applications}{data-publishing}) with 
+      the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to 
+      the data and Binder service). 
 \end{compactitem}
 
 
