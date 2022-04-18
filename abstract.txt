@@ -30,6 +30,5 @@ notebooks and thus for researchers not yet served by them. We will develop
 and deliver training on best practices for reproducibility.
 
 We motivate and validate our efforts with selected use cases, such as data
-publishing and High Performance Computing (HPC) contexts where Binder tools
-are not currently practical, and engage with the global community of researchers
-to contribute to the open source project.
+publishing and High Performance Computing (HPC) where Binder tools
+are not currently practical. 
