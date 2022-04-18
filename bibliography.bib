@@ -873,3 +873,36 @@
   title = {Sustainable data analysis with Snakemake},
   journal = {F1000Research}
 }
+
+@inproceedings{CharlieCloud2017,
+  author = {Priedhorsky, Reid and Randles, Tim},
+  title = {Charliecloud: Unprivileged Containers for User-Defined Software Stacks in HPC},
+  year = {2017},
+  isbn = {9781450351140},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3126908.3126925},
+  doi = {10.1145/3126908.3126925},
+  abstract = {Supercomputing centers are seeing increasing demand for user-defined software stacks (UDSS), instead of or in addition to the stack provided by the center. These UDSS support user needs such as complex dependencies or build requirements, externally required configurations, portability, and consistency. The challenge for centers is to provide these services in a usable manner while minimizing the risks: security, support burden, missing functionality, and performance. We present Charliecloud, which uses the Linux user and mount namespaces to run industry-standard Docker containers with no privileged operations or daemons on center resources. Our simple approach avoids most security risks while maintaining access to the performance and functionality already on offer, doing so in just 800 lines of code. Charliecloud promises to bring an industry-standard UDSS user workflow to existing, minimally altered HPC resources.},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  articleno = {36},
+  numpages = {10},
+  keywords = {user environments, least privilege, containers},
+  location = {Denver, Colorado},
+  series = {SC '17}
+}
+
+@article{Singularity2017,
+    doi = {10.1371/journal.pone.0177459},
+    author = {Kurtzer, Gregory M. AND Sochat, Vanessa AND Bauer, Michael W.},
+    journal = {PLOS ONE},
+    publisher = {Public Library of Science},
+    title = {Singularity: Scientific containers for mobility of compute},
+    year = {2017},
+    month = {05},
+    volume = {12},
+    url = {https://doi.org/10.1371/journal.pone.0177459},
+    pages = {1-20},
+    abstract = {Here we present Singularity, software developed to bring containers and reproducibility to scientific computing. Using Singularity containers, developers can work in reproducible environments of their choosing and design, and these complete environments can easily be copied and executed on other platforms. Singularity is an open source initiative that harnesses the expertise of system and software engineers and researchers alike, and integrates seamlessly into common workflows for both of these groups. As its primary use case, Singularity brings mobility of computing to both users and HPC centers, providing a secure means to capture and distribute software and compute environments. This ability to create and deploy reproducible environments across these centers, a previously unmet need, makes Singularity a game changing development for computational science.},
+    number = {5},
+}
