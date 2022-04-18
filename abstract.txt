@@ -1,0 +1,30 @@
+The societal goals of Open Science -- particularly improved validation and reuse of research outputs --
+can only be achieved if reproducibility is an integral part of the process.
+\emph{Merely available} code is of drastically less value than code
+that can be run easily by anyone.
+As institutions and policies increasingly adopt Open and Reproducible policies,
+researchers urgently need practical tools to fulfill these requirements.
+Further, policy makers can benefit from tools for evaluation and enforcement of reproducibility policies.
+In \TheProject, we focus on \emph{computational} reproducibility.
+
+To reproduce computational results, the software environment in
+which to execute the code must be created.
+This project automates and improves ways to do this by developing and extending the
+Binder project.
+
+Binder aims to \myemph{automate existing practices}
+for reproducible computational environments,
+solving a key piece of reproducibility without dictating the execution workflow itself.
+Binder is a subproject of Jupyter,
+providing open source tools such as the widely used Jupyter notebook.
+
+Binder has demonstrated potential in the Jupyter community by serving over ten million user sessions in 2021 at mybinder.org,
+building over fifty thousand unique computational environments.
+We aim to bring this potential to researchers not yet served by the tools,
+by extending the robustness and the applicability of the
+Binder tools,
+and delivering clear communication and training about best practices for reproducibility.
+
+We motivate and validate our efforts with selected use cases, such as
+data publishing and in High Performance Computing (HPC) contexts where Binder tools are not currently practical,
+and engage with the global community of researchers to contribute to the open source project.
