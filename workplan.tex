@@ -53,7 +53,7 @@ these work packages.
     \label{fig:workpackages}
     The relationships and interactions of the work packages,
     broken up into four categories: Management (WP1),
-    Development of new functionality surrounding Jupyter's Binder tools to improving robustness 
+    Development of new functionality surrounding Jupyter's Binder tools to improving robustness
     and Broadening impact (WP2, WP3),
     Applications of tools developed in real world research context (WP4),
     and Dissemination, education, and engagement (WP5: Dis., edu., eng.).
@@ -63,28 +63,27 @@ these work packages.
 % \subsubsection{How the Work Packages will Achieve the Project Objectives}
 % \label{sssec:how_the_work_packages_will_achieve}
 
-\ganttchart[draft,xscale=.33,milestones]
-\TODO{Gantt chart: HF: seems useless as it is. Can we fiddle with options? Otherwise
-remove.}
-
-\ifgrantagreement\else
-\newpage
-\subsubsection{Deliverables}\label{sec:deliverables}
-\inputdelivs{9.3cm}
-\TODO{Strage vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
-\fi
-
-% Save space for exploitation
-% \newpage
-\subsubsection{Milestones}\label{sec:milestones}
-\input{milestones}
-
 % ---------------------------------------------------------------------------
 % Include Work package descriptions
 % ---------------------------------------------------------------------------
 
+\ganttchart[draft,xscale=.33,milestones]
+
+\begin{workplan}
+
 \input{WorkPackages/WorkPackages}
 
+
+% \TODO{Strange vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
+
+\input{milestones}
+
+\end{workplan}
+
+\subsubsection{Deliverables}\label{sec:deliverables}
+\inputdelivs{9.3cm}%
+
+\milestonetable
 
 \input{risks}
 \input{resources}

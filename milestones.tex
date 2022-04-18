@@ -1,3 +1,5 @@
+\subsubsection{Milestones}\label{sec:milestones}
+
 \eucommentary{Milestones means control points in the project that help to chart progress. Milestones may
 correspond to the completion of a key deliverable, allowing the next phase of the work to begin.
 They may also be needed at intermediary points so that, if problems have arisen, corrective
@@ -5,82 +7,120 @@ measures can be taken. A milestone may be a critical decision point in the proje
 example, the consortium must decide which of several technologies to adopt for further
 development.
 }
-\begin{draft}
-\begin{verbatim}
-* TODO
-- [ ] we refer to \TheProject SERVICES a lot
-- [ ] would it be better to refer to TOOLS instead?
-- [ ] we should probably list the services / tools somewhere for clarity
-\end{verbatim}
-\end{draft}
-
-
-% \milestonetable
-
-
+%
+% \begin{draft}
+% \begin{verbatim}
+% TODO:
+% - [ ] sort milestones
+% - [ ] omit descriptions? Template doesn't have any
+% - [ ] involved WP: both input and output, or just input?
+% \end{verbatim}
+% \end{draft}
 
 \begin{milestones}
   \milestone[
-    id=startup,
+    id=study,
     month=12,
-    verif={
-      Completed all corresponding deliverables
-      and preparation for deployment of prototype services is underway
-      }
+    wps={reproducibility},
+    verif={Report produced.},
     ]
-  {Project startup, requirements gathering, and exploratory prototypes}
+  {Reproducibility study}
   {
+  We will have preliminary study results to guide and evaluate
+  improvements to reproducibility with \TheProject tools,
+  and inform best tractices.
+  }
+  \milestone[
+    id=conda-time,
+    month=6,
+    wps={reproducibility},
+    verif={},
+    ]
+  {Conda time machine}
+  {
+  The conda/mamba package manager shall be able to
+  select packages for installation based on a given date
+  }
 
-  By milestone 1, we will have established the infrastructure for the project
-  and begun exploratory prototyping development and deployment of services,
-  engaging with the existing communities. We will have a network of advisors
-  through the Community Engagement Panel and are coordinating our plans for
-  \TheProject with those of wider open science communities and the Jupyter
-  project. We will have preliminary study results to guide and evaluate
-  improvements to reproducibility with \TheProject tools. }
+  \milestone[
+    id=repo2docker-time,
+    month=18,
+    wps={reproducibility},
+    verif={Feature present in repo2docker software},
+    ]
+  {repo2docker takes publication time into account}
+  {
+  }
+
+  \milestone[
+    id=repo2docker-improved,
+    month=24,
+    wps={reproducibility},
+    verif={Comparative study},
+    ]
+  {repo2docker produces robust computational environments}
+  {
+  Taking input from earlier study and tests,
+  improvements to repo2docker are made.
+  }
+
+  \milestone[
+    id=rm-kubernetes,
+    month=9,
+    wps={impact,applications},
+    verif={},
+    ]
+  {BinderHub can be deployed without Kubernetes}
+  {
+  }
+
+  \milestone[
+    id=rm-docker,
+    month=15,
+    wps={impact,applications},
+    verif={},
+    ]
+  {Support for alternative container technologies in repo2docker for suitability in HPC}
+  {
+  }
+
+  \milestone[
+    id=data-publishing,
+    month=18,
+    wps={impact,applications},
+    verif={},
+    ]
+  {Support for data publishing}
+  {
+  }
 
   \milestone[
     id=prototype,
-    month=24,
+    month=12,
+    wps={applications},
     verif={
-      Developed functional prototypes for all important topics.
+      Deployed first functional prototypes of science demonstrators.
       Early users are able to access and test prototype services
     }
     ]
   {Prototype demonstrator services}
   {
-
   By this point, prototype demonstrator services will be useful and accessible
   to a broad range of users, and we will have begun to experiment with early-adopter
   users and local demonstrators to guide further development of \TheProject,
   ensuring that development serves the reproducibility needs of the global science community.
-
-  There will be improvements to reproducibility.
   }
 
   \milestone[
-    id=final,
-    month=36,
-    verif={Refactored and stabilised prototypes.}
+    id=docs-online,
+    month=12,
+    wps={education},
+    verif={},
     ]
-  {Project conclusion}
+  {Draft best practices documentation}
   {
-  At the end of the project,
-  we will have engaged with the science communities to evaluate demonstrator services, and
-  identified which services and tools shall be sustained beyond the life of the project.
-  We will have made those robust and maintainable from a software engineering point of view.
-
-  We will have training materials and have run workshops to train users in Reproducibility and Open Science,
-  making use of tools and services developed through \TheProject.
-
-  We will have developed a sustainability plan for how future maintenance and
-  development of \TheProject tools be achieved under community support and
-  leadership.
-
-  \TheProject tools are more reliable and useful to a broader audience than at
-  the start of the project.
-
+  Draft version of documentation for best practices is online
   }
-
-
 \end{milestones}
+
+% \milestonetable
