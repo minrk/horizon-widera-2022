@@ -64,24 +64,18 @@ the technology dominates (WP2 and WP3). The activity in application of the new f
 %   (\ref{fig:gantt}) that explains the role of the bars. But I think the solution
 % now is okay.}
 
-\ifgrantagreement\else
-\newpage
-\subsubsection{Deliverables}\label{sec:deliverables}
-\inputdelivs{9.3cm}
-\TODO{Strage vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
-\fi
-
-% Save space for exploitation
-% \newpage
-\subsubsection{Milestones}\label{sec:milestones}
-\input{milestones}
-
-% ---------------------------------------------------------------------------
-% Include Work package descriptions
-% ---------------------------------------------------------------------------
+\begin{workplan}
 
 \input{WorkPackages/WorkPackages}
 
+
+% \TODO{Strange vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
+
+\subsubsection{Deliverables}\label{sec:deliverables}
+\inputdelivs{9.3cm}%
+\input{milestones}
+
+\end{workplan}
 
 \input{risks}
 \input{resources}
