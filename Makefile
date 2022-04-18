@@ -35,7 +35,7 @@ PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.
 
 all: $(TBIB.pdf) $(TSIMP.pdf)
 
-check:
+check: check-length-final check-length-abstract
 	test -f draft.pdf
 	test -f draft.pdata
 	python3 ./check-pdata

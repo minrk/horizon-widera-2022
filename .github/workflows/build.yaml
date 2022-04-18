@@ -62,7 +62,9 @@ jobs:
             # trigger error if too long
             make check-length-final
 
-
+      - name: abstract length
+        run: |
+            make check-length-abstract
 
       # Comment out for now as the check script is not working yet
       # - name: check person-month data
