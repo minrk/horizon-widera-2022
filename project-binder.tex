@@ -12,9 +12,9 @@ within this container from which the user can execute the notebooks from the
 repository.
 
 \emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
-  federation} that collectively host a service running the Binder software
+Federation} that collectively host a service running the Binder software
 under the URL \url{https://mybinder.org}. This is the service we made use of in
-our example in section~\ref{sec:reproducibility-example}.
+our example in section~\ref{sec:reproducibility-example}. The \emph{BinderHub Federation}
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
 \repotodocker{} solves the software environment challenge (see
@@ -52,7 +52,7 @@ describe the role of the individual components of Binder:
   to start the build of the corresponding environment, or to obtain the URL to
   re-use that configuration later, or share it with others.
 \item From the \mybinder{} entry point, the request is forwarded to one
-  \binderhub{} service of one of the organisations in the BinderHub federation
+  \binderhub{} service of one of the organisations in the BinderHub Federation
   that has available compute resources.
 \item The \binderhub{} software running at the chosen location, will ask
   \repotodocker{} to create a Docker container in which the notebooks from the repository can be executed.
@@ -116,7 +116,7 @@ immediate and free interaction by readers in their browser.
 \subsubsection{The \mybinder{} service}\label{sec:mybinder}
 
 \emph{\mybinder{}} is a service run by the \emph{BinderHub
-  federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+Federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
 
