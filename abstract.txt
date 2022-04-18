@@ -1,18 +1,18 @@
-The societal goals of Open Science -- particularly improved validation and reuse of research outputs --
+The societal goals of Open Science - particularly improved validation and reuse of research outputs -
 can only be achieved if reproducibility is an integral part of the process.
-\emph{Merely available} code is of drastically less value than code
+Merely available code is of drastically less value than code
 that can be run easily by anyone.
 As institutions and policies increasingly adopt Open and Reproducible policies,
 researchers urgently need practical tools to fulfill these requirements.
 Further, policy makers can benefit from tools for evaluation and enforcement of reproducibility policies.
-In \TheProject, we focus on \emph{computational} reproducibility.
+In SOURCE, we focus on computational reproducibility.
 
 To reproduce computational results, the software environment in
 which to execute the code must be created.
 This project automates and improves ways to do this by developing and extending the
 Binder project.
 
-Binder aims to \myemph{automate existing practices}
+Binder aims to automate existing practices
 for reproducible computational environments,
 solving a key piece of reproducibility without dictating the execution workflow itself.
 Binder is a subproject of Jupyter,
