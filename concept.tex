@@ -449,9 +449,17 @@ within this container from which the user can execute the notebooks from the
 repository.
 
 \emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \myemph{BinderHub
-  federation} that collectively host a service running the Binder software
-under the URL \url{https://mybinder.org}. This is the service we made use of in
-our example in section~\ref{sec:reproducibility-example}.
+Federation} that collectively host a service running the Binder software
+under the URL \url{https://mybinder.org}. (This is the service we made use of in the example
+of section~\ref{sec:reproducibility-example}.)
+
+The BinderHub Federation is currently composed of three deployments of the BinderHub software
+
+\begin{itemize}
+\item \url{https://gke.mybinder.org}, operated by the Binder team, and hosted on Google Cloud,
+\item \url{https://ovh.mybinder.org}, operated and hosted by OVH,
+\item \url{https://gesis.mybinder.org}, operated and hosted by GESIS.
+\end{itemize}
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
 \repotodocker{} solves the software environment challenge (see
@@ -539,7 +547,7 @@ the technical expertise required is dramatically greater than a single click on 
 % \mbox{}\\
 
 The \mybinder{} service is run by the \emph{BinderHub
-  federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+Federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
 
