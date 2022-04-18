@@ -58,7 +58,7 @@ MPI-program the processes on the nodes run in containers but communicate via MPI
 as usual. We evaluate the situation here with software that allows
 MPI-parallelisation (such as Octopus). Subsequently, we will share our experience with
 reproducible software environments in HPC
-contexts~(\localdelivref{report-use-cases-interim},~\localdelivref{report-use-cases}). 
+contexts~(\localdelivref{report-use-cases-interim},~\localdelivref{report-use-cases}).
 
 \paragraph*{Challenges}: We expect that we need to use a container technology
 that is widely accepted at HPC sites (such as for example Singularity): Docker
@@ -76,7 +76,7 @@ Should hardware requirements be archived in the reproducible repository? If so,
 what specification should we use?
 
 The existing buildpacks that repo2docker supports
-\ref{repo2docker-supported-software-specifications} may need to be extended for
+\ref{sec:repo2docker} may need to be extended for
 HPC specific software provision (such as Spack or Easybuild).
 
 % The re-execution of parallel software may create significant costs, and thus
