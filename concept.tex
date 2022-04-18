@@ -354,8 +354,14 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
   Access to parallel computing resources throught DASK on HPC or
   Cloud architecture together with access to bigdata stored next to the
   parallel computing architecture is required to make reproducibility realistic.
-\item Reproduciblity of result computed
-  with the ab-initio software Octopus
+\item Reproducibility of analysis pipelines and their software
+  requirements at the example of a
+  Biophysics application\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
+  While the compute requirements are moderate and mostly satisfied by Binder in the Cloud,
+  the underlying software stack is highly complex (--- it requires the Gromacs simulation
+  code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
+  ---) and poses a particular challenge for long-term reproducibility.
+\item Reproduciblity of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
