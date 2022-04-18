@@ -25,7 +25,7 @@
 % in the modern age of computational science. As more and more research takes the
 % form of code and/or data, the opportunity to share, reproduce, and reuse
 % scientific work is greater than ever, even enabling new forms of
-% {interdisciplinary collaboration}, and interoperable and re-usable results and
+% {interdisciplinary collaboration}, and interoperable and reusable results and
 % tools.
 %
 %  Simultaneously, there are obstacles -- both technical and social -- to
@@ -39,25 +39,25 @@
 % These are the questions that guide the \TheProject{} project.
 
 \paragraph*{Supporting Open, Useful, and Reproducible Computational
-  Environments}\label{sec:SOURCE}
+  Environments}\label{sec:SOURCE} 
 
-The ideas behind our project title:
+  \mbox{}\\
+
+  The ideas behind our project title:
 \begin{itemize}
 \item The work done is this project will be \textbf{Supporting} scientists in their
-  endeavours to make their work more reproducible and re-usable.
-\item We believe in the value of \textbf{Open} science and \textbf{Open} source. The
-  best reproducibility and re-usability of scientific results is given through
+  endeavours to make their work more reproducible and reusable.
+\item We believe in the value of \textbf{Open} science and \textbf{Open} source software.
+  The best reproducibility and reusability of scientific results is given through
   complete transparency of the steps taken in the derivation of a result. For
   the computational aspects this means to make all simulation and/or
   post-processing and analysis steps open source. While this may not always be
   possible, we advocate such openness as the best practice for reproducible science.
 
   All work done, including software, training and documentation materials, will
-  be open source and available through an open access license.
-
-  (We note that the collective development of the grant proposal you are reading
-  is also done as open source, and can be inspected at
-  \url{http://github.com/minrk/horizon-widera-2022} for those interested.)
+  be open source and available through an open access license. (We note that the
+  collective development of the grant proposal you are reading is also done as
+  open source, and can be inspected at \url{http://github.com/minrk/horizon-widera-2022}.)
 
 \item Measures towards better reproducibility have to be \textbf{Useful} and
   practical: if a proposed approach or tool burdens the scientist with
@@ -86,9 +86,18 @@ proposed project builds in more detail.
   \fullref{sec:reproducibility-challenges} contextualise the proposed work
   within the wide field of reproducibility.
 \item Section~\fullref{sec:methodology} presents our approach to improving reproducibility.
-\item We illustrate the reproducibility discussion with
-  \fullref{sec:reproducibility-example} and provide details on some of our
-  \fullref{sec:science-applications}.
+\item We illustrate the reproducibility discussion in 
+  \fullref{sec:reproducibility-example} and highlight the current shortcomings
+  in \fullref{sec:reproducibility-challenges}.
+    We provide details on some of our science use cases in 
+  \fullref{sec:science-applications}. These studies will provide feedback to the development of the 
+  Binder tools, validate the tools, and serve to showcase the outcomes of \TheProject.  
+\item Section~\fullref{sec:community-engagement-panel} presents our strategy to
+  engage with all stakeholders on reproducibility in science. We use the forum to  
+  share requirements, constraints and experiences from different communities,
+  and to learn from each other. This will help us to
+  create training materials that are targetting different audiences and 
+  contribute to a relevant presentation of best practices.   
 \item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
 
@@ -141,8 +150,8 @@ the same data analysis, creation of figures and tables as they are presented in
 a paper, at a later stage, and get to the same results?
 
 Such tables and figures in a publication may be computed from the analysis of
-some type of raw data which could originate an experiment, another publication,
-a data base, post-processing of another data set or from executing computer
+some type of raw data which could originate from an experiment, another publication,
+a data base, post-processing of another dataset or from executing computer
 simulations.
 
 % Where additional software, such as analysis scripts, input files
@@ -150,23 +159,25 @@ simulations.
 
 \paragraph*{Challenges of Reproducibility}\label{sec:reproducibility-challenges}
 
+\mbox{}\\
+
 We can classify the reproducibility challenges listed above into different categories:
 
 \begin{description}
 \item[1. Workflow]: Are the processing commands (and their order)
-correctly recorded? Do we know which part of the data set the analysis is meant to be applied to? Do we know the protocol, \emph{i.e.} are the different processing steps for that data recorded? This could be the order in which analysis scripts need to be executed -- for example to compute intermediate results -- which will be turned into a figure in the last step?
+correctly recorded? Do we know which part of the dataset the analysis is meant to be applied to? Do we know the protocol, \emph{i.e.} are the different processing steps for that data recorded? This could be the order in which analysis scripts need to be executed -- for example to compute intermediate results -- which will be turned into a figure in the last step?
 
-We will call this sequence of steps the \emph{workflow}. This is to a significant degree a question of the organisation and documentation of the research process. This workflow could be archived -- for example -- through a \softwarename{README.txt} file, or scanned pages of a hand-written laboratory notebook as a pdf file, or as a
+We will call this sequence of steps the \emph{workflow}. This is to a significant degree a question of the organisation and documentation of the research process. This workflow could be archived -- for example -- through a \softwarename{README} file, or scanned pages of a hand-written laboratory notebook as a pdf file, or as a
 machine-executable script (or a Jupyter notebook).
 
 This is particularly challenging where software is used which can only be
 controlled via a Graphical User Interface, as it may require manual recording
-and description of the different clicks and steps in laboratory logbook.
+and description of the different clicks and steps in a laboratory logbook.
 
 \item[2. Software environment]: Can we recreate the software environment that is required to execute these commands?
 \begin{itemize}
 \item Where software is involved, have we recorded which version of that software is needed (or was used)? If compilation is required, do we know which compilers (and which version) and which additional dependencies are required?
-\item Are there instructions how to obtain / compile the required dependencies,
+\item Are there instructions on how to obtain / compile the required dependencies,
 and the software itself (in particular where this is about simulation-based
 science or more complex analysis and interpretation software tools)?
 \end{itemize}
@@ -177,7 +188,7 @@ touching on expectations, existing cultures, lack of metrics that acknowledge
 reproducibility efforts, and policies.
 
 \item[4. Other]: There are other related topics, for example the challenge of
-archival of (large) research data sets, of making the data FAIR, and the (for
+archival of (large) research datasets, of making the data FAIR, and the (for
 some domains important) bit-wise reproducibility.
 \end{description}
 
@@ -245,7 +256,7 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
   stakeholders. These include research councils and funders, publishers, research
   infrastructure providers, and educators. There are also opportunities to use the same
   software environment creation to support outreach and
-  citizen-science projects (see~\ref{sec:opensource}). A set of representatives of
+  citizen science projects (see~\ref{sec:opensource}). A set of representatives of
   these domains will be gathered in the Community Engagement Panel, and connect
   us with the relevant communities. A list of confirmed panel members is
   available (see~\taskref{management}{community-engagement-panel}) and will be
@@ -290,7 +301,7 @@ Panel~(\taskref{management}{community-engagement-panel}).
     \WPref{reproducibility} will improve the robustness of reproducible
     environments through technical work on \repotodocker{} and BinderHub. In
     particular, we will first create a metric to be able to measure our progress
-    (\taskref{reproducibility}{repo2docker-checker}), improve the ability create
+    (\taskref{reproducibility}{repo2docker-checker}), improve the ability to create
     software environments for older repositories
     (\taskref{reproducibility}{repo2docker-timemachine}) and improve the
     performance (\taskref{reproducibility}{performance-optimisation}). We
@@ -303,7 +314,7 @@ Panel~(\taskref{management}{community-engagement-panel}).
 
     \WPref{impact} will extend the feature set of \repotodocker{} to broaden
     the impact of the project. This
-    includes to understand more data sources and software specification patters
+    includes to understand more data sources and software specification patterns
     (\taskref{impact}{buildpacks}), to refactor the tool to not depend on a
     Kubernetes installation and support other container formats next to Docker
     (\taskref{impact}{constraints}), to export identified software dependencies,
@@ -334,8 +345,16 @@ Panel~(\taskref{management}{community-engagement-panel}).
     demonstrators we develop to be exploited as production services already during
     the grant, and subsequently.
 
-Our science applications (Figure \ref{fig:applications}) follow the workflow outlined in
-\ref{fig:use-cases-binder}, and include these examples: \TODO{Mention that some of our science applications need
+We will actively work with representatives of key user communities, including Biophysics, 
+Climate change and biodiversity, Molecular Dynamics, and ab-initio physics calculations.
+Our science applications (Figure \ref{fig:applications}) follow a workflow that is similar to the one 
+outlined in \ref{fig:use-cases-binder}. 
+Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but 
+real cases that will drive technological developments and future exploitation of \TheProject results,
+ and onboard adopters to fully demonstrate that \TheProject
+solves practial issues for reproducible science:
+
+  \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
 \begin{itemize}
 \item Introducing reproducibility to a fish track analysis model~\cite{woillez2016} based on
@@ -346,50 +365,84 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
   the size and complexity of marine physics data to be ingested
   to obtain high spatial and temporal resolution of resulting sea bass track
   required by fish habitat scientist.
-  Access to parallel computing resources throught DASK on HPC or
-  Cloud architecture together with access to bigdata stored next to the
-  parallel computing architecture is required to make reproducibility realistic.
+  Access to parallel computing resources through DASK \footnote{https://dask.org/} on HPC or
+  Cloud architecture together with access to big data stored next to the
+  parallel computing architecture is required to make reproducibility realistic. 
+  \TheProject will add real value by enabling access to HPC from Binder tools (\taskref{applications}{binder-at-hpc}).
 \item Reproducibility of analysis pipelines and their software
   requirements at the example of a
   Biophysics application\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
   While the compute requirements are moderate and mostly satisfied by Binder in the Cloud,
-  the underlying software stack is highly complex (--- it requires the Gromacs simulation
+  the underlying software stack is highly complex -- it requires the Gromacs simulation
   code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
-  ---) and poses a particular challenge for long-term reproducibility.
+  -- and poses a particular challenge for long-term reproducibility.
+  \TheProject will increase the re-usability of such complex pipelines, 
+  highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
+  and re-run the same pipelines, long after their publications (\taskref{applications}{data-publishing}). 
 \item Reproduciblity of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
   reproduction of simulation results. A (Slurm) job submission may be required
-  to start the reproduction.
-\item \TODO{Add examples from UiO. Some placeholder text. Some placeholder
-    text.Some placeholder text.Some placeholder text. Some placeholder text.Some
-    placeholder text. Some placeholder text. Some placeholder text. Some
-    placeholder text. Some placeholder text. Some placeholder text. }
+  to start the reproduction. This science application will serve \taskref{applications}{binder-at-hpc}.
+\item FAIR@UiO\footnote{https://www.usit.uio.no/prosjekter/fair-uio/} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable} 
+  data at the University of Oslo and will leverage on \TheProject work for data publishing (\taskref{applications}{data-publishing})
+  to increase the re-use of enormous amounts of data that will be made available to everyone through FAIR@UiO platform. 
+  FAIR@UiO is led by the University's Center for Information Technology of the University of Oslo 
+  (USIT\footnote{https://www.usit.uio.no/}).
+\item Reproducibility of Earth System Models with the Norwegian Earth System Modelling Consortium (NCC),
+   represented in \TheProject by the University of Oslo. The Norwegian Earth System Model\footnote{https://noresm-docs.readthedocs.io/en/latest/}
+  ~\cite{Seland2020} (NorESM) is a coupled Earth System Model and has been an important tool for Norwegian 
+  climate researchers in the study of the past, present and future climate. NorESM has also contributed
+   to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6} 
+   ~\cite{Seland2020} and in research assessed in the IPCC’s reports. 
+   NorESM can be run on a laptop (small configuration such as single 
+  point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity). 
+  The current bottleneck is the need to create a container for each specific
+  simulation (which is difficult or impossible for most researchers) and
+  make sure a docker/singularity container can be re-created long after the simulation has been archived.
+  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (CPU, communication fabric and filesystem) and software.
+  This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
+development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC), 
+data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
+blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT) 
+and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National
+provider of e-infrastructure for the provision of computing, storage and
+services. A BinderHub deployment is planned within \TheProject. 
+
 \end{itemize}
 
 \begin{figure}
-  \includegraphics[height=4cm]{images/fish.png}
-  \includegraphics[height=4cm]{images/octopus-benzene.pdf}
+  \includegraphics[height=4.5cm]{images/fish.png}\hfill
+  \includegraphics[height=4.5cm]{images/octopus-benzene.pdf}\hfill
+  \includegraphics[height=4.5cm]{images/gg-a.png}
   \caption{Selected domains from our use cases. From left to right: interactive
     analysis of sea bass fish track reconstructions on biologging tag data (sea bass)
     with low resolution marine physics data; electron
-    density of benzene molecule computed with Octopus.
+    density of benzene molecule computed with Octopus; NorESM artic grid for running Earth System Modelling experiments.
     (Background map: \copyright
     OpenStreetMap contributors ) \label{fig:applications}}
   \TODO{Add at least one more.}
 \end{figure}
 
-\subsubsection{Open Source ecosystem}\label{sec:opensource}
+\subsubsection{Open Source ecosystem}\label{sec:opensource}\TODO{Should the
+  title be a bit more specific for Binder /Jupyter?}
+
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
-a subproject of the Jupyter project. The Binder project is formally operating
-within the Jupyter ecosystem, but not confined to be useful only for notebooks.
+a subproject of the Jupyter project, although it is not confined to be
+useful only for notebooks.
+\emph{Project Jupyter} \cite{Jupyter}, which has grown increasingly popular in the scientific
+computing community, has become the \emph{lingua franca} of interactive
+computing in both academia and industry \cite{Perkel2018}. The main goal of Project Jupyter
+is to provide a consistent set of tools to improve researchers'
+workflows from the exploratory phase of the analysis to the communication
+of the results \cite{Kluyver2016,Granger2021}.
 
 \TODO{Lost "what is Jupyter" in reshuffle}
 
 The key components of the Binder software are \repotodocker{}
-(Section~\ref{sec:repo2docker}) and \binderhub{}. The \repotodocker{} tool
+(Section~\ref{sec:repo2docker}) and \binderhub{}~\ref{sec:binderhub}. The \repotodocker{} tool
 creates a software environment inside a Docker container from a software
 specification in a repository. \binderhub{} starts a Jupyter notebook server
 within this container from which the user can execute the notebooks from the
@@ -405,17 +458,16 @@ The focus for this proposal is to improve \repotodocker{}. In particular,
 Section~\ref{sec:reproducibility-challenges}) in a generic way and is independent
 from Jupyter notebooks.
 
-\TODO{Add image that depicts this Jupyter/Binder relation ship}.
 
-
-\paragraph*{Binder example}
+\paragraph{Binder example}
 \label{binder-how-does-it-work}
+
+\mbox{}\\
 
 The currently most common reproducibility use case -- with the current state of the
 \textbf{Binder tools} -- is the one we introduced in
-Section~\ref{sec:reproducibility-example}. We will use this to
-describe the role of the individual components of Binder:
-
+Section~\ref{sec:reproducibility-example} using the \mybinder{} service. We will use this to
+describe the role of the individual components of the Binder tools:
 
 \begin{figure}[ht]
   \centering
@@ -445,14 +497,14 @@ describe the role of the individual components of Binder:
 \end{compactitem}
 
 
-\noindent\textbf{\repotodocker}\label{sec:repo2docker}
-is a tool that aims to \myemph{automate existing practices} for reproducible environment specification.
+\paragraph{\repotodocker}\label{sec:repo2docker}
+The \repotodocker{} tool aims to \myemph{automate existing practices} for reproducible environment specification.
 It finds \emph{standard} environment specifications and produces \emph{typical} installation commands,
 constructing an environment in a Docker container image.
 \repotodocker{} can fetch a remote repository and build a software
 environment for this repository. Currently, \repotodocker{} can retrieve
 repositories from the following services and formats: GitHub, Gist, Git, GitLab,
-Zenodo, Hydroshare, Figshare, Dataverse.
+Zenodo, Hydroshare, Figshare, and Dataverse.
 
 For the automatic building of reproducible computational environments,
 \repotodocker{} understands commonly used conventions for environment specifications and
@@ -464,10 +516,10 @@ A common issue is to produce an environment that works when published,
 but which may produce a non-working environment at a later point in time,
 due to version drift and insufficiently strict specifications.
 Additionally, community practices not yet supported by \repotodocker{} have been proposed by their respective community members,
-while the \repotodocker{} team has not had the funding support to incorporate and maintain.
+but the \repotodocker{} team has not had the funding support to incorporate and maintain them.
 
-\noindent \textbf{BinderHub}\label{sec:binderhub}
-is software for hosting a web service built on \repotodocker{} and
+\paragraph{BinderHub}\label{sec:binderhub}
+BinderHub is software for hosting a web service built on \repotodocker{} and
 JupyterHub where individuals can share reproducible environments for
 immediate and free interaction by readers in their browser.
 
@@ -482,9 +534,11 @@ with authenticated and/or performant access to large data or compute resources.
 While the \repotodocker{} terminal utility \emph{can} technically be deployed anywhere,
 the technical expertise required is dramatically greater than a single click on a website such as mybinder.org.
 
-\paragraph*{The \mybinder{} service}\label{sec:mybinder}
+\paragraph{The \mybinder{} service}\label{sec:mybinder}
 
-\emph{\mybinder{}} is a service run by the \emph{BinderHub
+% \mbox{}\\
+
+The \mybinder{} service is run by the \emph{BinderHub
   federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
@@ -503,8 +557,8 @@ include reproducible research repositories
 \cite{ligo-open-science,OSCOVIDA2022}.
 
 This \TheProject{} project will not provide or operate a BinderHub service (such as the global
-``\url{https://mybinder.org}'' instance). The improvements achieved, however, will immediately
-be made available to all operators of BinderHubs, including \mybinder{}.
+``\url{https://mybinder.org}'' instance). The resulting improvements, however, will be
+immediately available to all operators of BinderHubs, including \mybinder{}.
 
 
 \TODO{Add info on links we have with our own providers and what role they play in the project e.g.
@@ -526,7 +580,7 @@ We will bring it to TRL 6.
 
 \subsubsection{Community Engagement Panel}\label{sec:community-engagement-panel}
 The Community Engagement Panel (CEP) is a forum to bring together
-  representatives of different current and potential user communities of Binder tools.
+  representatives of current and potential user communities of Binder tools.
   Through the community engagement panel we want to maximise the interaction between existing and new users.
   This will help shape the software features so that we can
   achieve the highest possible impact for reproducibility in science.
@@ -582,27 +636,20 @@ Open Life Science.
   established; [e.g. 1 pages]}
 \TOWRITE{}{}
 
-The SOURCE project, as part of the overall jupyter environment, will intrinsically build on the achievements of many national and European and international research and innovative developments, which have been produced or are being implemented in research projects in which research infrastructures and project partners are or have been involved.
-Table~\ref{tab:national-research} shows a selection of highly relevant projects in different areas and coordinated and/or conducted by \TheProject partners.
+The SOURCE project, as part of the overall Jupyter environment, will intrinsically build on the achievements of many
+ national and European and international research and innovative developments, which have been produced or are 
+ being implemented in research projects in which research infrastructures and project partners are or have been 
+ involved.
 
+The science applications build on the outcomes of National, Nordic, European and/or international research and 
+innovation projects and initiatives. Both Ifremer and the University of Oslo are active members of the international 
+Pangeo\footnote{https://pangeo.io/} Big data Geosciences Community.
 
-
-\begin{table}[]
-\label{tab:national-research}
-\begin{tabular}{lll}
-\rowcolor[HTML]{00D2CB}
-
-Project Name  & Country & Description of the linked project and how that link will be established \\
-Digital Twin  &         &                                                                         \\
-Digital ocean &         &                                                                         \\
-              &         &                                                                         \\
-              &         &
-
-\end{tabular}
-\end{table}
-
-
-
+Ifremer, through its co-ownership of Mercator Ocean International\footnote{https://www.mercator-ocean.eu/},
+ participate in the operation of the Copernicus Marine Environment Monitoring Service (CMEMS), 
+ a part of Copernicus, the European Union’s Earth Observation Programme and is also actively involved in the 
+ development of a Digital Twin of the Ocean that will be fully compatible with the Destination Earth (DestinE\footnote{https://digital-strategy.ec.europa.eu/en/policies/destination-earth})
+ architecture and supports the European's Digital Strategy and Green Deal Package.   
 
 \subsubsection{Interdisciplinarity}
 

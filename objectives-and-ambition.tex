@@ -82,12 +82,12 @@ We aim to realise that potential by extending Binder open source tools.
 \end{figure}
 
 We start with a description of a use-case making use of existing Binder-based
-tools for computational reproducibility. Start from this base-line, we can
+tools for computational reproducibility. Starting from this base-line, we can
 explain what progress and additional impact we will enable through this project.
 
 Figure~\ref{fig:use-cases-binder} depicts how a scientist can use a Jupyter
 notebook and the Binder software to make her research results easily
-reproducible and re-usable. Jupyter Notebooks are very popular and allow the creation of notebook
+reproducible and reusable. Jupyter Notebooks are very popular and allow the creation of notebook
 documents, containing a mixture of text and interactively executable code, along with rich output from
 running that code.
 
@@ -193,13 +193,13 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
     &
     We develop generic tools for reproducible software environments,
     but have identified several areas where the Binder tools do not yet meet user needs,
-    such as in traditional HPC environments, or users with large data.
+    such as traditional HPC environments, or users with large datasets.
     We shall address those gaps so that tools and strategies can be shared by a wider variety of communities,
     aligning effort and reducing necessary duplication.
     &
     In order to \textbf{promote uptake, greater collaboration, and increased alignment of the activities of stakeholders},
     it is most efficient when knowledge and tools can be shared.
-    When tools do not work for significant fractions of the research community
+    When tools do not work for significant fractions of the research community,
     they must develop their own, often similar tools,
     as has often been the case for the HPC community.
 
@@ -255,7 +255,7 @@ output, and to carry out the two necessary steps:
 \end{compactitem}
 
 It is of particular value if Steps 1 \emph{and} 2 can be \emph{carried out
-  automatically} by executing some kind of script or program that is part of the
+  automatically} by executing a program included included in the
 archive. First, if the automatic execution is possible, we know that there is a
 complete description of the protocol included in the archive, and that no
 mistake is made in trying to follow the protocol. Second, the automatic
@@ -281,7 +281,7 @@ which can inhibit adoption when it does not suit their existing patterns.
 
 The standard computing tools approach (b) is generic, but not accessible to all researchers
 as it requires substantial training or experience to be effective,
-and prone to errors or incompleteness when executed,
+and it is prone to errors or incompleteness when executed,
 leading to the "Works for Me" problem,
 where the author may have no trouble reproducing their own work,
 but they have not effectively communicated the requirements such that others can do the same.
@@ -306,7 +306,7 @@ been designed by the Jupyter team to automatically create the appropriate
 software environment (step 1) in which the notebook can be executed.
 
 BinderHub instances such as mybinder.org are extremely convenient,
-but being hosted services they do not offer the digital sovereignty
+but being hosted services they do not offer the autonomy
 of private execution on one's own computational resources,
 be they a local machine or cloud or on-premises clusters.
 
@@ -329,7 +329,7 @@ We will go beyond the current state of the art by bringing the following selecte
 \item the existing Binder software is already widely used in the Jupyter user community but focused on the 
       reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many
       programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending
-      the Binder software beyond the notebooks will undoubtedly attract new community of users and can facilitate 
+      the Binder software beyond the notebooks will undoubtedly attract new communities of users and can facilitate 
       transfer of knowledge between academia and industry;
 \item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are 
       beyond many institutional or companies IT support staff. As a result, most researchers rely on existing 
@@ -342,7 +342,7 @@ We will go beyond the current state of the art by bringing the following selecte
       Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset 
       itself or separately) but the usage of the Binder software and/or existing public Binder deployments for 
       this use case is not currently supported (such amount of data cannot be easily and efficiently moved to 
-      the Binder resources). Ad-hoc or domain specific solutions (for instance the usage of cloud optimized 
+      the Binder resources). \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized 
       data formats and associated catalogs such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
       or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community) 
       have been explored by diverse communities but are technically difficult and not generic enough to be 
@@ -380,7 +380,7 @@ exactly the right version of the plotting library, before a reproduction of
 results is attempted using it.
 
 Third, being able to re-create the appropriate software environment is a
-pre-requisite before any actual reproduction of results can be attempted: it
+prerequisite before any actual reproduction of results can be attempted: it
 would be inefficient to educate researchers what data and programs to archive,
 if in the future nobody (or only very few highly trained people) will be able to
 execute those scripts.

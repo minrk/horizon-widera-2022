@@ -15,7 +15,8 @@ once completed)}
 \end{verbatim}
 \end{draft}
 % (41)/36 = 1.138888 -> !1.14
-\begin{workpackage}[id=education,wphases=0-36!0.97,
+% 35/30 = 1.16
+\begin{workpackage}[id=education, wphases={0-12!0.48,12-24!0.48,24-36!0.71},
   title={Dissemination, education and engagement},
   short={Dissemination, education, and engagement},
   lead=IFR,
@@ -41,7 +42,7 @@ once completed)}
   requirements for practical reproducibility in the different domain as well as
   technical contributions -- for example through merge requests for Binder
   tools, or open source documentation of best practice for reprocudible software
-  environments.
+  environments. Strong collaboration with the Community Engagement Panel is expected to take place.
 
   Our dissemination, education and engagement objectives includes:
  \begin{compactitem}
@@ -70,10 +71,7 @@ once completed)}
 \begin{wpdescription}
 
   Open science and reproducible science is entirely dependent on researchers
-  adopting open practices. In \TheProject, we improve and developing tools that
-  can facilitate these practices, but they only work if researchers actually adopt
-  them. For researchers to adopt the practices, they need to (i) know about them
-  and (ii) want to use them.
+  adopting open practices. 
 
   We address this challenge in multiple ways:
   \begin{enumerate}
@@ -93,14 +91,9 @@ once completed)}
       required software stack. Only one aspect of this training is to show how
       Binder can help with reproducibility.
 
-      Attendees and users following such training and advice will create more
-      reproducible artifacts. If they -- or later users of their published
-      artifacts -- want to use Binder to reproduce or re-use the results, they
-      can. Even if they do not, we will have achieved an improvement of the
-      reproducibility of scientific artifacts.
-
     \item Throughout the activities of this project and the engagement with the
-      wider science community, we aim to understand the underlying drivers for
+      wider science community through the Community Engagement Panel, we aim to understand 
+      the underlying drivers for
       acceptance, rejection or lack-of-interest in adopting practices that lead
       to reproducible science results.
   \end{enumerate}
@@ -119,36 +112,18 @@ once completed)}
   % dissemination and training workshops, as well as by producing and maintaining
   % material for online courses and documentation.
 
-  The \TheProject project will develop, through \WPref{applications}, a number
-  of demonstrator repositories that show examples of reproducibility in
-  different scientific domains. (We use
-  those activities to inform and evaluate the technical improvement to the
-  Binder tools in \WPref{reproducibility} and \WPref{impact}). We also use those
-  studies to create tutorials and \emph{best practice guides for
-    reproducibility} (\localtaskref{online-resources}) in this work package, and
-  offer interactive workshops (\localtaskref{workshops}) to help disseminate the
-  content more effectively.
-
-  As with all the code, test and build infrastructure produced as part of the
-  project, we will also make all documentation open source. Our documentation --
-  which includes best practice guides for reproducibility -- can thus be
-  modified and improved after the end of the project to react to new
-  developments (\delivref{education}{education-materials2}).
-
-  We will engage with the scientific to support them in making their
-  work more reproducible with Binder tools. The project will benefit from these interactions
-  as we will learn more about reproducibility requirements and usefulness of the
-  Binder tools, so that we can tailor our work to support scientific communities as broad as possible
-  (\localtaskref{community-support}).
+  Science applications ()\WPref{applications}) will also support the creation
+   of tutorials and \emph{best practice guides for
+    reproducibility} (\localtaskref{online-resources}), and
+  offer interactive (online, hybrid and/or in-person) workshops (\localtaskref{workshops}) 
+  to help disseminate the content more effectively.
 
   We will also participate in the well established academic dissemination
   activities, and events of the European e-infrastructure projects and other
   relevant structures. EGI is a member of our the community engagement panel
   (\taskref{management}{community-engagement-panel}) and the interaction with
   them will be useful to prioritise our resources in this very active field.
-
-  Open access to all publications resulting from the project will be ensured.
-  %\TODO{Should this sentence go into a data / IPR management plan?}
+  
 \end{wpdescription}
 
 \begin{tasklist}
@@ -158,13 +133,13 @@ once completed)}
 \end{tasklist}
 
 \begin{wpdelivs}
-  \begin{wpdeliv}[due=24,id=best-practice-guide,dissem=PU,miles=prototype,nature=R,lead=UIO]
+  \begin{wpdeliv}[due=24,id=best-practice-guide,dissem=PU,nature=R,lead=IFR]
   {Best practice guide for reproducible science with Binder.}
 \end{wpdeliv}
-\begin{wpdeliv}[due=36,id=education-materials2,dissem=PU,miles=final,nature=R,lead=UIO]
+\begin{wpdeliv}[due=36,id=education-materials2,dissem=PU,nature=R,lead=IFR]
   {All training sessions material completed, reviewed, and published online.}
 \end{wpdeliv}
-% \begin{wpdeliv}[due=36,id=report2,dissem=PU,miles=final,nature=R,lead=UIO]
+% \begin{wpdeliv}[due=36,id=report2,dissem=PU,nature=R,lead=UIO]
 %   {Community building: Report on impact of development workshops, dissemination and training activities.}
 % \end{wpdeliv}
 \end{wpdelivs}
