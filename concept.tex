@@ -39,9 +39,9 @@
 % These are the questions that guide the \TheProject{} project.
 
 \paragraph*{Supporting Open, Useful, and Reproducible Computational
-  Environments}\label{sec:SOURCE}
+  Environments}\label{sec:SOURCE} 
 
-The ideas behind our project title:
+  The ideas behind our project title:
 \begin{itemize}
 \item The work done is this project will be \textbf{Supporting} scientists in their
   endeavours to make their work more reproducible and re-usable.
@@ -86,9 +86,14 @@ proposed project builds in more detail.
   \fullref{sec:reproducibility-challenges} contextualise the proposed work
   within the wide field of reproducibility.
 \item Section~\fullref{sec:methodology} presents our approach to improving reproducibility.
-\item We illustrate the reproducibility discussion with
-  \fullref{sec:reproducibility-example} and provide details on some of our
-  \fullref{sec:science-applications}.
+\item We illustrated the reproducibility discussion with
+  \fullref{sec:reproducibility-example} and highlighted the current shortcomings\fullref{sec:reproducibility-challenges}.
+    We provide details on some of our
+  \fullref{sec:science-applications}, how they will contribute to feedback the developments of the 
+  Binder tools and serve to showcase the outcomes of \TheProject.  
+\item Section~\fullref{sec:community-engagement-panel} presents our strategy to engage with communities, 
+  learn from each others and create training materials that are targeting different audiences and 
+  contribute to the elaboration of best practices.   
 \item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
 
@@ -334,8 +339,16 @@ Panel~(\taskref{management}{community-engagement-panel}).
     demonstrators we develop to be exploited as production services already during
     the grant, and subsequently.
 
-Our science applications (Figure \ref{fig:applications}) follow the workflow outlined in
-\ref{fig:use-cases-binder}, and include these examples: \TODO{Mention that some of our science applications need
+We will actively work with representatives of key user communities, from Biophysics, 
+Climate change and biodiversity, Molecular Dynamics.
+Our science applications (Figure \ref{fig:applications}) follow a workflow that is similar to the one 
+outlined in \ref{fig:use-cases-binder}. 
+Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but 
+real cases that will drive technological developments and future exploitation of \TheProject results,
+ and onboard adopters to fully demonstrate that \TheProject
+solves practial issues for reproducible science:
+
+  \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
 \begin{itemize}
 \item Introducing reproducibility to a fish track analysis model~\cite{woillez2016} based on
@@ -346,9 +359,10 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
   the size and complexity of marine physics data to be ingested
   to obtain high spatial and temporal resolution of resulting sea bass track
   required by fish habitat scientist.
-  Access to parallel computing resources throught DASK on HPC or
-  Cloud architecture together with access to bigdata stored next to the
-  parallel computing architecture is required to make reproducibility realistic.
+  Access to parallel computing resources through DASK \footnote{https://dask.org/} on HPC or
+  Cloud architecture together with access to big data stored next to the
+  parallel computing architecture is required to make reproducibility realistic. 
+  \TheProject will add real value by enabling access to HPC from Binder tools (\taskref{applications}{binder-at-hpc}).
 \item Reproducibility of analysis pipelines and their software
   requirements at the example of a
   Biophysics application\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
@@ -356,25 +370,47 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
   the underlying software stack is highly complex (--- it requires the Gromacs simulation
   code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
   ---) and poses a particular challenge for long-term reproducibility.
+  \TheProject will increase the re-usability of such complex pipelines, 
+  highlithing the ability of the newly developed Binder tools to re-create valid computational environments,
+  and re-run the same pipelones, long after their publications (\taskref{applications}{data-publishing}). 
 \item Reproduciblity of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
   reproduction of simulation results. A (Slurm) job submission may be required
-  to start the reproduction.
-\item \TODO{Add examples from UiO. Some placeholder text. Some placeholder
-    text.Some placeholder text.Some placeholder text. Some placeholder text.Some
-    placeholder text. Some placeholder text. Some placeholder text. Some
-    placeholder text. Some placeholder text. Some placeholder text. }
+  to start the reproduction. This science application will serve \taskref{applications}{binder-at-hpc}.
+\item FAIR@UiO\footnote{https://www.usit.uio.no/prosjekter/fair-uio/} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable} 
+  data at the University of Oslo and will leverage on \TheProject work for data publishing (\taskref{applications}{data-publishing})
+  to increase the re-use of enormous amounts of data that will be made available to everyone through FAIR@UiO platform. 
+  FAIR@UiO is led by the University's Center for Information Technology of the University of Oslo 
+  (USIT\footnote{https://www.usit.uio.no/}).
+\item Reproducibility of Earth System Models with the Norwegian Earth System Modelling Consortium (NCC),
+   represented in \TheProject by the University of Oslo. The Norwegian Earth System Model\footnote{https://noresm-docs.readthedocs.io/en/latest/}
+  ~\cite{Seland2020} (NorESM) is a coupled Earth System Model and has been an important tool for Norwegian 
+  climate researchers in the study of the past, present and future climate. NorESM has also contributed
+   to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6} 
+   ~\cite{Seland2020} and in research assessed in the IPCC’s reports. 
+   NorESM can be run on a laptop (small configuration such as single 
+  point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity). 
+  The current bottleneck is the need to create a container for each specific simulation (which is not easy to do for a researcher) and
+  make sure a docker/singularity container can be re-created long after the simulation has been archived.
+  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (cpu, communication fabric and filesystem) and software.
+  This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
+development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC), 
+data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
+blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT) 
+and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National provider of e-infrastructure for the provision of computing, storage and services (Binder deployment planned within \TheProject).
+
 \end{itemize}
 
 \begin{figure}
   \includegraphics[height=4cm]{images/fish.png}
   \includegraphics[height=4cm]{images/octopus-benzene.pdf}
+  \includegraphics[height=4cm]{images/gg-a.png}
   \caption{Selected domains from our use cases. From left to right: interactive
     analysis of sea bass fish track reconstructions on biologging tag data (sea bass)
     with low resolution marine physics data; electron
-    density of benzene molecule computed with Octopus.
+    density of benzene molecule computed with Octopus; NorESM artic grid for running Earth System Modelling experiments.
     (Background map: \copyright
     OpenStreetMap contributors ) \label{fig:applications}}
   \TODO{Add at least one more.}
@@ -382,9 +418,17 @@ Our science applications (Figure \ref{fig:applications}) follow the workflow out
 
 \subsubsection{Open Source ecosystem}\label{sec:opensource}
 
+
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
 a subproject of the Jupyter project. The Binder project is formally operating
 within the Jupyter ecosystem, but not confined to be useful only for notebooks.
+
+\emph{Project Jupyter} \cite{Jupyter}, which has grown increasingly popular in the scientific
+computing community, has become the \emph{lingua franca} of interactive
+computing in both academia and industry \cite{Perkel2018}. The main goal of Project Jupyter
+is to provide a consistent set of tools to improve researchers'
+workflows from the exploratory phase of the analysis to the communication
+of the results \cite{Kluyver2016,Granger2021}.
 
 \TODO{Lost "what is Jupyter" in reshuffle}
 
