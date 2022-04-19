@@ -11,68 +11,40 @@ development.
 \begin{draft}
 \begin{verbatim}
 TODO:
-- [ ] sort milestones
+- [x] sort milestones
 - [ ] check dates
 - [ ] omit descriptions? Template doesn't have any
-- [ ] involved WP: both input and output, or just input?
+- [x] involved WP: both input and output, or just input?
 \end{verbatim}
 \end{draft}
 
 \begin{milestones}
-  \milestone[
-    id=study,
-    month=12,
-    wps={reproducibility},
-    verif={Report produced},
-    ]
-  {Reproducibility study}
-  {
-  We will have preliminary study results to guide and evaluate
-  improvements to reproducibility with \TheProject tools,
-  and inform best practices.
-  }
   \milestone[
     id=conda-time,
     month=6,
     wps={reproducibility},
     verif={Feature available in conda/mamba software},
     ]
-  {Conda time machine}
+  {Select conda packages by date}
   {
   The conda/mamba package manager shall be able to
-  select packages for installation based on a given date
+  select packages for installation based on a given date.
+  Necessary for repo2docker to best take time into account
+  when creating a software environment.
   }
 
   \milestone[
-    id=repo2docker-time,
-    month=18,
-    wps={reproducibility},
-    verif={Feature present in repo2docker software},
+    id=study,
+    month=12,
+    wps={reproducibility,education},
+    verif={Report produced},
     ]
-  {repo2docker takes publication time into account}
+  {Reproducibility study and evaluation tool}
   {
-  }
-
-  \milestone[
-    id=repo2docker-improved,
-    month=24,
-    wps={reproducibility},
-    verif={Delivered in repo2docker software; Repeat study, comparing baseline results form start of project},
-    ]
-  {repo2docker produces robust computational environments}
-  {
-  Taking input from earlier study and tests,
-  improvements to repo2docker are made.
-  }
-
-  \milestone[
-    id=rm-kubernetes,
-    month=9,
-    wps={impact,applications},
-    verif={Feature available in BinderHub software},
-    ]
-  {BinderHub can be deployed without Kubernetes}
-  {
+  We will have preliminary study results and an associated tool,
+  regarding the reproducibility of repositories with repo2docker.
+  These results will inform future development of the tools in WP2,
+  as well as best practices resources and education in WP5.
   }
 
   \milestone[
@@ -83,22 +55,16 @@ TODO:
     ]
   {Support for alternative container technologies in repo2docker for suitability in HPC}
   {
-  }
-
-  \milestone[
-    id=data-publishing,
-    month=18,
-    wps={impact,applications},
-    verif={Demonstrated example deployment},
-    ]
-  {Support for authenticated data publishing}
-  {
+  The Docker container runtime is not suitable in all cases.
+  In order to proceed with some demonstrators in WP4,
+  we must ensure compatibility with container runtimes supported by our HPC providers,
+  such as Singularity.
   }
 
   \milestone[
     id=prototype,
     month=12,
-    wps={applications},
+    wps={applications,impact},
     verif={
       Deployed first functional prototypes of science demonstrators.
       Early users are able to access and test prototype services
@@ -108,7 +74,7 @@ TODO:
   {
   By this point, prototype demonstrator services will be useful and accessible
   to a broad range of users, and we will have begun to experiment with early-adopter
-  users and local demonstrators to guide further development of \TheProject,
+  users and local demonstrators to guide further development in WP3,
   ensuring that development serves the reproducibility needs of the global science community.
   }
 
@@ -120,8 +86,48 @@ TODO:
     ]
   {Draft best practices documentation}
   {
-  Draft version of documentation for best practices is online
+  Draft version of documentation for best practices is online.
+  Required starting point for education tasks in WP5.
   }
+
+  \milestone[
+    id=repo2docker-time,
+    month=18,
+    wps={reproducibility},
+    verif={Feature available in repo2docker software},
+    ]
+  {repo2docker takes publication time into account}
+  {
+  By taking publication time into account,
+  repo2docker will reproduce environments with higher fidelity,
+  especially when environments are not fully or strictly specified.
+  }
+
+  \milestone[
+    id=data-publishing,
+    month=18,
+    wps={impact,applications},
+    verif={Demonstrated example deployment},
+    ]
+  {Practical support for authenticated data publishing}
+  {
+  It shall be practical to deploy BinderHub with performant, authenticated access to large datasets,
+  required for some advanced science demonstrators in WP4.
+  }
+
+  \milestone[
+    id=repo2docker-improved,
+    month=24,
+    wps={reproducibility},
+    verif={Delivered in repo2docker software; Repeat study, comparing baseline results form start of project},
+    ]
+  {repo2docker produces robust computational environments}
+  {
+  Taking input from earlier study and tests,
+  repo2docker has been improved to produce environments more reliably and robustly,
+  as verified by a comparison study with the baseline at the beginning of the project.
+  }
+
 \end{milestones}
 
 \milestonetable
