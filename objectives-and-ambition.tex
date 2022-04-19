@@ -2,11 +2,11 @@
 
 \label{sect:objectives}
 
-As the values of Open and Reproducible Science are adopted by
+As the values of \textbf{open science} and \textbf{reproducible science} are adopted by
 governments, funding agencies, research institutes, and society,
 there are practical challenges to implementing such practices on a global scale.
 
-Two of the key societal goals of Open Science are facilitation of
+Two of the key societal goals of open science are facilitation of
 
 \begin{compactenum}
 \item \textbf{verification} of results, improving the reliability and trustworthiness of scientific output, and
@@ -22,13 +22,13 @@ any more likely to be verified.
 Without the \myemph{practical} ability to reuse work, results are not
 any more likely to be exploited in new research or commercial work.
 
-In \TheProject, we focus on `practical reproducibility',
+In \TheProject, we focus on ``practical reproducibility'',
 specifically focusing on computational results, such as computer simulation, data
 processing, data analysis, and creation of figures and tables in publications.
-We differentiate `technical reproducibility,'
+We differentiate ``technical reproducibility'',
 where enough information is \emph{technically present} to reproduce the work given sufficient effort,
-from `practical reproducibility,'
-where effort to reproduce the work is not a burden \cite{binder}.
+from ``practical reproducibility''
+where effort to reproduce the work is not a burden~\cite{binder}.
 
 \subsubsection{Ambition}
 
@@ -43,7 +43,7 @@ To reproduce the work, a \textbf{sufficiently similar} computational environment
 This may be a specific version of an application, or a large collection of software dependencies,
 as is common in data science fields.
 
-In order to meet the goals or policies of Open and Reproducible science,
+In order to meet the goals or policies of open and reproducible science,
 \myemph{researchers need tools} to address the challenge. Ideally, those tools should
 \begin{compactenum}
 \item be freely available and open source (to maximise access and longevity);
@@ -64,7 +64,7 @@ We plan to achieve this goal through
 
 Rather than re-inventing the wheel, we will build upon \textbf{existing tools and standards}.
 
-Increasingly, Open Science and Reproducibility are declared as values or requirements
+Increasingly, open science and reproducibility are declared as values or requirements
 at research institutions, governments, and funding agencies.
 In order to meet these goals or requirements,
 researchers need \myemph{tools} that help them accomplish the tasks required for reproducible work.
@@ -326,22 +326,6 @@ We will go beyond the current state of the art by bringing the following selecte
       beyond many institutional or companies IT support staff. As a result, most researchers rely on existing
       deployments that are overloaded and cannot cope with the huge demand, and they may disregard Binder
       as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{}
-<<<<<<< HEAD
-      anywhere e.g. from the user’s personal laptop (Binder@home, \taskref{applications}{binder-at-home}) to the
-      most powerful High Performance Computers (Binder@HPC, \taskref{applications}{binder-at-hpc}) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
-\item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes
-      with restricted access permissions) that are published and deposited on (domain) specific long-term archives.
-      Examples (to read and process such data sets) can be provided by end-users (either as part of the data set
-      itself or separately) but the usage of the Binder software and/or existing public Binder deployments for
-      this use case is not currently supported (such amount of data cannot be easily and efficiently moved to
-      the Binder resources). \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimised
-      data formats and associated catalogues such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
-      or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community)
-      have been explored by diverse communities but are technically difficult and not generic enough to be
-      adopted by everyone. The Binder software will be extended to facilitate data publishing (see \taskref{applications}{data-publishing}) with
-      the plugin of external long-term archive resources and enable the publication and reuse of large and complex data sets (software close to
-      the data and Binder service).
-=======
       anywhere e.g. from the user’s personal laptop (Binder@Home, \taskref{applications}{binder-at-home}) to the
       most powerful supercomputers (Binder@HPC, \taskref{applications}{binder-at-hpc})
       by removing technical restrictions such as the dependence on Kubernetes,
@@ -359,7 +343,6 @@ We will go beyond the current state of the art by bringing the following selecte
       have been explored by diverse communities but are technically difficult and not generic enough to be
       adopted by everyone. The Binder software will be extended to \textbf{facilitate data publishing} (see \taskref{applications}{data-publishing}) with
       the plugin of external long-term archive resources and enable the \textbf{publication and reuse of large and complex datasets}.
->>>>>>> main
 \end{compactitem}
 
 
