@@ -49,10 +49,10 @@ include:
 \item Software environments can only be created inside Docker container
 \item To run and orchestrate (multiple) Docker containers, a Kubernetes system must
 be available
-\item The user must interact with Binder environments through a Binderhub
+\item The user must interact with Binder environments through a BinderHub
   installation
 \item There is no Binders-specific provision to access (substantial) data sets
-  from inside te container. \TODO{HF: What prevents us from
+  from inside the container. \TODO{HF: What prevents us from
     a data-publishing application at the moment? How to express this without
     making the impression one couldn't use \softwarename{curl/wget} to fetch
     data, etc. }
@@ -79,7 +79,7 @@ At the same time, these restrictions prevent the following scenarios:
 \item To access and use significant amounts of data from inside the software
   environment is not supported. An important use case that cannot be supported due to
   this restriction is that of ``data publishing'': the idea is that a
-  (potentially large and/or complex) dataset is published \emph{together} with
+  (potentially large and/or complex) data set is published \emph{together} with
   software that encodes the necessary knowledge to extract meaningful data from
   that data set. A Binder environment would make this data set accessible in an
   interactive environment. \TODO{Point to data publishing use case(s)}
