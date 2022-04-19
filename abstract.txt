@@ -12,7 +12,7 @@ Most research results include a computational component, at least to process
 data and create figures for publications.
 To reproduce computational results, the software environment in which to execute
 the code must be created. Often, this is difficult.
-This project will enable researchers to carry out that step automatically. 
+SOURCE will enable researchers to carry out that step automatically.
 
 We base our work on the Binder tools. Binder aims to automate existing practices for reproducing computational
 environments, solving a key piece of practical reproducibility without dictating the
@@ -23,10 +23,10 @@ Binder has demonstrated its potential for reproducibility in the Jupyter communi
 million user sessions in the last year at mybinder.org, building over fifty thousand
 unique computational environments. We aim to increase the usage by an order of magnitude.
 
-To do this, we will make the Binder tools practically useful outside Jupyter
-notebooks and thus for researchers not yet served by them. We will develop
+To do this, SOURCE will make the Binder tools more useful outside the Jupyter
+community, and thus reach a wider audience of researchers. We will develop
 and deliver training on best practices for reproducibility.
 
 We motivate and validate our efforts with selected use cases, such as data
 publishing and High Performance Computing (HPC) where Binder tools
-are not currently practical. 
+are not currently practical.
