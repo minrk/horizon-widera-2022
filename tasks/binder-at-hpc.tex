@@ -11,7 +11,7 @@
   % wphases={0-36},
   % partner institution ID(s)
   % don't include lead here
-  partners={IFR,UIO}
+  partners={SRL,IFR,UIO}
 ]
 In this task, we want to broaden the applicability of the Binder tools to become
 more useful in High Performance Computing (HPC) environments. In particular, this
@@ -31,7 +31,7 @@ available.
 It is outside the scope of this proposal to find and implement a generic
 reproducibility approach for HPC use cases. Nevertheless, we propose to explore
 some aspects of HPC-reproducibility to influence the development of Binder,
-and start the - probably iterative - process of finding a good solution.
+and start the -- probably iterative -- process of finding a generic solution.
 
 \paragraph*{Strategy:}
 We focus on reproducible execution of an HPC application to compute data as the step of
@@ -42,7 +42,7 @@ environment to the HPC system's queue.
 We assume for this to work that the user (who wants to reproduce some results)
 needs to logon to the HPC resource of their choice, and uses repo2docker to
 create a suitable software container, and starts execution of those containers
-'manually', for example through submission of a compute job to the Slurm
+``manually'', for example through submission of a compute job to the Slurm
 queuing system. We also assume that the hardware required for this reproduction
 is available on the HPC system.
 
