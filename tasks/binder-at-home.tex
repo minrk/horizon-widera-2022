@@ -13,48 +13,48 @@
   % don't include lead here
   partners={MP,UIO}
 ]
-In this task, we want to use the compute power of the Desktops of individual researchers and
-users, to recreate software environments in which computational results can be
-reproduced, and re-used: We want to provide an experience identical or similar
-to that of using BinderHub, but using only the local computer.
+In this task we target the compute power of the desktops of individual researchers and
+users to recreate software environments in which computational results can be
+reproduced and re-used: We envision to provide an experience identical or similar
+to that of using BinderHub, but only employing the local computer available to the user anyway.
 
 \paragraph*{Context:} Reproducibility services using Binder currently rely on hosted Binder instances.
 The BinderHub Federation provides such a service global service at mybinder.org
 which is free at
-the point of use, and delegates the building of the software environment and
+the point of use. It delegates the building of the software environment and
 re-execution of the code to a small number of computer centres that have
 volunteered to contribute compute resources.
-
-It thus possible to overload the system \TODO{Add link to general discussion
+It may hence be possible to overload the system \TODO{Add link to general discussion
   that mentions how many thousand builds take place per months etc}.
+To allow the up-scaling of good reproducibility practice, it is 
+desirable not to depend exclusively on such a single hosted service (or even multiple similar hosted services).
 
-To allow the up-scaling of good reproducibility practice, it would be
-desirable not to depend on such a single (or even multiple hosted services).
-
-The compute resources typically offered through mybinder are modest: at most 2 GB of RAM
+Moreover, the compute resources typically offered through mybinder are modest, namely at most 2 GB of RAM
 and a single CPU core.
-Most laptops and Desktops have similar or much better hardware capabilities than
-the mybinder cloud-computing resources currently offer.
-
-For some research areas, it is essential to access big data sets to reproduce the scientific computing workflow.  For such cases, it is essential to reproduce the work using infrastructure that has optimised access to the data, so that one does not consume unnessesary computing and network resources.  
+In contrast most laptops and Desktops have similar or better hardware capabilities than
+the free mybinder cloud-computing resources currently offer, making it highly desirable to leverage these local resources.
+% not sure how/if the following two sentences fit here, maybe better elsewhere
+For some research areas, it is essential to access big data sets to reproduce the scientific computing workflow.
+For such cases, it is crucial to reproduce the work using infrastructure that has optimised access to the data,
+so that one does not consume unnessesary computing and network resources.  
 
 \paragraph*{Task activity:} Based on the preparations in \WPref{reproducibility} and
-\WPref{impact}, extend Binder so that users of the service can
-carry out the building of the environment, and -- if desired -- launching of a
-notebook server \emph{on their own hardware}, such as their laptop or on-premise or cloud infrastructures.   The working title for such
-functionality is ``binder@home'' (as a reference to the crowd-based SETI@home search for
-extraterrestrial intelligence at home.\footnote{https://setiathome.berkeley.edu}
+\WPref{impact}, we intend to extend Binder such that users of the service can
+carry out the building of the environment, and -- if desired -- the launching of a
+notebook server \emph{on their own hardware}, e.g. their laptop or on-premise or cloud infrastructure.
+The working title for such
+functionality is ``Binder@Home'' (as a reference to the crowd-based SETI@home search for
+extraterrestrial intelligence at home.\footnote{https://setiathome.berkeley.edu})
 
-We will design, implement, and test the 'binder@home' functionality, and make it
-available as part of binder software. We will need a utility that takes on
-the responsibility of BinderHub for a single-user use case, and which triggers
-the local build of the software environment, start of Jupyter notebook
-server and opening of the relevant local URL and port an a browser.
+We will design, implement, and test the 'Binder@Home' functionality, and make it
+available as part of the Binder software. That new 'Binder@Home' software component will
+essentially complement BinderHub with an easy-to-use local single-user case, it will trigger
+the local build of the software environment, the start of the Jupyter notebook
+server, and the opening of the relevant local URL and port in a browser.
 This effort will bridge the gap from mybinder.org to ``Home'';
 by giving the freedom and digital sovereignty
 to the researchers to chose where they execute their computational experiments in a simple manner,
 without sacrificing the convenience of the mybinder.org service.
-
 
 %  The task includes the following activities
 %  \begin{compactitem}
