@@ -25,24 +25,24 @@ graphical presentation of the components showing how they inter-relate (Pert cha
 \ifgrantagreement The \else As shown in
 Figure~\ref{fig:workpackages}, the \fi work plan is broken down into five work
 packages: \WPref{reproducibility} focuses on robustness improvements of the
-Binder tools, \WPref{impact} is advancing the Binder tools feature set to
-increase the impact of the tools and project, \WPref{applications} applies and
+Binder tools, \WPref{impact} is advancing the Binder tools' feature set to
+broaden its applicability and increase the impact of the tools and project, \WPref{applications} applies and
 evaluates the reproducibility tools in real-world research contexts.
 \WPref{education} is focused on engaging with and educating researchers and the
-wider public in best practices for reproducible science. This is complemented by
+wider public in best practices for reproducible science. This is supported by
 the usual management work package (\WPref{management}).
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.67\textwidth]{images/WP.pdf}
+  \includegraphics[width=0.63\textwidth]{images/WP.pdf}
   \caption{
     \label{fig:workpackages}
     The relationships and interactions of the work packages,
-    broken up into four categories: Management (WP1),
-    Development of new functionality surrounding Jupyter's Binder tools to improving robustness
-    and Broadening impact (WP2, WP3),
-    Applications of tools developed in real world research context (WP4),
-    and Dissemination, education, and engagement (WP5: Dis., edu., eng.).
+    broken up into four categories: management (WP1),
+    development of new functionality surrounding Jupyter's Binder tools to improving robustness
+    and broadening impact (WP2, WP3),
+    applications of tools developed in real world research context (WP4),
+    and dissemination, education, and engagement (WP5: Dis., edu., eng.).
   }
 \end{figure}
 
@@ -52,18 +52,17 @@ the usual management work package (\WPref{management}).
 % , including inter-task dependencies.
 % add milestones, for milestone markers
 % but these don't work if we have more than one milestone at the same point in time
-\ganttchart[draft,xscale=.4,yscale=0.9,step=3,
+\ganttchart[draft,xscale=.4,yscale=0.82,step=3,
     caption={
-        Gantt chart illustrates the distribution of time across the work packages over
+        Gantt chart illustrates the distribution of effort across the work packages over
         time. The height of grey bars corresponds to total person month effort per
         month for each work packages. We ramp up overall activity during year 1, then
-        remain  at a constant level. In the beginning of the project, the work on core
-        parts of he technology dominates (WP2 and WP3). The activity in application of
-        the new features (WP4) and dissemination  (WP5) grows over time.
+        remain at a constant level. In the beginning of the project, the work on core
+        parts of the technology dominates (WP2 and WP3). The activity in application of
+        the new features (WP4) and dissemination (WP5) grows over time.
     },
 ]
 
-\clearpage
 \begin{workplan}
 
 \input{WorkPackages/WorkPackages}
