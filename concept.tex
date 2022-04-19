@@ -320,42 +320,42 @@ to motivate and validate our work.
 \begin{itemize}
 \item Introducing reproducibility to a \textbf{fish track analysis model}~\cite{woillez2016} based on
   marine physics data using the Pangeo ecosystem:
-  Pangeo enables interactive analysis on HPC infrastructures~\cite{odaka2020}
-  but also have examples on reproducible marine data analysis~\cite{maze2020}.
+  Pangeo enables interactive data analysis on HPC infrastructures~\cite{odaka2020}
+  and significant oceanographic data sets~\cite{maze2020}.
   A particular challenge here is
   the size and complexity of marine physics data to be ingested
-  to obtain high spatial and temporal resolution of resulting sea bass track
-  required by fish habitat scientist.
-  Access to parallel computing resources through DASK \footnote{https://dask.org/} on HPC or
-  Cloud architecture together with access to big data stored next to the
+  to obtain high spatial and temporal resolution of resulting sea bass tracks
+  required by scientist researching fish habitats.
+  Access to parallel computing resources through Dask\footnote{\url{https://dask.org/}} on HPC or
+  Cloud architectures together with access to big data stored next to the
   parallel computing architecture is required to make reproducibility realistic.
   \TheProject will add real value by \textbf{enabling access to HPC from Binder tools} (\taskref{applications}{binder-at-hpc}).
 \item Reproducibility of analysis pipelines and their software
   requirements at the example of a
-  \textbf{biophysics application}\footnote{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}:
+  \textbf{biophysics application}\footnote{\url{https://gitlab.mpcdf.mpg.de/MPIBP-Hummer/glycoshield-md}}:
   While the compute requirements are moderate and mostly satisfied by Binder in the Cloud,
   the underlying software stack is highly complex -- it requires the Gromacs simulation
-  code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
+  code\footnote{\url{https://www.gromacs.org}} among others
   -- and poses a particular challenge for long-term reproducibility.
   \TheProject will increase the re-usability of such complex pipelines,
   highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
   and re-run the same pipelines, long after their publications (\taskref{applications}{data-publishing}).
-\item Reproduciblity of results computed with the \emph{ab-initio} software Octopus
-  (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
-  virtual experimentation capabilities. A particular challenge is that Octopus
-  is a highly parallelised code and needs HPC computing resources for a
+\item Reproduciblity of results computed with the 
+  Octopus software\footnote{\url{https://octopus-code.org}}
+  which provides time-dependent \emph{ab-initio} computation capabilities.
+  Octopus is a highly parallelised code and needs HPC computing resources for a
   reproduction of simulation results. A (Slurm) job submission may be required
   to start the reproduction. This science application will serve \taskref{applications}{binder-at-hpc}.
-\item FAIR@UiO\footnote{https://www.usit.uio.no/prosjekter/fair-uio/} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable}
+\item FAIR@UiO\footnote{\url{https://www.usit.uio.no/prosjekter/fair-uio}} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable}
   data at the University of Oslo and will leverage \TheProject work for data publishing (\taskref{applications}{data-publishing})
   to increase the reuse of enormous amounts of data that will be made available to everyone through FAIR@UiO platform.
   FAIR@UiO is led by the University's Center for Information Technology of the University of Oslo
-  (USIT\footnote{https://www.usit.uio.no/}).
+  (USIT\footnote{\url{https://www.usit.uio.no}}).
 \item \textbf{Reproducibility of Earth System Models} with the Norwegian Earth System Modelling Consortium (NCC),
-   represented in \TheProject by the University of Oslo. The Norwegian Earth System Model\footnote{https://noresm-docs.readthedocs.io/en/latest/}
+   represented in \TheProject by the University of Oslo. The Norwegian Earth System Model\footnote{\url{https://noresm-docs.readthedocs.io/en/latest}}
   ~\cite{Seland2020} (NorESM) is a coupled Earth System Model and has been an important tool for Norwegian
   climate researchers in the study of the past, present and future climate. NorESM has also contributed
-   to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6}
+  to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{\url{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6}}
    ~\cite{Seland2020} and in research assessed in the IPCC’s reports.
    NorESM can be run on a laptop (small configuration such as single
   point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity).
@@ -366,8 +366,8 @@ to motivate and validate our work.
   This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
 development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC),
 data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
-blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT)
-and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National
+blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{\url{https://www.mn.uio.no/geo/english/index.html}} and USIT)
+and supported by Sigma2\footnote{\url{https://www.sigma2.no}}, the Norwegian National
 provider of e-infrastructure for the provision of computing, storage and
 services.
 
