@@ -1,9 +1,10 @@
 FROM gitpod/workspace-full
 
 # Install LaTeX
-RUN sudo apt-get -q update &&     sudo apt-get install -yq --no-install-recommends \
+RUN sudo apt-get -q update &&  sudo apt-get -y install \
             ca-certificates \
             make \
+            latexmk \
             texlive-latex-base \
             texlive-latex-recommended \
             texlive-latex-extra \

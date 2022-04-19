@@ -180,7 +180,7 @@ and~\ref{table:impact-comparison}, respectively.
         community-effort-based Binder tools (\WPref{reproducibility}, \WPref{impact},  \WPref{applications}).
 
         We know that the technologies such as the Jupyter Notebook and their reproducibility
-        with Binder find some acceptance in the scientist community (see Section~\ref{sec:mybinder})
+        with Binder find some acceptance in the scientist community (see Section~\ref{sec:opensource})
         One of the outcomes of this project is an improved understanding of the underlying drivers
         for the wider research community to adopt or not adopt this technology as a concrete and effective action to improve the reproducibility of their results~(\WPref{education}). We expect an interplay of technical, social, community-specific and policy drivers affecting this.
         %
@@ -231,7 +231,7 @@ and~\ref{table:impact-comparison}, respectively.
         %
       Increased re-use of scientific results by research and innovation
       &
-        Reproducibility enables re-usability, in particular where the reproduction
+        Reproducibility enables reusability, in particular where the reproduction
         of the results can be carried out automatically (for example using the
         tools developed and improved in the \TheProject project).
 
@@ -284,30 +284,37 @@ and~\ref{table:impact-comparison}, respectively.
 As we are building tools for open and reproducible science, the best measure of our impact
 is in the adoption and use of these tools and services based on them. This can be observed
 qualitatively (anecdotal feedback and case studies) and quantitatively (counting workshop
-attendees, for example). Much of our work will be in the form of contributions to existing
-public projects, such as Binder and Jupyter, which can be measured in our participation in
-those projects, such as code and documentation contributions, bug reports, and roadmap
-contributions.
+attendees, for example).
 
-\TODO{KPIs should tie directly to objectives - if they don't, KPIs or objectives need updating}
+% Much of our work will be in the form of contributions to existing
+% public projects, such as Binder and Jupyter, which can be measured in our participation in
+% those projects, such as code and documentation contributions, bug reports, and roadmap
+% contributions.
 
-We can measure progress toward our objectives in \ref{sect:objectives}
+We measure progress toward our objectives in \ref{sect:objectives}
 via the following Key Performance Indicators (KPIs):
 \begin{compactenum}[\textbf{KPI} 1:]
-\item \label{kpi:binder-publications} Fraction of published repositories for
+\item \label{kpi:reproducibility} Fraction of published repositories for
   which Binder tools can build the computational environment -- measuring both
-  improvements in Binder tools and impact from our training efforts
+  improvements in Binder tools and impact from our training efforts. We will
+  implement the required methodology in
+  \taskref{reproducibility}{repo2docker-checker}. (Objective 1)
     % Open publications for which the authors have made a reproducible repository available
     % through \TheProject services.
-\item \label{kpi:workshop-attendees} Number of attendees of \TheProject
-  workshops on reproducible science.
-\item \label{kpi:dissemination} Dissemination outputs such as publications,
-  reports, presentations, best practice guidance for reproducibility and the use
-  of \TheProject tools and services.
-\item \label{kpi:success} Adoption of new features and demonstrators in the research community.
-\item \label{kpi:contributions} Contributions through \TheProject to Binder and
-  other open source software, including issues reported, bugs fixed, features
-  added, and roadmaps developed.
+\item \label{kpi:broaden} Number of researchers who benefit from using
+  \TheProject{} results in their work. Due to the open source nature of our
+  outcomes, it is difficult to track this number accurately. To solicit this
+  information, we can request feedback from users on forums, mailing lists and
+  social media, and count the users we know directly working with
+  them through \WPref{applications} and \WPref{education} for example. We expect
+  to under count beneficiaries for this metric, but believe the KPI is still useful
+  to measure our direct impact for better reproducibility in science. (Objective 2)
+\item \label{kpi:demonstrators} Number of demonstrators enabled that make
+  results from scientific research reproducible. (Objective 3)
+\item \label{kpi:education} Metrics to capture the number of people that have
+  made use of the training and education activities of \TheProject{}, such as
+  workshop attendees, viewers of training videos, access to online documentation
+  of best practice. (Objective 4)% can we track people accessing a documentation web site?
 \end{compactenum}
 
 
@@ -342,10 +349,9 @@ operating institution-wide Jupyter deployment;
 \noemph{Universities} using Jupyter as a teaching platform;
 % \item
 \noemph{Large cloud providers} building commercial products on the
-top of Jupyter (Google DataLab and Colaboratory, Amazon Sagemaker, Microsoft Azure
-Notebooks);
+top of Jupyter (Google DataLab and Colaboratory, AWS Sagemaker, OVH AI Notebook);
 % \item
-within the \noemph{European Open Science Cloud} Jupyter is used in many EOSC
+within the \noemph{European Open Science Cloud}, Jupyter is used in many EOSC
 projects, and a JupyterHub service is provided by the EGI foundation.
 % \item
 This impact was recognised by the \emph{ACM Software System Award} that was
@@ -357,7 +363,7 @@ There are at least 8 million notebooks deposited on GitHub \cite{notebookcount},
 the size of the Notebook user base was estimated to be of the order of
 millions in 2015 \cite{jupyter-grant}. We know that the public Binder-based service mybinder.org
 was used to create over 10,000,000 computational environments
-from at least 50,000 unique repositories in 2021 (Section~\ref{sec:mybinder}).
+from at least 50,000 unique repositories in 2021~(Section~\ref{sec:opensource}).
 
 \TODO{Or integrate into table above?}
 \TODO{This is mentioned on the evaluation form for this section, and then
@@ -366,17 +372,17 @@ from at least 50,000 unique repositories in 2021 (Section~\ref{sec:mybinder}).
 
 \subsubsection{Potential barriers}
 
-While a number of the partners have worked closely together in previous
-projects, the integration of new partners from different disciplines will
-require some efforts for communication within the project.
-
 A central barrier towards impact would be if the research community would not
-accept or embrace the tools and practical best guidance developed here. To
-minimise this risk, we'll stay in close touch with all our stakeholders
+accept or embrace the tools and practical guidance developed here.
+To minimise this risk, we'll stay in close touch with all our stakeholders
 (\WPref{management}, \WPref{applications}, \WPref{education}), and use
-the experience of the team members who are research active themselves.
+the experience of the team members who are active researchers themselves.
 
-A detailed assessment of risks and mitigations can be found in \ref{sec:risks}.
+A key strategy in mitigating barriers to adoption is the approach of \textbf{automating existing practices}.
+All of the practices promoted and developed by \TheProject are beneficial to
+producers and consumers of reproducible research alike,
+independent of the specific \textbf{Binder tools} in which we choose to implement the automations.
+This avoids lock-in and ensures positive impact even among researchers who choose not to use any of the specific tools we develop.
 
 \subsection{Measures to maximise impact - Dissemination, exploitation and communication}
 
@@ -437,7 +443,7 @@ actions to promote the project and the adoption of its outcomes beyond the proje
 \subsubsection{Dissemination of results}
 
  \TheProject endeavours to make Open and Reproducible Science practices both more understandable and actionable
- to practioners through the development and use of open and freely available tools.
+ to practitioners through the development and use of open and freely available tools.
 Most of \TheProject software will be in the form of contributions to existing projects,
 which will be governed by the licenses of those projects.
 All Jupyter and Binder software is released under the permissive BSD license,
@@ -479,7 +485,8 @@ open source communities. \textbf{Free and online training} will be streamed (Twi
 These resources will be hosted on free, public hosting services,
 such as GitHub Pages, YouTube channels and as much as possible co-developed and co-hosted with existing and
 well-established organizations
-(The Carpentries, CodeRefinery, Galaxy Training Network, Pangeo, etc.).
+(The Carpentries\footnote{https://carpentries.org/}, CodeRefinery\footnote{https://coderefinery.org/},
+Galaxy Training Network\footnote{https://training.galaxyproject.org/}, Pangeo\footnote{http://gallery.pangeo.io/}, etc.).
 
 We will also disseminate our results through publications and conferences.
 All publications funded by \TheProject will be \textbf{Open Access},
@@ -520,7 +527,7 @@ This means that exploitation generally has the form of:
 A key aspect of our exploitation strategy is to focus our work on existing,
 active projects in Binder and the wider Jupyter ecosystem.
 This means that our contributions are of immediate practical benefit to between
-thousands and millions of users worldwide (Section \ref{sec:project-jupyter}).
+thousands and millions of users worldwide \TOWRITE{}{Pull in Jupyter usage info here, now that Jupyter section is gone?}.
 
 \TheProject contributions to Binder tools will be immediately (\emph{i.e.
   already during the duration of the project}) exploited via the public mybinder.org service
@@ -528,34 +535,14 @@ and its thousands of daily users (Section~\ref{sec:mybinder}), as well as many B
 
 The science demonstrators in \WPref{applications} are themselves exploitations of the outputs
 in \WPref{reproducibility} and \WPref{impact},
-building prototype services not possible before the project.
-Continued operation and adoption of these services by project partners and the researchers they serve beyond the duration of the project
-is a goal and will indicate successful exploitation of the project.
+building services not possible before the project.
+Continued operation and adoption of these services by project partners and the researchers they serve beyond
+the duration of the project is already ensured for a majority of the science applications and will indicate
+successful exploitation of the project.
 
 %\TOWRITE{ALL}{Specific per-site exploitation?}  Not needed I think - we have
 %the demonstrators clearly mentioned.
 
-The QuantStack SME provides commercial support and development services around the
-open-source scientific computing ecosystem. The team has specialized on the Jupyter ecosystem
-and package management solutions, which are both at the core of this proposal. The consolidation
-of Binder's technical foundations will help QuantStack provide robust solutions to its clients.
-
-Industrial use cases met by QuantStack also show that the reproducibility issues addressed in this proposal go
-beyond the scientific use case:
-
-\begin{compactitem}
-\item For example, financial institutions using numerical libraries to price and hedge derivatives must be able
-   to reproduce results obtained with past versions of their software, especially in cases of mispricing or
-   mishedging. Rolling back to a state of the software environment as of several years earlier may prove
-   extremely difficult. Adopting the approach of Binder to favor reproducibility has shown to be a viable way
-   to address this issue.
-\item Similarly, in the field of industrial robotics, QuantStack has developed a conda-based distribution of the
-   ROS open-source ecosystem called RoboStack, and a tool akin to repo2docker to produce container images providing
-   all required packages for a ROS node, that will directly benefit from this work.
-\end {compactitem}
-
-This shows that techniques that arose from the scientific computing and research communities to address reproducibility
-will help address the same issue for a much broader audience.
 The QuantStack SME provides commercial support and development services around the
 open-source scientific computing ecosystem. The team has specialized on the Jupyter ecosystem
 and package management solutions, which are both at the core of this proposal. The consolidation
@@ -619,12 +606,12 @@ We will continually refine our Communication, Dissemination, and Exploitation pl
   {
   \begin{itemize}
 
-\item Logo creation, standard document templates for deliverables, reports, letters, presentations, roject posters/leaflets, etc. and creation and/or use of relevant social media accounts such as Linkedin, Twitter, YouTube channel (80k followers for Project Jupyter, 34k for IPythonDev, 132k for the pydata);
+\item Logo creation, standard document templates for deliverables, reports, letters, presentations, roject posters/leaflets, etc. and creation and/or use of relevant social media accounts such as Linkedin, Twitter, YouTube channel (80k Twitter followers for @ProjectJupyter, 34k for @IPythonDev, and 132k for the PyData Youtube channel);
 \item Annual plan for publication in scientific and technical peer-reviewed journals and conference proceedings;
 \item Creation of \TheProject website:
 \begin{itemize}
-\item links to \TheProject repository of results (videos, training material, use cases, demonstrators, software and associated documentation such as repo2docker, jupyterhub and binder);
-\item links to social media accounts, e.g. on Facebook, Instagram, LinkedIn and Twitter and public communication channel (zulip);
+\item links to \TheProject repository of results (videos, training material, use cases, demonstrators, software and associated documentation such as repo2docker, JupyterJub and Binder);
+\item links to social media accounts, e.g. on Facebook, Instagram, LinkedIn and Twitter and public communication channel (Zulip);
 \item live “Infoboard” to highlight news and outcomes, event calendar, public resources, specific social media posts; This infoBoard will be relayed by the News (and Newsletter) of partnered projects (Jupyter, Pangeo, Ifremer, NeIC, Sigma2, etc.).
 \item links to the EOSC catalogues of services and national/institutional services supporting \TheProject;
 \end{itemize}
@@ -645,37 +632,35 @@ We will continually refine our Communication, Dissemination, and Exploitation pl
 Provide a summary of this section by presenting in the canvas below the
 key elements of your project impact pathway and of the measures to
 maximise its impact.
+KEY ELEMENT OF THE IMPACT SECTION
 }
 
-\textbf{KEY ELEMENT OF THE IMPACT SECTION}
+% measured original color as 0, 0.75, 0.95
+% but it's a bit low-contrast
 
-\newlength{\savedparindent}
-\newcommand{\summarybox}[2]{
-\begin{framed}
-
-\centerline{\textbf{ #1}}
-\setlength{\savedparindent}{\parindent}
-\par
-\setlength{\parindent}{0pt}
-{#2}
-\setlength{\parindent}{\savedparindent}
-\end{framed}
+\definecolor{summaryblue}{rgb}{0, 0.7, 0.9}
+\newtcolorbox{summarybox}[1]{
+    colback=white,
+    colframe=summaryblue,
+    fonttitle=\bfseries,
+    title={#1}
 }
-
 
 \begin{multicols}{2}
-\summarybox{SPECIFIC NEEDS}{
+
+\begin{summarybox}{SPECIFIC NEEDS}
 \eucommentary{What are the specific needs that triggered this project?}
 
 Reproducibility is a widely recognized challenge in computational science.
 There are many tools that solve \emph{part} of the problem,
 or aim to solve the whole problem while requiring wholesale adoption of a specific tool,
 which may not be practical or desirable across a variety of domains or communities.
-Reliably reproducing software environments without requiring adoption of any single tool chain
+Reliably reproducing software environments without requiring adoption of any single toolchain
 allows for modular adoption, integrating into policies, practices, etc.
 We want to lower the practical barrier to reproducibility, and thereby increase the adoption of reproducible practices.
-}
-\summarybox{D \& E \& C MEASURES}{
+\end{summarybox}
+
+\begin{summarybox}{D \& E \& C MEASURES}
 \eucommentary{What dissemination, exploitation and communication measures will you apply to the results?}
 
 \textbf{Exploitation:} All services based on BinderHub will immediately benefit from the project, improving tools
@@ -686,7 +671,7 @@ PlasmaBio project, a Jupyter-based platform at Université de Paris for educatio
 directly benefit from the improvements to repo2docker.
 
 The QuantStack SME will exploit the improvements to Binder and it's technological foundations, in areas ranging from
-industrial robotics and quantitative finance.
+industrial robotics to quantitative finance.
 
 \textbf{Dissemination:} Results, insights, tools, and guidelines will
   be disseminated to potential users and stakeholders through conventional
@@ -697,10 +682,9 @@ industrial robotics and quantitative finance.
   about the project through news releases, videos, a website, social media,
   further media engagement, fliers and interviews, with a consistent visual
   identity.
+\end{summarybox}
 
- }
-
-\summarybox{EXPECTED RESULTS}{
+\begin{summarybox}{EXPECTED RESULTS}
 \eucommentary{What do you expect to generate by the end of the project? }
 
 \textbf{Improved software tools for reproducing computational environments}:
@@ -708,9 +692,10 @@ by improving the Binder tools for reproducible environments,
 it will be easier for researchers to produce and share results openly and reproducibly.
 
 \textbf{Improved understanding of good practices for reproducibility}: study results, documentation, and workshops will aid researchers and policy makers in understanding the most appropriate practices to adopt in their pursuit of reproducible research.
-}
 
-\summarybox{TARGET GROUPS}{
+\end{summarybox}
+
+\begin{summarybox}{TARGET GROUPS}
 \eucommentary{Who will use or further up-take the results of the project? Who will benefit from the results of the project?}
 
 \textbf{Computational science practitioners}: researchers with an interest in reproducibility of their on work.
@@ -720,9 +705,9 @@ it will be easier for researchers to produce and share results openly and reprod
 \textbf{Policy makers}: Funders and institutions requiring their subjects to follow reproducible practices
 
 \textbf{Publishers}: Requiring/enabling reproducible publications
-}
+\end{summarybox}
 
-\summarybox{OUTCOMES}{
+\begin{summarybox}{OUTCOMES}
 \eucommentary{What change do you expect to see after successful dissemination and exploitation of project results to the target group(s)?}
 
 \textbf{Adoption of Binder tools for reproducibility}:
@@ -730,8 +715,8 @@ practitioners will have access to Binder tools for reproducibility.
 Having improved their usability and robustness
 
 \textbf{Facilitating practical policies for reproducible publications}
-}
-\summarybox{IMPACTS}{
+\end{summarybox}
+\begin{summarybox}{IMPACTS}
 \eucommentary{
 What are the expected wider scientific, economic and societal effects of the project contributing to the expected impacts outlined in the respective destination in the work programme?
 }
@@ -742,9 +727,9 @@ access of reproducible research outputs.
 
 \textbf{Increased re-use of scientific results}: Practical reproducibility
 enables rapid re-use of published results leading to more effective research activities.
-
-}
+\end{summarybox}
 \end{multicols}
+\clearpage
 
 % \noindent
 % \fbox{

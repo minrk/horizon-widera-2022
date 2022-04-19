@@ -1,9 +1,11 @@
 \usepackage{lscape} % for landscape
 \usepackage{comments}
 % %\usepackage[final]{comments}
+\usepackage{fontspec}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{supertabular,array}
+\usepackage{tcolorbox}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
@@ -72,13 +74,21 @@
 \newcommand{\nbdiff}{\software{nbdiff}}
 \newcommand{\nbmerge}{\software{nbmerge}}
 \newcommand{\conda}{\software{conda}}
+\newcommand{\mamba}{\software{mamba}}
 \newcommand{\clang}{\software{clang}}
 \newcommand{\gcc}{\software{gcc}}
 \newcommand{\cling}{\software{cling}}
 \newcommand{\Julia}{\software{Julia}}
 \newcommand{\Fortran}{\software{Fortran}}
 
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "proposal"
-%%% End:
+\XeTeXtracingfonts=1\relax
+
+% this is latex's Times New Roman,
+% extending Nimbus Roman No9 L
+\setmainfont[
+    Extension=.otf,
+    UprightFont=*-regular,
+    BoldFont=*-bold,
+    ItalicFont=*-italic,
+    BoldItalicFont=*-bolditalic,
+]{texgyretermes}

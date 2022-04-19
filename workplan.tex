@@ -32,30 +32,16 @@ evaluates the reproducibility tools in real-world research contexts.
 wider public in best practices for reproducible science. This is complemented by
 the usual management work package (\WPref{management}).
 
-
-\TODO{Gantt chart link:
-  Remove the next sentence, if we remove the Ganttchart.} The Gantt chart on
-Page~\pageref{fig:gantt} illustrates the timeline for the various tasks for
-these work packages.
-%, including inter-task dependencies.
-
-\ifgrantagreement\else
-%\makeatletter\wp@total@RM{management}\makeatother
-\wpfigstyle{\footnotesize\def\tabcolsep{3.5pt}}
-%\wpfig[pages,type,start,end]
-{\wpfig}
-\fi
-
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.7\textwidth]{images/WP.pdf}
+  \includegraphics[width=0.67\textwidth]{images/WP.pdf}
   \caption{
     \label{fig:workpackages}
     The relationships and interactions of the work packages,
     broken up into four categories: Management (WP1),
-    Development of new functionality surrounding Jupyter's Binder tools to improving robustness 
+    Development of new functionality surrounding Jupyter's Binder tools to improving robustness
     and Broadening impact (WP2, WP3),
-    Applications of tools developped in real world research context (WP4),
+    Applications of tools developed in real world research context (WP4),
     and Dissemination, education, and engagement (WP5: Dis., edu., eng.).
   }
 \end{figure}
@@ -63,28 +49,35 @@ these work packages.
 % \subsubsection{How the Work Packages will Achieve the Project Objectives}
 % \label{sssec:how_the_work_packages_will_achieve}
 
-\ganttchart[draft,xscale=.33,milestones]
-\TODO{Gantt chart: HF: seems useless as it is. Can we fiddle with options? Otherwise
-remove.}
+\pagebreak The Gantt chart in
+Figure~\ref{fig:gantt} %on page~\pageref{fig:gantt}
+illustrates the distribution of time across the work packages over time.
+The height of grey bars corresponds to total person month effort per
+month for each work packages. We ramp up overall activity during year 1, then remain
+at a constant level. In the beginning of the project, the work on core parts of
+the technology dominates (WP2 and WP3). The activity in application of the new features (WP4) and dissemination
+(WP5) grows over time.
+% , including inter-task dependencies.
+% add milestones, for milestone markers
+% but these don't work if we have more than one milestone at the same point in time
+\ganttchart[draft,xscale=.4,yscale=0.9,step=3]
 
-\ifgrantagreement\else
-\newpage
-\subsubsection{Deliverables}\label{sec:deliverables}
-\inputdelivs{9.3cm}
-\TODO{Strage vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
-\fi
+% \TODO{HF: Don't know how to add extra text to (or override) caption to gantt chart
+%   (\ref{fig:gantt}) that explains the role of the bars. But I think the solution
+% now is okay.}
 
-% Save space for exploitation
-% \newpage
-\subsubsection{Milestones}\label{sec:milestones}
-\input{milestones}
-
-% ---------------------------------------------------------------------------
-% Include Work package descriptions
-% ---------------------------------------------------------------------------
+\begin{workplan}
 
 \input{WorkPackages/WorkPackages}
 
+
+% \TODO{Strange vertical lines at the left of the bottom of table~\ref{sec:deliverables}?}
+
+\subsubsection{Deliverables}\label{sec:deliverables}
+\inputdelivs{9.3cm}%
+\input{milestones}
+
+\end{workplan}
 
 \input{risks}
 \input{resources}

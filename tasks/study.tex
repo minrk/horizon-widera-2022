@@ -8,7 +8,7 @@
   % lead institution ID
   lead=SRL,
   PM=10,
-  wphases={0-24!0.42},
+  % wphases={0-24!0.42},
   % partner institution ID(s)
   % don't include lead here
   partners={MP}
@@ -16,7 +16,7 @@
   The \repotodocker{} tool is a key component of the Binder software for
   reproducibility (see \ref{binder-how-does-it-work}). It can be used to create
   a software environment based on software dependency specification standards
-  (see \ref{repo2docker-supported-software-specifications}) that are widely used.
+  (see \ref{sec:repo2docker}) that are widely used.
 
   If the required software is specified -- for example through a
   \texttt{requirements.txt} file for Python dependencies -- then \repotodocker{}
@@ -34,7 +34,7 @@
   environments in repositories may be reproducible because the authors already
   use Binder to offer their repository in an interactive Binder environment. Or
   the software environment may be reproducible because the authors have followed
-  standard conventions (see \ref{repo2docker-supported-software-specifications})
+  standard conventions
   and \repotodocker{} understands these conventions.
 
 The task includes the following activities:

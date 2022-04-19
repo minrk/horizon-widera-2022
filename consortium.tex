@@ -80,6 +80,7 @@ open source collaboration tools and practices as the Open Source Open Science
 community.
 
 \subsubsection{Complementarity and interdisciplinarity}
+\label{sec:complementarity-and-interdisciplinarity}
 
 For the successful delivery of this project and its mission to enable better
 reproducibility and science through better software (and services built upon it),
@@ -90,7 +91,7 @@ provide automatic reproducible computational environments if best practice is
 followed by the researchers, the education and training aspect for best practice
 is also vital for this project.
 
-The chosen consortium ensures a critical mass of scientific expertise and
+The chosen consortium ensures a critical mass of interdisciplinary expertise and
 excellence in key areas (such as natural sciences, education, software
 engineering, Project Jupyter) with research organisations and SMEs of recognised
 international reputation:
@@ -118,8 +119,7 @@ work together within the interdisciplinary team of participants.
 
 \subsubsection{Capacities and roles of participants}
 
-\paragraph{Simula Research Laboratory}
-
+\noindent \textbf{Simula Research Laboratory}
 \site{SRL} is an internationally-leading Norwegian research institute in the key
 ICT areas: communication systems, scientific computing, and software
 engineering. Dedicated to tackling scientific challenges with long-term impact and of
@@ -145,14 +145,24 @@ and for project-wide administrative support,
 as well as the host of some project activities such as workshops,
 and cloud computing resources.
 
-\paragraph{Max Planck Gesellschaft}
-The Max Planck Society (\emph{Max Planck Society}, MPG) is non-profit research
+\noindent \textbf{Max Planck Gesellschaft}
+The Max Planck Society (MPG) is non-profit research
 organisation with 86 research institutes and nearly 24,000 staff. For this
-project, we have Max Planck representatives from the Max Planck Compute and Data
+project, we have representatives from the Max Planck Computing and Data
 Facility (MPCDF) -- the organisation's cross-institutional competence centre
 for computational and data sciences -- and staff from the Max Planck Institute
 for Structure and Dynamics of matter (MPSD), who are active in condensed matter research and
 reproducibility research.
+%
+The MPCDF operates large state-of-the-art supercomputers, several mid-range
+compute systems and data repositories for various Max Planck institutes and
+provides an up-to-date infrastructure for data management including long-term
+archival.
+The MPCDF is a member of major European exascale projects, particularly the
+BioExcel and Novel Materials Discovery (NOMAD) CoE, and of projects
+such as Big data driven material science (BIGMax), FAIR data infrastructure for
+Condensed-Matter Physics and the Chemical Physics of Solids (FAIRmat), and Data
+Infrastructure Capacity for EOSC (DICE).
 
 % A bit odd to mention an individual here, but lots of the prior work
 % was not done at MPG, so it may help reviewers to know the name.
@@ -160,8 +170,9 @@ One team member (Hans Fangohr) has a long-standing collaboration with \site{SRL}
 and the Jupyter project, and a research interest in the use of open source
 tools, Jupyter, and Binder for research and reproducible
 research~\cite{Fangohr:ICALEPCS2017-TUCPA01,Fangohr2020,nbval-arxiv,Beg2021}.
-The MPCDF has experience deploying and using JupyterHub and BinderHub
-installations for the many staff they support.
+The MPCDF has multi-year expertise in deploying and using Cloud-based
+JupyterHub and BinderHub installations for various use cases from different
+scientific domains.
 
 MPCDF and MPSD have long standing experience in delivering training and
 workshops on computational methods, including best practice and reproducibility.
@@ -171,13 +182,12 @@ teaching activities at different universities.
 % https://fangohr.github.io/teaching/index.html#awards
 
 In this project, the team will co-design Binder-based services for
-reproducible science and data publishing. They will use the wide research
+reproducible science and data publishing. They will draw from the wide research
 activities of scientists in the Max Planck Society -- including social sciences,
 humanities and HPC-based activities -- to evaluate, improve and apply the Binder
-tools for use cases such as data sharing and more reproducible HPC.
+tools for use cases such as data publishing and better reproducibility in HPC.
 
-\paragraph{QuantStack}
-
+\noindent \textbf{QuantStack}
 QuantStack is a France-based software corporation specializing in open-source
 scientific computing.
 
@@ -203,14 +213,13 @@ the development of the mamba package manager, which has been adopted by the cond
 and Binder projects, among others.
 
 Clients and partners of QuantStack range from financial software companies to robotics
-startups and public research institutions. 
+startups and public research institutions.
 
 QuantStack's team will provide expertise to the consortium as core Jupyter developers,
 and will contribute to the project by improving the performance and reliability of the
 Binder project for building software environments.
 
-\paragraph{Ifremer}
-
+\noindent \textbf{Ifremer}
 Ifremer, French National Institute for Ocean Science, is a French public
 scientific and technological institution that works for exploring, understanding
 and predicting the ocean. A pioneer in ocean science, Ifremer's cutting-edge
@@ -224,8 +233,7 @@ applying the developed
 tools for practical reproducibility in real-world research contexts.
 \TODO{Tina, a bit more detail on the use cases, and the challenges?}
 
-\paragraph{University of Oslo}
-
+\noindent \textbf{University of Oslo}
 The University of Oslo (UiO) is Norway's oldest institution for research and
 higher education, with 28,000 students and 6,000 employees. UiO aspires to be an
 international hub for the research-based integration of computing into science
@@ -243,12 +251,16 @@ initiative that acts as a hub for FAIR (Findable, Accessible, Interoperable, and
 Reusable) software practices. Twice a year, CodeRefinery organizes big online
 training events with more then 300 attendees each.
 
-The focus of UiO is to use their vast and leading experience in training 
+The focus of UiO is to use their vast and leading experience in training
 and communication to educate researchers globally about open science and
 practical reproducibility, to help translate the technical advances of this
 project into wide-spread impact.
 
-\TODO{Anne - is this an okay description?} 
+The University Center for Information Technology (USIT) that represents the University of Oslo in this 
+project is part of the Norwegian Research Infrastructure Services (NRIS), 
+a collaboration between highly qualified IT staff at the four Norwegian universities (NTNU), the 
+Universities of Bergen, Oslo and Tromsø and employees at Sigma2 (the Norwegian National e-infrastructure provider),
+ to pool competencies, resources and services.
 
 \subsubsection{Connections beyond project partners}
 
@@ -263,11 +275,8 @@ to also be able to use that network to support communication, dissemination and
 exploitation of our results.
 
 The project partners are research active in current topics of open science, and
-are members in varies of research activities and organisations, including {Big
-  data driven material science (BIGMax), Novel Materials Discovery (NOMAD), FAIR
-  data infrastructure for Condensed-Matter Physics and the Chemical Physics of
-  Solids (FAIRmat), Data Infrastructure Capacity for EOSC (DICE), and Software
-  Sustainability Institute (SSI).}
+are members in various of research activities and organisations, including
+BIGMax, NOMAD, FAIRmat, DICE, and Software Sustainability Institute (SSI).
 
 \TODO{All, Please list more. Feel free to add more relevant ones at the beginning.
   EOSC, FAIR, RDA, Carpentries, SSI, ?}

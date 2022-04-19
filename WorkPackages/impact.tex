@@ -11,7 +11,7 @@ once completed)}
 
 \begin{workpackage}[
   id=impact,
-  wphases=0-36!1.17,
+  wphases={6-24!0.89,24-30!0.86,30-36!0.48},
   swsites,
   title=Broadening impact,
   short=Broadening impact,
@@ -72,8 +72,8 @@ At the same time, these restrictions prevent the following scenarios:
 \item To use Binder on systems where Docker cannot be used. A use case for this
   is to create reproducible environments on HPC installations. The HPC
   administrators generally avoid use of Docker for security reasons, but much
-  prefer to support container technologies that can be executed with
-  user-only privileges). \TODO{Point to task in applications}
+  prefer to support container technologies that can be executed without
+  administrative privileges). \TODO{Point to task in applications}
 \item To use Binder for software environments that use \TOWRITE{}{insert buildback
     example / community / software system}
 \item To access and use significant amounts of data from inside the software
@@ -127,14 +127,14 @@ At the same time, these restrictions prevent the following scenarios:
 
 
 \begin{wpdelivs}
-  \begin{wpdeliv}[due=12,miles=startup,id=extract-dependencies,dissem=PU,nature=OTHER,lead=SRL]
+  \begin{wpdeliv}[due=12,id=extract-dependencies,dissem=PU,nature=OTHER,lead=SRL]
     {Release new \repotodocker{} feature that exposes the command to install
       identified software environments in stand-alone script
     %  (see \taskref{impact}{extract-dependencies}).
     }
   \end{wpdeliv}
 
-\begin{wpdeliv}[due=36,miles=final,id=binder-tools-software,dissem=PU,nature=OTHER,lead=SRL]
+\begin{wpdeliv}[due=36,id=binder-tools-software,dissem=PU,nature=OTHER,lead=SRL]
   {Final open source release of \TheProject tools, completed with automatic
     testing and documentation. }
 \end{wpdeliv}

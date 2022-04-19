@@ -8,7 +8,7 @@
   % lead institution ID
   lead=SRL,
   PM=14,
-  wphases={0-36},
+  %wphases={0-36},
   % partner institution ID(s)
   % don't include lead here
   partners={MP,QS}
@@ -21,7 +21,7 @@ particular, we want to address and remove the constraints that currently exist:
 \item Dependency of existing Kubernetes system: at the moment, BinderHub can
   only start container environments within a Kubernetes installation. In this
   task, we will make it possible to start a container directly on the host
-  machine. Setting up Kubernetis system is a complex task: while justified to
+  machine. Setting up Kubernetes system is a complex task: while justified to
   exploit large computational resources through swarms of containers
   effectively, it is not necessary for single-machine execution of
   Binder-reproduced environments (such as anticipated for Binder@home in

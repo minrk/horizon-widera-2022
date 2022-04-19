@@ -24,7 +24,7 @@ make everything open source. (i.e. get rid of 'draft' plan at M1)
 \end{draft}
 
 % (12+4)/36 = 0.4444444444444444 -> !.44
-\begin{workpackage}[id=management,type=MGT,wphases=0-36!.44,
+\begin{workpackage}[id=management,type=MGT,wphases=0-36!.25,
   title=Project Management,
   short=Management,
   lead=SRL,
@@ -150,15 +150,6 @@ project's technical report.
   wphases={0-36!.056},
   partners={MP,QS,UIO,IFR},
   ]
-  The Community Engagement Panel (CEP) is a forum to bring together
-  representatives of different current and potential user communities of Binder tools.
-  Through the community engagement panel we want to maximise the interaction between existing and new users.
-  This will help shape the software features so that we can
-  achieve the highest possible impact for reproducibility in science.
-
-  Stakeholders for the topic of reproducibility that should be represented in the
-  community engagement panel include researchers, research infrastructure
-  providers, publishers, research councils, librarians, and educators.
 
 The task includes the following activities:
 \begin{compactenum}
@@ -175,20 +166,19 @@ The task includes the following activities:
   panel that go beyond the advisory role of the panel itself.
 \end{compactenum}
 
-\input{community-engagement-panel.tex}
 \end{task}
 \end{tasklist}
 
 
 \begin{wpdelivs}
 
-\begin{wpdeliv}[due=2,miles=startup,id=infrastructure,dissem=PU,nature=DEC,lead=SRL]
+\begin{wpdeliv}[due=2,id=infrastructure,dissem=PU,nature=DEC,lead=SRL]
   {Basic project infrastructure (web site, mailing lists, issue trackers, mailing lists, repositories)}
 \end{wpdeliv}
 
 
   \begin{wpdeliv}[due=3,id=dissemination-plan,dissem=PU,nature=R,lead=SRL]
-    {Detailed Dissemination, communication and exploitation plan.}
+    {Detailed dissemination, communication, and exploitation plan.}
   \end{wpdeliv}
 
 
@@ -196,15 +186,15 @@ The task includes the following activities:
 % detailed data management plan (DMP) for making their data/research outputs
 % findable, accessible, interoperable and reusable (FAIR) as a deliverable by
 % month 6 and revised towards the end of a project’s lifetime.”
-\begin{wpdeliv}[due=6,miles=startup,id=data-management-plan,dissem=PU,nature=R,lead=SRL]
+\begin{wpdeliv}[due=6,id=data-management-plan,dissem=PU,nature=DMP,lead=SRL]
   {Data Management Plan}
 \end{wpdeliv}
 
-\begin{wpdeliv}[due=32,miles=final,id=data-management-plan-revised,dissem=PU,nature=R,lead=SRL]
+\begin{wpdeliv}[due=32,id=data-management-plan-revised,dissem=PU,nature=DMP,lead=SRL]
   {Revised Data Management Plan}
 \end{wpdeliv}
 
-% \begin{wpdeliv}[due=9,miles=startup,id=innovation-management-plan,dissem=CO,nature=R,lead=SRL]
+% \begin{wpdeliv}[due=9,id=innovation-management-plan,dissem=CO,nature=R,lead=SRL]
 %   {Innovation Management Plan}
 % \end{wpdeliv}
 

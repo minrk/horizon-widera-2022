@@ -12,9 +12,9 @@ within this container from which the user can execute the notebooks from the
 repository.
 
 \emph{\mybinder{}} (see \ref{sec:mybinder}) is a service provided by the \emph{BinderHub
-  federation} that collectively host a service running the Binder software
+Federation} that collectively host a service running the Binder software
 under the URL \url{https://mybinder.org}. This is the service we made use of in
-our example in section~\ref{sec:reproducibility-example}.
+our example in section~\ref{sec:reproducibility-example}. The \emph{BinderHub Federation}
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
 \repotodocker{} solves the software environment challenge (see
@@ -32,19 +32,17 @@ Section~\ref{sec:reproducibility-example}. We will use this to
 describe the role of the individual components of Binder:
 
 
-\begin{figure}
-  \begin{minipage}[b]{0.67\textwidth}
-    \includegraphics[width=1.0\textwidth]{images/mybinder.png}
-  \end{minipage}\hfill
-  \begin{minipage}[b]{0.3\textwidth}
-    \caption{Home page of the \mybinder{} service.}  \label{fig:mybinder-homepage}
-  \end{minipage}
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.7\textwidth]{images/mybinder.png}
+    \caption{Home page of the \mybinder{} service.}
+    \label{fig:mybinder-homepage}
 \end{figure}
 
 
 \begin{compactitem}
 \item The \mybinder{} service is called with a URL that encodes the location of the data
-  repository\footnote{For example the 
+  repository\footnote{For example the
     {\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
     refers to the GitHub repository ``reproducibility-repository-example'' of the
     github user ``fangohr'', asking to open the ``figure1.ipynb'' file.}
@@ -54,7 +52,7 @@ describe the role of the individual components of Binder:
   to start the build of the corresponding environment, or to obtain the URL to
   re-use that configuration later, or share it with others.
 \item From the \mybinder{} entry point, the request is forwarded to one
-  \binderhub{} service of one of the organisations in the BinderHub federation
+  \binderhub{} service of one of the organisations in the BinderHub Federation
   that has available compute resources.
 \item The \binderhub{} software running at the chosen location, will ask
   \repotodocker{} to create a Docker container in which the notebooks from the repository can be executed.
@@ -62,7 +60,7 @@ describe the role of the individual components of Binder:
 \item \repotodocker{} composes a Dockerfile that contains all the commands
   necessary to install software.
 \item \repotodocker{} builds the Docker image based on the Dockerfile.
-\item \binderhub{} takes the Docker image and asks Kubernetes to start 
+\item \binderhub{} takes the Docker image and asks Kubernetes to start
   a container based on this image.
 \item The notebook server is started in this Docker container.
 \item \binderhub{} forwards the user who requested this virtual environment to
@@ -118,7 +116,7 @@ immediate and free interaction by readers in their browser.
 \subsubsection{The \mybinder{} service}\label{sec:mybinder}
 
 \emph{\mybinder{}} is a service run by the \emph{BinderHub
-  federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+Federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
 
@@ -151,4 +149,3 @@ be made available to all operators of BinderHubs, including \mybinder{}.
 %%% mode: latex
 %%% TeX-master: "proposal"
 %%% End:
-

@@ -14,7 +14,7 @@ once completed)}
 
 \begin{workpackage}[
   id=applications,
-  wphases=0-36!1.11,
+  wphases={6-36!.48,12-24!0.62,24-30!0.95,30-36!1.14},
   swsites,
   title=Applications and use cases,
   short=Applications,
@@ -29,11 +29,11 @@ once completed)}
   The objectives of this work package are
  \begin{compactitem}
  \item to guide the development of core tools in \WPref{reproducibility} and \WPref{impact}
-   by simultaneously attempting to use  them in diverse fields and use cases
- \item to do this together with active scientists from these fields to ensuring we develop tools
+   by simultaneously applying them to real-world use cases from various scientific fields
+ \item to do this together with active scientists from these fields to ensure we develop tools
    which can cater for a broad European and global research community
  \item to demonstrate how the tools we develop can support more reproducible and
-   re-usable science
+   reusable science
    \end{compactitem}
 \end{wpobjectives}
 
@@ -41,13 +41,13 @@ once completed)}
 
   Whilst the components issued from work packages  \WPref{reproducibility} and \WPref{impact} will be
   made available as generic tools for reproducible open science,
-  this work package is focused on using (and if required tailoring them further)
-  to make them suitable for specific real-world cases, described in \ref{sec:science-applications}
+  this work package is focused on using (and if required tailoring) them
+  to make them suitable for specific real-world cases, described in \ref{sec:science-applications}.
 
   The use-cases we anticipate are
   \begin{compactitem}
   \item \localtaskref{demos} Applications and best practice examples that
-    demonstrate use of Binder for more reproducible and re-usable science.
+    demonstrate use of Binder for more reproducible and reusable science.
   \item \localtaskref{binder-at-home} Ability to recreate software environments
     and re-produce results using local compute resources (such as the Desktop of
     a researcher)
@@ -71,7 +71,7 @@ once completed)}
   inspire each other to find out-of-the box solutions that each group on
   their own may not come to think about.
 
-  \medskip
+  %\medskip
 
   % The particular workflows, data infrastructures, data policies, and data access
   % protocols for
@@ -98,6 +98,7 @@ once completed)}
   Documentation of best practice guideliness will be developed as an open
   document throughout the project, used in \WPref{education}, and be submitted
   as deliverable at the end of the project~(\localdelivref{best-practice-guide}).
+  \TODO{Fix link right before this note!}
 \end{wpdescription}
 
 \begin{tasklist}
@@ -118,14 +119,12 @@ once completed)}
     lead=MP,
     % month when deliverable is due (max 36)
     due=18,
-    % associated milestone id (see milestones.tex)
-    miles=prototype,
     % ~always PU, DEC
     dissem=PU,
     nature=DEC,
     ]
     {
-      Interim report on real world use cases of Binder for reproducible and re-usable science
+      Interim report on real world use cases of Binder for reproducible and reusable science
     }
   \end{wpdeliv}
 
@@ -136,18 +135,16 @@ once completed)}
     lead=MP,
     % month when deliverable is due (max 36)
     due=34,
-    % associated milestone id (see milestones.tex)
-    miles=final,
     % ~always PU, DEC
     dissem=PU,
     nature=DEC,
     ]
     {
-      Final report on real world use cases of Binder for reproducible and re-usable science
+      Final report on real world use cases of Binder for reproducible and reusable science
     }
   \end{wpdeliv}
 
-  
+
 % \begin{wpdeliv}[
 %   % id for linking with \delivref or \localdelivref
 %   id=best-practice-guide,
@@ -155,8 +152,6 @@ once completed)}
 %   lead=UIO,
 %   % month when deliverable is due (max 36)
 %   due=34,
-%   % associated milestone id (see milestones.tex)
-%   miles=final,
 %   % ~always PU, DEC
 %   dissem=PU,
 %   nature=DEC,

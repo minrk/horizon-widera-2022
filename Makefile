@@ -18,7 +18,7 @@ TBIB.pdf 	= $(TBIB:%.tex=%.pdf)         	  # PDFs to be produced
 TBIB.aux 	= $(TBIB:%.tex=%.aux)             # their aux files.
 PDATA 		= $(PROPOSAL:%.tex=%.pdata)       # the proposal project data
 SRC = $(filter-out $(TARGET),$(shell ls *.tex */*.tex))   # included files
-PDFLATEX = xelatex -interaction scrollmode -file-line-error -halt-on-error -synctex=1
+PDFLATEX = xelatex -interaction scrollmode -file-line-error -halt-on-error -synctex=1 -shell-escape
 BBL = $(PROPOSAL:%.tex=%.bbl)
 PROPCLS.dir = $(PROP.dir)/base
 PROPETC.dir = $(PROP.dir)/etc
@@ -35,7 +35,7 @@ PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.
 
 all: $(TBIB.pdf) $(TSIMP.pdf)
 
-check:
+check: check-length-final check-length-abstract
 	test -f draft.pdf
 	test -f draft.pdata
 	python3 ./check-pdata
@@ -43,6 +43,10 @@ check:
 check-length-final:
 	python3 ./check-length-final.py
 
+check-length-abstract:
+	@echo "limit is 2000 characters for abstract:"
+	wc -c abstract.txt
+	./check-length-abstract.sh
 
 final:
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=final.tex all
