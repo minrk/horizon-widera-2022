@@ -13,13 +13,13 @@ Two of the key societal goals of Open Science are facilitation of
 \item \textbf{reuse} of research products, enabling commercial exploitation and/or derivative research.
 \end{compactenum}
 
-If results are merely \emph{available}, however,
+\noindent If results are merely \emph{available}, however,
 much of the value of Open Science remains unrealised.
 \myemph{Practical reproducibility} is required for efficient, widespread fulfillment of Open Science goals.
 But what does it mean to be reproducible?
-Without the \emph{practical} ability to verify results, results are not
+Without the \myemph{practical} ability to verify results, results are not
 any more likely to be verified.
-Without the \emph{practical} ability to reuse work, results are not
+Without the \myemph{practical} ability to reuse work, results are not
 any more likely to be exploited in new research or commercial work.
 
 In \TheProject, we focus on `practical reproducibility',
@@ -46,8 +46,8 @@ as is common in data science fields.
 In order to meet the goals or policies of Open and Reproducible science,
 \myemph{researchers need tools} to address the challenge. Ideally, those tools should
 \begin{compactenum}
-\item be freely available and open source;
-\item meet researchers where they are, as much as possible.
+\item be freely available and open source (to maximise access and longevity);
+\item meet researchers where they are, as much as possible (to maximise practical adoption).
 \end{compactenum}
 
 \TheProject's main goal is to \myemph{improve the global reproducibility of
@@ -62,105 +62,15 @@ We plan to achieve this goal through
   through improving and developing relevant software tools.
 \end{compactitem}
 
-Rather than re-inventing the wheel, we will build upon existing tools and standards.
+Rather than re-inventing the wheel, we will build upon \textbf{existing tools and standards}.
 
-\subsubsection{Binder for Reproducible Research}
-\label{sec:reproducibility-example}
+Increasingly, Open Science and Reproducibility are declared as values or requirements
+at research institutions, governments, and funding agencies.
+In order to meet these goals or requirements,
+researchers need \myemph{tools} that help them accomplish the tasks required for reproducible work.
 
-Binder\footnote{https://jupyter.org/binder} is a project providing open source tools to solve this computational environment reproducibility challenge.
-It has already proven useful for at least tens of thousands of researchers, educators, developers, and students,
-and we believe it has the potential to facilitate practical reproducibility for millions more,
-including in institutions, funding agencies, and policy makers.
-
-We aim to realise that potential by extending Binder open source tools.
-
-\begin{figure}[htb]\centering
-  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
-  \caption{A typical use case for Binder-based reproducibility using Jupyter notebooks in research.
-            Image by Juliette Belin for the OpenDreamKit project, used under
-            CC-BY-SA.}\label{fig:use-cases-binder}
-\end{figure}
-
-We start with a description of a use-case making use of existing Binder-based
-tools for computational reproducibility. Starting from this base-line, we can
-explain what progress and additional impact we will enable through this project.
-
-Figure~\ref{fig:use-cases-binder} depicts how a scientist can use a Jupyter
-notebook and the Binder software to make her research results easily
-reproducible and reusable. Jupyter Notebooks are very popular and allow the creation of notebook
-documents, containing a mixture of text and interactively executable code, along with rich output from
-running that code.
-
- In short:
-\begin{itemize}
-\item Scientist Jane has created a notebook that carries out computations or
-  data processing and creates a figure based on those results. For the purpose
-  of the introduction of this workflow, we assume that
-  Figure~\ref{fig:reproducibility-example-covid} shows this figure.
-
-\item She has made the notebook and raw data available in a public repository
-  (for our example at\newline
-  \mbox{\url{https://github.com/fangohr/reproducibility-repository-example}}).
-
-\item As she has described what software is needed to execute her notebook (more
-  details below), it is possible for all interested scientists (and anybody
-  else, including the reviewers of this proposal) to \emph{reproduce} her
-  figure.
-
-  To reproduce the figure, one needs to visit an online URL\footnote{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
-  (combination of the public repository and online Binder service) in a browser, and then wait a minute or so for a dedicated computational
-  environment to be created and started. Then select 'Run' -> 'Run all cells'
-  from the menu of the interactive Jupyter notebook that will appear in the
-  browser.
-
-  At that point, the computational steps that Jane has carried out to create her
-  result are repeated, and the results are \emph{reproduced}.
-
-\item Because all the computational steps are captured in the Jupyter notebook,
-  they can be inspected and interrogated if desired. In particular, the steps
-  can be modified and re-executed: this allows very efficient \emph{re-use} of
-  the results by other researchers.
-\end{itemize}
-
-We provide a more detailed description of the components and steps in this
-process in the following sections \ref{sec:opensource}.
-
-The reproducibility workflow shown in Figure~\ref{fig:use-cases-binder} is
-working today, and we provide estimates on the number of current users in
-section \ref{sec:opensource}. The work proposed for this project will build on
-this existing technology and (i)~make it more robust and easier to use
-(\WPref{reproducibility}), and (ii)~extend the functionality (\WPref{impact}) so
-that the existing tools can be used in many more use cases
-(\WPref{applications}).
-
-We note in particular that the Binder-enabled workflow for reproducibility has
-originally been developed to reproduce results that are created within Jupyter
-Notebook (as shown in Figure~\ref{fig:use-cases-binder}).
-However, the approach taken is generic, and not specific to notebooks: it is
-based on \repotodocker (Section~\ref{sec:repo2docker}), a tool to build, run, and 
-push Docker images from source code repositories.
-As part of this project, we will demonstrate that reproducible
-computational environments can be created  using the same approach
-in studies that do not make use of Jupyter notebooks.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/figure1.pdf}
-  \caption{Figure (\softwarename{figure1.pdf}) which can be reproduced in our explanatory repository example
-    \cite{ReproducibilityRepositoryExample2022}. \label{fig:reproducibility-example-covid}}
-\end{figure}
-
-
-% Increasingly, Open Science and Reproducibility are declared as values or requirements
-% at research institutions, governments, and funding agencies.
-% In order to meet these goals or requirements,
-% researchers need \myemph{tools} that help them accomplish the tasks required for reproducible work.
-
-It is in this context that we set our objectives to \textbf{find, experiment, and mainstream Binder tools as concrete solutions and best-practices to increase the reproducibility of research}:
-
-\TOWRITE{Feedback}{
-Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bound
-}
+\clearpage
+It is in this context that we set our objectives to \textbf{develop, experiment with, and mainstream Binder tools as concrete solutions and best-practices to increase the reproducibility of research}:
 
 \begin{table}[H]
   \label{tab:objectives-tasks}
@@ -183,7 +93,7 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
     solving known issues where we can improve the \myemph{reproducibility of computational environments}
     used for science, and facilitate \myemph{FAIR data practices}.
     &
-    The core of this effort is to \textbf{develop, validate, pilot and deploy practices and practical tools for funders, publishers and scientists}.
+    The core of this effort is to \textbf{develop, validate, pilot, and deploy practices and practical tools for funders, publishers, and scientists}.
     The robustness of these tools is key to their utility and value,
     and thereby adoption in research communities.
     \\\hline
@@ -191,9 +101,9 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
     \label{obj:broaden} Objective 2:\\\medskip
     \myemph{Enable reproducibility using common tools in a wider variety of environments}
     &
-    We develop generic tools for reproducible software environments,
+    We develop \textbf{generic tools for reproducible software environments},
     but have identified several areas where the Binder tools do not yet meet user needs,
-    such as traditional HPC environments, or users with large datasets.
+    such as traditional \textbf{HPC environments}, or users with \textbf{large datasets}.
     We shall address those gaps so that tools and strategies can be shared by a wider variety of communities,
     aligning effort and reducing necessary duplication.
     &
@@ -210,8 +120,8 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
     &
     We will demonstrate the utility of the Binder tools for achieving reproducible research
     in a variety of scientific domains,
-    which serves both to inform and motivate improvements to the system,
-    and as illustration and reference for others to follow.
+    which serves both to \textbf{inform and motivate} improvements to the system,
+    and as \textbf{illustration and reference} for others to follow.
     &
     By collaborating across domains, we \textbf{promote uptake, greater collaboration, and increased alignment of the activities of stakeholders}.
     Further, by publishing working examples,
@@ -224,9 +134,9 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
     \label{obj:education} Objective 4:\\\medskip
     \myemph{Educate researchers about reproducible practices}
     &
-    Develop best practice guidelines for reproducible science, and disseminate this by
-    educating the research communities about reproducible practices and available
-    tools for reproducible publications and policies. Reach out to scientists, and
+    Develop \textbf{best practice guidelines} for reproducible science, and disseminate this by
+    \textbf{educating the research communities} about reproducible practices and available
+    tools for reproducible publications and policies. \textbf{Reach out} to scientists, and
     the wider research communities and reproducibility stakeholders to encourage
     engagement with this project.
     &
@@ -237,12 +147,94 @@ Objectives should be SMART: Specific, Measurable, Achievable, Relevant, Time-bou
   \end{tabular}
 \end{table}
 
+\subsubsection{Binder tools for reproducible research}
+\label{sec:reproducibility-example}
+
+Binder\footnote{https://jupyter.org/binder} is a project providing open source tools to solve this computational environment reproducibility challenge.
+It has already proven useful for at least tens of thousands of researchers, educators, developers, and students,
+and we believe it has the potential to \textbf{facilitate practical reproducibility for millions} more,
+including in institutions, funding agencies, and policy makers.
+We aim to realise that potential by extending Binder open source tools.
+
+\begin{figure}[htb]\centering
+  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
+  \caption{A typical use case for Binder-based reproducibility using Jupyter notebooks in research.
+            Image by Juliette Belin for the OpenDreamKit project, used under
+            CC-BY-SA.}\label{fig:use-cases-binder}
+\end{figure}
+
+We start with an example making use of existing \textbf{Binder
+tools for computational reproducibility}. Starting from this base-line, we can
+explain what progress and additional impact we will enable through this project.
+
+Figure~\ref{fig:use-cases-binder} depicts how a scientist can use a Jupyter
+notebook and the Binder software to make her research results easily
+reproducible and reusable. Jupyter notebooks are popular with millions of researchers and allow the creation of notebook
+documents, containing a mixture of text and interactively executable code, along with rich output from
+running that code. In short:
+\begin{compactitem}
+\item Scientist Jane has created a \myemph{notebook that carries out computations} or
+  data processing and creates a figure based on those results. For the purpose
+  of the introduction of this workflow, we assume that
+  Figure~\ref{fig:reproducibility-example-covid} shows this figure.
+
+\item She has made the notebook and raw data available in a \myemph{public repository}
+  (for our example at\newline
+  \mbox{\url{https://github.com/fangohr/reproducibility-repository-example}}).
+
+\item As she has described \textbf{what software is needed} to execute her notebook (more
+  details below), it is possible for all interested scientists (and anybody
+  else, including the reviewers of this proposal) to \myemph{reproduce} her
+  figure.
+
+  To reproduce the figure, one needs to visit an online URL\footnote{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
+  (combination of the public repository and online Binder service) in a browser, and then wait a minute or so for a dedicated computational
+  environment to be created and started. Then select 'Run' -> 'Run all cells'
+  from the menu of the interactive Jupyter notebook that will appear in the
+  browser.
+
+  At that point, the computational steps that Jane has carried out to create her
+  result are repeated, and the results are \myemph{reproduced}.
+
+\item Because all the computational steps are captured in the Jupyter notebook,
+  they can be inspected and interrogated if desired. In particular, the steps
+  can be modified and re-executed: this allows very efficient \myemph{re-use} of
+  the results by other researchers.
+\end{compactitem}
+
+We provide a more detailed description of the components and steps in this
+process in the following sections \ref{sec:opensource}.
+
+The reproducibility workflow shown in Figure~\ref{fig:use-cases-binder} is
+working today, and we provide estimates on the number of current users in
+section \ref{sec:mybinder}. The work proposed for this project will build on
+this existing technology and (i)~make it \myemph{more robust and easier to use}
+(\WPref{reproducibility}), and (ii)~extend the functionality (\WPref{impact}) so
+that the existing tools can be \textbf{used in many more use cases}
+(\WPref{applications}).
+
+We note in particular that the Binder-enabled workflow for reproducibility has
+originally been developed to reproduce results that are created within Jupyter
+notebook (as shown in Figure~\ref{fig:use-cases-binder}).
+However, the approach taken is generic, and not specific to notebooks: it is
+based on \repotodocker (Section~\ref{sec:repo2docker}), a tool to \textbf{build, run, and
+publish} Docker images from source code repositories.
+As part of this project, we will demonstrate that reproducible
+computational environments can be created using the same approach
+in studies that do not make use of Jupyter notebooks.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/figure1.pdf}
+  \caption{Figure (\softwarename{figure1.pdf}) which can be reproduced in our explanatory repository example
+    \cite{ReproducibilityRepositoryExample2022}. \label{fig:reproducibility-example-covid}}
+\end{figure}
 
 
 \subsubsection{State of the Art}
 
-To make computational research reproducible, we generally need to make available
-(i)~required data, (ii)~the required software, (iii)~the protocol that explains
+To make computational research \textbf{reproducible}, we generally need to make available
+(i)~required \textbf{data}, (ii)~the required \textbf{software}, (iii)~the \textbf{protocol} that explains
 how to process the data to obtain the result that is to be reproduced. Using
 services such as Zenodo, it is possible to deposit such archives with a DOI and
 make reference to them in publications.
@@ -262,35 +254,33 @@ mistake is made in trying to follow the protocol. Second, the automatic
 execution saves time.
 
 There are two common approaches to achieve this reproducibility: (a) to use a
-workflow tool or environment that caters to a given use case (for example
-~\cite{reana2019} ~\cite{Afgan2018} ~\cite{Mlder2021} \TODO{cite other workflow systems})
+\textbf{workflow} tool or environment that caters to a given use case (for example
+~\cite{reana2019} ~\cite{Afgan2018} ~\cite{Mlder2021})
 and encapsulates the full process for strong reproducility guarantees.
-Or (b) to use standard (software engineering) computing tools and conventions
+Or (b) to use \textbf{standard} (software engineering) \textbf{computing tools} and conventions
 (git, make, python, perl, bash, \ldots)
 to specify the compute environment and reproduce steps piecemeal.
 
 The workflow tool approach (a) is robust, but requires `all-in' adoption by authors and reproducers alike,
-and is difficult in practice. It can also have associated `vendor lock-in' effects
+and is \textbf{difficult in practice}. It can also have associated `vendor lock-in' effects
 - once a tool is adopted for one piece, it must be used for all associated work.
-A consequence of this more tailored approach is reduced re-use and duplication of effort.
+A consequence of this more tailored approach is \textbf{reduced re-use and duplication of effort}.
 As a workflow tool may not meet the needs of a community,
-that community must then build its own tool, or be left without appropriate tools
+that community must then build its own tool, or be left \textbf{without appropriate tools}
 if they lack the resources or expertise to build their own.
 Workflow tools also often \emph{dictate} a significant amount of how researchers perform their work,
 which can inhibit adoption when it does not suit their existing patterns.
 
-The standard computing tools approach (b) is generic, but not accessible to all researchers
+The \textbf{standard computing tools} approach (b) is generic, but \textbf{not accessible} to all researchers
 as it requires substantial training or experience to be effective,
 and it is prone to errors or incompleteness when executed,
 leading to the "Works for Me" problem,
 where the author may have no trouble reproducing their own work,
 but they have not effectively communicated the requirements such that others can do the same.
-The gap
-% gap between what and what?
-between researchers' expertise and practical need when it comes to these tools has led to the creation
+The \textbf{gap between researchers' expertise and practical need} when it comes to these tools has led to the creation
 of whole industries of remedial skills training.
-The loose coupling of tools and modular choices make it more flexible (covering more use cases),
-but more difficult to follow robustly.
+The loose coupling of tools and modular choices make it \textbf{more flexible} (covering more use cases),
+but \textbf{more difficult} to follow robustly.
 Identifying which tools to use and following appropriate installation is a challenge
 for both authors, who must communicate requirements clearly without knowing the reader's context,
 and readers, who must find, understand, and follow potentially complex directions, even assuming they were
@@ -298,12 +288,12 @@ complete and correct.
 
 \medskip Researchers who use the Jupyter notebook to orchestrate their
 computational research can achieve this automatic
-reproducibility with little additional effort~\cite{Beg2021}: they use the Notebook document as
+reproducibility with little additional effort~\cite{Beg2021}: they use the notebook document as
 the protocol of their analysis (Step 2), which can be executed automatically.
-They can make use of the Binder tools (Section~\ref{sec:opensource}) and/or the
+They can make use of the \textbf{Binder tools} (Section~\ref{sec:opensource}) and/or the
 associated  mybinder.org\footnote{https://mybinder.org/} service (free and public) that has
-been designed by the Jupyter team to automatically create the appropriate
-software environment (step 1) in which the notebook can be executed.
+been designed by the Jupyter team to \textbf{automatically create the appropriate
+software environment} (step 1) in which the notebook can be executed.
 
 BinderHub instances such as mybinder.org are extremely convenient,
 but being hosted services they do not offer the autonomy
@@ -320,35 +310,35 @@ especially for long-term preservation.
 
 We will go beyond the current state of the art by bringing the following selected improvements:
 \begin{compactitem}
-\item currently producing valid computational environments from published scientific publications and/or existing 
-      online repositories is difficult and usually requires manual handling of the process which is cumbersome and 
-      time consuming. Improving the robustness of Binder tools and in particular \repotodocker{}'s ability to 
+\item currently producing valid computational environments from published scientific publications and/or existing
+      online repositories is difficult and usually requires manual handling of the process which is cumbersome and
+      time consuming. Improving the robustness of Binder tools and in particular \repotodocker{}'s ability to
       produce computational environments, long after the publication and/or release,
-      through testing and development, as well as taking additional context information into account, 
+      through testing and development, as well as taking additional context information into account,
       such as repository publication date will enable the production of computational environment to be seamless;
-\item the existing Binder software is already widely used in the Jupyter user community but focused on the 
+\item the existing Binder software is already widely used in the Jupyter user community but focused on the
       reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many
       programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending
-      the Binder software beyond the notebooks will undoubtedly attract new communities of users and can facilitate 
+      the Binder software beyond the notebooks will undoubtedly attract new communities of users and can facilitate
       transfer of knowledge between academia and industry;
-\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are 
-      beyond many institutional or companies IT support staff. As a result, most researchers rely on existing 
-      deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder 
-      as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{} 
+\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are
+      beyond many institutional or companies IT support staff. As a result, most researchers rely on existing
+      deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder
+      as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{}
       anywhere e.g. from the user’s personal laptop (Binder@home, \taskref{applications}{binder-at-home}) to the
       most powerful High Performance Computers (Binder@HPC, \taskref{applications}{binder-at-hpc}) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
 \item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes
       with restricted access permissions) that are published and deposited on (domain) specific long-term archives.
-      Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset 
-      itself or separately) but the usage of the Binder software and/or existing public Binder deployments for 
-      this use case is not currently supported (such amount of data cannot be easily and efficiently moved to 
-      the Binder resources). \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized 
+      Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset
+      itself or separately) but the usage of the Binder software and/or existing public Binder deployments for
+      this use case is not currently supported (such amount of data cannot be easily and efficiently moved to
+      the Binder resources). \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized
       data formats and associated catalogs such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
-      or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community) 
-      have been explored by diverse communities but are technically difficult and not generic enough to be 
-      adopted by everyone. The Binder software will be extended to facilitate data publishing (see \taskref{applications}{data-publishing}) with 
-      the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to 
-      the data and Binder service). 
+      or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community)
+      have been explored by diverse communities but are technically difficult and not generic enough to be
+      adopted by everyone. The Binder software will be extended to facilitate data publishing (see \taskref{applications}{data-publishing}) with
+      the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to
+      the data and Binder service).
 \end{compactitem}
 
 
