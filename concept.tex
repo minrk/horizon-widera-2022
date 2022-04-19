@@ -96,7 +96,7 @@ proposed project builds in more detail.
   engage with all stakeholders on reproducibility in science. We use the forum to  
   share requirements, constraints and experiences from different communities,
   and to learn from each other. This will help us to
-  create training materials that are targetting different audiences and 
+  create training materials that are targeting different audiences and 
   contribute to a relevant presentation of best practices.   
 \item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
@@ -151,7 +151,7 @@ a paper, at a later stage, and get to the same results?
 
 Such tables and figures in a publication may be computed from the analysis of
 some type of raw data which could originate from an experiment, another publication,
-a data base, post-processing of another dataset or from executing computer
+a data base, post-processing of another data set or from executing computer
 simulations.
 
 % Where additional software, such as analysis scripts, input files
@@ -165,7 +165,7 @@ We can classify the reproducibility challenges listed above into different categ
 
 \begin{description}
 \item[1. Workflow]: Are the processing commands (and their order)
-correctly recorded? Do we know which part of the dataset the analysis is meant to be applied to? Do we know the protocol, \emph{i.e.} are the different processing steps for that data recorded? This could be the order in which analysis scripts need to be executed -- for example to compute intermediate results -- which will be turned into a figure in the last step?
+correctly recorded? Do we know which part of the data set the analysis is meant to be applied to? Do we know the protocol, \emph{i.e.} are the different processing steps for that data recorded? This could be the order in which analysis scripts need to be executed -- for example to compute intermediate results -- which will be turned into a figure in the last step?
 
 We will call this sequence of steps the \emph{workflow}. This is to a significant degree a question of the organisation and documentation of the research process. This workflow could be archived -- for example -- through a \softwarename{README} file, or scanned pages of a hand-written laboratory notebook as a pdf file, or as a
 machine-executable script (or a Jupyter notebook).
@@ -188,13 +188,13 @@ touching on expectations, existing cultures, lack of metrics that acknowledge
 reproducibility efforts, and policies.
 
 \item[4. Other]: There are other related topics, for example the challenge of
-archival of (large) research datasets, of making the data FAIR, and the (for
+archival of (large) research data sets, of making the data FAIR, and the (for
 some domains important) bit-wise reproducibility.
 \end{description}
 
 In this proposal, we start from practices that researchers increasingly adopt,
 and which we argue are \emph{good reproducibility practices}. We propose to carry
-out additional work to \emph{improve the toolset enabling this practice}.
+out additional work to \emph{improve the tool set enabling this practice}.
 
 To deal with the \emph{Workflow} challenges, we recommend to automate the
 workflow steps as much as possible. In particular, the use of Jupyter notebooks
@@ -241,13 +241,13 @@ publishing, see for example Task \taskref{applications}{data-publishing}).
   \caption{Overview of \TheProject approach} \label{fig:overview-approach}
 \end{figure}
 
-Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered around the following ideas:
+Our approach is summarised on Figure~\ref{fig:overview-approach} and is centred around the following ideas:
 \begin{compactenum}
-  \item We put the researcher at the center of our work. In the end,
+  \item We put the researcher at the centre of our work. In the end,
     researchers are responsible for making their work
     reproducible. It is therefore essential to find technical and social solutions
     that are \emph{useful and practical}. This idea is reflected in researchers
-    being involved in \WPref{management} through the \emph{Community Engagegment
+    being involved in \WPref{management} through the \emph{Community Engagement
     Panel}, the requirements gathering and application of the work carried out
   in \WPref{applications} and the interaction with scientists through our
   outreach and engagement activities in \WPref{education}. All of these inputs
@@ -272,7 +272,7 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
   keeping raw data,  meta data and relevant software, using version control and
   automating analysis steps and workflows.
   We will also showcase tools to support the creation (and use) of reproducible
-  research artifacts, including those developed through this project.
+  research artefacts, including those developed through this project.
 \item We will explain the possibility of using Jupyter notebooks to create
   reproducible records of computational science, but also support non-notebook
   driven use cases.
@@ -292,7 +292,7 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
 
 %\begin{itemize}
 %\item
-\WPref{management} deals with the admininstrative~(\taskref{management}{admin})
+\WPref{management} deals with the administrative~(\taskref{management}{admin})
 and technical~(\taskref{management}{project-management}) management of the
 project, and the organisation of the Community Engagement
 Panel~(\taskref{management}{community-engagement-panel}).
@@ -352,7 +352,7 @@ outlined in \ref{fig:use-cases-binder}.
 Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but 
 real cases that will drive technological developments and future exploitation of \TheProject results,
  and onboard adopters to fully demonstrate that \TheProject
-solves practial issues for reproducible science:
+solves practical issues for reproducible science:
 
   \TODO{Mention that some of our science applications need
   additional features, and are not yet supported.}
@@ -379,7 +379,7 @@ solves practial issues for reproducible science:
   \TheProject will increase the re-usability of such complex pipelines, 
   highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
   and re-run the same pipelines, long after their publications (\taskref{applications}{data-publishing}). 
-\item Reproduciblity of results computed with the ab-initio software Octopus
+\item Reproducibility of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
@@ -401,7 +401,7 @@ solves practial issues for reproducible science:
   The current bottleneck is the need to create a container for each specific
   simulation (which is difficult or impossible for most researchers) and
   make sure a docker/singularity container can be re-created long after the simulation has been archived.
-  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (CPU, communication fabric and filesystem) and software.
+  Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (CPU, communication fabric and file system) and software.
   This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
 development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC), 
 data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
@@ -419,7 +419,7 @@ services. A BinderHub deployment is planned within \TheProject.
   \caption{Selected domains from our use cases. From left to right: interactive
     analysis of sea bass fish track reconstructions on biologging tag data (sea bass)
     with low resolution marine physics data; electron
-    density of benzene molecule computed with Octopus; NorESM artic grid for running Earth System Modelling experiments.
+    density of benzene molecule computed with Octopus; NorESM arctic grid for running Earth System Modelling experiments.
     (Background map: \copyright
     OpenStreetMap contributors ) \label{fig:applications}}
   \TODO{Add at least one more.}
@@ -430,7 +430,7 @@ services. A BinderHub deployment is planned within \TheProject.
 
 
 The Binder Project \cite{binder} (\url{https://jupyter.org/binder}) is
-a subproject of the Jupyter project, although it is not confined to be
+a sub project of the Jupyter project, although it is not confined to be
 useful only for notebooks.
 \emph{Project Jupyter} \cite{Jupyter}, which has grown increasingly popular in the scientific
 computing community, has become the \emph{lingua franca} of interactive
@@ -734,7 +734,7 @@ as well as publicly accessible open data.
 All data generated, collected, processed and stored will be made available following the
 relevant standards and regulations. Processing of personal data in relation to training,
 hackathons and/or workshop events will comply with GDPR regulations e.g. data
-anonymization and minimization before sharing.
+anonymisation and minimisation before sharing.
 Procedures to monitor the real-time effectiveness of our dissemination and
 communication strategies will also be GDPR compliant.
 We have no plans to collect or produce personally identifiable information (PII)
@@ -775,7 +775,7 @@ provenance of, existing data.
 }
 
 \eucommentary{
-Findability of data/research outputs: Types of persistent and uniqueidentifiers
+Findability of data/research outputs: Types of persistent and unique identifiers
 (e.g. digital object identifiers) and trusted repositories that will be used.
 }
 
