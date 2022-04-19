@@ -101,7 +101,7 @@ It is in this context that we set our objectives to \textbf{develop, experiment 
     &
     We develop \textbf{generic tools for reproducible software environments},
     but have identified several areas where the Binder tools do not yet meet user needs,
-    such as traditional \textbf{HPC environments}, or users with \textbf{large data sets}.
+    such as traditional \textbf{HPC environments}, or users with \textbf{large datasets}.
     We shall address those gaps so that tools and strategies can be shared by a wider variety of communities,
     aligning effort and reducing necessary duplication.
     &
@@ -317,20 +317,21 @@ We will go beyond the current state of the art by bringing the following selecte
 \item Currently, producing valid computational environments from published scientific publications and/or existing
       online repositories is difficult and usually requires manual handling of the process which is cumbersome and
       time consuming. \textbf{Improving the robustness of Binder tools} and in particular \repotodocker{}'s ability to
-      produce computational environments, long after the publication and/or release,
+      produce computational environments long after the publication and/or
+      release --- 
       through testing and development, as well as taking additional context information into account,
-      such as repository publication date, will enable \textbf{seamless reproduction of computational environments};
+      such as repository publication date --- will \textbf{enable seamless
+        reproduction of computational environments};
 \item The existing \textbf{Binder tools} are already widely used in the Jupyter user community,
-      but the focus has been on the reproducibility of Jupyter notebooks that may not fit everyone’s needs:
-      for instance mastering one of the many programming languages (> 40) supported by Jupyter is required and limits take-up by some communities.
+      but the focus has been on the reproducibility of Jupyter notebooks that may not fit everyone’s needs.
       Highlighting and extending \textbf{Binder tools}' \textbf{capabilities beyond notebooks}
       will undoubtedly \textbf{attract new communities} of users and can facilitate
       \textbf{transfer of knowledge} between academia and industry;
-\item The current \textbf{Binder tools} rely on Kubernetes and deploying a Binder service requires technical skills that are
+\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are
       beyond many institutional or companies IT support staff. As a result, most researchers rely on existing
       deployments that are overloaded and cannot cope with the huge demand, and they may disregard Binder
-      as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{}
-      anywhere e.g. from the user’s personal laptop (Binder@Home, \taskref{applications}{binder-at-home}) to the
+      as a viable solution for creating reproducible computational environments. \textbf{Being able to use \repotodocker{}
+      anywhere} e.g. from the user’s personal laptop (Binder@Home, \taskref{applications}{binder-at-home}) to the
       most powerful supercomputers (Binder@HPC, \taskref{applications}{binder-at-hpc})
       by removing technical restrictions such as the dependence on Kubernetes,
       and supporting a wider variety of community practices for reproducible environments
@@ -342,8 +343,8 @@ We will go beyond the current state of the art by bringing the following selecte
       this use case is not yet well supported (such amount of data cannot be easily and efficiently moved to
       public Binder instances).
       \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized
-      data formats and associated catalogs such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
-      or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community)
+      data formats and associated catalogs such as intake\footnote{\url{https://intake.readthedocs.io/en/latest/index.html}}
+      or STAC\footnote{\url{https://stacspec.org/}} by the Pangeo\footnote{\url{https://pangeo.io/}} Geoscience community)
       have been explored by diverse communities but are technically difficult and not generic enough to be
       adopted by everyone. The Binder software will be extended to \textbf{facilitate data publishing} (see \taskref{applications}{data-publishing}) with
       the plugin of external long-term archive resources and enable the \textbf{publication and reuse of large and complex datasets}.
