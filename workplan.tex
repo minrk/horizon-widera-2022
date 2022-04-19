@@ -22,7 +22,7 @@ graphical presentation of the components showing how they inter-relate (Pert cha
 
 \subsubsection{Quality and efficiency of the implementation}\label{sec:workplan-structure}
 
-\ifgrantagreement The \else As shown in Table~\ref{fig:wplist} and
+\ifgrantagreement The \else As shown in
 Figure~\ref{fig:workpackages}, the \fi work plan is broken down into five work
 packages: \WPref{reproducibility} focuses on robustness improvements of the
 Binder tools, \WPref{impact} is advancing the Binder tools feature set to
@@ -49,23 +49,21 @@ the usual management work package (\WPref{management}).
 % \subsubsection{How the Work Packages will Achieve the Project Objectives}
 % \label{sssec:how_the_work_packages_will_achieve}
 
-\pagebreak The Gantt chart in
-Figure~\ref{fig:gantt} %on page~\pageref{fig:gantt}
-illustrates the distribution of time across the work packages over time.
-The height of grey bars corresponds to total person month effort per
-month for each work packages. We ramp up overall activity during year 1, then remain
-at a constant level. In the beginning of the project, the work on core parts of
-the technology dominates (WP2 and WP3). The activity in application of the new features (WP4) and dissemination
-(WP5) grows over time.
 % , including inter-task dependencies.
 % add milestones, for milestone markers
 % but these don't work if we have more than one milestone at the same point in time
-\ganttchart[draft,xscale=.4,yscale=0.9,step=3]
+\ganttchart[draft,xscale=.4,yscale=0.9,step=3,
+    caption={
+        Gantt chart illustrates the distribution of time across the work packages over
+        time. The height of grey bars corresponds to total person month effort per
+        month for each work packages. We ramp up overall activity during year 1, then
+        remain  at a constant level. In the beginning of the project, the work on core
+        parts of he technology dominates (WP2 and WP3). The activity in application of
+        the new features (WP4) and dissemination  (WP5) grows over time.
+    },
+]
 
-% \TODO{HF: Don't know how to add extra text to (or override) caption to gantt chart
-%   (\ref{fig:gantt}) that explains the role of the bars. But I think the solution
-% now is okay.}
-
+\clearpage
 \begin{workplan}
 
 \input{WorkPackages/WorkPackages}
