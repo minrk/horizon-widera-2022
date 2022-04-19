@@ -23,8 +23,8 @@ Binder has demonstrated its potential for reproducibility in the Jupyter communi
 million user sessions in the last year at mybinder.org, building over fifty thousand
 unique computational environments. We aim to increase the usage by an order of magnitude.
 
-To do this, SOURCE will make the Binder tools practically useful outside Jupyter
-notebooks and thus for researchers not yet served by them. We will develop
+To do this, SOURCE will make the Binder tools more useful outside the Jupyter
+community, and thus reach a wider audience of researchers. We will develop
 and deliver training on best practices for reproducibility.
 
 We motivate and validate our efforts with selected use cases, such as data
