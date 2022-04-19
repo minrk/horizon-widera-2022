@@ -302,62 +302,66 @@ be they a local machine or cloud or on-premises clusters.
 
 \subsubsection{Beyond the state of the art}
 
-In this project, we will focus on the \emph{reproduction of the
+In this project, we will focus on the \myemph{reproduction of the
 software environment} (Step 1) which is a prerequisite for any attempt to
 reproduce the actual research outputs. In particular, we want to make the
-creation of this computational environment \emph{automatic}, \emph{generic} and \emph{robust},
+creation of this computational environment \myemph{automatic}, \myemph{generic} and \myemph{robust},
 especially for long-term preservation.
 
 We will go beyond the current state of the art by bringing the following selected improvements:
 \begin{compactitem}
-\item currently producing valid computational environments from published scientific publications and/or existing
+\item Currently, producing valid computational environments from published scientific publications and/or existing
       online repositories is difficult and usually requires manual handling of the process which is cumbersome and
-      time consuming. Improving the robustness of Binder tools and in particular \repotodocker{}'s ability to
+      time consuming. \textbf{Improving the robustness of Binder tools} and in particular \repotodocker{}'s ability to
       produce computational environments, long after the publication and/or release,
       through testing and development, as well as taking additional context information into account,
-      such as repository publication date will enable the production of computational environment to be seamless;
-\item the existing Binder software is already widely used in the Jupyter user community but focused on the
-      reproducibility of Jupyter notebooks that may not fit everyone’s needs: for instance mastering one of the many
-      programming languages (> 40) supported by Jupyter is required and limits take-up by some communities. Extending
-      the Binder software beyond the notebooks will undoubtedly attract new communities of users and can facilitate
-      transfer of knowledge between academia and industry;
-\item The current Binder tools rely on Kubernetes and deploying a Binder service requires technical skills that are
+      such as repository publication date, will enable \textbf{seamless reproduction of computational environments};
+\item The existing \textbf{Binder tools} are already widely used in the Jupyter user community,
+      but the focus has been on the reproducibility of Jupyter notebooks that may not fit everyone’s needs:
+      for instance mastering one of the many programming languages (> 40) supported by Jupyter is required and limits take-up by some communities.
+      Highlighting and extending \textbf{Binder tools}' \textbf{capabilities beyond notebooks}
+      will undoubtedly \textbf{attract new communities} of users and can facilitate
+      \textbf{transfer of knowledge} between academia and industry;
+\item The current \textbf{Binder tools} rely on Kubernetes and deploying a Binder service requires technical skills that are
       beyond many institutional or companies IT support staff. As a result, most researchers rely on existing
-      deployments that are overloaded and cannot cope with the huge demand, and they often quickly disregard Binder
+      deployments that are overloaded and cannot cope with the huge demand, and they may disregard Binder
       as a viable solution for creating reproducible computational environments. Being able to use \repotodocker{}
-      anywhere e.g. from the user’s personal laptop (Binder@home, \taskref{applications}{binder-at-home}) to the
-      most powerful High Performance Computers (Binder@HPC, \taskref{applications}{binder-at-hpc}) by removing technical restrictions such as the dependence on Kubernetes, and implementing more community practices for reproducible environments will open new ways of using Binder software that are more in line with the current needs of end-users;
-\item another important bottleneck is the need to access and to reuse very large and complex data sets (sometimes
-      with restricted access permissions) that are published and deposited on (domain) specific long-term archives.
-      Examples (to read and process such datasets) can be provided by end-users (either as part of the dataset
+      anywhere e.g. from the user’s personal laptop (Binder@Home, \taskref{applications}{binder-at-home}) to the
+      most powerful supercomputers (Binder@HPC, \taskref{applications}{binder-at-hpc})
+      by removing technical restrictions such as the dependence on Kubernetes,
+      and supporting a wider variety of community practices for reproducible environments
+      will open new ways of using Binder tools that are more in line with the current needs of end-users;
+\item Another important bottleneck is the need to \textbf{access and to reuse very large and complex datasets} (sometimes
+      with restricted access permissions) that are published and deposited on (domain-) specific long-term archives.
+      Specific use cases (to read and process such datasets) are provided by end-users (either as part of the dataset
       itself or separately) but the usage of the Binder software and/or existing public Binder deployments for
-      this use case is not currently supported (such amount of data cannot be easily and efficiently moved to
-      the Binder resources). \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized
+      this use case is not yet well supported (such amount of data cannot be easily and efficiently moved to
+      public Binder instances).
+      \emph{Ad hoc} or domain-specific solutions (for instance the usage of cloud optimized
       data formats and associated catalogs such as intake\footnote{https://intake.readthedocs.io/en/latest/index.html}
       or STAC\footnote{https://stacspec.org/} by the Pangeo\footnote{https://pangeo.io/} Geoscience community)
       have been explored by diverse communities but are technically difficult and not generic enough to be
-      adopted by everyone. The Binder software will be extended to facilitate data publishing (see \taskref{applications}{data-publishing}) with
-      the plugin of external long-term archive resources and enable the publication and reuse of large and complex datasets (software close to
-      the data and Binder service).
+      adopted by everyone. The Binder software will be extended to \textbf{facilitate data publishing} (see \taskref{applications}{data-publishing}) with
+      the plugin of external long-term archive resources and enable the \textbf{publication and reuse of large and complex datasets}.
 \end{compactitem}
 
 
 \subsubsection{Motivation - why?}\label{sec:motivation-why}
 
-We focus on the computational reproducibility because it is a real
-obstacle for practical reproducibility.
+We focus on the \textbf{computational reproducibility} because it is a real
+obstacle for \textbf{practical reproducibility}.
 
-First, it affects the majority of all researchers: there are estimates that over
-92\% of all researchers work with \emph{research software} and over 50\% develop
+First, it affects the majority of all researchers: there are estimates that \textbf{over
+92\% of all researchers} work with research software and over 50\% develop
 their own~\cite{Hettrick2014}. Where experiments drive the research, this is
 often data processing, analysis, and plotting. Each of those computational
-research cases needs a software environment in which the actual processing can
+research cases needs a \textbf{software environment} in which the actual processing can
 be carried out. The software environment may consist of somewhat standard
 packages (for example use of a Python, R, or Julia plotting library), or it may
 include tailored programs that have been developed specifically for a study.
 
 Second, software packaging and management is a technically challenging topic,
-and we cannot expect 92\% of all researchers to master it -- so we believe there
+and \textbf{we cannot expect 92\% of all researchers to master it} -- so we believe there
 is a clear need to support them with appropriate tooling.
 
 The complexity arises in parts from the increasing age of archived studies, and
@@ -369,7 +373,7 @@ change its interface or behaviour over time, so it is important to install
 exactly the right version of the plotting library, before a reproduction of
 results is attempted using it.
 
-Third, being able to re-create the appropriate software environment is a
+Third, being able to recreate the appropriate software environment is a
 prerequisite before any actual reproduction of results can be attempted: it
 would be inefficient to educate researchers what data and programs to archive,
 if in the future nobody (or only very few highly trained people) will be able to
@@ -377,15 +381,16 @@ execute those scripts.
 
 Finally, we think that there are low-hanging fruits: the work proposed here will
 make it possible to create computational environments automatically for
-\emph{existing data archives}: the Binder philosophy is to support existing standards for software
-specification, and to build a software environment based on those standards.
+\myemph{existing data archives}: the Binder philosophy is to support existing standards for software
+specification, and to \myemph{automatically} build a software environment based on those standards.
 Where researchers have used the existing software specification already, Binder tools
 will work immediately on their archived files. This means that (i)~a researcher
-putting together a well organised archive does not need to know about Binder tools,
+putting together a well-organised archive does not need to know about Binder tools,
 yet the researcher who wants to reproduce the results later can use Binder tools to
 automate the recreation of the software environment. This also means that
 (ii)~improvements we propose in this work, will make some existing archives (that
 have been created in the past) more easily reproducible.
+To reiterate: \textbf{researchers do not need to use Binder tools to benefit}.
 
 %(It is part of our training programme to educate about the importance and methods
 %for software specification.)
