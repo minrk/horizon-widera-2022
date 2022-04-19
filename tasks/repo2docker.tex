@@ -7,7 +7,7 @@
   partners={QS}
 ]
 
-This tasks improves the robustness of \repotodocker{}. We illustrate this with one specific example: 
+This tasks improves the robustness of \repotodocker{}. We illustrate this with one specific example:
 Often, a repository of scientific results may
 specify which software library is required (such as the Python library
 \softwarename{pandas}), but not which version.
@@ -20,7 +20,7 @@ on other packages of \softwarename{pandas} will change, and at some point an
 automatic build of the software for the whole repository may fail because of
 conflicting dependencies.
 
-We have found through anecdotal evidence that these problems can be
+We have found through prior study\cite{repo2docker-checker2020} that these problems can be
 overcome if a \softwarename{pandas} version can be chosen that was the
 most recent at the time when the repository was created. A related
 issue is that the Python version itself (such as 3.8, 3.9 or 3.10) may
@@ -33,6 +33,6 @@ versions if no specific version is specified.
 
 In the context of Python packages, we can use the
 \softwarename{pypi-timemachine}
-package.\footnote{\url{https://github.com/astrofrog/pypi-timemachine}}
-
+package \footnote{\url{https://github.com/astrofrog/pypi-timemachine}},
+and we will implement a similar fetaure in the context of conda packages.
 \end{task}

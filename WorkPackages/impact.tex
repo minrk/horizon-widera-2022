@@ -1,14 +1,3 @@
-\begin{draft}
-\TOWRITE{PS (Work Package Lead)}{For WP leaders, please check the following (remove items
-once completed)}
-\begin{verbatim}
-- [ ] discuss what the build packs are and where they go
-- [ ] how we structure and budget different tasks in this WP
-- [ ] needs review and more technical detail
-- [ ] add deliverable(s)
-\end{verbatim}
-\end{draft}
-
 \begin{workpackage}[
   id=impact,
   wphases={6-24!0.89,24-30!0.86,30-36!0.48},
@@ -26,14 +15,14 @@ once completed)}
   This work package extends the functionality of the \TheProject tools for
   reproducibility to broaden their applicability and increase impact.
   \WPref{applications} exploits these technological advances
-  in real world use cases.
+  in real-world use cases.
 
   The objectives of this work package are to
  \begin{compactitem}
- \item remove the dependency of \repotodocker{} on Kubernetes
+ \item remove the dependency of \binderhub{} on Kubernetes
  \item support container technologies other than Docker
  \item extend the range of software specification standards that are recognised
-   and supported by \repotodocker{} \TOWRITE{}{Can we give an example here?}
+   and supported by \repotodocker{}, such as Poetry for Python, renv for R, or Maven for Java.
  \item enable access to data from data sources outside the container
  \item enable \repotodocker{} to extract and save the software installations
    instructions (independent from container generation)
@@ -51,11 +40,8 @@ include:
 be available
 \item The user must interact with Binder environments through a BinderHub
   installation
-\item There is no Binders-specific provision to access (substantial) datasets
-  from inside the container. \TODO{HF: What prevents us from
-    a data-publishing application at the moment? How to express this without
-    making the impression one couldn't use \softwarename{curl/wget} to fetch
-    data, etc. }
+\item Access to data is not considered, and often challenging or expensive,
+      depending on where the data resides.
 \end{compactitem}
 
 The benefits of such a restrictive approach are that the software development
@@ -68,7 +54,7 @@ At the same time, these restrictions prevent the following scenarios:
 \item To run the Binder software on systems where Kubernetes is not available (such as
   the Desktop of a scientist). A related use case is ``Binder@home'' (\taskref{applications}{binder-at-home}).
 \item To access and use significant amounts of data from inside the software
-  environment is not supported. An important use case that cannot be supported due to
+  environment is not wellsupported. An important use case that cannot be supported due to
   this restriction is that of ``data publishing'': the idea is that a
   (potentially large and/or complex) dataset is published \emph{together} with
   software that encodes the necessary knowledge to extract meaningful data from
@@ -81,8 +67,6 @@ At the same time, these restrictions prevent the following scenarios:
   prefer to support container technologies that can be executed without
   administrative privileges). This prepares the ``Binder@HPC'' use
   case~(\taskref{applications}{binder-at-hpc}).
-%\item To use Binder for software environments that use \TOWRITE{}{insert buildback
-%    example / community / software system}
  \end{compactitem}
 
 % Open source software in general, and Jupyter in particular,

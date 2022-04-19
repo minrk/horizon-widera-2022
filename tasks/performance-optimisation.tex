@@ -14,17 +14,14 @@
   partners={SRL}
 ]
   The creation of reproducible software environments can take -- depending on
-  the complexity and overall size -- some time: generally, an image can be built
-  within few minutes, but there are tasks taking much longer.
+  the complexity and overall size of the destination environment -- quite some time.
+  Often, an image can be built within few minutes,
+  but there are environments that can take much longer.
 
-  In this task, we will optimise the \repotodocker{} performance.
-
-  \TODO{QS - add a little more detail here?}
-
-  % \TODO{Mention in which deliverable this will be reported?}
-  % \begin{compactitem}
-  % \item ...
-  %   % deliverable will be defined in the appropriate WorkPackage.tex
-  %   % (\localdelivref{deliv-id})
-  % \end{compactitem}
+  In this task, we will profile and optimise \repotodocker{} performance,
+  both in terms of build time
+  and image size (can be several gigabytes),
+  which contributes to user-experienced performance as launching a large image
+  can take longer than a small one
+  when the image must be transferred across a network.
 \end{task}
