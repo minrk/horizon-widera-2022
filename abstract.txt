@@ -1,6 +1,4 @@
-
-
-The goals of open science - particularly improved validation and re-use
+The goals of open science - particularly improved verification and re-use
 of research outputs - can only be achieved if reproducibility is an integral
 part of the process. Merely available data and code is of drastically less value than
 code that can be run easily by anyone. As institutions and organisations increasingly
