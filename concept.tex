@@ -431,7 +431,7 @@ It looks in \textbf{repositories}, finds \emph{standard} \textbf{environment spe
 constructing a \textbf{software environment} in a Docker container image.
 \repotodocker{} can fetch a remote repository and build a software
 environment for this repository. Currently, \repotodocker{} can retrieve
-repositories from at least the following services and formats: GitHub, Gist, GitLab, (any git repository),
+repositories from at least the following services and formats: GitHub, Gist, GitLab, any git repository,
 Zenodo, Hydroshare, Figshare, and Dataverse.
 
 For the automatic building of reproducible computational environments,
@@ -503,15 +503,15 @@ describe the role of the individual components of the Binder tools:
 
 \paragraph{The \mybinder{} service}\label{sec:mybinder}
 
-The \mybinder{} service is run by the \myemph{BinderHub
-Federation}\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
+The \mybinder{} service is run by the BinderHub
+Federation\footnote{\url{https://mybinder.readthedocs.io/en/latest/about/federation.html}}
 of organisations. Collectively, they host a service running the BinderHub software
 which can be reached from \url{https://mybinder.org}.
-The service is actively used with approximately 200,000 sessions being
+The service is \textbf{actively used} with approximately 200,000 sessions being
 requested and delivered by the \mybinder{} service every week in 2021. The number
 of sessions is growing from approximately 10,000 per day in November 2018
-(beginning of the available records) to about 30,000 per day in 2022. We have
-identified 60,000 unique repositories published in the last few years which have
+(beginning of the available records) to about \textbf{30,000 sessions per day} in 2022. We have
+identified \textbf{60,000 unique repositories published} in the last few years which have
 used the \mybinder{} service. The data is available~\cite{mybinder-archive}.
 
 Examples of reproducible repositories that make use of the \mybinder{} service
@@ -522,14 +522,14 @@ include reproducible research repositories
 
 This \TheProject{} project will not provide or operate a public BinderHub service such as the global
 \mybinder{} instance. The resulting improvements to Binder tools, however, will be
-immediately available to all operators of BinderHubs, including \mybinder{}.
+immediately available for \textbf{exploitation by all operators of BinderHubs}, including \mybinder{}.
 
 
 \subsubsection{Technical Readiness Level (TRL)}
 
-TRL is unusual for Binder tools, because they are tools that can be used in many ways,
-and they can be described as having a different TRL \emph{in different contexts}.
-
+Binder tools can be used in many ways, and their TRL depends on the context. 
+% TRL is unusual for Binder tools, because they are tools that can be used in many ways,
+% and they can be described as having a different TRL \emph{in different contexts}.
 The Binder software and service demonstration at mybinder.org is TRL 6,
 where scope \emph{excludes} long-term robustness.
 The Binder software for deploying services with authenticated access to data is TRL 3.
