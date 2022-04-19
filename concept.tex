@@ -39,7 +39,7 @@
 % These are the questions that guide the \TheProject{} project.
 
 \paragraph*{Supporting Open, Useful, and Reproducible Computational
-  Environments}\label{sec:SOURCE} 
+  Environments}\label{sec:SOURCE}
 
   \mbox{}\\
 
@@ -77,7 +77,7 @@
   % thus repeat) the calculation of a result obtained before.
 \end{itemize}
 
-\subsubsection{Outline of concept and methodology}
+\subsubsection{Outline of concept and approach}
 
 In the following we explain our concept and the technology on which this
 proposed project builds in more detail.
@@ -86,22 +86,22 @@ proposed project builds in more detail.
   \fullref{sec:reproducibility-challenges} contextualise the proposed work
   within the wide field of reproducibility.
 \item Section~\fullref{sec:methodology} presents our approach to improving reproducibility.
-\item We illustrate the reproducibility discussion in 
+\item We illustrate the reproducibility discussion in
   \fullref{sec:reproducibility-example} and highlight the current shortcomings
   in \fullref{sec:reproducibility-challenges}.
-    We provide details on some of our science use cases in 
-  \fullref{sec:science-applications}. These studies will provide feedback to the development of the 
-  Binder tools, validate the tools, and serve to showcase the outcomes of \TheProject.  
+    We provide details on some of our science use cases in
+  \fullref{sec:science-applications}. These studies will provide feedback to the development of the
+  Binder tools, validate the tools, and serve to showcase the outcomes of \TheProject.
 \item Section~\fullref{sec:community-engagement-panel} presents our strategy to
-  engage with all stakeholders on reproducibility in science. We use the forum to  
+  engage with all stakeholders on reproducibility in science. We use the forum to
   share requirements, constraints and experiences from different communities,
   and to learn from each other. This will help us to
-  create training materials that are targetting different audiences and 
-  contribute to a relevant presentation of best practices.   
+  create training materials that are targeting different audiences and
+  contribute to a relevant presentation of best practices.
 \item We provide some technical background and context for our implementation in \fullref{sec:opensource}.
 \end{itemize}
 
-\noindent The methodology for this project is discussed starting in section
+\noindent The approach for this project is discussed starting in section
 \fullref{sec:methodology}.
 
 
@@ -232,7 +232,7 @@ publishing, see for example Task \taskref{applications}{data-publishing}).
 %\label{sec:reproducibility-example}
 
 
-\subsubsection{Methodology}\label{sec:methodology}
+\subsubsection{Approach}\label{sec:methodology}
 
 \begin{figure}[htb]
   \centerline{
@@ -290,66 +290,61 @@ Our approach is summarized on Figure~\ref{fig:overview-approach} and is centered
 \medskip
 \noindent We implement our approach through 5 Work packages:
 
-%\begin{itemize}
-%\item
 \WPref{management} deals with the admininstrative~(\taskref{management}{admin})
 and technical~(\taskref{management}{project-management}) management of the
 project, and the organisation of the Community Engagement
 Panel~(\taskref{management}{community-engagement-panel}).
-    % \item
 
-    \WPref{reproducibility} will improve the robustness of reproducible
-    environments through technical work on \repotodocker{} and BinderHub. In
-    particular, we will first create a metric to be able to measure our progress
-    (\taskref{reproducibility}{repo2docker-checker}), improve the ability to create
-    software environments for older repositories
-    (\taskref{reproducibility}{repo2docker-timemachine}) and improve the
-    performance (\taskref{reproducibility}{performance-optimisation}). We
-    explicitly allocate some time in \taskref{reproducibility}{maintenance} for
-    maintaining the tools we extend and want to build on. Maintenance is crucial
-    to creating reliable, sustainable software, but its cost is often swept
-    under the rug in funding applications because of the perceived pressure to
-    focus on novelty.
-    % \item
+\WPref{reproducibility} will improve the robustness of reproducible
+environments through technical work on \repotodocker{} and BinderHub. In
+particular, we will first create a metric to be able to measure our progress
+(\taskref{reproducibility}{repo2docker-checker}), improve the ability to create
+software environments for older repositories
+(\taskref{reproducibility}{repo2docker-timemachine}) and improve the
+performance (\taskref{reproducibility}{performance-optimisation}). We
+explicitly allocate some time in \taskref{reproducibility}{maintenance} for
+maintaining the tools we extend and want to build on. Maintenance is crucial
+to creating reliable, sustainable software, but its cost is often swept
+under the rug in funding applications because of the perceived pressure to
+focus on novelty.
 
-    \WPref{impact} will extend the feature set of \repotodocker{} to broaden
-    the impact of the project. This
-    includes to understand more data sources and software specification patterns
-    (\taskref{impact}{buildpacks}), to refactor the tool to not depend on a
-    Kubernetes installation and support other container formats next to Docker
-    (\taskref{impact}{constraints}), to export identified software dependencies,
-    to support new use cases and to
-    better support use outside the Jupyter ecosystem (\taskref{impact}{patterns}).
-    % \item
+\WPref{impact} will extend the feature set of \repotodocker{} to broaden
+the impact of the project. This
+includes to understand more data sources and software specification patterns
+(\taskref{impact}{buildpacks}), to refactor the tool to not depend on a
+Kubernetes installation and support other container formats next to Docker
+(\taskref{impact}{constraints}), to export identified software dependencies,
+to support new use cases and to
+better support use outside the Jupyter ecosystem (\taskref{impact}{patterns}).
 
-    \WPref{applications} will test, evaluate and apply the improvements from
-    work packages \WPref{reproducibility} and \WPref{impact} in real-world
-    reproducibility use cases, such as best practice reproducibility show
-    cases~(\taskref{applications}{demos}), use of \repotodocker{} on
-    decentralised hardware~(\taskref{applications}{binder-at-home}), publishing
-    of large, complex or restricted access data
-    sets~(\taskref{applications}{data-publishing}), and reproducibility for HPC~
-    (\taskref{applications}{binder-at-hpc}).
-    % \item
+\WPref{applications} will test, evaluate and apply the improvements from
+work packages \WPref{reproducibility} and \WPref{impact} in real-world
+reproducibility use cases, such as best practice reproducibility show
+cases~(\taskref{applications}{demos}), use of \repotodocker{} on
+decentralised hardware~(\taskref{applications}{binder-at-home}), publishing
+of large, complex or restricted access data
+sets~(\taskref{applications}{data-publishing}), and reproducibility for HPC~
+(\taskref{applications}{binder-at-hpc}).
 
-    \WPref{education} disseminates outcomes, delivers training materials
-    and activities, and supports community engagement. We will develop best practice guidelines for reproducible
-    science (\taskref{education}{online-resources}), organise and deliver
-    training events (\taskref{education}{workshops}), work closely with
-    scientists wishing to contribute to the project (\taskref{education}{community-support}).
+\WPref{education} disseminates outcomes, delivers training materials
+and activities, and supports community engagement. We will develop best practice guidelines for reproducible
+science (\taskref{education}{online-resources}), organise and deliver
+training events (\taskref{education}{workshops}), work closely with
+scientists wishing to contribute to the project (\taskref{education}{community-support}).
 
-    \subsubsection{Science Applications}\label{sec:science-applications}
-    Throughout this project, we will apply the reproducibility tools to ongoing
-    research projects that need reproducible processes. This is to inform the
-    project, evaluate the tools, and provide demonstrators. We expect the
-    demonstrators we develop to be exploited as production services already during
-    the grant, and subsequently.
+\subsubsection{Science applications}\label{sec:science-applications}
 
-We will actively work with representatives of key user communities, including Biophysics, 
+Throughout this project, we will apply the reproducibility tools to ongoing
+research projects that need reproducible processes. This is to inform the
+project, evaluate the tools, and provide demonstrators. We expect the
+demonstrators we develop to be exploited as production services already during
+the grant, and subsequently.
+
+We will actively work with representatives of key user communities, including Biophysics,
 Climate change and biodiversity, Molecular Dynamics, and ab-initio physics calculations.
-Our science applications (Figure \ref{fig:applications}) follow a workflow that is similar to the one 
-outlined in \ref{fig:use-cases-binder}. 
-Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but 
+Our science applications (Figure \ref{fig:applications}) follow a workflow that is similar to the one
+outlined in \ref{fig:use-cases-binder}.
+Below is a non-exhaustive list of science applications we will consider: these are not just exemplars but
 real cases that will drive technological developments and future exploitation of \TheProject results,
  and onboard adopters to fully demonstrate that \TheProject
 solves practial issues for reproducible science:
@@ -367,7 +362,7 @@ solves practial issues for reproducible science:
   required by fish habitat scientist.
   Access to parallel computing resources through DASK \footnote{https://dask.org/} on HPC or
   Cloud architecture together with access to big data stored next to the
-  parallel computing architecture is required to make reproducibility realistic. 
+  parallel computing architecture is required to make reproducibility realistic.
   \TheProject will add real value by enabling access to HPC from Binder tools (\taskref{applications}{binder-at-hpc}).
 \item Reproducibility of analysis pipelines and their software
   requirements at the example of a
@@ -376,39 +371,39 @@ solves practial issues for reproducible science:
   the underlying software stack is highly complex -- it requires the Gromacs simulation
   code (\href{https://www.gromacs.org}{https://www.gromacs.org}), among others
   -- and poses a particular challenge for long-term reproducibility.
-  \TheProject will increase the re-usability of such complex pipelines, 
+  \TheProject will increase the re-usability of such complex pipelines,
   highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
-  and re-run the same pipelines, long after their publications (\taskref{applications}{data-publishing}). 
+  and re-run the same pipelines, long after their publications (\taskref{applications}{data-publishing}).
 \item Reproduciblity of results computed with the ab-initio software Octopus
   (\href{https://octopus-code.org}{https://octopus-code.org}) which provides a
   virtual experimentation capabilities. A particular challenge is that Octopus
   is a highly parallelised code and needs HPC computing resources for a
   reproduction of simulation results. A (Slurm) job submission may be required
   to start the reproduction. This science application will serve \taskref{applications}{binder-at-hpc}.
-\item FAIR@UiO\footnote{https://www.usit.uio.no/prosjekter/fair-uio/} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable} 
+\item FAIR@UiO\footnote{https://www.usit.uio.no/prosjekter/fair-uio/} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable}
   data at the University of Oslo and will leverage on \TheProject work for data publishing (\taskref{applications}{data-publishing})
-  to increase the re-use of enormous amounts of data that will be made available to everyone through FAIR@UiO platform. 
-  FAIR@UiO is led by the University's Center for Information Technology of the University of Oslo 
+  to increase the re-use of enormous amounts of data that will be made available to everyone through FAIR@UiO platform.
+  FAIR@UiO is led by the University's Center for Information Technology of the University of Oslo
   (USIT\footnote{https://www.usit.uio.no/}).
 \item Reproducibility of Earth System Models with the Norwegian Earth System Modelling Consortium (NCC),
    represented in \TheProject by the University of Oslo. The Norwegian Earth System Model\footnote{https://noresm-docs.readthedocs.io/en/latest/}
-  ~\cite{Seland2020} (NorESM) is a coupled Earth System Model and has been an important tool for Norwegian 
+  ~\cite{Seland2020} (NorESM) is a coupled Earth System Model and has been an important tool for Norwegian
   climate researchers in the study of the past, present and future climate. NorESM has also contributed
-   to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6} 
-   ~\cite{Seland2020} and in research assessed in the IPCC’s reports. 
-   NorESM can be run on a laptop (small configuration such as single 
-  point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity). 
+   to climate simulation that has been used for the sixth phase of the Coupled Model Intercomparison Project (CMIP6)\footnote{https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6}
+   ~\cite{Seland2020} and in research assessed in the IPCC’s reports.
+   NorESM can be run on a laptop (small configuration such as single
+  point or single component) to the most powerful HPCs (including EuroHPC JU such as LUMI) using containers (Docker and Singuarity).
   The current bottleneck is the need to create a container for each specific
   simulation (which is difficult or impossible for most researchers) and
   make sure a docker/singularity container can be re-created long after the simulation has been archived.
   Thanks to \TheProject, researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container leveraging the full performance of the target host hardware (CPU, communication fabric and filesystem) and software.
   This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
-development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC), 
+development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC),
 data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
-blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT) 
+blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{https://www.mn.uio.no/geo/english/index.html} and USIT)
 and supported by Sigma2\footnote{https://www.sigma2.no/}, the Norwegian National
 provider of e-infrastructure for the provision of computing, storage and
-services. A BinderHub deployment is planned within \TheProject. 
+services. A BinderHub deployment is planned within \TheProject.
 
 \end{itemize}
 
@@ -425,7 +420,7 @@ services. A BinderHub deployment is planned within \TheProject.
   \TODO{Add at least one more.}
 \end{figure}
 
-\subsubsection{Open Source ecosystem}\label{sec:opensource}\TODO{Should the
+\subsubsection{Open source ecosystem}\label{sec:opensource}\TODO{Should the
   title be a bit more specific for Binder /Jupyter?}
 
 
@@ -654,19 +649,19 @@ enforced both at Jupyter events and online venues.
 \TOWRITE{}{}
 
 The SOURCE project, as part of the overall Jupyter environment, will intrinsically build on the achievements of many
- national and European and international research and innovative developments, which have been produced or are 
- being implemented in research projects in which research infrastructures and project partners are or have been 
+ national and European and international research and innovative developments, which have been produced or are
+ being implemented in research projects in which research infrastructures and project partners are or have been
  involved.
 
-The science applications build on the outcomes of National, Nordic, European and/or international research and 
-innovation projects and initiatives. Both Ifremer and the University of Oslo are active members of the international 
+The science applications build on the outcomes of National, Nordic, European and/or international research and
+innovation projects and initiatives. Both Ifremer and the University of Oslo are active members of the international
 Pangeo\footnote{https://pangeo.io/} Big data Geosciences Community.
 
 Ifremer, through its co-ownership of Mercator Ocean International\footnote{https://www.mercator-ocean.eu/},
- participate in the operation of the Copernicus Marine Environment Monitoring Service (CMEMS), 
- a part of Copernicus, the European Union’s Earth Observation Programme and is also actively involved in the 
+ participate in the operation of the Copernicus Marine Environment Monitoring Service (CMEMS),
+ a part of Copernicus, the European Union’s Earth Observation Programme and is also actively involved in the
  development of a Digital Twin of the Ocean that will be fully compatible with the Destination Earth (DestinE\footnote{https://digital-strategy.ec.europa.eu/en/policies/destination-earth})
- architecture and supports the European's Digital Strategy and Green Deal Package.   
+ architecture and supports the European's Digital Strategy and Green Deal Package.
 
 \subsubsection{Interdisciplinarity}
 
@@ -720,7 +715,7 @@ These aspects should instead be described below under 'Impact'.}
 
 \TOWRITE{}{}
 
-\subsubsection{Research Data Management and management of other outputs}
+\subsubsection{Research data management and management of other outputs}
 
 The Data Management Plan (DMP) will be prepared and regularly updated within WP1.
 
