@@ -24,7 +24,7 @@ once completed)}
 ]
 \begin{wpobjectives}
   This work package extends the functionality of the \TheProject tools for
-  reproducibility to broaden its applicability and increase impact.
+  reproducibility to broaden their applicability and increase impact.
   \WPref{applications} exploits these technological advances
   in real world use cases.
 
@@ -66,23 +66,23 @@ complexity.
 At the same time, these restrictions prevent the following scenarios:
 \begin{compactitem}
 \item To run the Binder software on systems where Kubernetes is not available (such as
-  the Desktop of a scientist). A related use case is ``Binder@home''
-  \TODO{Provide link to Binder at home task in
-   \WPref{applications}}.
-\item To use Binder on systems where Docker cannot be used. A use case for this
-  is to create reproducible environments on HPC installations. The HPC
-  administrators generally avoid use of Docker for security reasons, but much
-  prefer to support container technologies that can be executed without
-  administrative privileges). \TODO{Point to task in applications}
-\item To use Binder for software environments that use \TOWRITE{}{insert buildback
-    example / community / software system}
+  the Desktop of a scientist). A related use case is ``Binder@home'' (\taskref{applications}{binder-at-home}).
 \item To access and use significant amounts of data from inside the software
   environment is not supported. An important use case that cannot be supported due to
   this restriction is that of ``data publishing'': the idea is that a
   (potentially large and/or complex) dataset is published \emph{together} with
   software that encodes the necessary knowledge to extract meaningful data from
   that dataset. A Binder environment would make this dataset accessible in an
-  interactive environment. \TODO{Point to data publishing use case(s)}
+  interactive environment. This is needed for the data publishing
+  use cases~(\taskref{applications}{data-publishing}).
+\item To use Binder on systems where Docker cannot be used. A use case for this
+  is to create reproducible environments on HPC installations. The HPC
+  administrators generally avoid use of Docker for security reasons, but much
+  prefer to support container technologies that can be executed without
+  administrative privileges). This prepares the ``Binder@HPC'' use
+  case~(\taskref{applications}{binder-at-hpc}).
+%\item To use Binder for software environments that use \TOWRITE{}{insert buildback
+%    example / community / software system}
  \end{compactitem}
 
 % Open source software in general, and Jupyter in particular,
