@@ -250,35 +250,36 @@ output, and to carry out the two necessary steps:
 \end{compactitem}
 
 It is of particular value if Steps 1 \emph{and} 2 can be \emph{carried out
-  automatically} by executing a program included included in the
+  automatically} by executing a program included in the
 archive. First, if the automatic execution is possible, we know that there is a
 complete description of the protocol included in the archive, and that no
 mistake is made in trying to follow the protocol. Second, the automatic
 execution saves time.
 
 There are two common approaches to achieve this reproducibility: (a) to use a
-\textbf{workflow} tool or environment that caters to a given use case (for example
-~\cite{reana2019} ~\cite{Afgan2018} ~\cite{Mlder2021})
+\textbf{workflow} tool or environment that caters to a given use case (for
+example~\cite{Afgan2018,Mlder2021,reana2019})
 and encapsulates the full process for strong reproducibility guarantees.
 Or (b) to use \textbf{standard} (software engineering) \textbf{computing tools} and conventions
 (git, make, python, perl, bash, \ldots)
 to specify the compute environment and reproduce steps piecemeal.
 
-The workflow tool approach (a) is robust, but requires `all-in' adoption by authors and reproducers alike,
-and is \textbf{difficult in practice}. It can also have associated `vendor lock-in' effects
-- once a tool is adopted for one piece, it must be used for all associated work.
+The workflow tool approach (a) is robust, but requires ``all-in'' adoption by authors and reproducers alike,
+and is \textbf{difficult in practice}. It can also have associated ``vendor lock-in'' effects
+--- once a tool is adopted for one piece, it must be used for all associated work.
 A consequence of this more tailored approach is \textbf{reduced re-use and duplication of effort}.
 As a workflow tool may not meet the needs of a community,
 that community must then build its own tool, or be left \textbf{without appropriate tools}
 if they lack the resources or expertise to build their own.
 Workflow tools also often \emph{dictate} a significant amount of how researchers perform their work,
-which can inhibit adoption when it does not suit their existing patterns.
+which can inhibit adoption of the workflow tool by researchers
+when it does not suit their existing patterns.
 
 The \textbf{standard computing tools} approach (b) is generic, but \textbf{not accessible} to all researchers
 as it requires substantial training or experience to be effective,
 and it is prone to errors or incompleteness when executed,
-leading to the "Works for Me" problem,
-where the author may have no trouble reproducing their own work,
+leading to the ``Works for Me'' problem:
+the author may have no trouble reproducing their own work,
 but they have not effectively communicated the requirements such that others can do the same.
 The \textbf{gap between researchers' expertise and practical need} when it comes to these tools has led to the creation
 of whole industries of remedial skills training.
@@ -296,7 +297,7 @@ the protocol of their analysis (Step 2), which can be executed automatically.
 They can make use of the \textbf{Binder tools} (Section~\ref{sec:opensource}) and/or the
 associated  mybinder.org\footnote{\url{https://mybinder.org/}} service (free and public) that has
 been designed by the Jupyter team to \textbf{automatically create the appropriate
-software environment} (step 1) in which the notebook can be executed.
+software environment} (Step 1) in which the notebook can be executed.
 
 BinderHub instances such as mybinder.org are extremely convenient,
 but being hosted services they do not offer the autonomy
