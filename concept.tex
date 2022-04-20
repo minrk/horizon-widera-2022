@@ -325,8 +325,8 @@ to motivate and validate our work.
   A particular challenge here is
   the size and complexity of marine physics data to be ingested
   to obtain high spatial and temporal resolution of resulting sea bass tracks
-  required by scientist researching fish habitats.
-  Access to parallel computing resources through Dask\footnote{\url{https://dask.org/}} on HPC or
+  required by scientists researching fish habitats.
+  Access to parallel computing resources through Dask\footnote{\url{https://dask.org}} on HPC or
   Cloud architectures together with access to big data stored next to the
   parallel computing architecture is required to make reproducibility realistic.
   \TheProject will add real value by \textbf{enabling access to HPC from Binder tools} (\taskref{applications}{binder-at-hpc}).
@@ -340,13 +340,13 @@ to motivate and validate our work.
   \TheProject will increase the re-usability of such complex pipelines,
   highlighting the ability of the newly developed Binder tools to re-create valid computational environments,
   and re-run the same pipelines, long after their publications (\taskref{applications}{demos}).
-\item Reproduciblity of results computed with the 
+\item Reproduciblity of results computed with the
   Octopus software\footnote{\url{https://octopus-code.org}}
   which provides time-dependent \emph{ab-initio} computation capabilities.
   Octopus is a highly parallelised code. Significant compute resources
-  (\taskref{applications}{binder-at-home}) or 
+  (\taskref{applications}{binder-at-home}) or
   (Slurm) \textbf{job submissions to HPC computing
-  resources}~(\taskref{applications}{binder-at-hpc}) are required for 
+  resources}~(\taskref{applications}{binder-at-hpc}) are required for
   reproduction of simulation results.
 \item FAIR@UiO\footnote{\url{https://www.usit.uio.no/prosjekter/fair-uio}} is the flagship project for FAIR\footnote{Findable, Accessible, Interoperable, Reusable}
   data at the University of Oslo and will leverage \TheProject work for data publishing (\taskref{applications}{data-publishing})
@@ -367,7 +367,7 @@ to motivate and validate our work.
   Thanks to \TheProject, \textbf{researchers will be able to use \repotodocker{} to automatically re-generate a docker/singularity container} leveraging the full performance of the target host hardware (CPU, communication fabric and file system) and software.
   This science application leverages Binder@home (\taskref{applications}{binder-at-home}) (model
 development, education, single column or very simple model configuration), Binder@HPC (\taskref{applications}{binder-at-hpc}) (operational runs at scale including on EuroHPC),
-data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
+and data publishing  (\taskref{applications}{data-publishing}) (publication of simulation results from
 blue-sky research). This science application is led by the University of Oslo (both the Department of Geosciences\footnote{\url{https://www.mn.uio.no/geo/english/index.html}} and USIT)
 and supported by Sigma2,\footnote{\url{https://www.sigma2.no}} the Norwegian National
 provider of e-infrastructure for the provision of computing, storage and
@@ -415,8 +415,8 @@ The BinderHub Federation is currently composed of three deployments of the Binde
 
 \begin{compactitem}
 \item \url{https://gke.mybinder.org}, operated by the Binder team, and hosted on Google Cloud,
-\item \url{https://ovh.mybinder.org}, operated and hosted by OVH,
-\item \url{https://gesis.mybinder.org}, operated and hosted by GESIS.
+\item \url{https://ovh.mybinder.org}, operated and hosted by OVHcloud,
+\item \url{https://gesis.mybinder.org}, operated and hosted by GESIS (Leibniz Institute for the Social Sciences).
 \end{compactitem}
 
 The focus for this proposal is to improve \repotodocker{}. In particular,
@@ -527,7 +527,7 @@ immediately available for \textbf{exploitation by all operators of BinderHubs}, 
 
 \subsubsection{Technical Readiness Level (TRL)}
 
-Binder tools can be used in many ways, and their TRL depends on the context. 
+Binder tools can be used in many ways, and their TRL depends on the context.
 % TRL is unusual for Binder tools, because they are tools that can be used in many ways,
 % and they can be described as having a different TRL \emph{in different contexts}.
 The Binder software and service demonstration at mybinder.org is TRL 6,
@@ -608,16 +608,16 @@ The Jupyter Project itself and its software ecosystem provides a substantial int
  Initial points of contact, beyond common ambitions to foster open science, are
  provided through the participants who have been long-time members of Project
  Jupyter (\site{SRL}, \site{QS}).
- 
+
 The science applications build on the outcomes of national, Nordic, European and/or international research and
 innovation projects and initiatives. For example, both Ifremer and the University of Oslo are active members of the international
-Pangeo\footnote{\url{https://pangeo.io/}} Big data Geosciences Community. Ifremer, through its co-ownership of Mercator Ocean International,\footnote{\url{https://www.mercator-ocean.eu/}}
+Pangeo\footnote{\url{https://pangeo.io}} Big data Geosciences Community. Ifremer, through its co-ownership of Mercator Ocean International,\footnote{\url{https://www.mercator-ocean.eu}}
  participates in the operation of the Copernicus Marine Environment Monitoring Service (CMEMS),
  a part of Copernicus, the European Union’s Earth Observation Programme and is also actively involved in the
  development of a Digital Twin of the Ocean that will be fully compatible with the Destination Earth (DestinE\footnote{\url{https://digital-strategy.ec.europa.eu/en/policies/destination-earth}})
  architecture and supports the European's Digital Strategy and Green Deal
  Package.
- See also Section~\ref{sec:science-applications} and 
+ See also Section~\ref{sec:science-applications} and
  Section~\ref{sec:consortium} for additional research activities.
 
 \subsubsection{Interdisciplinarity}
@@ -640,11 +640,11 @@ with a lasting impact for better reproducibility in science.
 
 \TheProject will make use of open source licensed software, packages and
 libraries, following the OSI
-recommendations.\footnote{\url{https://opensource.org/licenses}} 
+recommendations.\footnote{\url{https://opensource.org/licenses}}
 All codes in this project will be open source and collaboratively developed using GitHub, following best software engineering practice
 such as version control, tests, and continuous integration.
 Training materials will be collaboratively developed through the {Carpentries
-  Incubator}\footnote{\url{https://carpentries-incubator.org}} 
+  Incubator}\footnote{\url{https://carpentries-incubator.org}}
 using the {Carpentries Curriculum Development Handbook}:\footnote{\url{https://cdh.carpentries.org}} all Carpentries lessons are licensed under
 the {Creative Commons Attribution version 4.0 (CC-BY)}\footnote{\url{https://creativecommons.org/licenses/by/4.0/legalcode}} and any related software under
 the {MIT license}.\footnote{\url{https://opensource.org/licenses/MIT}}
@@ -701,7 +701,7 @@ communication strategies will also be GDPR compliant.
 We have no plans to collect or produce personally identifiable information (PII)
 during the project.\medskip
 
-\paragraph*{Software} 
+\paragraph*{Software}
 Most research data from \TheProject will take the form of code.
 All code produced by \TheProject will be developed in the public using open
 source licenses (see Section~\ref{sec:open-science-practices}).
@@ -709,7 +709,7 @@ Milestone achievements of the software may be archived
 in separate repositories such as Zenodo,
 e.g. to coincide with publications.
 
-\paragraph*{Service usage data} 
+\paragraph*{Service usage data}
 Any data collected through the operation of public services
 (e.g. popularity data for public open science repositories)
 will be fully anonymised to the satisfaction of relevant best privacy practices and regulations, such as GDPR,

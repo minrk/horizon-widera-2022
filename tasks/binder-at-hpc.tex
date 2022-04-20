@@ -40,7 +40,7 @@ building of the software environment and the submission of a batch job making us
 environment to the HPC system's queue.
 
 We assume for this to work that the user (who wants to reproduce some results)
-needs to logon to the HPC resource of their choice, and uses repo2docker to
+needs to login to the HPC resource of their choice, and uses repo2docker to
 create a suitable software container, and starts execution of those containers
 ``manually'', for example through submission of a compute job to the Slurm
 queuing system. We also assume that the hardware required for this reproduction
@@ -48,7 +48,7 @@ is available on the HPC system.
 
 \paragraph*{Activity:} We will use repo2docker to automate the creation of
 reproducible software environments on an HPC system. If no parallelism is
-required, this is similar to the Binder@Home scenario
+required, this is similar to the Binder@home scenario
 (\taskref{applications}{binder-at-home}). Shared memory parallelisation, using for
 example OpenMP, will work well with the approach chosen.
 

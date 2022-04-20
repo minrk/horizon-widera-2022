@@ -2,7 +2,7 @@
 %  Section 2: Impact
 % ---------------------------------------------------------------------------
 
-
+\clearpage
 \section{Impact}
 \label{sec:impact}
 
@@ -82,9 +82,10 @@ The expected outputs and impact of \TheProject with respect to the
 work program is detailed in Tables~\ref{table:output-comparison}
 and~\ref{table:impact-comparison}, respectively.
 
+%\begin{table}[p]
 \begin{table}[h!]
   \begin{center}
-    \begin{tabular}{>{\raggedright}m{.475\textwidth}|m{.475\textwidth}}
+    \begin{tabular}{>{\raggedright}m{.30\textwidth}|m{.65\textwidth}}
       \toprule
       \textbf{Expected outputs from call}
       & \textbf{Expected outputs from the \TheProject project}\\\midrule
@@ -129,7 +130,7 @@ and~\ref{table:impact-comparison}, respectively.
 
 \begin{table}[h!]
   \begin{center}
-    \begin{tabular}{>{\raggedright}m{.25\textwidth}|m{.7\textwidth}}
+      \begin{tabular}{>{\raggedright}m{.2\textwidth}|m{.75\textwidth}}
       \toprule
       \textbf{Expected impacts from call}
       & \textbf{Expected impacts from the \TheProject project}\\\midrule
@@ -188,20 +189,19 @@ and~\ref{table:impact-comparison}, respectively.
   \caption{Relating \TheProject impacts to the impacts expected by the call \label{table:impact-comparison}}
 \end{table}
 
-
-\newpage
+%\newpage
 \subsubsection{Measuring impact}\label{sec:KPIs}
 
 As we are building tools for open and reproducible science, the best measure of our impact
 is in the adoption and use of these tools and services based on them. This can be observed
 qualitatively (anecdotal feedback and case studies) and quantitatively (counting workshop
-attendees, for example).\medskip
-
+attendees, for example).
+%
 % Much of our work will be in the form of contributions to existing
 % public projects, such as Binder and Jupyter, which can be measured in our participation in
 % those projects, such as code and documentation contributions, bug reports, and roadmap
 % contributions.
-
+%
 We measure progress toward our objectives (Table~\ref{tab:objectives-tasks})
 via the following Key Performance Indicators (KPIs):
 \begin{compactenum}[\textbf{KPI} 1:]
@@ -274,7 +274,7 @@ There are \textbf{at least 8 million notebooks} deposited on GitHub \cite{notebo
 the size of the \textbf{notebook user base was estimated} to be of the order of
 \textbf{millions in 2015} \cite{jupyter-grant}. We know that the public Binder service \textbf{\mybinder{}
 was used to create over 10,000,000 computational environments}
-from at least 50,000 unique repositories in 2021~(Section~\ref{sec:opensource}).
+from at least 60,000 unique repositories in 2021~(Section~\ref{sec:mybinder}).
 
 
 \subsubsection{Potential barriers}
@@ -393,8 +393,8 @@ findability to the wider community who may not be able to attend workshops.
 These resources will be hosted on free, public hosting services,
 such as GitHub Pages, ReadTheDocs, or YouTube channels, and as much as possible co-developed and co-hosted with existing and
 well-established organisations
-(The Carpentries,\footnote{\url{https://carpentries.org/}} CodeRefinery,\footnote{\url{https://coderefinery.org/}}
-Galaxy Training Network,\footnote{\url{https://training.galaxyproject.org/}} Pangeo,\footnote{\url{http://gallery.pangeo.io/}} etc.).
+(The Carpentries,\footnote{\url{https://carpentries.org}} CodeRefinery,\footnote{\url{https://coderefinery.org}}
+Galaxy Training Network,\footnote{\url{https://training.galaxyproject.org}} Pangeo,\footnote{\url{http://gallery.pangeo.io}} etc.).
 
 We will also disseminate our results through \textbf{publications and conferences}.
 All publications funded by \TheProject will be \textbf{open access},
@@ -583,9 +583,9 @@ and thereby increase the adoption of reproducible practices.
 \textbf{Exploitation:} All services based on BinderHub will immediately benefit from the project, improving tools
 already used by hundreds of thousands of users. They will also enable the application of public policies that advocate
 or require reproducibility of scientific outputs. Beyond Binder, underlying tools such as \repotodocker{}
-are used in other parts of the ecosystem to enable the creation of software environments. This is of particular 
-interest for several of the science applications in the project, as well as other Jupyter-based platforms 
-currently deployed for research and education. 
+are used in other parts of the ecosystem to enable the creation of software environments. This is of particular
+interest for several of the science applications in the project, as well as other Jupyter-based platforms
+currently deployed for research and education.
 Such projects will also directly benefit from the improvements to \repotodocker{}.
 
 The QuantStack SME will commercially exploit the improvements to Binder and its technological foundations in areas ranging from
@@ -607,7 +607,7 @@ industrial robotics to quantitative finance.
 
 \textbf{Improved software tools for reproducing computational environments}:
 by improving the Binder tools for reproducible environments,
-it will be easier for researchers to produce and share results openly and reproducibly.
+it will be easy for researchers to produce and share results openly and reproducibly.
 
 \textbf{Improved understanding of good practices for reproducibility}: study results, documentation, and workshops will aid researchers and policy makers in understanding the most appropriate practices to adopt in their pursuit of reproducible research.
 
@@ -630,8 +630,8 @@ through experimental and computational services.
 \eucommentary{What change do you expect to see after successful dissemination and exploitation of project results to the target group(s)?}
 
 \textbf{Adoption of Binder tools for reproducibility}:
-practitioners will have access to Binder tools for reproducibility.
-Having improved their usability and robustness.
+practitioners will have access to Binder tools for reproducibility,
+having improved their usability and robustness.
 
 \textbf{Resources for reproducible practices}:
 practitioners will have access to resources to learn about effective reproducibility practices.
