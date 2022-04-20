@@ -73,7 +73,7 @@ It is in this context that we set our objectives to \textbf{develop, experiment 
 \begin{table}[H]
   \begin{tabular}{>{\raggedright}m{.2\textwidth}|m{.36\textwidth}|m{.36\textwidth}}
     \toprule
-    
+
     \myemph{Objective} & \myemph{Description} & \myemph{Relation to work programme}\\\midrule
 
     \label{obj:reproducibility} Objective 1:\\\medskip \myemph{Evaluate and facilitate better computational
@@ -103,7 +103,7 @@ It is in this context that we set our objectives to \textbf{develop, experiment 
     it is most efficient when knowledge and tools can be shared.
     When tools do not work for significant fractions of the research community,
     they must develop their own, often similar tools,
-    as has often been the case for the HPC community.
+    as has often been the case e.g. for the HPC community.
 
     \\\midrule
 
@@ -182,9 +182,9 @@ running that code. In short:
   else, including the reviewers of this proposal) to \myemph{reproduce} her
   figure.
 
-  To reproduce the figure, one needs to visit an online 
+  To reproduce the figure, one needs to visit an online
   URL\footnote{\url{https://mybinder.org/v2/gh/fangohr/reproducibility-repository-example/HEAD?labpath=figure1.ipynb}}
-  (which contains a combination of the public repository and online Binder service adress) 
+  (which contains a combination of the public repository and online Binder service adress)
   in a browser, and then wait a minute or so for a dedicated computational
   environment to be created and started. Then select ``Run'' -> ``Run all cells''
   from the menu of the interactive Jupyter notebook that will appear in the
@@ -216,7 +216,7 @@ that the existing tools can be \textbf{used in many more use cases}
 We note in particular that the Binder-enabled workflow for reproducibility has
 originally been developed to reproduce results that are created within Jupyter
 notebook (as shown in Figure~\ref{fig:use-cases-binder}).
-However, the approach taken is generic, and not specific to notebooks: it is
+However, \textbf{the approach taken is generic, and not specific to notebooks}: it is
 based on \repotodocker{} (Section~\ref{sec:repo2docker}), a tool to \textbf{build, run, and
 publish} Docker images from source code repositories.
 As part of this project, we will demonstrate that reproducible
@@ -256,8 +256,8 @@ execution saves time.
 There are two common approaches to achieve this reproducibility: (a) to use a
 \textbf{workflow} tool or environment that caters to a given use case (for
 example~\cite{Afgan2018,Mlder2021,reana2019})
-and encapsulates the full process for strong reproducibility guarantees.
-Or (b) to use \textbf{standard} (software engineering) \textbf{computing tools} and conventions
+and encapsulates the full process for strong reproducibility guarantees,
+or (b) to use \textbf{standard} (software engineering) \textbf{computing tools} and conventions
 (git, make, python, perl, bash, \ldots)
 to specify the compute environment and reproduce steps piecemeal.
 
@@ -295,6 +295,7 @@ They can make use of the \textbf{Binder tools} (Section~\ref{sec:opensource}) an
 associated  mybinder.org\footnote{\url{https://mybinder.org/}} service (free and public) that has
 been designed by the Jupyter team to \textbf{automatically create the appropriate
 software environment} (Step 1) in which the notebook can be executed.
+But different workflows and tools are not as well served, yet.
 
 BinderHub instances such as mybinder.org are extremely convenient,
 but being hosted services they do not offer the autonomy
@@ -315,7 +316,7 @@ We will go beyond the current state of the art by bringing the following selecte
       online repositories is difficult and usually requires manual handling of the process which is cumbersome and
       time consuming. \textbf{Improving the robustness of Binder tools} and in particular \repotodocker{}'s ability to
       produce computational environments long after the publication and/or
-      release --- 
+      release ---
       through testing and development, as well as taking additional context information into account,
       such as repository publication date --- will \textbf{enable seamless
         reproduction of computational environments};
@@ -328,7 +329,7 @@ We will go beyond the current state of the art by bringing the following selecte
       beyond many institutional or companies IT support staff. As a result, most researchers rely on existing
       deployments that are overloaded and cannot cope with the huge demand, and they may disregard Binder
       as a viable solution for creating reproducible computational environments. \textbf{Being able to use \repotodocker{}
-      anywhere} e.g. from the user’s personal laptop (Binder@Home, \taskref{applications}{binder-at-home}) to the
+      anywhere} e.g. from the user’s personal laptop (Binder@home, \taskref{applications}{binder-at-home}) to the
       most powerful supercomputers (Binder@HPC, \taskref{applications}{binder-at-hpc})
       by removing technical restrictions such as the dependence on Kubernetes,
       and supporting a wider variety of community practices for reproducible environments
