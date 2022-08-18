@@ -10,7 +10,7 @@ Links:
 
 - The [submitted proposal is available here (pdf)](submitted-SOURCE-2022-04-20.pdf).
 
-- Update August 2022: The project proposal is has not been funded.
+- Update August 2022: The project proposal has not been funded.
 
 
 ## Prior proposal: BOSSEE
