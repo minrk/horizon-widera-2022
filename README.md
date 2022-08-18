@@ -27,19 +27,6 @@ BOSSEE is a [proposal](submitted.pdf) that was submitted on January
 In this proposal we want to improve reproducibility and re-usability of scientific software, in particular through further development of the [Binder project](https://jupyter.org/binder) and [repo2docker](https://jupyter.org/binder#repo2docker).
 
 
-## Work Plan
-
-<!-- <img src="https://github.com/bossee-project/proposal/blob/master/images/workpackages.svg" width="75%"> -->
-
-To be added.
-
-<!--
-## Positions
-
-If accepted (notifications around June) the project will start around
-January 2023. and will open about 11 postdoc or research software
-engineer positions in our various institutions.
--->
 
 ## Can I help?
 
@@ -54,12 +41,3 @@ Quick instructions:
 
 Join us on [Zulip chat](https://source.mpsd.mpg.de).
 
-<!--
-## Stay tuned
-
-- [Twitter](https://twitter.com/ProjectBOSSEE)
-
-- [Slack channel](https://bossee.slack.com/)
-
-## [Notes for authors](Contributing.md)
--->
