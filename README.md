@@ -19,12 +19,12 @@ This proposal is adapted from a prior submission, BOSSEE.
 
 BOSSEE is a [proposal](submitted-BOSSEE-2019-01-29.pdf) that was submitted on January
 29th 2019 to the H2020 European E-Infrastructure call
-[INFRAEOSC-02-2019](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/infraeosc-02-2019).
+[INFRAEOSC-02-2019](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/infraeosc-02-2019) (and which was not funded).
 
 
 ## Focus
 
-In this proposal we want to improve reproducibility and re-usability of scientific software, in particular through further development of the [Binder project](https://jupyter.org/binder) and [repo2docker](https://jupyter.org/binder#repo2docker).
+In this SOURCE proposal we want to improve reproducibility and re-usability of scientific software, in particular through further development of the [Binder project](https://jupyter.org/binder) and [repo2docker](https://jupyter.org/binder#repo2docker).
 
 
 
