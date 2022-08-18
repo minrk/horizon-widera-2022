@@ -18,7 +18,7 @@ Links:
 This proposal is adapted from a prior submission, BOSSEE.
 
 BOSSEE is a [proposal](submitted.pdf) that was submitted on January
-29th to the H2020 European E-Infrastructure call
+29th 2019 to the H2020 European E-Infrastructure call
 [INFRAEOSC-02-2019](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/infraeosc-02-2019).
 
 
