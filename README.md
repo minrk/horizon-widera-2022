@@ -6,6 +6,12 @@ Links:
 - [latest build (draft)](https://nightly.link/minrk/horizon-widera-2022/workflows/build.yaml/main/draft.pdf.zip?status=completed)
 - [latest build (final)](https://nightly.link/minrk/horizon-widera-2022/workflows/build.yaml/main/final.pdf.zip?status=completed)
 
+## Status: SOURCE
+
+- The [submitted proposal is available here (pdf)](submitted-SOURCE-2022-04-20.pdf).
+
+- Update August 2022: The project proposal is has not been funded.
+
 
 ## Prior proposal: BOSSEE
 
